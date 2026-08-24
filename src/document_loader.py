@@ -13,6 +13,8 @@ import logging
 from pathlib import Path
 from typing import Any
 
+from .thai_normalize import normalize_text
+
 logger = logging.getLogger(__name__)
 
 
@@ -70,9 +72,11 @@ def load_text(path: Path, encoding: str = "utf-8") -> str:
     reader = _READERS.get(suffix)
     if reader is None:
         raise ValueError(f"Unsupported file type: {suffix!r} ({path.name})")
-    if suffix in {".txt", ".md"}:
-        return reader(path, encoding=encoding)
-    return reader(path)
+    raw = reader(path, encoding=encoding) if suffix in {".txt", ".md"} else reader(path)
+
+    # Legacy Thai PDF fonts map vowels and tone marks into the Private Use
+    # Area — repair them here so every caller downstream sees real Unicode.
+    return normalize_text(raw)
 
 
 def parse_document(text: str, source: str = "") -> list[dict[str, Any]]:

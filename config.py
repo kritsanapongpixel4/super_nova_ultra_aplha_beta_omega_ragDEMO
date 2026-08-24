@@ -12,11 +12,37 @@ VECTOR_DB_DIR = ROOT_DIR / "vector_db"
 # Supported file types for ingestion
 SUPPORTED_EXTENSIONS = {".pdf", ".txt", ".docx", ".md"}
 
-# Auto-discover all supported files in data/
-SOURCE_FILES: list[Path] = sorted(
-    p for p in DATA_DIR.iterdir()
-    if p.is_file() and p.suffix.lower() in SUPPORTED_EXTENSIONS
-)
+# Which category sub-folders of data/ to ingest.
+#   ["curriculum"]              → only the หลักสูตร documents (current)
+#   ["curriculum", "forms"]     → several categories
+#   None                        → everything under data/
+SOURCE_CATEGORIES: list[str] | None = ["curriculum"]
+
+
+def discover_sources() -> list[Path]:
+    """Return every supported file in the selected categories.
+
+    Recursive, so files nested inside a category folder are found too, and
+    guarded so `import config` still works on a fresh clone where data/ has
+    not been created yet.
+    """
+    if not DATA_DIR.exists():
+        return []
+    roots = (
+        [DATA_DIR]
+        if SOURCE_CATEGORIES is None
+        else [DATA_DIR / name for name in SOURCE_CATEGORIES]
+    )
+    return sorted(
+        path
+        for root in roots
+        if root.exists()
+        for path in root.rglob("*")
+        if path.is_file() and path.suffix.lower() in SUPPORTED_EXTENSIONS
+    )
+
+
+SOURCE_FILES: list[Path] = discover_sources()
 
 # Golden set is optional — not every dataset has one
 _golden_candidate = DATA_DIR / "golden_set.json"
