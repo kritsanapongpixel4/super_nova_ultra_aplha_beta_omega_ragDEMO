@@ -128,6 +128,13 @@ def info():
             "generation": {
                 "provider": config.LLM_PROVIDER,
                 "model": config.LLM_MODEL,
+                # Quota is per model, so the one answering is often not the
+                # one configured — say which it actually is.
+                "active_model": (
+                    _pipeline.generator.last_model if _pipeline else None
+                ),
+                "fallbacks": list(config.LLM_FALLBACK_MODELS),
+                "resting": sorted(_pipeline.generator._cooldown) if _pipeline else [],
                 "max_tokens": config.LLM_MAX_TOKENS,
                 "memory_turns": config.MEMORY_MAX_TURNS,
             },
@@ -225,6 +232,7 @@ def chat():
         "sources": sources,
         "latency": latency,
         "pinned_hit": any(s["pinned"] for s in sources),
+        "model": _pipeline.generator.last_model,
     }
     conversation["messages"].append(message)
     return jsonify({"conversation": _public(conversation), "message": message})

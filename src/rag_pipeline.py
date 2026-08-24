@@ -81,7 +81,9 @@ class RAGPipeline:
         return cls(
             retriever=HybridRetriever(store, embedder, bm25),
             generator=Generator(
-                model=config.LLM_MODEL, max_tokens=config.LLM_MAX_TOKENS
+                model=config.LLM_MODEL,
+                max_tokens=config.LLM_MAX_TOKENS,
+                fallback_models=config.LLM_FALLBACK_MODELS,
             ),
             reranker=(
                 CrossEncoderReranker(config.RERANKER_MODEL)
@@ -131,7 +133,9 @@ class RAGPipeline:
             rewrite_query(
                 query,
                 history,
-                model=self.generator.model,
+                # Whichever model is actually answering right now — the
+                # configured one may be sitting out a quota cooldown.
+                model=self.generator.last_model or self.generator.model,
                 client=self.generator.client,
             )
             if history

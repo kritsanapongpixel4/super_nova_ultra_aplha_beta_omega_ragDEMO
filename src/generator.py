@@ -7,13 +7,26 @@ never commit .env (it is gitignored).
 
 from __future__ import annotations
 
+import logging
 import os
+import time
 from pathlib import Path
 from typing import Any
 
 from . import prompt_templates
 
+logger = logging.getLogger(__name__)
+
 _ENV_PATH = Path(__file__).resolve().parents[1] / ".env"
+
+# Quota exhaustion and capacity pressure are both "try a different model";
+# anything else (a bad key, a malformed request) must surface as-is.
+_EXHAUSTED_MARKERS = ("RESOURCE_EXHAUSTED", "429", "UNAVAILABLE", "503")
+
+
+def _is_exhausted(exc: Exception) -> bool:
+    text = str(exc)
+    return any(marker in text for marker in _EXHAUSTED_MARKERS)
 
 # Conversation history is stored in the neutral {"role": "user"|"assistant"}
 # shape (see memory.ConversationMemory); Gemini calls the assistant "model".
@@ -37,17 +50,26 @@ def load_api_key() -> str:
 
 
 class Generator:
-    """Wraps a single Gemini call over the retrieved context."""
+    """Wraps a Gemini call over the retrieved context, with model fallback."""
 
     def __init__(
         self,
         model: str = "gemini-3.6-flash",
         max_tokens: int = 16000,
         system_prompt: str = prompt_templates.SYSTEM_PROMPT,
+        fallback_models: tuple[str, ...] = (),
+        cooldown_seconds: float = 600.0,
     ) -> None:
         self.model = model
         self.max_tokens = max_tokens
         self.system_prompt = system_prompt
+        # Free-tier quota is counted per model and the models do not reset
+        # together — on any given day some are exhausted while others are
+        # untouched.  Pinning one model therefore breaks at random intervals.
+        self.models = [model, *(m for m in fallback_models if m != model)]
+        self.cooldown_seconds = cooldown_seconds
+        self._cooldown: dict[str, float] = {}  # model -> retry-after timestamp
+        self.last_model: str | None = None
         self._client = None  # built on first use so importing stays cheap
 
     @property
@@ -103,15 +125,33 @@ class Generator:
             )
         )
 
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=contents,
-            config=types.GenerateContentConfig(
-                system_instruction=self.system_prompt,
-                max_output_tokens=self.max_tokens,
-            ),
+        config = types.GenerateContentConfig(
+            system_instruction=self.system_prompt,
+            max_output_tokens=self.max_tokens,
         )
 
-        # response.text is None when the model returns no text part at all —
-        # a safety block or a response cut off before it wrote anything.
-        return (response.text or "").strip()
+        now = time.monotonic()
+        available = [m for m in self.models if self._cooldown.get(m, 0) <= now]
+        # Everything is cooling down — try them all anyway rather than refuse
+        # outright, since the cooldown is only a guess at when quota returns.
+        for model in available or self.models:
+            try:
+                response = self.client.models.generate_content(
+                    model=model, contents=contents, config=config
+                )
+            except Exception as exc:
+                if not _is_exhausted(exc):
+                    raise
+                self._cooldown[model] = time.monotonic() + self.cooldown_seconds
+                logger.warning("โมเดล %s ใช้ไม่ได้ชั่วคราว — ลองตัวถัดไป", model)
+                continue
+
+            self.last_model = model
+            # response.text is None when the model returns no text part at
+            # all — a safety block, or output cut off before anything was
+            # written.
+            return (response.text or "").strip()
+
+        raise RuntimeError(
+            "โมเดลทั้งหมดใช้ไม่ได้ในตอนนี้ (" + ", ".join(self.models) + ")"
+        )

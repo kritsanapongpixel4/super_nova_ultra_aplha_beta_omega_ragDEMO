@@ -106,6 +106,16 @@ LLM_MODEL = "gemini-3.5-flash"    # 3.7-flash/flash-latest คืน 503 บ่�
                                   # โควตา free tier แยกรายโมเดล: 3.6-flash หมดก่อน
                                   # 3.5-flash และ 3-flash-preview เป็นตัวสำรอง
                                   # API key อ่านจาก GEMINI_API_KEY ใน .env
+# โควตา free tier นับแยกรายโมเดลและรีเซ็ตไม่พร้อมกัน — วันหนึ่งตัวหนึ่งหมด
+# อีกตัวยังว่าง  Generator จะไล่ตามลำดับนี้เองเมื่อเจอ 429/503
+# แล้วพักโมเดลที่หมดไว้ 10 นาทีก่อนกลับมาลองใหม่
+LLM_FALLBACK_MODELS = (
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3-flash-preview",
+    "gemini-3.1-flash-lite",
+)
+
 LLM_MAX_TOKENS = 16000
 MEMORY_MAX_TURNS = 6      # conversation turns kept in the prompt
 

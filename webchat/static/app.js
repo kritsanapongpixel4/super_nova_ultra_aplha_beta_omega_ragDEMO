@@ -28,17 +28,45 @@ function render(text) {
     .replace(/^\s*[*-]\s+/gm, "· ");
 }
 
-function initials(title) {
-  const word = (title || "?").trim().split(/\s+/)[0];
-  return word.slice(0, 2).toUpperCase();
+function hashOf(id) {
+  let hash = 0;
+  for (const ch of String(id)) hash = (hash * 31 + ch.charCodeAt(0)) >>> 0;
+  return hash;
 }
 
 /* Stable per-conversation tint so the list stays scannable. */
 function tint(id) {
-  let hash = 0;
-  for (const ch of id) hash = (hash * 31 + ch.charCodeAt(0)) % 360;
-  return `linear-gradient(145deg,hsl(${hash} 26% 62%),hsl(${(hash + 40) % 360} 24% 44%))`;
+  const hue = hashOf(id) % 360;
+  return `linear-gradient(145deg,hsl(${hue} 30% 64%),hsl(${(hue + 44) % 360} 26% 44%))`;
 }
+
+/* Initials were useless here: nearly every conversation starts with "วิชา",
+   so the list was a column of identical "วิ". These abstract marks are
+   derived from the id instead, so two conversations never look alike. */
+const MARKS = [
+  '<circle cx="12" cy="12" r="5.6"/>',
+  '<circle cx="12" cy="12" r="5.4" fill="none" stroke="currentColor" stroke-width="2.3"/>',
+  '<path d="M12 6 18 17.4H6z"/>',
+  '<path d="M12 5.4 18.6 12 12 18.6 5.4 12z"/>',
+  '<path d="M6.2 12a5.8 5.8 0 0 1 11.6 0z"/>',
+  '<rect x="6.4" y="6.4" width="11.2" height="11.2" rx="3"/>',
+  '<circle cx="8.6" cy="12" r="2.5"/><circle cx="15.4" cy="12" r="2.5"/>',
+  '<rect x="5.6" y="9.1" width="12.8" height="2.5" rx="1.25"/><rect x="5.6" y="13.4" width="12.8" height="2.5" rx="1.25"/>',
+];
+
+function avatarMark(id) {
+  const hash = hashOf(id);
+  const shape = MARKS[hash % MARKS.length];
+  const spin = (hash >> 3) % 4 * 45;
+  return `<svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+    <g transform="rotate(${spin} 12 12)">${shape}</g></svg>`;
+}
+
+/* The assistant gets one fixed mark so it never reads as "just another
+   conversation" in the header. */
+const ASSISTANT_MARK = `<svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+  <circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+  <circle cx="12" cy="12" r="3.1"/></svg>`;
 
 const clock = () => new Date().toTimeString().slice(0, 5);
 
@@ -50,7 +78,7 @@ function drawConversations() {
     const item = document.createElement("button");
     item.className = "conv" + (conv.id === activeId ? " active" : "");
     item.innerHTML = `
-      <div class="avatar" style="background:${tint(conv.id)}">${escapeHtml(initials(conv.title))}</div>
+      <div class="avatar" style="background:${tint(conv.id)}">${avatarMark(conv.id)}</div>
       <div class="conv-body">
         <div class="conv-name">${escapeHtml(conv.title)}</div>
         <div class="conv-preview">${escapeHtml(conv.preview)}</div>
@@ -94,16 +122,65 @@ function metaHtml(msg) {
   return `<div class="meta">${bits.join('<span class="dot"></span>')}</div>`;
 }
 
+/* Every one of these was run against the live index before being offered —
+   a suggested question that answers "ไม่พบข้อมูล" teaches the user that the
+   system does not work. */
+const SUGGESTIONS = [
+  {
+    group: "รายวิชาและ CLO",
+    items: [
+      "วิชา 04-620-201 มี CLO อะไรบ้าง",
+      "วิชาระบบฐานข้อมูลมี CLO อะไรบ้าง",
+      "วิชาไหนสอนเรื่องปัญญาประดิษฐ์",
+    ],
+  },
+  {
+    group: "ภาพรวมหลักสูตร",
+    items: [
+      "หลักสูตรมีกี่หน่วยกิต",
+      "อาชีพที่ทำได้หลังจบหลักสูตรนี้มีอะไรบ้าง",
+      "วิชาไหนบ้างที่สอดคล้องกับ PLO8",
+    ],
+  },
+];
+
+function emptyState() {
+  const wrap = document.createElement("div");
+  wrap.className = "empty";
+  wrap.innerHTML = `
+    <div class="empty-head">
+      <div class="avatar xl">${ASSISTANT_MARK}</div>
+      <h2>ถามเกี่ยวกับหลักสูตรได้เลย</h2>
+      <p>ตอบจากเอกสารหลักสูตรวิศวกรรมคอมพิวเตอร์ พร้อมอ้างอิงกลับไปที่เอกสารทุกครั้ง</p>
+    </div>
+    ${SUGGESTIONS.map(
+      (s) => `
+      <div class="sug-group">
+        <h3>${escapeHtml(s.group)}</h3>
+        <div class="sug-list">
+          ${s.items
+            .map((q) => `<button class="sug" data-q="${escapeHtml(q)}">${escapeHtml(q)}</button>`)
+            .join("")}
+        </div>
+      </div>`
+    ).join("")}`;
+
+  for (const button of wrap.querySelectorAll(".sug")) {
+    button.onclick = () => {
+      input.value = button.dataset.q;
+      composer.requestSubmit();
+    };
+  }
+  return wrap;
+}
+
 function drawThread() {
   const conv = conversations.find((c) => c.id === activeId);
   thread.innerHTML = "";
   if (!conv) return;
 
   if (!conv.messages.length) {
-    const hint = document.createElement("div");
-    hint.className = "day";
-    hint.textContent = "ถามเกี่ยวกับหลักสูตร รายวิชา CLO หรือ PLO ได้เลย";
-    thread.appendChild(hint);
+    thread.appendChild(emptyState());
   }
 
   for (const msg of conv.messages) {
@@ -225,7 +302,10 @@ function drawDrawer(info) {
       ${kv("RRF k", retrieval.rrf_k)}
       ${kv("reranker", retrieval.reranker || "ปิด")}
       ${kv("ปักหมุดรหัสวิชา", lastPinned ? "ใช้ในคำถามล่าสุด" : "เปิดอยู่")}
-      ${kv("โมเดลตอบ", generation.model)}
+      ${kv("โมเดลที่ตั้งไว้", generation.model)}
+      ${kv("โมเดลที่ตอบจริง", generation.active_model || "ยังไม่ได้ถาม")}
+      ${kv("โมเดลสำรอง", generation.fallbacks.length)}
+      ${kv("พักอยู่ (โควตาหมด)", generation.resting.length ? generation.resting.join(", ") : "ไม่มี")}
       ${kv("จำบทสนทนา", `${generation.memory_turns} เทิร์น`)}
       ${kv("ถามไปแล้ว", `${stats.questions} ครั้ง`)}
       ${kv("เวลาตอบเฉลี่ย", stats.avg_latency != null ? stats.avg_latency + " วินาที" : "—")}
@@ -244,8 +324,13 @@ function drawDrawer(info) {
 async function loadInfo() {
   try {
     const info = await (await fetch("/api/info")).json();
+    const gen = info.generation;
+    const model = gen.active_model || gen.model;
+    // Say so when a fallback is carrying the load — otherwise the header
+    // claims a model that is actually sitting out a quota cooldown.
+    const swapped = gen.active_model && gen.active_model !== gen.model ? " · สำรอง" : "";
     $("peerSub").textContent =
-      `${info.generation.model} · ${info.index.chunks.toLocaleString()} chunks · top-${info.retrieval.top_k}`;
+      `${model}${swapped} · ${info.index.chunks.toLocaleString()} chunks · top-${info.retrieval.top_k}`;
     $("footStat").textContent = info.stats.questions
       ? `${info.stats.questions} คำถาม · เฉลี่ย ${info.stats.avg_latency}s`
       : "";
@@ -347,6 +432,8 @@ $("closeDrawer").onclick = () => toggleDrawer(false);
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !drawer.hidden) toggleDrawer(false);
 });
+
+$("peerAvatar").innerHTML = ASSISTANT_MARK;
 
 loadInfo();
 loadConversations();
