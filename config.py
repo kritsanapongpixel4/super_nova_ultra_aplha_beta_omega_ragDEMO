@@ -9,8 +9,18 @@ DATA_DIR = ROOT_DIR / "data"
 OUTPUTS_DIR = ROOT_DIR / "outputs"
 VECTOR_DB_DIR = ROOT_DIR / "vector_db"
 
-SOURCE_FILE = DATA_DIR / "sex_q_a.txt"
-GOLDEN_SET_FILE = DATA_DIR / "golden_set.json"
+# Supported file types for ingestion
+SUPPORTED_EXTENSIONS = {".pdf", ".txt", ".docx", ".md"}
+
+# Auto-discover all supported files in data/
+SOURCE_FILES: list[Path] = sorted(
+    p for p in DATA_DIR.iterdir()
+    if p.is_file() and p.suffix.lower() in SUPPORTED_EXTENSIONS
+)
+
+# Golden set is optional — not every dataset has one
+_golden_candidate = DATA_DIR / "golden_set.json"
+GOLDEN_SET_FILE: Path | None = _golden_candidate if _golden_candidate.exists() else None
 
 EXTRACTED_TEXT_FILE = OUTPUTS_DIR / "extracted_text.json"
 CHUNKS_FILE = OUTPUTS_DIR / "chunks.json"
@@ -25,8 +35,8 @@ CHUNK_STORE_FILE = VECTOR_DB_DIR / "chunk_store.json"
 INDEX_META_FILE = VECTOR_DB_DIR / "index_meta.json"
 
 # --- Chunking ------------------------------------------------------------
-CHUNK_SIZE = 500          # characters per chunk
-CHUNK_OVERLAP = 50        # characters shared between neighbouring chunks
+CHUNK_SIZE = 500          # Thai tokens per chunk (measured by PyThaiNLP)
+CHUNK_OVERLAP = 50        # Thai tokens shared between neighbouring chunks
 
 # --- Embeddings ----------------------------------------------------------
 EMBEDDING_MODEL = "BAAI/bge-m3"     # multilingual, works well with Thai

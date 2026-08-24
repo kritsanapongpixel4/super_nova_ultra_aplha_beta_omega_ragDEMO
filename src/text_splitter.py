@@ -69,6 +69,7 @@ def split_records(
             "chunk_id": 0,
             "text": "…",
             "source_id": 3,
+            "source": "filename.pdf",
             "line_start": 12,
             "line_end": 15,
         }
@@ -78,17 +79,16 @@ def split_records(
     chunk_id = 0
 
     for record in records:
-        # Combine question + answer into a single passage for chunking
-        passage = ""
-        if record.get("question"):
-            passage += record["question"].strip()
-        if record.get("answer"):
-            if passage:
-                passage += "\n"
-            passage += record["answer"].strip()
+        # Support both generic "text" records and Q&A records
+        passage = record.get("text", "")
         if not passage:
-            # fallback: try a generic "text" key
-            passage = record.get("text", "")
+            # Fallback: combine question + answer (Q&A format)
+            parts_list: list[str] = []
+            if record.get("question"):
+                parts_list.append(record["question"].strip())
+            if record.get("answer"):
+                parts_list.append(record["answer"].strip())
+            passage = "\n".join(parts_list)
         if not passage:
             continue
 
@@ -99,6 +99,7 @@ def split_records(
                     "chunk_id": chunk_id,
                     "text": part,
                     "source_id": record.get("id"),
+                    "source": record.get("source", ""),
                     "line_start": record.get("line_start"),
                     "line_end": record.get("line_end"),
                 }
