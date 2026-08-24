@@ -29,7 +29,7 @@ def _read_pdf(path: Path) -> str:
         ) from exc
 
     text_parts: list[str] = []
-    with fitz.open(str(path)) as doc:
+    with pymupdf.open(str(path)) as doc:
         for page in doc:
             text_parts.append(page.get_text())
     return "\n".join(text_parts)

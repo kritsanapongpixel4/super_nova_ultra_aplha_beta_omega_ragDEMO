@@ -35,8 +35,13 @@ CHUNK_STORE_FILE = VECTOR_DB_DIR / "chunk_store.json"
 INDEX_META_FILE = VECTOR_DB_DIR / "index_meta.json"
 
 # --- Chunking ------------------------------------------------------------
-CHUNK_SIZE = 500          # Thai tokens per chunk (measured by PyThaiNLP)
-CHUNK_OVERLAP = 50        # Thai tokens shared between neighbouring chunks
+# Tuned for this dataset (Thai university forms + textbooks):
+#   - 73.5% of records < 50 tokens, median = 18 tokens
+#   - P90 = 128 tokens, P95 = 183 tokens, max = 722 tokens
+#   - Small chunk size preserves granularity of short form content
+#   - 20% overlap ratio maintains passage continuity
+CHUNK_SIZE = 150          # Thai tokens per chunk (measured by PyThaiNLP)
+CHUNK_OVERLAP = 30        # Thai tokens shared between neighbouring chunks
 
 # --- Embeddings ----------------------------------------------------------
 EMBEDDING_MODEL = "BAAI/bge-m3"     # multilingual, works well with Thai
