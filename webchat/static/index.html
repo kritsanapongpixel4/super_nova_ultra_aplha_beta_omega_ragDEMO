@@ -6,10 +6,21 @@
 <title>RAG Chat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+
+<!-- Depth is built in layers: horizon, floor grid, lit orbs, grain, vignette. -->
+<div class="scene" aria-hidden="true">
+  <div class="floor"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="orb orb-c"></div>
+  <div class="orb orb-d"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+</div>
 
 <div class="stage">
   <div class="glass">
@@ -25,20 +36,22 @@
       <div id="convList" class="conv-list"></div>
 
       <footer class="sidebar-foot">
-        <div id="statusDot" class="status" title="สถานะการเชื่อมต่อ"></div>
+        <div id="statusDot" class="status"></div>
         <span id="statusText">กำลังเชื่อมต่อ</span>
+        <span class="spacer"></span>
+        <span id="footStat" class="foot-stat"></span>
       </footer>
     </aside>
 
     <section class="chat">
       <header class="chat-head">
-        <div class="avatar lg" id="peerAvatar">R</div>
+        <div class="avatar lg">R</div>
         <div class="peer">
           <div class="peer-name">ผู้ช่วยหลักสูตร วศ.คอม</div>
           <div class="peer-sub" id="peerSub">—</div>
         </div>
         <div class="head-actions">
-          <button class="icon-btn" id="infoBtn" title="ข้อมูลระบบ" aria-label="ข้อมูลระบบ">
+          <button class="icon-btn" id="infoBtn" title="รายละเอียดระบบ" aria-label="รายละเอียดระบบ">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6v.2"/></svg>
           </button>
         </div>
@@ -46,17 +59,25 @@
 
       <div id="thread" class="thread"></div>
 
-      <div id="infoPanel" class="info-panel" hidden></div>
-
       <form id="composer" class="composer" autocomplete="off">
         <div class="field">
           <input id="input" type="text" placeholder="พิมพ์คำถามเกี่ยวกับหลักสูตร รายวิชา CLO หรือ PLO">
         </div>
-        <button id="send" type="submit" class="send" aria-label="ส่ง">
-          <span>Send</span>
-        </button>
+        <button id="send" type="submit" class="send" aria-label="ส่ง"><span>Send</span></button>
       </form>
     </section>
+
+    <!-- Details live in a drawer, not above the composer: the panel used to
+         push the thread and had nowhere to grow. -->
+    <aside class="drawer" id="drawer" hidden>
+      <header class="drawer-head">
+        <h2>รายละเอียดระบบ</h2>
+        <button class="icon-btn" id="closeDrawer" aria-label="ปิด">
+          <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+      <div class="drawer-body" id="drawerBody"></div>
+    </aside>
 
   </div>
 </div>
