@@ -68,6 +68,9 @@ INDEX_META_FILE = VECTOR_DB_DIR / "index_meta.json"
 #   - 20% overlap ratio maintains passage continuity
 CHUNK_SIZE = 150          # Thai tokens per chunk (measured by PyThaiNLP)
 CHUNK_OVERLAP = 30        # Thai tokens shared between neighbouring chunks
+MIN_CHUNK_LETTERS = 10    # drop chunks with fewer Thai/Latin letters than this
+                          # (page numbers, stray bullets, table furniture).
+                          # 20 is too aggressive — it eats course codes.
 
 # --- Embeddings ----------------------------------------------------------
 EMBEDDING_MODEL = "BAAI/bge-m3"     # multilingual, works well with Thai

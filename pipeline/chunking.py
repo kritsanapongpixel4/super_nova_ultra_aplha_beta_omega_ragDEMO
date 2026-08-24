@@ -31,7 +31,12 @@ def main() -> None:
     print(f"📄 โหลด {len(records)} records จาก {config.EXTRACTED_TEXT_FILE.name}")
 
     # 2. Split into chunks using Thai‑aware recursive splitter
-    chunks = split_records(records, config.CHUNK_SIZE, config.CHUNK_OVERLAP)
+    chunks = split_records(
+        records,
+        config.CHUNK_SIZE,
+        config.CHUNK_OVERLAP,
+        min_letters=config.MIN_CHUNK_LETTERS,
+    )
     print(f"✂️  ได้ทั้งหมด {len(chunks)} chunks "
           f"(chunk_size={config.CHUNK_SIZE}, overlap={config.CHUNK_OVERLAP})")
 

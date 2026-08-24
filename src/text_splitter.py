@@ -7,6 +7,8 @@ Thai word boundaries instead of slicing mid‑word.
 
 from __future__ import annotations
 
+import re
+
 from typing import Any
 
 from pythainlp.tokenize import word_tokenize
@@ -15,6 +17,12 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 # ── Thai‑aware separators (highest→lowest priority) ────────────────────
 # The splitter tries each separator in order and falls back to the next
 # one when a chunk is still too large.
+# Thai or Latin letters only: digits and punctuation do not make a chunk
+# worth embedding.  A page number, a lone bullet or a run of form dots
+# all score zero here.
+_LETTER_RE = re.compile(r"[ก-๙A-Za-z]")
+
+
 _THAI_SEPARATORS: list[str] = [
     "\n\n",        # paragraph break
     "\n",          # line break
@@ -56,10 +64,16 @@ def split_text(text: str, chunk_size: int, chunk_overlap: int) -> list[str]:
     return splitter.split_text(text)
 
 
+def is_noise(text: str, min_letters: int) -> bool:
+    """True if *text* has too few real letters to be worth indexing."""
+    return len(_LETTER_RE.findall(text)) < min_letters
+
+
 def split_records(
     records: list[dict[str, Any]],
     chunk_size: int,
     chunk_overlap: int,
+    min_letters: int = 0,
 ) -> list[dict[str, Any]]:
     """Chunk every Q&A record, carrying its metadata onto each chunk.
 
@@ -94,6 +108,8 @@ def split_records(
 
         parts = splitter.split_text(passage)
         for part in parts:
+            if is_noise(part, min_letters):
+                continue
             chunks.append(
                 {
                     "chunk_id": chunk_id,

@@ -11,6 +11,7 @@ This module maps them back before anything downstream sees the text.
 
 from __future__ import annotations
 
+import re
 import unicodedata
 
 from pythainlp.util import normalize as thai_normalize
@@ -80,6 +81,12 @@ _PUA_MAP: dict[int, str] = {**_THAI_MARKS, **_SYMBOLS}
 # outright would fuse the words on either side.
 _PUA_FALLBACK = " "
 
+# Some PDF fonts draw "ำ" as a separate glyph, so extraction returns a space
+# followed by "า" or "ำ" — "ส านัก" for "สำนัก", "ค าสั่ง" for "คำสั่ง".
+# Neither vowel can ever begin a Thai word, so a space in front of one is
+# always this artefact and never a real word boundary.
+_SPLIT_VOWEL_RE = re.compile(r"(?<=[ก-ฮ]) ([าำ])")
+
 
 def has_pua(text: str) -> bool:
     """True if *text* still contains Private Use Area characters."""
@@ -112,6 +119,7 @@ def normalize_text(text: str) -> str:
         return text
     text = fix_pua(text)
     text = unicodedata.normalize("NFC", text)
+    text = _SPLIT_VOWEL_RE.sub("ำ", text)
     lines = text.split("\n")
     return "\n".join(
         thai_normalize(line) if line.strip() else line

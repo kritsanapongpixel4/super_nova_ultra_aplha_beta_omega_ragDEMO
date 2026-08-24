@@ -13,6 +13,7 @@ import logging
 from pathlib import Path
 from typing import Any
 
+from .clo_parser import parse as parse_clo_matrix
 from .thai_normalize import normalize_text
 
 logger = logging.getLogger(__name__)
@@ -141,23 +142,33 @@ def extract_all(paths: list[Path]) -> list[dict[str, Any]]:
             logger.warning("Skipping missing file: %s", path)
             continue
 
+        # A PLO × CLO matrix is a table, not prose — its own parser rebuilds
+        # the relationships from the page geometry.
         try:
-            text = load_text(path)
+            records = parse_clo_matrix(path) if path.suffix.lower() == ".pdf" else None
         except Exception:
-            logger.exception("Failed to read %s — skipping", path.name)
-            continue
+            logger.exception("CLO parser failed on %s — falling back", path.name)
+            records = None
 
-        if not text.strip():
-            logger.info("Empty content in %s — skipping", path.name)
-            continue
+        if records is None:
+            try:
+                text = load_text(path)
+            except Exception:
+                logger.exception("Failed to read %s — skipping", path.name)
+                continue
 
-        records = parse_document(text, source=path.name)
+            if not text.strip():
+                logger.info("Empty content in %s — skipping", path.name)
+                continue
+
+            records = parse_document(text, source=path.name)
+            logger.info("  📄 %s → %d records", path.name, len(records))
+
         # Re-number with globally unique IDs
         for rec in records:
             rec["id"] = global_id
             global_id += 1
 
-        logger.info("  📄 %s → %d records", path.name, len(records))
         all_records.extend(records)
 
     return all_records
