@@ -44,7 +44,7 @@ class EmbeddingModel:
     def dim(self) -> int:
         """Dimensionality of the vectors this model produces."""
         self.load()
-        return self._model.get_sentence_embedding_dimension()
+        return self._model.get_embedding_dimension()
 
     # ── Encoding ────────────────────────────────────────────────────────
 

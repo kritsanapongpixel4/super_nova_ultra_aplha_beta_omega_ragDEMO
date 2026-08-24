@@ -21,4 +21,5 @@ rank-bm25==0.2.2                # keyword index สำหรับ hybrid retrie
 numpy==2.5.1
 
 # --- Generation (src/generator.py) ---------------------------------------
-anthropic>=0.75                 # Claude API — ตั้งค่า ANTHROPIC_API_KEY ก่อนใช้
+google-genai==2.19.0            # Gemini API
+python-dotenv==1.2.3            # อ่าน GEMINI_API_KEY จาก .env

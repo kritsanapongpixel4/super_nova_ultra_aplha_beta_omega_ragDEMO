@@ -15,4 +15,4 @@ class DenseRetriever:
 
     def retrieve(self, query: str, k: int) -> list[dict[str, Any]]:
         """Return the k most similar chunks, ranked best-first."""
-        raise NotImplementedError
+        return self.store.search(self.embedder.encode_query(query), k)

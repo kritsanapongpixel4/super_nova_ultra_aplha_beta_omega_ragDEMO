@@ -106,20 +106,25 @@ def split_records(
         if not passage:
             continue
 
-        parts = splitter.split_text(passage)
+        # A record marked "atomic" is a structured unit that only makes sense
+        # whole — a course and all its CLOs, say.  Splitting it would scatter
+        # one answer across several chunks, where TOP_K can then cut it in
+        # half without anything looking wrong.
+        parts = [passage] if record.get("atomic") else splitter.split_text(passage)
         for part in parts:
             if is_noise(part, min_letters):
                 continue
-            chunks.append(
-                {
-                    "chunk_id": chunk_id,
-                    "text": part,
-                    "source_id": record.get("id"),
-                    "source": record.get("source", ""),
-                    "line_start": record.get("line_start"),
-                    "line_end": record.get("line_end"),
-                }
-            )
+            chunk = {
+                "chunk_id": chunk_id,
+                "text": part,
+                "source_id": record.get("id"),
+                "source": record.get("source", ""),
+                "line_start": record.get("line_start"),
+                "line_end": record.get("line_end"),
+            }
+            if record.get("course_code"):
+                chunk["course_code"] = record["course_code"]
+            chunks.append(chunk)
             chunk_id += 1
 
     return chunks

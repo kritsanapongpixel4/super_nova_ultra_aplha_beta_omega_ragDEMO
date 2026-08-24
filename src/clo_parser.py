@@ -6,11 +6,19 @@ text extraction throws the geometry away, leaving hundreds of chunks whose
 entire content is ``'✓'`` — real information that no embedding model can
 use.
 
-This module rebuilds the relationships from word coordinates and writes
-them as sentences instead::
+This module rebuilds the relationships from word coordinates and emits **one
+record per course** — the course line followed by every one of its CLOs::
 
     รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน สอดคล้องกับ PLO2, PLO4, PLO5, PLO8
-    รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน — CLO 1 สามารถประยุกต์ใช้งาน… สอดคล้องกับ PLO2
+    CLO 1 สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ์และเชลล์สคริปต์ได้ สอดคล้องกับ PLO2
+    CLO 2 …
+
+A course is deliberately one retrievable unit.  A record per CLO instead
+spreads one course over up to 8 chunks, and ``TOP_K=5`` then truncates it
+silently — the generator answers "4 CLOs" for a course that has 5, with
+citations that look right.  Records are marked ``atomic`` so the chunker
+keeps each course whole; they run 55-319 Thai tokens, far inside bge-m3's
+limit.
 
 ``page.get_text("words")`` is used rather than ``page.find_tables()``: the
 table extractor mis-assembles Thai combining marks (``ความสัมพนั ธ์`` instead
@@ -98,24 +106,30 @@ def parse(path: Path) -> list[dict[str, Any]] | None:
         if not doc.page_count or not looks_like_clo_matrix(doc[0]):
             return None
 
-        records: list[dict[str, Any]] = []
-        course = ""          # "04-620-201 ปฏิบัติการควบคุมเวอร์ชัน"
+        # course code -> {"header": str, "clos": [str], "page": int}
+        courses: dict[str, dict[str, Any]] = {}
+        current_code = ""
         pending: dict | None = None   # entry still collecting wrapped lines
 
         def flush() -> None:
+            """Finish the entry being read and file it under its course."""
             nonlocal pending
             if pending is None:
                 return
             label = normalize_text(" ".join(pending["parts"]).strip())
-            plos = pending["plos"]
-            if not label:
-                pending = None
-                return
-            suffix = f" สอดคล้องกับ {', '.join(plos)}" if plos else ""
-            records.append({
-                "text": f"{pending['prefix']}{label}{suffix}",
-                "page": pending["page"],
-            })
+            code = pending["code"]
+            if label and code:
+                plos = pending["plos"]
+                suffix = f" สอดคล้องกับ {', '.join(plos)}" if plos else ""
+                line = f"{pending['prefix']}{label}{suffix}"
+                course = courses.setdefault(
+                    code, {"header": "", "clos": [], "page": pending["page"]}
+                )
+                if pending["is_header"]:
+                    course["header"] = line
+                    course["page"] = pending["page"]
+                else:
+                    course["clos"].append(line)
             pending = None
 
         for page_no, page in enumerate(doc, start=1):
@@ -145,22 +159,25 @@ def parse(path: Path) -> list[dict[str, Any]] | None:
 
                 if course_match:
                     flush()
-                    code, name = course_match.groups()
-                    course = normalize_text(f"{code} {name}".strip())
+                    current_code = course_match.group(1)
                     pending = {
                         "prefix": "รายวิชา ",
                         "parts": [label],
                         "plos": plos,
                         "page": page_no,
+                        "code": current_code,
+                        "is_header": True,
                     }
                 elif clo_match:
                     flush()
                     number, body = clo_match.groups()
                     pending = {
-                        "prefix": f"รายวิชา {course} — CLO {number} ",
+                        "prefix": f"CLO {number} ",
                         "parts": [body],
                         "plos": plos,
                         "page": page_no,
+                        "code": current_code,
+                        "is_header": False,
                     }
                 elif pending is not None:
                     # Wrapped continuation of the previous label.
@@ -172,12 +189,23 @@ def parse(path: Path) -> list[dict[str, Any]] | None:
 
         flush()
 
-    for index, record in enumerate(records):
-        record["id"] = index
-        record["source"] = path.name
-        # Downstream expects line_start/line_end; this table has no lines,
-        # so both carry the page number the relationship was read from.
-        record["line_start"] = record["line_end"] = record.pop("page")
+    records: list[dict[str, Any]] = []
+    for index, (code, course) in enumerate(courses.items()):
+        header = course["header"] or f"รายวิชา {code}"
+        records.append({
+            "id": index,
+            "text": "\n".join([header, *course["clos"]]),
+            "source": path.name,
+            "course_code": code,
+            # One course must stay one chunk, or TOP_K silently truncates it.
+            "atomic": True,
+            # Downstream expects line_start/line_end; this table has no lines,
+            # so both carry the page number the course was read from.
+            "line_start": course["page"],
+            "line_end": course["page"],
+        })
 
-    logger.info("  📊 %s → %d records (ตาราง PLO-CLO)", path.name, len(records))
+    logger.info(
+        "  📊 %s → %d การ์ดวิชา (ตาราง PLO-CLO)", path.name, len(records)
+    )
     return records
