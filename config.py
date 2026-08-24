@@ -79,10 +79,10 @@ EMBEDDING_BATCH_SIZE = 32
 NORMALIZE_EMBEDDINGS = True         # cosine similarity via inner product
 
 # --- Retrieval -----------------------------------------------------------
-TOP_K = 8                 # chunks handed to the generator.  Was 5, which cut
-                          # off the course card for a code-specific question
-                          # at hybrid rank 6 — the answer then came back
-                          # "ไม่พบข้อมูล" for a course that is in the corpus.
+TOP_K = 8                 # chunks handed to the generator.  Raised from 5
+                          # because a "which courses cover X" question needs
+                          # several course cards, and extra chunks cost almost
+                          # nothing against a 1M-token context window.
 CANDIDATE_K = 20          # chunks pulled per retriever before fusion/rerank
 RRF_K = 60                # Reciprocal Rank Fusion smoothing constant.  Do not
                           # lower it: measured 2026-08-24, dropping to 5 or 1
@@ -90,17 +90,21 @@ RRF_K = 60                # Reciprocal Rank Fusion smoothing constant.  Do not
                           # by amplifying BM25's noisy head.
 DENSE_WEIGHT = 0.5        # dense vs BM25 weighting when fusing by score
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
-USE_RERANKER = False      # It works — it lifted the right chunk from rank 6 to
-                          # 2 — but costs ~291s per query on this CPU-only box,
-                          # while TOP_K=8 reaches the same answer in ~0.15s.
-                          # Turn it on for the evaluation comparison
+USE_RERANKER = False      # It works — it lifted the right chunk from hybrid
+                          # rank 6 to 2 — but costs ~291s per query on this
+                          # CPU-only box.  Pinning exact course codes
+                          # (hybrid_retriever.exact_code_matches) fixes the
+                          # same queries outright, in milliseconds.  Turn the
+                          # reranker on for the evaluation comparison
                           # (pipeline/complete_retrieval.py --rerank), not for
                           # interactive use.
 
 # --- Generation ----------------------------------------------------------
 LLM_PROVIDER = "gemini"           # ผู้ให้บริการที่ src/generator.py เรียกใช้
-LLM_MODEL = "gemini-3.6-flash"    # 3.7-flash/flash-latest คืน 503 บ่อย, pro-latest
+LLM_MODEL = "gemini-3.5-flash"    # 3.7-flash/flash-latest คืน 503 บ่อย, pro-latest
                                   # ชน 429 ของ free tier, 2.5.* ปิดรับผู้ใช้ใหม่แล้ว
+                                  # โควตา free tier แยกรายโมเดล: 3.6-flash หมดก่อน
+                                  # 3.5-flash และ 3-flash-preview เป็นตัวสำรอง
                                   # API key อ่านจาก GEMINI_API_KEY ใน .env
 LLM_MAX_TOKENS = 16000
 MEMORY_MAX_TURNS = 6      # conversation turns kept in the prompt

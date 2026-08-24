@@ -20,7 +20,7 @@ _ENV_PATH = Path(__file__).resolve().parents[1] / ".env"
 _ROLE_MAP = {"user": "user", "assistant": "model", "model": "model"}
 
 
-def _load_api_key() -> str:
+def load_api_key() -> str:
     """Read GEMINI_API_KEY from the environment, falling back to .env."""
     key = os.environ.get("GEMINI_API_KEY")
     if not key and _ENV_PATH.exists():
@@ -54,8 +54,25 @@ class Generator:
     def client(self):
         if self._client is None:
             from google import genai
+            from google.genai import types
 
-            self._client = genai.Client(api_key=_load_api_key())
+            # The SDK's default retry policy keeps re-trying a 429 with
+            # growing backoff, so a request that has simply run out of free
+            # quota hangs for minutes instead of failing.  Behind a chat UI
+            # that reads as a frozen page.  Fail fast and let the caller show
+            # the real reason.
+            self._client = genai.Client(
+                api_key=load_api_key(),
+                http_options=types.HttpOptions(
+                    timeout=60_000,  # milliseconds
+                    retry_options=types.HttpRetryOptions(
+                        attempts=2,
+                        initial_delay=1.0,
+                        max_delay=4.0,
+                        http_status_codes=[503, 504],  # transient only, not 429
+                    ),
+                ),
+            )
         return self._client
 
     def generate(

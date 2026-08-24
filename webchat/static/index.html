@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAG Chat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="stage">
+  <div class="glass">
+
+    <aside class="sidebar">
+      <header class="sidebar-head">
+        <h1>Messages</h1>
+        <button id="newChat" class="icon-btn" title="การสนทนาใหม่" aria-label="การสนทนาใหม่">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+      </header>
+
+      <div id="convList" class="conv-list"></div>
+
+      <footer class="sidebar-foot">
+        <div id="statusDot" class="status" title="สถานะการเชื่อมต่อ"></div>
+        <span id="statusText">กำลังเชื่อมต่อ</span>
+      </footer>
+    </aside>
+
+    <section class="chat">
+      <header class="chat-head">
+        <div class="avatar lg" id="peerAvatar">R</div>
+        <div class="peer">
+          <div class="peer-name">ผู้ช่วยหลักสูตร วศ.คอม</div>
+          <div class="peer-sub" id="peerSub">—</div>
+        </div>
+        <div class="head-actions">
+          <button class="icon-btn" id="infoBtn" title="ข้อมูลระบบ" aria-label="ข้อมูลระบบ">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6v.2"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div id="thread" class="thread"></div>
+
+      <div id="infoPanel" class="info-panel" hidden></div>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <div class="field">
+          <input id="input" type="text" placeholder="พิมพ์คำถามเกี่ยวกับหลักสูตร รายวิชา CLO หรือ PLO">
+        </div>
+        <button id="send" type="submit" class="send" aria-label="ส่ง">
+          <span>Send</span>
+        </button>
+      </form>
+    </section>
+
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

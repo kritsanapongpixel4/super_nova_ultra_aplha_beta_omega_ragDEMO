@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # import from proj
 import numpy as np  # noqa: E402
 
 import config  # noqa: E402
+from src.index_meta import build_meta, write_meta  # noqa: E402
 from src.vector_store import VectorStore  # noqa: E402
 
 
@@ -41,8 +42,13 @@ def main() -> None:
     store.build(embeddings, chunks)
     print(f"🔧 สร้าง FAISS index แล้ว (IndexFlatIP, {len(store)} เวกเตอร์, มิติ {store.dim})")
 
-    # 3. Save
+    # 3. Save, plus a fingerprint of the data it was built from — an index
+    #    that quietly drifts out of sync keeps answering, just from the wrong
+    #    documents.
     store.save(config.FAISS_INDEX_FILE, config.CHUNK_STORE_FILE)
+    write_meta(
+        build_meta(config.SOURCE_FILES, len(chunks)), config.INDEX_META_FILE
+    )
     index_mb = config.FAISS_INDEX_FILE.stat().st_size / 1024 / 1024
     store_mb = config.CHUNK_STORE_FILE.stat().st_size / 1024 / 1024
     print(f"💾 {config.FAISS_INDEX_FILE.name} ({index_mb:.1f} MB)")

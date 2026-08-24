@@ -52,10 +52,12 @@ def show(title: str, hits: list[dict], elapsed: float) -> None:
         return
     for hit in hits:
         head = hit["text"].splitlines()[0][:80]
+        # A pinned chunk never went through fusion, so it has no score to show.
+        score = "ปักหมุด" if hit.get("pinned") else f"{hit['score']:.4f}"
         extra = ""
-        if "rerank_score" in hit:
-            extra = f"  (retrieval={hit.get('retrieval_score'):.4f})" if hit.get("retrieval_score") is not None else ""
-        print(f"   {hit['rank']}. {hit['score']:.4f}{extra}  [{hit['source'][:24]}]")
+        if hit.get("retrieval_score") is not None:
+            extra = f"  (retrieval={hit['retrieval_score']:.4f})"
+        print(f"   {hit['rank']}. {score}{extra}  [{hit['source'][:24]}]")
         print(f"      {head}")
 
 
@@ -87,15 +89,31 @@ def main() -> None:
     results["dense"] = DenseRetriever(store, embedder).retrieve(question, config.TOP_K)
     show("dense-only", results["dense"], time.perf_counter() - started)
 
-    # 2. Hybrid: BM25 + dense, fused by RRF.
+    # 2. Hybrid: BM25 + dense, fused by RRF — without the code pin, so the
+    #    next row can show what the pin is actually worth.
     hybrid = HybridRetriever(store, embedder, bm25)
     started = time.perf_counter()
     results["hybrid"] = hybrid.retrieve(
-        question, k=config.TOP_K, candidate_k=config.CANDIDATE_K, rrf_k=config.RRF_K
+        question,
+        k=config.TOP_K,
+        candidate_k=config.CANDIDATE_K,
+        rrf_k=config.RRF_K,
+        pin_exact_codes=False,
     )
     show("hybrid (BM25 + dense + RRF)", results["hybrid"], time.perf_counter() - started)
 
-    # 3. Hybrid then reranked — rerank the fused candidates, not just top-k,
+    # 3. The same, with exact course codes pinned to the front.
+    started = time.perf_counter()
+    results["hybrid_pinned"] = hybrid.retrieve(
+        question, k=config.TOP_K, candidate_k=config.CANDIDATE_K, rrf_k=config.RRF_K
+    )
+    show(
+        "hybrid + ปักหมุดรหัสวิชา",
+        results["hybrid_pinned"],
+        time.perf_counter() - started,
+    )
+
+    # 4. Hybrid then reranked — rerank the fused candidates, not just top-k,
     #    or the cross-encoder never sees anything the fusion ranked low.
     if use_reranker:
         started = time.perf_counter()
@@ -104,6 +122,7 @@ def main() -> None:
             k=config.CANDIDATE_K,
             candidate_k=config.CANDIDATE_K,
             rrf_k=config.RRF_K,
+            pin_exact_codes=False,
         )
         reranker = CrossEncoderReranker(config.RERANKER_MODEL)
         results["hybrid_rerank"] = reranker.rerank(question, candidates, config.TOP_K)
