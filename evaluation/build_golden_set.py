@@ -85,6 +85,9 @@ _NOT_COVERED = re.compile(
 # corpus does answer this one, so it is not a test of refusing to answer.
 _CROSS_REFERENCE = re.compile(r"REG-\d+")
 
+# Written by evaluation/paraphrase_faq.py — see build_faq() for why.
+_PARAPHRASE_FILE = config.DATA_DIR / "faq_paraphrases.json"
+
 
 # "รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน สอดคล้องกับ PLO2, ..."
 _COURSE_LINE = re.compile(
@@ -141,7 +144,20 @@ def build_faq(records: list[dict], chunks: list[dict]) -> list[dict]:
     short answer like "500 บาท" turns up in several places.  Chunks overlap by
     ``CHUNK_OVERLAP`` tokens, so a pair sitting on a boundary lands in two
     chunks and both are correct — hence a list, and hence hit@k.
+
+    That search is also why the *asked* question has to come from
+    ``data/faq_paraphrases.json`` rather than from the document.  Locating the
+    chunk by its text guarantees the text is in the chunk, so using it as the
+    query measures string matching: ``tfidf-char`` scored 94.5% on these
+    against dense's 63.6%, and it is the weakest retriever in the set.  The
+    document's wording still finds the chunk; the paraphrase is what gets
+    asked.  Without the file the pairs are skipped — a contaminated number is
+    worse than a missing one.
     """
+    paraphrases: dict[str, str] = {}
+    if _PARAPHRASE_FILE.exists():
+        with open(_PARAPHRASE_FILE, "r", encoding="utf-8") as f:
+            paraphrases = json.load(f)
     by_source: dict[str, list[tuple[dict, str]]] = {}
     for chunk in chunks:
         by_source.setdefault(chunk.get("source", ""), []).append(
@@ -150,6 +166,7 @@ def build_faq(records: list[dict], chunks: list[dict]) -> list[dict]:
 
     entries: list[dict] = []
     unlocated: list[str] = []
+    unparaphrased: list[str] = []
 
     for record in records:
         source = record.get("source", "")
@@ -165,20 +182,30 @@ def build_faq(records: list[dict], chunks: list[dict]) -> list[dict]:
                 # question no retriever could ever get right.
                 unlocated.append(f"{source}: {question[:40]}")
                 continue
+            asked = paraphrases.get(question)
+            if not asked:
+                unparaphrased.append(question)
+                continue
             entries.append(
                 {
-                    "question": question,
+                    "question": asked,
                     "relevant_chunk_ids": [str(c["chunk_id"]) for c in found],
                     "relevant_chunk_keys": [chunk_key(c) for c in found],
                     "category": "faq",
                     "phrasing": "faq",
                     "source": source,
+                    # Kept so the pair can be traced back to the document, and
+                    # so a rebuild finds the same chunk after re-chunking.
+                    "document_question": question,
                     "reference_answer": answer,
                 }
             )
 
     if unlocated:
         print(f"⚠️  หา chunk ของ {len(unlocated)} คำถาม FAQ ไม่เจอ: {unlocated[:3]}")
+    if unparaphrased:
+        print(f"⚠️  ข้าม {len(unparaphrased)} คำถาม FAQ ที่ยังไม่มีคำถามเขียนใหม่ — "
+              "รัน python evaluation/paraphrase_faq.py")
     return entries
 
 

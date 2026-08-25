@@ -2772,3 +2772,584 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   ]
 }
 ```
+
+## ✅ 2026-08-26 00:25 — benchmark sparse retrievers (dense=e5-base)
+
+- **ทดลองอะไร:** เทียบ 6 วิธี sparse นอกเหนือจาก BM25 ทั้งแบบเดี่ยวและ fuse กับ dense
+- **ทำอย่างไร:** golden set 183 คำถาม, dense index จาก e5-base, RRF k=60, candidate_k=20
+- **ผลลัพธ์:** sparse เดี่ยวดีสุด: bm25 Hit@1 47.5%; hybrid ดีสุด: dense+dirichlet-lm Hit@1 88.5%
+
+```json
+{
+  "methods": [
+    "bm25",
+    "bm25l",
+    "bm25plus",
+    "tfidf-word",
+    "tfidf-char",
+    "dirichlet-lm"
+  ],
+  "build_seconds": {
+    "bm25": 0.76,
+    "bm25l": 0.54,
+    "bm25plus": 0.56,
+    "tfidf-word": 0.61,
+    "tfidf-char": 1.09,
+    "dirichlet-lm": 0.54
+  },
+  "sparse_recall_at_1": {
+    "bm25": 0.4754,
+    "bm25l": 0.3989,
+    "bm25plus": 0.4754,
+    "tfidf-word": 0.3388,
+    "tfidf-char": 0.306,
+    "dirichlet-lm": 0.4317
+  },
+  "hybrid_recall_at_1": {
+    "bm25": 0.8361,
+    "bm25l": 0.6175,
+    "bm25plus": 0.8415,
+    "tfidf-word": 0.7869,
+    "tfidf-char": 0.6776,
+    "dirichlet-lm": 0.8852
+  },
+  "hybrid_pinned_recall_at_1": {
+    "bm25": 0.8962,
+    "bm25l": 0.8579,
+    "bm25plus": 0.9016,
+    "tfidf-word": 0.8743,
+    "tfidf-char": 0.8743,
+    "dirichlet-lm": 0.9016
+  }
+}
+```
+
+## ✅ 2026-08-26 00:30 — benchmark sparse retrievers (dense=e5-base)
+
+- **ทดลองอะไร:** เทียบ 6 วิธี sparse นอกเหนือจาก BM25 ทั้งแบบเดี่ยวและ fuse กับ dense
+- **ทำอย่างไร:** golden set 183 คำถาม, dense index จาก e5-base, RRF k=60, candidate_k=20
+- **ผลลัพธ์:** sparse เดี่ยวดีสุด: bm25 Hit@1 33.3%; hybrid ดีสุด: dense+dirichlet-lm Hit@1 82.0%
+
+```json
+{
+  "methods": [
+    "bm25",
+    "bm25l",
+    "bm25plus",
+    "tfidf-word",
+    "tfidf-char",
+    "dirichlet-lm"
+  ],
+  "build_seconds": {
+    "bm25": 1.15,
+    "bm25l": 0.89,
+    "bm25plus": 0.86,
+    "tfidf-word": 0.87,
+    "tfidf-char": 1.71,
+    "dirichlet-lm": 0.82
+  },
+  "sparse_recall_at_1": {
+    "bm25": 0.3333,
+    "bm25l": 0.3169,
+    "bm25plus": 0.3333,
+    "tfidf-word": 0.1858,
+    "tfidf-char": 0.1366,
+    "dirichlet-lm": 0.2896
+  },
+  "hybrid_recall_at_1": {
+    "bm25": 0.7814,
+    "bm25l": 0.5464,
+    "bm25plus": 0.7869,
+    "tfidf-word": 0.7158,
+    "tfidf-char": 0.5683,
+    "dirichlet-lm": 0.8197
+  },
+  "hybrid_pinned_recall_at_1": {
+    "bm25": 0.8415,
+    "bm25l": 0.7869,
+    "bm25plus": 0.847,
+    "tfidf-word": 0.8033,
+    "tfidf-char": 0.765,
+    "dirichlet-lm": 0.8361
+  }
+}
+```
+
+## ✅ 2026-08-26 00:31 — benchmark embedding: e5-base
+
+- **ทดลองอะไร:** วัดความเร็วและคุณภาพของ intfloat/multilingual-e5-base (278M, มิติ 768)
+- **ทำอย่างไร:** เข้ารหัส 2202 chunks บน cuda, batch=32, max_seq=512; ประเมิน dense-only ด้วย golden set 183 คำถาม
+- **ผลลัพธ์:** โหลด 8.72s, เข้ารหัส 9.28s (237.34 chunks/s), ต่อคำถาม p50 13.45ms, Hit@1 65.0%, MRR 0.735
+
+```json
+{
+  "model_key": "e5-base",
+  "hf_id": "intfloat/multilingual-e5-base",
+  "params_m": 278,
+  "dim": 768,
+  "max_seq_length": 512,
+  "device": "cuda",
+  "batch_size": 32,
+  "n_chunks": 2202,
+  "n_queries": 183,
+  "corpus": {
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
+    "key_version": 1
+  },
+  "golden": {
+    "n_queries": 183,
+    "categories": {
+      "clo": 128,
+      "faq": 55
+    },
+    "questions_sha1": "f6ee0c6f12db5a1b"
+  },
+  "load_seconds": 8.72,
+  "encode_seconds": 9.28,
+  "chunks_per_second": 237.34,
+  "index_seconds": 0.033,
+  "query_ms_mean": 15.2,
+  "query_ms_p50": 13.45,
+  "query_ms_p95": 24.22,
+  "embeddings_mb": 6.5,
+  "rss_before_gb": 0.5,
+  "rss_after_gb": 1.74,
+  "measured_at": "2026-08-26T00:31:37",
+  "quality": {
+    "all": {
+      "mrr": 0.7351916905195595,
+      "hit@1": 0.6502732240437158,
+      "recall@1": 0.6420765027322405,
+      "ndcg@1": 0.6502732240437158,
+      "hit@3": 0.7923497267759563,
+      "recall@3": 0.7814207650273224,
+      "ndcg@3": 0.7253600613760788,
+      "hit@5": 0.8469945355191257,
+      "recall@5": 0.8415300546448088,
+      "ndcg@5": 0.7515402427513062,
+      "hit@10": 0.9234972677595629,
+      "recall@10": 0.9207650273224044,
+      "ndcg@10": 0.7768960640382252
+    },
+    "by_name": {
+      "mrr": 0.9609375,
+      "hit@1": 0.921875,
+      "recall@1": 0.921875,
+      "ndcg@1": 0.921875,
+      "hit@3": 1.0,
+      "recall@3": 1.0,
+      "ndcg@3": 0.9711663869977701,
+      "hit@5": 1.0,
+      "recall@5": 1.0,
+      "ndcg@5": 0.9711663869977701,
+      "hit@10": 1.0,
+      "recall@10": 1.0,
+      "ndcg@10": 0.9711663869977701
+    },
+    "by_code": {
+      "mrr": 0.645765128968254,
+      "hit@1": 0.53125,
+      "recall@1": 0.53125,
+      "ndcg@1": 0.53125,
+      "hit@3": 0.71875,
+      "recall@3": 0.71875,
+      "ndcg@3": 0.6393204417968782,
+      "hit@5": 0.78125,
+      "recall@5": 0.78125,
+      "ndcg@5": 0.6662377266764652,
+      "hit@10": 0.921875,
+      "recall@10": 0.921875,
+      "ndcg@10": 0.711101820210939
+    },
+    "faq": {
+      "mrr": 0.5765656565656566,
+      "hit@1": 0.4727272727272727,
+      "recall@1": 0.44545454545454544,
+      "ndcg@1": 0.4727272727272727,
+      "hit@3": 0.6363636363636364,
+      "recall@3": 0.6,
+      "ndcg@3": 0.5394497125266352,
+      "hit@5": 0.7454545454545455,
+      "recall@5": 0.7272727272727273,
+      "ndcg@5": 0.5952363845152359,
+      "hit@10": 0.8363636363636363,
+      "recall@10": 0.8272727272727273,
+      "ndcg@10": 0.6273966265025058
+    }
+  }
+}
+```
+
+## ✅ 2026-08-26 00:32 — benchmark embedding: bge-m3
+
+- **ทดลองอะไร:** วัดความเร็วและคุณภาพของ BAAI/bge-m3 (568M, มิติ 1024)
+- **ทำอย่างไร:** เข้ารหัส 2202 chunks บน cuda, batch=32, max_seq=768; ประเมิน dense-only ด้วย golden set 183 คำถาม
+- **ผลลัพธ์:** โหลด 16.87s, เข้ารหัส 27.82s (79.14 chunks/s), ต่อคำถาม p50 17.37ms, Hit@1 58.5%, MRR 0.674
+
+```json
+{
+  "model_key": "bge-m3",
+  "hf_id": "BAAI/bge-m3",
+  "params_m": 568,
+  "dim": 1024,
+  "max_seq_length": 768,
+  "device": "cuda",
+  "batch_size": 32,
+  "n_chunks": 2202,
+  "n_queries": 183,
+  "corpus": {
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
+    "key_version": 1
+  },
+  "golden": {
+    "n_queries": 183,
+    "categories": {
+      "clo": 128,
+      "faq": 55
+    },
+    "questions_sha1": "f6ee0c6f12db5a1b"
+  },
+  "load_seconds": 16.87,
+  "encode_seconds": 27.82,
+  "chunks_per_second": 79.14,
+  "index_seconds": 0.081,
+  "query_ms_mean": 19.76,
+  "query_ms_p50": 17.37,
+  "query_ms_p95": 32.35,
+  "embeddings_mb": 8.6,
+  "rss_before_gb": 0.5,
+  "rss_after_gb": 1.71,
+  "measured_at": "2026-08-26T00:32:33",
+  "quality": {
+    "all": {
+      "mrr": 0.6744296990198629,
+      "hit@1": 0.5846994535519126,
+      "recall@1": 0.5737704918032787,
+      "ndcg@1": 0.5846994535519126,
+      "hit@3": 0.73224043715847,
+      "recall@3": 0.726775956284153,
+      "ndcg@3": 0.6631043823557817,
+      "hit@5": 0.8032786885245902,
+      "recall@5": 0.8005464480874317,
+      "ndcg@5": 0.6940907766167768,
+      "hit@10": 0.8961748633879781,
+      "recall@10": 0.8961748633879781,
+      "ndcg@10": 0.7255682602317485
+    },
+    "by_name": {
+      "mrr": 0.9791666666666666,
+      "hit@1": 0.96875,
+      "recall@1": 0.96875,
+      "ndcg@1": 0.96875,
+      "hit@3": 0.984375,
+      "recall@3": 0.984375,
+      "ndcg@3": 0.978608277399554,
+      "hit@5": 0.984375,
+      "recall@5": 0.984375,
+      "ndcg@5": 0.978608277399554,
+      "hit@10": 1.0,
+      "recall@10": 1.0,
+      "ndcg@10": 0.9841740146981168
+    },
+    "by_code": {
+      "mrr": 0.43408978174603174,
+      "hit@1": 0.296875,
+      "recall@1": 0.296875,
+      "ndcg@1": 0.296875,
+      "hit@3": 0.515625,
+      "recall@3": 0.515625,
+      "ndcg@3": 0.4205704417968782,
+      "hit@5": 0.640625,
+      "recall@5": 0.640625,
+      "ndcg@5": 0.47029653491490997,
+      "hit@10": 0.796875,
+      "recall@10": 0.796875,
+      "ndcg@10": 0.5194517213430734
+    },
+    "faq": {
+      "mrr": 0.5994949494949495,
+      "hit@1": 0.4727272727272727,
+      "recall@1": 0.43636363636363634,
+      "ndcg@1": 0.4727272727272727,
+      "hit@3": 0.6909090909090909,
+      "recall@3": 0.6727272727272727,
+      "ndcg@3": 0.5781938898642981,
+      "hit@5": 0.7818181818181819,
+      "recall@5": 0.7727272727272727,
+      "ndcg@5": 0.6234309842317172,
+      "hit@10": 0.8909090909090909,
+      "recall@10": 0.8909090909090909,
+      "ndcg@10": 0.6644899002867959
+    }
+  }
+}
+```
+
+## ✅ 2026-08-26 00:33 — benchmark embedding: pixie-rune
+
+- **ทดลองอะไร:** วัดความเร็วและคุณภาพของ telepix/PIXIE-Rune-v1.0 (568M, มิติ 1024)
+- **ทำอย่างไร:** เข้ารหัส 2202 chunks บน cuda, batch=32, max_seq=768; ประเมิน dense-only ด้วย golden set 183 คำถาม
+- **ผลลัพธ์:** โหลด 9.51s, เข้ารหัส 27.86s (79.05 chunks/s), ต่อคำถาม p50 22.36ms, Hit@1 58.5%, MRR 0.686
+
+```json
+{
+  "model_key": "pixie-rune",
+  "hf_id": "telepix/PIXIE-Rune-v1.0",
+  "params_m": 568,
+  "dim": 1024,
+  "max_seq_length": 768,
+  "device": "cuda",
+  "batch_size": 32,
+  "n_chunks": 2202,
+  "n_queries": 183,
+  "corpus": {
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
+    "key_version": 1
+  },
+  "golden": {
+    "n_queries": 183,
+    "categories": {
+      "clo": 128,
+      "faq": 55
+    },
+    "questions_sha1": "f6ee0c6f12db5a1b"
+  },
+  "load_seconds": 9.51,
+  "encode_seconds": 27.86,
+  "chunks_per_second": 79.05,
+  "index_seconds": 0.04,
+  "query_ms_mean": 23.78,
+  "query_ms_p50": 22.36,
+  "query_ms_p95": 35.26,
+  "embeddings_mb": 8.6,
+  "rss_before_gb": 0.5,
+  "rss_after_gb": 1.7,
+  "measured_at": "2026-08-26T00:33:21",
+  "quality": {
+    "all": {
+      "mrr": 0.6859810044236273,
+      "hit@1": 0.5846994535519126,
+      "recall@1": 0.5737704918032787,
+      "ndcg@1": 0.5846994535519126,
+      "hit@3": 0.7377049180327869,
+      "recall@3": 0.7349726775956285,
+      "ndcg@3": 0.675820667036222,
+      "hit@5": 0.8142076502732241,
+      "recall@5": 0.8087431693989071,
+      "ndcg@5": 0.7071391765533613,
+      "hit@10": 0.8961748633879781,
+      "recall@10": 0.8934426229508197,
+      "ndcg@10": 0.7349484124412075
+    },
+    "by_name": {
+      "mrr": 0.953125,
+      "hit@1": 0.90625,
+      "recall@1": 0.90625,
+      "ndcg@1": 0.90625,
+      "hit@3": 1.0,
+      "recall@3": 1.0,
+      "ndcg@3": 0.9653996643973242,
+      "hit@5": 1.0,
+      "recall@5": 1.0,
+      "ndcg@5": 0.9653996643973242,
+      "hit@10": 1.0,
+      "recall@10": 1.0,
+      "ndcg@10": 0.9653996643973242
+    },
+    "by_code": {
+      "mrr": 0.453515625,
+      "hit@1": 0.34375,
+      "recall@1": 0.34375,
+      "ndcg@1": 0.34375,
+      "hit@3": 0.46875,
+      "recall@3": 0.46875,
+      "ndcg@3": 0.4205704417968782,
+      "hit@5": 0.59375,
+      "recall@5": 0.59375,
+      "ndcg@5": 0.4730355193423382,
+      "hit@10": 0.75,
+      "recall@10": 0.75,
+      "ndcg@10": 0.5229234684850981
+    },
+    "faq": {
+      "mrr": 0.6456277056277057,
+      "hit@1": 0.4909090909090909,
+      "recall@1": 0.45454545454545453,
+      "ndcg@1": 0.4909090909090909,
+      "hit@3": 0.7454545454545455,
+      "recall@3": 0.7363636363636363,
+      "ndcg@3": 0.6358744594763579,
+      "hit@5": 0.8545454545454545,
+      "recall@5": 0.8363636363636363,
+      "ndcg@5": 0.6790294099986679,
+      "hit@10": 0.9454545454545454,
+      "recall@10": 0.9363636363636364,
+      "ndcg@10": 0.7135068904048354
+    }
+  }
+}
+```
+
+## ✅ 2026-08-26 00:34 — benchmark embedding: octen-0.6b
+
+- **ทดลองอะไร:** วัดความเร็วและคุณภาพของ bflhc/Octen-Embedding-0.6B (596M, มิติ 1024)
+- **ทำอย่างไร:** เข้ารหัส 2202 chunks บน cuda, batch=32, max_seq=768; ประเมิน dense-only ด้วย golden set 183 คำถาม
+- **ผลลัพธ์:** โหลด 16.55s, เข้ารหัส 33.62s (65.5 chunks/s), ต่อคำถาม p50 53.04ms, Hit@1 46.4%, MRR 0.531
+
+```json
+{
+  "model_key": "octen-0.6b",
+  "hf_id": "bflhc/Octen-Embedding-0.6B",
+  "params_m": 596,
+  "dim": 1024,
+  "max_seq_length": 768,
+  "device": "cuda",
+  "batch_size": 32,
+  "n_chunks": 2202,
+  "n_queries": 183,
+  "corpus": {
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
+    "key_version": 1
+  },
+  "golden": {
+    "n_queries": 183,
+    "categories": {
+      "clo": 128,
+      "faq": 55
+    },
+    "questions_sha1": "f6ee0c6f12db5a1b"
+  },
+  "load_seconds": 16.55,
+  "encode_seconds": 33.62,
+  "chunks_per_second": 65.5,
+  "index_seconds": 0.049,
+  "query_ms_mean": 56.92,
+  "query_ms_p50": 53.04,
+  "query_ms_p95": 89.67,
+  "embeddings_mb": 8.6,
+  "rss_before_gb": 0.5,
+  "rss_after_gb": 1.82,
+  "measured_at": "2026-08-26T00:34:29",
+  "quality": {
+    "all": {
+      "mrr": 0.5306487986815855,
+      "hit@1": 0.4644808743169399,
+      "recall@1": 0.453551912568306,
+      "ndcg@1": 0.4644808743169399,
+      "hit@3": 0.5737704918032787,
+      "recall@3": 0.5655737704918032,
+      "ndcg@3": 0.5202799768527692,
+      "hit@5": 0.6010928961748634,
+      "recall@5": 0.5956284153005464,
+      "ndcg@5": 0.5334895179979381,
+      "hit@10": 0.7049180327868853,
+      "recall@10": 0.7021857923497268,
+      "ndcg@10": 0.568563668095506
+    },
+    "by_name": {
+      "mrr": 0.9423363095238095,
+      "hit@1": 0.90625,
+      "recall@1": 0.90625,
+      "ndcg@1": 0.90625,
+      "hit@3": 0.984375,
+      "recall@3": 0.984375,
+      "ndcg@3": 0.9514498321986621,
+      "hit@5": 0.984375,
+      "recall@5": 0.984375,
+      "ndcg@5": 0.9514498321986621,
+      "hit@10": 1.0,
+      "recall@10": 1.0,
+      "ndcg@10": 0.9566581655319955
+    },
+    "by_code": {
+      "mrr": 0.09595114087301587,
+      "hit@1": 0.046875,
+      "recall@1": 0.046875,
+      "ndcg@1": 0.046875,
+      "hit@3": 0.09375,
+      "recall@3": 0.09375,
+      "ndcg@3": 0.07235827739955403,
+      "hit@5": 0.125,
+      "recall@5": 0.125,
+      "ndcg@5": 0.0851321737324905,
+      "hit@10": 0.3125,
+      "recall@10": 0.3125,
+      "ndcg@10": 0.1445721678796184
+    },
+    "faq": {
+      "mrr": 0.5574242424242424,
+      "hit@1": 0.43636363636363634,
+      "recall@1": 0.4,
+      "ndcg@1": 0.43636363636363634,
+      "hit@3": 0.6545454545454545,
+      "recall@3": 0.6272727272727273,
+      "ndcg@3": 0.5397730318140169,
+      "hit@5": 0.7090909090909091,
+      "recall@5": 0.6909090909090909,
+      "ndcg@5": 0.5688606075277982,
+      "hit@10": 0.8181818181818182,
+      "recall@10": 0.8090909090909091,
+      "ndcg@10": 0.6103347258751693
+    }
+  }
+}
+```
+
+## ❌ 2026-08-26 00:37 — บั๊ก: คำถาม FAQ ในชุดทดสอบลอกมาจากคลัง วัดการจับคู่ตัวอักษรแทนการค้นคืน
+
+- **ทดลองอะไร:** ตรวจว่าคำถาม FAQ ที่เพิ่งเพิ่มเข้า golden set วัดสิ่งที่ตั้งใจจะวัดจริงหรือไม่
+- **ทำอย่างไร:** ให้ sparse retriever ที่ไม่เข้าใจความหมายเลยลองทำข้อสอบชุดนี้ ถ้าตัวที่โง่ที่สุดทำได้ดีเกินเหตุ แปลว่าข้อสอบมีปัญหา
+- **ผลลัพธ์:** tfidf-char ซึ่งได้ CLO-ชื่อแค่ 6.2% กลับได้ FAQ 94.5% ขณะที่ dense ได้ 63.6% — ปนเปื้อน 100% โดยโครงสร้าง เพราะ build_faq หา chunk เฉลยด้วยการค้นข้อความคำถามในนั้น คำถามจึงอยู่ในเฉลยของตัวเองแบบคำต่อคำเสมอ แก้ด้วย paraphrase_faq.py เขียนคำถามใหม่เป็นภาษานักศึกษา (คำซ้ำเหลือ 48%) เก็บแยกใน data/faq_paraphrases.json เพื่อให้ build_golden_set ยังทำงาน offline
+
+```json
+{
+  "root_cause": "ใช้ข้อความเดียวกันทั้งระบุเฉลยและเป็นคำถาม",
+  "detection": "ให้ retriever ที่โง่ที่สุดลองทำ ถ้าชนะแปลว่าวัดผิดเรื่อง",
+  "faq_hit1_before": {
+    "tfidf-char": 0.945,
+    "bm25": 0.945,
+    "dirichlet-lm": 0.945,
+    "dense": 0.636
+  },
+  "faq_hit1_after": {
+    "tfidf-char": 0.382,
+    "bm25": 0.473,
+    "dirichlet-lm": 0.473,
+    "dense": 0.473
+  },
+  "corrected_claim": "เคยสรุปว่า pixie-rune ชนะ FAQ 12.8 จุด — หลังแก้เหลือ 1.8 จุด ซึ่งเป็น noise"
+}
+```
+
+## ✅ 2026-08-26 00:37 — วัด embedding ใหม่บนชุดคำถามที่ไม่ปนเปื้อน
+
+- **ทดลองอะไร:** วัด 4 โมเดลซ้ำหลังเขียนคำถาม FAQ ใหม่ ตัวเลขชุดก่อนใช้ไม่ได้แล้วเพราะ questions_sha1 เปลี่ยน
+- **ทำอย่างไร:** dense-only, corpus 30cffcd2a35ff359, golden f6ee0c6f12db5a1b, 183 คำถาม, RTX 5050
+- **ผลลัพธ์:** e5-base ยังชนะภาพรวม 65.0% แต่หมวด FAQ ทุกโมเดลตกมาอยู่ 43.6-49.1% ห่างกันแค่ 5.5 จุด เทียบกับ CLO-ชื่อวิชาที่ทำได้ 90-97% ทุกตัว — งานจริงยากกว่าที่ตัวเลขเดิมบอกมาก
+
+```json
+{
+  "hit_at_1": {
+    "e5-base": 0.65,
+    "pixie-rune": 0.585,
+    "bge-m3": 0.585,
+    "octen-0.6b": 0.464
+  },
+  "faq_hit_at_1": {
+    "pixie-rune": 0.491,
+    "e5-base": 0.473,
+    "bge-m3": 0.473,
+    "octen-0.6b": 0.436
+  },
+  "corpus": "30cffcd2a35ff359",
+  "golden": "f6ee0c6f12db5a1b"
+}
+```
