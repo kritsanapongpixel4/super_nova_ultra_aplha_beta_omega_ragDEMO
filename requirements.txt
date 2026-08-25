@@ -17,9 +17,24 @@ huggingface-hub==1.24.0
 
 # --- Vector store & retrieval --------------------------------------------
 faiss-cpu==1.14.3               # dense index (IndexFlatIP)
-rank-bm25==0.2.2                # keyword index สำหรับ hybrid retrieval
+rank-bm25==0.2.2                # BM25Okapi/BM25L/BM25Plus (src/sparse_retrievers.py)
+scikit-learn==1.9.0             # TF-IDF สำหรับ sparse retriever ทางเลือก
 numpy==2.5.1
 
 # --- Generation (src/generator.py) ---------------------------------------
 google-genai==2.19.0            # Gemini API
 python-dotenv==1.2.3            # อ่าน GEMINI_API_KEY จาก .env
+
+# --- Benchmarking (ไม่บังคับ) ---------------------------------------------
+psutil==7.2.2                   # วัด RAM ที่โมเดลใช้จริง ถ้าไม่มีจะข้ามช่องนั้นไป
+
+# ── ใช้ GPU ────────────────────────────────────────────────────────────────
+# ไฟล์นี้ติดตั้ง torch รุ่น CPU  เครื่องที่มีการ์ด NVIDIA ให้แยก venv ต่างหาก
+# เพราะ torch รุ่น CUDA ล่าสุดบน index ของ pytorch คือ 2.11 ซึ่งต่ำกว่าที่ปักหมุดไว้:
+#
+#   python -m venv .venv-gpu
+#   .venv-gpu/Scripts/pip install torch==2.11.0+cu128 #       --index-url https://download.pytorch.org/whl/cu128
+#   .venv-gpu/Scripts/pip install -r requirements.txt
+#
+# วัดเมื่อ 25 ส.ค. 2026 บน RTX 5050 Laptop: เข้ารหัส 3,128 chunks ด้วย bge-m3
+# ใช้ 58 วินาที เทียบกับที่ประเมินไว้ราว 9 นาทีบน CPU

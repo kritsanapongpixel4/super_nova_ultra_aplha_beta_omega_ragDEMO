@@ -206,6 +206,11 @@ class RunLogger:
         self.problems.append(entry)
         logging.getLogger("run").warning("[%s] %s", kind, message)
 
+    @property
+    def warnings(self) -> int:
+        """Warnings logged so far — a run with none is the only clean one."""
+        return self._counter.warnings
+
     def step(self, title: str) -> "_Step":
         """Time one named step: ``with run.step("chunking"): ...``."""
         return _Step(self, title)

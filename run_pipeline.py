@@ -161,10 +161,16 @@ def main() -> None:
         for header, seconds in timings.items():
             print(f"  {header:34s} {seconds:8.1f}s")
         print(f"  {'รวม':34s} {total:8.1f}s")
+        # "No failed steps" and "nothing went wrong" are different claims.  A
+        # run where two PDFs yielded almost no text finishes every step and is
+        # still not clean; saying so is the entire point of keeping the logs.
         if failed:
             print(f"\n⚠️  ขั้นที่ล้มเหลว: {failed}  →  logs/errors/{run.error_path.name}")
+        elif run.warnings:
+            print(f"\n✅ ครบทุกขั้น แต่มีคำเตือน {run.warnings} รายการ "
+                  f"→  logs/errors/{run.error_path.name}")
         else:
-            print("\n🎉 ครบทุกขั้นโดยไม่มีข้อผิดพลาด")
+            print("\n🎉 ครบทุกขั้นโดยไม่มีคำเตือนใด ๆ")
 
     journal.append(
         f"pipeline steps {args.steps}: {spec.key}",

@@ -68,15 +68,30 @@ class RAGPipeline:
             config.EMBEDDING_MODEL, normalize=config.NORMALIZE_EMBEDDINGS
         )
 
-        # BM25 is cheap to rebuild (~1.5s for 1.8k chunks) but must describe the
-        # same chunks as the FAISS index, or fusion mixes two different corpora.
-        bm25 = BM25Index()
-        if config.BM25_INDEX_FILE.exists():
-            bm25 = BM25Index.load(config.BM25_INDEX_FILE)
-        if len(bm25) != len(store.chunks):
+        # The sparse half.  Cheap to rebuild (~2s for 3k chunks) but it must
+        # describe the same chunks as the FAISS index, or fusion mixes two
+        # different corpora.
+        #
+        # config.SPARSE_METHOD picks which one; "bm25" keeps the original
+        # BM25Index and its own cache file, so the default path is unchanged.
+        # The alternatives measured in benchmarks/results/retriever-comparison.md
+        # live in src/sparse_retrievers.py and cache beside it.
+        if config.SPARSE_METHOD == "bm25":
             bm25 = BM25Index()
-            bm25.build(store.chunks)
-            bm25.save(config.BM25_INDEX_FILE)
+            if config.BM25_INDEX_FILE.exists():
+                bm25 = BM25Index.load(config.BM25_INDEX_FILE)
+            if len(bm25) != len(store.chunks):
+                bm25 = BM25Index()
+                bm25.build(store.chunks)
+                bm25.save(config.BM25_INDEX_FILE)
+        else:
+            from . import sparse_retrievers
+
+            bm25 = sparse_retrievers.load_or_build(
+                config.SPARSE_METHOD,
+                store.chunks,
+                config.SPARSE_INDEX_DIR / f"{config.SPARSE_METHOD}.pkl",
+            )
 
         return cls(
             retriever=HybridRetriever(store, embedder, bm25),

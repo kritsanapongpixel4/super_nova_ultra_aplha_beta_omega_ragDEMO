@@ -782,3 +782,280 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   }
 }
 ```
+
+## ✅ 2026-08-25 19:24 — benchmark LLM API latency
+
+- **ทดลองอะไร:** วัดเวลาตอบกลับของโมเดลภาษาแต่ละตัว (TTFT, เวลารวม, tokens/วินาที)
+- **ทำอย่างไร:** 3 คำถามจริง × 2 ครั้ง/โมเดล, prompt สร้างจาก hybrid retrieval บน index ของ bge-m3, เรียกแบบ streaming ไม่มี retry
+- **ผลลัพธ์:** gemini-3.5-flash: TTFT 3.862s รวม 4.133s, gemini-3.6-flash: TTFT 30.981s รวม 31.334s, gemini-3.7-flash: TTFT 79.455s รวม 79.456s, gemini-3-flash-preview: TTFT 7.258s รวม 7.591s, gemini-3.1-flash-lite: TTFT 1.11s รวม 1.214s
+
+```json
+{
+  "providers_with_keys": {
+    "gemini": true,
+    "openai": false,
+    "anthropic": false
+  },
+  "summary": {
+    "gemini-3.5-flash": {
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 3.862,
+        "min": 2.459,
+        "max": 6.301
+      },
+      "total_s": {
+        "mean": 4.133,
+        "min": 2.46,
+        "max": 6.567
+      },
+      "tokens_per_s": {
+        "mean": 32.083,
+        "min": 11.9,
+        "max": 65.0
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 128.167,
+        "min": 33,
+        "max": 224
+      }
+    },
+    "gemini-3.6-flash": {
+      "calls": 6,
+      "ok": 5,
+      "failed": 1,
+      "errors": [
+        "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      ],
+      "ttft_s": {
+        "mean": 30.981,
+        "min": 3.176,
+        "max": 70.59
+      },
+      "total_s": {
+        "mean": 31.334,
+        "min": 3.178,
+        "max": 70.853
+      },
+      "tokens_per_s": {
+        "mean": 7.96,
+        "min": 0.8,
+        "max": 20.7
+      },
+      "input_tokens": {
+        "mean": 1285.4,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 120,
+        "min": 32,
+        "max": 224
+      }
+    },
+    "gemini-3.7-flash": {
+      "calls": 6,
+      "ok": 1,
+      "failed": 5,
+      "errors": [
+        "ReadTimeout: The read operation timed out",
+        "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      ],
+      "ttft_s": {
+        "mean": 79.455,
+        "min": 79.455,
+        "max": 79.455
+      },
+      "total_s": {
+        "mean": 79.456,
+        "min": 79.456,
+        "max": 79.456
+      },
+      "tokens_per_s": {
+        "mean": 0.4,
+        "min": 0.4,
+        "max": 0.4
+      },
+      "input_tokens": {
+        "mean": 1153,
+        "min": 1153,
+        "max": 1153
+      },
+      "output_tokens": {
+        "mean": 32,
+        "min": 32,
+        "max": 32
+      }
+    },
+    "gemini-3-flash-preview": {
+      "calls": 6,
+      "ok": 5,
+      "failed": 1,
+      "errors": [
+        "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      ],
+      "ttft_s": {
+        "mean": 7.258,
+        "min": 2.789,
+        "max": 14.598
+      },
+      "total_s": {
+        "mean": 7.591,
+        "min": 2.807,
+        "max": 15.121
+      },
+      "tokens_per_s": {
+        "mean": 17.7,
+        "min": 10.7,
+        "max": 32.0
+      },
+      "input_tokens": {
+        "mean": 1285.4,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 135.2,
+        "min": 32,
+        "max": 222
+      }
+    },
+    "gemini-3.1-flash-lite": {
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 1.11,
+        "min": 0.971,
+        "max": 1.227
+      },
+      "total_s": {
+        "mean": 1.214,
+        "min": 1.097,
+        "max": 1.309
+      },
+      "tokens_per_s": {
+        "mean": 72.15,
+        "min": 28.9,
+        "max": 123.3
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 90,
+        "min": 32,
+        "max": 159
+      }
+    }
+  }
+}
+```
+
+## ✅ 2026-08-25 19:29 — pipeline steps 1-7: e5-base
+
+- **ทดลองอะไร:** รัน pipeline ขั้น 1-7 ด้วย embedding model e5-base
+- **ทำอย่างไร:** 9 ไฟล์จาก ['curriculum'], chunk_size=150, overlap=30, max_seq=512, device=cuda
+- **ผลลัพธ์:** รวม 74.4s, ครบทุกขั้น
+
+```json
+{
+  "model": "e5-base",
+  "hf_id": "intfloat/multilingual-e5-base",
+  "step_seconds": {
+    "1/7 แยกข้อความจาก PDF": 6.7,
+    "2/7 ตัด chunk": 9.39,
+    "3/7 สร้าง embeddings": 27.85,
+    "4/7 สร้าง FAISS index": 0.51,
+    "5/7 แปลงคำถามเป็นเวกเตอร์": 9.77,
+    "6/7 ค้นหาด้วย similarity": 8.95,
+    "7/7 retrieval ครบระบบ": 9.55
+  },
+  "total_seconds": 74.36,
+  "failed_steps": []
+}
+```
+
+## ✅ 2026-08-25 19:30 — pipeline steps 1-2: bge-m3
+
+- **ทดลองอะไร:** รัน pipeline ขั้น 1-2 ด้วย embedding model bge-m3
+- **ทำอย่างไร:** 9 ไฟล์จาก ['curriculum'], chunk_size=150, overlap=30, max_seq=768, device=auto
+- **ผลลัพธ์:** รวม 16.4s, ครบทุกขั้น
+
+```json
+{
+  "model": "bge-m3",
+  "hf_id": "BAAI/bge-m3",
+  "step_seconds": {
+    "1/7 แยกข้อความจาก PDF": 5.26,
+    "2/7 ตัด chunk": 9.5
+  },
+  "total_seconds": 16.35,
+  "failed_steps": []
+}
+```
+
+## ✅ 2026-08-25 19:31 — pipeline steps 1-2: bge-m3
+
+- **ทดลองอะไร:** รัน pipeline ขั้น 1-2 ด้วย embedding model bge-m3
+- **ทำอย่างไร:** 9 ไฟล์จาก ['curriculum'], chunk_size=150, overlap=30, max_seq=768, device=auto
+- **ผลลัพธ์:** รวม 16.0s, ครบทุกขั้น
+
+```json
+{
+  "model": "bge-m3",
+  "hf_id": "BAAI/bge-m3",
+  "step_seconds": {
+    "1/7 แยกข้อความจาก PDF": 5.28,
+    "2/7 ตัด chunk": 9.16
+  },
+  "total_seconds": 16.0,
+  "failed_steps": []
+}
+```
+
+## ✅ 2026-08-25 19:32 — สรุปผลการทดลองรอบ 25 ส.ค. 2026
+
+- **ทดลองอะไร:** เปลี่ยน embedding model ตาม Thai-MTEB leaderboard, เทียบความเร็ว/คุณภาพ, หาทางเลือกแทน BM25, วัดความเร็ว API และรัน pipeline 1-7 ใหม่กับข้อมูลที่เพิ่มเข้ามา
+- **ทำอย่างไร:** สร้าง registry โมเดล + ระบบสลับตอนรัน, golden set 128 คำถามจากตาราง CLO, benchmark ทีละโมเดลบน RTX 5050 ผ่าน .venv-gpu, เทียบ sparse 6 วิธีบน dense เดียวกัน, วัด Gemini 5 โมเดลแบบ streaming
+- **ผลลัพธ์:** embedding ดีสุด multilingual-e5-base (Recall@1 72.7%, เร็วกว่า bge-m3 3.2 เท่า); sparse ดีสุดเมื่อ fuse คือ Dirichlet-LM (87.5% เทียบ BM25 77.3%) แต่เมื่อปักหมุดรหัสวิชาแล้ว BM25+ ชนะ (98.4%); LLM เร็วสุด gemini-3.1-flash-lite (TTFT 1.11s เทียบค่าเริ่มต้น 3.86s); ข้อมูลโตจาก 1,782 เป็น 3,128 chunks
+
+```json
+{
+  "models_tested": [
+    "e5-base",
+    "bge-m3",
+    "pixie-rune",
+    "octen-0.6b"
+  ],
+  "models_blocked": {
+    "embeddinggemma-300m": "gated ต้องมี HF token",
+    "nemotron-8b/kalm-12b/linq/sfr": "เกิน RAM 32GB"
+  },
+  "best_embedding": "e5-base",
+  "best_sparse_fused": "dirichlet-lm",
+  "best_full_stack": "dense+bm25plus+pin",
+  "bugs_found": [
+    "huggingface_hub retry ใช้ httpx client ที่ปิดแล้ว",
+    "tok/s คำนวณผิดเมื่อ response มา chunk เดียว",
+    "tfidf-char เตรียม query กับ document คนละแบบ",
+    "PDF 2 ไฟล์เป็นสแกน"
+  ],
+  "open_items": [
+    "ลำดับ LLM_FALLBACK_MODELS เรียงกลับด้านกับผลวัด",
+    "ยังไม่ได้ลบ index เก่าที่กำพร้า ~16MB",
+    "วัด reranker ใหม่บน GPU"
+  ]
+}
+```

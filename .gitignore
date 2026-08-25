@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- เพิ่มสำหรับการเปรียบเทียบโมเดล ---
+# log และ index ของแต่ละโมเดลใหญ่และสร้างใหม่ได้ ไม่ควรเข้า git
+logs/
+.venv-gpu/
+benchmarks/results/
+outputs/embeddings/
+# ยกเว้นสมุดทดลองกับผลเปรียบเทียบ ซึ่งเป็นผลลัพธ์ของงาน ไม่ใช่ไฟล์ชั่วคราว
+!logs/EXPERIMENTS.md
+!benchmarks/results/*.md

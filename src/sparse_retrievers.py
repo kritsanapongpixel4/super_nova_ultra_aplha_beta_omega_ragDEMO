@@ -250,3 +250,25 @@ def build(name: str, chunks: list[dict[str, Any]]) -> SparseIndex:
     index = BUILDERS[name]()
     index.build(chunks)
     return index
+
+
+def load_or_build(name: str, chunks: list[dict[str, Any]], path: Path) -> SparseIndex:
+    """Reuse the index cached at *path*, or build and cache it.
+
+    The cached copy is rejected when it describes a different number of
+    chunks: fusing a ranking over 1,782 chunks with a dense ranking over
+    3,128 does not fail, it just ranks against documents that are no longer
+    there.
+    """
+    if path.exists():
+        try:
+            index = SparseIndex.load(path)
+            if len(index) == len(chunks):
+                return index
+        except Exception:
+            # A pickle written by an older version of this module is not
+            # worth diagnosing — it costs a couple of seconds to rebuild.
+            pass
+    index = build(name, chunks)
+    index.save(path)
+    return index
