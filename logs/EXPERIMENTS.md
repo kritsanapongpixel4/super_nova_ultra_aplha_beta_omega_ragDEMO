@@ -1361,3 +1361,27 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   ]
 }
 ```
+
+## ✅ 2026-08-25 21:20 — pipeline steps 1-7: e5-base
+
+- **ทดลองอะไร:** รัน pipeline ขั้น 1-7 ด้วย embedding model e5-base
+- **ทำอย่างไร:** 18 ไฟล์จาก ['curriculum'], chunk_size=150, overlap=30, max_seq=512, device=auto
+- **ผลลัพธ์:** รวม 70.4s, ครบทุกขั้น
+
+```json
+{
+  "model": "e5-base",
+  "hf_id": "intfloat/multilingual-e5-base",
+  "step_seconds": {
+    "1/7 แยกข้อความจาก PDF": 3.35,
+    "2/7 ตัด chunk": 8.62,
+    "3/7 สร้าง embeddings": 21.85,
+    "4/7 สร้าง FAISS index": 0.32,
+    "5/7 แปลงคำถามเป็นเวกเตอร์": 14.28,
+    "6/7 ค้นหาด้วย similarity": 9.52,
+    "7/7 retrieval ครบระบบ": 10.54
+  },
+  "total_seconds": 70.42,
+  "failed_steps": []
+}
+```
