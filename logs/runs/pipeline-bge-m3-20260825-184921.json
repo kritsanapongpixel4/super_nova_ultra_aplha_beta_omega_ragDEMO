@@ -1,0 +1,44 @@
+{
+  "run": "pipeline-bge-m3",
+  "started_at": "2026-08-25T18:49:21",
+  "elapsed_s": 6.69,
+  "ok": true,
+  "context": {
+    "model": "bge-m3",
+    "hf_id": "BAAI/bge-m3",
+    "device": "auto",
+    "steps": "1",
+    "sources": 9,
+    "chunk_size": 150,
+    "chunk_overlap": 30
+  },
+  "environment": {
+    "python": "3.14.4",
+    "executable": "C:\\Python314\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.13.0+cpu",
+    "cuda_available": false
+  },
+  "events": [
+    {
+      "t": 6.69,
+      "event": "step",
+      "step": "1/7 แยกข้อความจาก PDF",
+      "elapsed_s": 5.26
+    },
+    {
+      "t": 6.69,
+      "event": "total",
+      "elapsed_s": 6.69,
+      "failed_steps": []
+    }
+  ],
+  "problems": [],
+  "warnings": 2,
+  "errors": 0,
+  "log_messages": [
+    "WARNING root: ⚠️  Regulations-regulations-announcements-2025.pdf: 54268 KB แต่ดึงข้อความได้แค่ 5173 ตัวอักษร — น่าจะเป็นไฟล์สแกนหรือฟอนต์ไม่มีตาราง ToUnicode (ต้องใช้ OCR)",
+    "WARNING root: ⚠️  Regulations-rules-and-announcements_2026-05-19.pdf: 42625 KB แต่ดึงข้อความได้แค่ 4136 ตัวอักษร — น่าจะเป็นไฟล์สแกนหรือฟอนต์ไม่มีตาราง ToUnicode (ต้องใช้ OCR)"
+  ]
+}

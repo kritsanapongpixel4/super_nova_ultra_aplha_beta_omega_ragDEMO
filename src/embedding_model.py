@@ -73,11 +73,21 @@ class EmbeddingModel:
 
     # ── Lifecycle ───────────────────────────────────────────────────────
 
-    def load(self) -> None:
+    def load(self, attempts: int = 3) -> None:
         """Load the underlying model into memory.
 
         Downloads it on first use (bge-m3 is ~2.2 GB, Qwen3-4B is ~8 GB), so
         this is deliberately lazy — importing the module stays cheap.
+
+        Retried, because a first download is a long sequence of requests and
+        the Hub does drop them.  Measured 2026-08-25: two of five models
+        failed on a reset connection (``WinError 10054``), and
+        huggingface_hub's own retry then died with "Cannot send a request, as
+        the client has been closed" — its retry path reuses an httpx client
+        that the failure already closed, so its five internal retries are
+        worth nothing here.  Rebuilding from the top gets a fresh client,
+        which does work.  Already-downloaded files are reused, so a retry
+        resumes rather than starting the download over.
         """
         if self._model is not None:
             return
@@ -100,7 +110,34 @@ class EmbeddingModel:
             # float32, not faster.
             kwargs["model_kwargs"] = {"dtype": self.dtype}
 
-        self._model = SentenceTransformer(self.model_name, **kwargs)
+        for attempt in range(1, attempts + 1):
+            try:
+                self._model = SentenceTransformer(self.model_name, **kwargs)
+                break
+            except Exception as exc:
+                # A gated repo, a typo in the id, or no disk space will fail
+                # identically on every attempt — retrying those just delays
+                # the message.  Only transport failures are worth another go.
+                transient = any(
+                    marker in str(exc)
+                    for marker in (
+                        "client has been closed",
+                        "10054",
+                        "Connection reset",
+                        "Read timed out",
+                        "Temporary failure",
+                    )
+                )
+                if not transient or attempt == attempts:
+                    raise
+                logger.warning(
+                    "⚠️  โหลด %s ไม่สำเร็จ (ครั้งที่ %d/%d): %s — ลองใหม่",
+                    self.spec.key,
+                    attempt,
+                    attempts,
+                    type(exc).__name__,
+                )
+                time.sleep(3 * attempt)
 
         if self.spec.max_seq_length:
             # Never raise it above what the checkpoint supports — e5-base has

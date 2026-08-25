@@ -1,0 +1,47 @@
+{
+  "run": "pipeline-bge-m3",
+  "started_at": "2026-08-25T18:47:40",
+  "elapsed_s": 16.93,
+  "ok": true,
+  "context": {
+    "model": "bge-m3",
+    "hf_id": "BAAI/bge-m3",
+    "device": "auto",
+    "steps": "1-2",
+    "sources": 9,
+    "chunk_size": 150,
+    "chunk_overlap": 30
+  },
+  "environment": {
+    "python": "3.14.4",
+    "executable": "C:\\Python314\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.13.0+cpu",
+    "cuda_available": false
+  },
+  "events": [
+    {
+      "t": 6.66,
+      "event": "step",
+      "step": "1/7 แยกข้อความจาก PDF",
+      "elapsed_s": 5.03
+    },
+    {
+      "t": 16.93,
+      "event": "step",
+      "step": "2/7 ตัด chunk",
+      "elapsed_s": 10.27
+    },
+    {
+      "t": 16.93,
+      "event": "total",
+      "elapsed_s": 16.93,
+      "failed_steps": []
+    }
+  ],
+  "problems": [],
+  "warnings": 0,
+  "errors": 0,
+  "log_messages": []
+}

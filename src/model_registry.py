@@ -24,6 +24,13 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+# Why 768 tokens and not the 8k-32k each model would allow: measured over
+# this corpus's 3,128 chunks on 2026-08-25, the longest chunk is 271 tokens
+# under the XLM-R tokenizer (bge-m3, e5, PIXIE) and 699 under Qwen3's, whose
+# vocabulary splits Thai far more finely.  768 truncates nothing at all,
+# while Qwen3's 32k default would reserve buffers for a context 45x longer
+# than anything in the data.  Attention is quadratic — that is not free.
+
 # The instruction Qwen3-Embedding and its derivatives were trained to see on
 # the query side.  Written once — four models share it verbatim.
 _QWEN3_QUERY = (
@@ -43,7 +50,7 @@ class EmbeddingSpec:
     weights_gb: float           # download size, measured from the HF file tree
     query_prompt: str = ""      # prepended when embedding a question
     doc_prompt: str = ""        # prepended when embedding a chunk
-    max_seq_length: int = 512   # tokens per chunk; see note in load_model()
+    max_seq_length: int = 768   # tokens per chunk; measured, see MAX_SEQ note
     gated: bool = False         # needs an accepted licence + HF token
     tier: str = "small"         # small | large | infeasible
     note: str = ""
@@ -94,7 +101,7 @@ MODELS: dict[str, EmbeddingSpec] = {
             weights_gb=1.20,
             query_prompt="task: search result | query: ",
             doc_prompt="title: none | text: ",
-            max_seq_length=512,
+            max_seq_length=768,
             gated=True,
             tier="small",
             note="อันดับ 2 บน Thai-MTEB — ต้องยอมรับ licence + ใช้ HF token",
@@ -107,7 +114,7 @@ MODELS: dict[str, EmbeddingSpec] = {
             weights_gb=2.27,
             query_prompt="query: ",
             doc_prompt="",
-            max_seq_length=512,
+            max_seq_length=768,
             tier="small",
             note="อันดับ 8 — สถาปัตยกรรมเดียวกับ bge-m3 (XLM-R large)",
         ),
@@ -120,7 +127,7 @@ MODELS: dict[str, EmbeddingSpec] = {
             query_prompt=_QWEN3_QUERY,
             # Its config really does say a single space, not an empty string.
             doc_prompt=" ",
-            max_seq_length=512,
+            max_seq_length=768,
             tier="small",
             note="อันดับ 6 — ต่อยอดจาก Qwen3-Embedding-0.6B",
         ),
@@ -132,7 +139,7 @@ MODELS: dict[str, EmbeddingSpec] = {
             weights_gb=1.19,
             query_prompt=_QWEN3_QUERY,
             doc_prompt="",
-            max_seq_length=512,
+            max_seq_length=768,
             tier="small",
             note="ไม่ได้อยู่ในรูป — ใส่เป็นตัวต้นทางของ Octen เพื่อแยกผลของการ fine-tune",
         ),
@@ -142,7 +149,7 @@ MODELS: dict[str, EmbeddingSpec] = {
             dim=1024,
             params_m=568,
             weights_gb=2.27,
-            max_seq_length=512,
+            max_seq_length=768,
             tier="small",
             note="ค่าเริ่มต้นปัจจุบันของระบบ",
         ),
@@ -155,7 +162,7 @@ MODELS: dict[str, EmbeddingSpec] = {
             weights_gb=8.04,
             query_prompt=_QWEN3_QUERY,
             doc_prompt="",
-            max_seq_length=512,
+            max_seq_length=768,
             tier="large",
             note="อันดับ 4 — 16 GB RAM ใน fp32, ไม่พอลง VRAM 8 GB แม้ใน fp16",
         ),
@@ -167,7 +174,7 @@ MODELS: dict[str, EmbeddingSpec] = {
             weights_gb=16.09,
             query_prompt=_QWEN3_QUERY,
             doc_prompt="",
-            max_seq_length=512,
+            max_seq_length=768,
             tier="large",
             note="อันดับ 5 — น้ำหนักเก็บเป็น fp32 จึงดาวน์โหลด 16 GB",
         ),

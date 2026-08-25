@@ -1,0 +1,22 @@
+{
+  "built_at": "2026-08-25T12:01:53+00:00",
+  "n_sources": 9,
+  "sources": [
+    "CLOs-Computer_Engineering-RMUTT.pdf",
+    "Manual-regulations-rules-announcements-Thanyaburi-University_2024.pdf.pdf",
+    "Regulations-regulations-announcements-2025.pdf",
+    "Regulations-rules-and-announcements_2026-05-19.pdf",
+    "คู่มือนักศึกษา67.pdf",
+    "คู่มือนักศึกษา68.pdf",
+    "คู่มือนักศึกษา69.pdf",
+    "หลักสูตร-683.pdf",
+    "หลักสูตร63-คอมพิวเตอร์.pdf"
+  ],
+  "sources_fingerprint": "20e5266a7a3662e308b478e5faa549610c9a6318592603cfb248f1a7f41f9a58",
+  "n_chunks": 3128,
+  "embedding_model": "telepix/PIXIE-Rune-v1.0",
+  "embedding_key": "pixie-rune",
+  "embedding_dim": 1024,
+  "chunk_size": 150,
+  "chunk_overlap": 30
+}

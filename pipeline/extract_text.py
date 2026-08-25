@@ -37,6 +37,31 @@ def main() -> None:
     records = extract_all(config.SOURCE_FILES)
     print(f"\n✅ แยกข้อความได้ทั้งหมด {len(records)} records")
 
+    # 2b. A PDF that is a stack of scans, or that embeds a font with no
+    #     ToUnicode table, still "succeeds" — it just yields almost nothing.
+    #     Silence there is the failure mode, so name the files instead: they
+    #     go into the index, contribute nothing, and the gap only shows up
+    #     later as a question the system cannot answer.
+    chars_by_source: dict[str, int] = {}
+    for record in records:
+        source = record.get("source", "?")
+        chars_by_source[source] = chars_by_source.get(source, 0) + len(
+            record.get("text", "")
+        )
+    for path in config.SOURCE_FILES:
+        chars = chars_by_source.get(path.name, 0)
+        kb = path.stat().st_size / 1024
+        # 2,000 characters per megabyte is far below anything a real text
+        # PDF produces; the working files here sit 20-100x above it.
+        if kb > 500 and chars < kb * 2:
+            logging.warning(
+                "⚠️  %s: %.0f KB แต่ดึงข้อความได้แค่ %d ตัวอักษร "
+                "— น่าจะเป็นไฟล์สแกนหรือฟอนต์ไม่มีตาราง ToUnicode (ต้องใช้ OCR)",
+                path.name,
+                kb,
+                chars,
+            )
+
     # 3. Golden set status
     if config.GOLDEN_SET_FILE:
         print(f"🏆 Golden set: {config.GOLDEN_SET_FILE.name}")

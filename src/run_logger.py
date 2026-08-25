@@ -94,6 +94,14 @@ class RunLogger:
         root = logging.getLogger()
         root.setLevel(logging.DEBUG)
 
+        # Root at DEBUG turns on every library's chatter too.  The HTTP
+        # clients underneath huggingface-hub and google-genai log a line per
+        # request, which buries the run's own output in both the console and
+        # the log file — hundreds of redirect traces around the three lines
+        # that say what the model actually did.
+        for noisy in ("httpx", "httpcore", "urllib3", "filelock", "fsspec"):
+            logging.getLogger(noisy).setLevel(logging.WARNING)
+
         file_handler = logging.FileHandler(self.log_path, encoding="utf-8")
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(logging.Formatter(_FORMAT, _DATEFMT))
