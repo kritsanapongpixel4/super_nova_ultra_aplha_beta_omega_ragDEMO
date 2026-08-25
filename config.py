@@ -1,6 +1,22 @@
-"""Project configuration — every path and tunable in one place."""
+"""Project configuration — every path and tunable in one place.
 
+The embedding model is the one setting that is *not* edited here any more.
+It is selected at runtime, in this order of precedence:
+
+    python build_index.py --model qwen3-0.6b     # command line, wins
+    set RAG_EMBED_MODEL=qwen3-0.6b               # environment variable
+    src.model_registry.DEFAULT_MODEL             # fallback
+
+Every model gets its own index directory under ``vector_db/<key>/`` and its
+own embeddings file, so switching back and forth costs nothing after the
+first build and two models can never overwrite each other's index.  See
+``src/model_registry.py`` for the list, or run ``python -m src.model_registry``.
+"""
+
+import os
 from pathlib import Path
+
+from src import model_registry
 
 # --- Paths ---------------------------------------------------------------
 ROOT_DIR = Path(__file__).resolve().parent
@@ -8,6 +24,8 @@ ROOT_DIR = Path(__file__).resolve().parent
 DATA_DIR = ROOT_DIR / "data"
 OUTPUTS_DIR = ROOT_DIR / "outputs"
 VECTOR_DB_DIR = ROOT_DIR / "vector_db"
+LOGS_DIR = ROOT_DIR / "logs"
+BENCHMARK_DIR = ROOT_DIR / "benchmarks" / "results"
 
 # Supported file types for ingestion
 SUPPORTED_EXTENSIONS = {".pdf", ".txt", ".docx", ".md"}
@@ -48,17 +66,18 @@ SOURCE_FILES: list[Path] = discover_sources()
 _golden_candidate = DATA_DIR / "golden_set.json"
 GOLDEN_SET_FILE: Path | None = _golden_candidate if _golden_candidate.exists() else None
 
+# Model-independent artefacts: text extraction and chunking depend on the
+# documents and the chunking settings, never on which embedder runs next.
 EXTRACTED_TEXT_FILE = OUTPUTS_DIR / "extracted_text.json"
 CHUNKS_FILE = OUTPUTS_DIR / "chunks.json"
-EMBEDDINGS_FILE = OUTPUTS_DIR / "embeddings.npy"
 RETRIEVAL_RESULTS_FILE = OUTPUTS_DIR / "retrieval_results.json"
 EVAL_RETRIEVAL_FILE = OUTPUTS_DIR / "eval_retrieval.json"
 EVAL_GENERATION_FILE = OUTPUTS_DIR / "eval_generation.json"
 
-FAISS_INDEX_FILE = VECTOR_DB_DIR / "document.index"
+# BM25 indexes the same chunks for every model, so it is shared too — one
+# copy, rebuilt only when chunks.json changes.
 BM25_INDEX_FILE = VECTOR_DB_DIR / "bm25_index.pkl"
-CHUNK_STORE_FILE = VECTOR_DB_DIR / "chunk_store.json"
-INDEX_META_FILE = VECTOR_DB_DIR / "index_meta.json"
+SPARSE_INDEX_DIR = VECTOR_DB_DIR / "sparse"
 
 # --- Chunking ------------------------------------------------------------
 # Tuned for this dataset (Thai university forms + textbooks):
@@ -73,10 +92,51 @@ MIN_CHUNK_LETTERS = 10    # drop chunks with fewer Thai/Latin letters than this
                           # 20 is too aggressive — it eats course codes.
 
 # --- Embeddings ----------------------------------------------------------
-EMBEDDING_MODEL = "BAAI/bge-m3"     # multilingual, works well with Thai
-EMBEDDING_DIM = 1024
 EMBEDDING_BATCH_SIZE = 32
 NORMALIZE_EMBEDDINGS = True         # cosine similarity via inner product
+EMBEDDING_DEVICE = os.environ.get("RAG_DEVICE") or None  # None → auto-detect
+
+# Filled in by use_model() immediately below; declared here so the module's
+# public surface is visible in one place.
+EMBEDDING_KEY: str
+EMBEDDING_SPEC: model_registry.EmbeddingSpec
+EMBEDDING_MODEL: str
+EMBEDDING_DIM: int
+MODEL_INDEX_DIR: Path
+FAISS_INDEX_FILE: Path
+CHUNK_STORE_FILE: Path
+INDEX_META_FILE: Path
+EMBEDDINGS_FILE: Path
+
+
+def use_model(key: str) -> model_registry.EmbeddingSpec:
+    """Point every model-dependent path at *key* and return its spec.
+
+    Call this before anything imports the paths — ``src/cli.py`` does it
+    from the ``--model`` flag, and the module body below does it from
+    ``RAG_EMBED_MODEL``.  Rebinding module globals rather than hiding the
+    paths behind functions keeps `config.FAISS_INDEX_FILE` working exactly
+    as it always did for the twenty-odd places that read it.
+    """
+    global EMBEDDING_KEY, EMBEDDING_SPEC, EMBEDDING_MODEL, EMBEDDING_DIM
+    global MODEL_INDEX_DIR, FAISS_INDEX_FILE, CHUNK_STORE_FILE
+    global INDEX_META_FILE, EMBEDDINGS_FILE
+
+    spec = model_registry.resolve(key)
+    EMBEDDING_KEY = spec.key
+    EMBEDDING_SPEC = spec
+    EMBEDDING_MODEL = spec.hf_id
+    EMBEDDING_DIM = spec.dim
+
+    MODEL_INDEX_DIR = VECTOR_DB_DIR / spec.slug
+    FAISS_INDEX_FILE = MODEL_INDEX_DIR / "document.index"
+    CHUNK_STORE_FILE = MODEL_INDEX_DIR / "chunk_store.json"
+    INDEX_META_FILE = MODEL_INDEX_DIR / "index_meta.json"
+    EMBEDDINGS_FILE = OUTPUTS_DIR / "embeddings" / f"{spec.slug}.npy"
+    return spec
+
+
+use_model(os.environ.get("RAG_EMBED_MODEL") or model_registry.DEFAULT_MODEL)
 
 # --- Retrieval -----------------------------------------------------------
 TOP_K = 8                 # chunks handed to the generator.  Raised from 5
@@ -89,6 +149,12 @@ RRF_K = 60                # Reciprocal Rank Fusion smoothing constant.  Do not
                           # pushed the right chunk from rank 6 down to 9 and 11
                           # by amplifying BM25's noisy head.
 DENSE_WEIGHT = 0.5        # dense vs BM25 weighting when fusing by score
+
+# Which sparse retriever the hybrid pipeline pairs with the dense one.
+# "bm25" is the measured default; benchmarks/bench_retrievers.py compares it
+# against the alternatives in src/sparse_retrievers.py.
+SPARSE_METHOD = os.environ.get("RAG_SPARSE_METHOD") or "bm25"
+
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
 USE_RERANKER = False      # It works — it lifted the right chunk from hybrid
                           # rank 6 to 2 — but costs ~291s per query on this
@@ -125,5 +191,12 @@ EVAL_K_VALUES = (1, 3, 5, 10)
 
 def ensure_dirs() -> None:
     """Create the output directories if they do not exist yet."""
-    for directory in (DATA_DIR, OUTPUTS_DIR, VECTOR_DB_DIR):
+    for directory in (
+        DATA_DIR,
+        OUTPUTS_DIR,
+        OUTPUTS_DIR / "embeddings",
+        VECTOR_DB_DIR,
+        MODEL_INDEX_DIR,
+        LOGS_DIR,
+    ):
         directory.mkdir(parents=True, exist_ok=True)

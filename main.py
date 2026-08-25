@@ -1,13 +1,16 @@
 """Entry point — ask the RAG system a question.
 
 Usage:
-    python main.py                       # interactive chat loop
-    python main.py "คำถามของคุณ"          # single question
+    python main.py                              # interactive chat loop
+    python main.py "คำถามของคุณ"                 # single question
+    python main.py --model qwen3-0.6b "คำถาม"    # ask a different model's index
 """
 
 import argparse
 import logging
 import sys
+
+from src import cli
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 
@@ -80,7 +83,9 @@ def chat() -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run the RAG system.")
     parser.add_argument("question", nargs="?", help="ask one question and exit")
+    cli.add_model_arg(parser)
     args = parser.parse_args()
+    cli.apply(args)
 
     try:
         if args.question:

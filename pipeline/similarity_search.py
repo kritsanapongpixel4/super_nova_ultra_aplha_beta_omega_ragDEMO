@@ -12,6 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # import from project root
 
 import config  # noqa: E402
+from src import cli  # noqa: E402
 from src.embedding_model import EmbeddingModel  # noqa: E402
 from src.retriever import DenseRetriever  # noqa: E402
 from src.vector_store import VectorStore  # noqa: E402
@@ -22,7 +23,8 @@ DEFAULT_QUESTION = "วิชาปฏิบัติการควบคุม
 
 
 def main() -> None:
-    question = " ".join(sys.argv[1:]).strip() or DEFAULT_QUESTION
+    spec, argv = cli.take_model_flag()
+    question = " ".join(argv).strip() or DEFAULT_QUESTION
 
     if not config.FAISS_INDEX_FILE.exists():
         print(f"❌ ไม่พบ {config.FAISS_INDEX_FILE}")
@@ -30,9 +32,15 @@ def main() -> None:
         sys.exit(1)
 
     store = VectorStore.load(config.FAISS_INDEX_FILE, config.CHUNK_STORE_FILE)
-    embedder = EmbeddingModel(config.EMBEDDING_MODEL, normalize=config.NORMALIZE_EMBEDDINGS)
+    embedder = EmbeddingModel(
+        spec.hf_id,
+        normalize=config.NORMALIZE_EMBEDDINGS,
+        device=config.EMBEDDING_DEVICE,
+        spec=spec,
+    )
     retriever = DenseRetriever(store, embedder)
 
+    print(f"🧬 โมเดล: {spec.key}")
     print(f"📚 index: {len(store)} เวกเตอร์ มิติ {store.dim}")
     print(f"❓ คำถาม: {question}\n")
 

@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # import from project root
 
 import config  # noqa: E402
+from src import cli  # noqa: E402
 from src.embedding_model import EmbeddingModel  # noqa: E402
 from src.hybrid_retriever import BM25Index, HybridRetriever  # noqa: E402
 from src.rerankers import CrossEncoderReranker  # noqa: E402
@@ -67,20 +68,26 @@ def main() -> None:
     # config.USE_RERANKER is off for interactive use because the cross-encoder
     # costs minutes per query on CPU; --rerank turns it back on for the
     # evaluation comparison, which is the one place that cost is worth paying.
-    argv = [arg for arg in sys.argv[1:] if arg != "--rerank"]
-    use_reranker = config.USE_RERANKER or "--rerank" in sys.argv[1:]
+    spec, argv = cli.take_model_flag()
+    use_reranker = config.USE_RERANKER or "--rerank" in argv
+    argv = [arg for arg in argv if arg != "--rerank"]
     question = " ".join(argv).strip() or DEFAULT_QUESTION
 
     if not config.FAISS_INDEX_FILE.exists():
         print(f"❌ ไม่พบ {config.FAISS_INDEX_FILE}")
-        print("   กรุณารัน pipeline/create_vector_db.py ก่อน")
+        print(f"   กรุณารัน pipeline/create_vector_db.py --model {spec.key} ก่อน")
         sys.exit(1)
 
     store = VectorStore.load(config.FAISS_INDEX_FILE, config.CHUNK_STORE_FILE)
-    embedder = EmbeddingModel(config.EMBEDDING_MODEL, normalize=config.NORMALIZE_EMBEDDINGS)
+    embedder = EmbeddingModel(
+        spec.hf_id,
+        normalize=config.NORMALIZE_EMBEDDINGS,
+        device=config.EMBEDDING_DEVICE,
+        spec=spec,
+    )
     bm25 = load_bm25(store.chunks)
 
-    print(f"📚 index: {len(store)} เวกเตอร์ | ❓ {question}")
+    print(f"🧬 โมเดล: {spec.key} | 📚 index: {len(store)} เวกเตอร์ | ❓ {question}")
 
     results: dict[str, list[dict]] = {}
 
@@ -140,6 +147,8 @@ def main() -> None:
 
     payload = {
         "question": question,
+        "embedding_model": spec.hf_id,
+        "embedding_key": spec.key,
         "top_k": config.TOP_K,
         "candidate_k": config.CANDIDATE_K,
         "rrf_k": config.RRF_K,

@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # import from proj
 import numpy as np  # noqa: E402
 
 import config  # noqa: E402
+from src import cli  # noqa: E402
 from src.embedding_model import EmbeddingModel  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -23,10 +24,17 @@ DEFAULT_QUESTION = "วิชาปฏิบัติการควบคุม
 
 
 def main() -> None:
-    question = " ".join(sys.argv[1:]).strip() or DEFAULT_QUESTION
+    spec, argv = cli.take_model_flag()
+    question = " ".join(argv).strip() or DEFAULT_QUESTION
+    print(f"🧬 โมเดล: {spec.key}")
     print(f"❓ คำถาม: {question}")
 
-    model = EmbeddingModel(config.EMBEDDING_MODEL, normalize=config.NORMALIZE_EMBEDDINGS)
+    model = EmbeddingModel(
+        spec.hf_id,
+        normalize=config.NORMALIZE_EMBEDDINGS,
+        device=config.EMBEDDING_DEVICE,
+        spec=spec,
+    )
     vector = model.encode_query(question)
 
     norm = float(np.linalg.norm(vector))
@@ -39,7 +47,7 @@ def main() -> None:
 
     # The query has to live in the same space as the chunks, or the index is
     # searching with a ruler from a different universe.
-    if vector.shape[0] != config.EMBEDDING_DIM:
+    if config.EMBEDDING_DIM and vector.shape[0] != config.EMBEDDING_DIM:
         print(
             f"❌ มิติ {vector.shape[0]} ไม่ตรงกับ config.EMBEDDING_DIM "
             f"({config.EMBEDDING_DIM}) — ค้นหาใน FAISS index ไม่ได้"

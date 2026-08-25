@@ -43,14 +43,25 @@ def sources_fingerprint(paths: list[Path]) -> str:
     return digest.hexdigest()
 
 
-def build_meta(source_paths: list[Path], n_chunks: int) -> dict[str, Any]:
-    """Describe the data an index was built from."""
+def build_meta(
+    source_paths: list[Path],
+    n_chunks: int,
+    **extra: Any,
+) -> dict[str, Any]:
+    """Describe the data an index was built from.
+
+    ``extra`` carries whatever else identifies this particular index —
+    which embedding model produced it, at what dimension.  With one index
+    directory per model that is no longer implied by the file's location
+    alone once the directories are copied around.
+    """
     return {
         "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "n_sources": len(source_paths),
         "sources": sorted(p.name for p in source_paths),
         "sources_fingerprint": sources_fingerprint(source_paths),
         "n_chunks": n_chunks,
+        **extra,
     }
 
 

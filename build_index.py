@@ -1,8 +1,10 @@
 """Build every index the RAG system needs, from the raw source file.
 
 Usage:
-    python build_index.py            # build only if the dataset changed
-    python build_index.py --force    # always rebuild
+    python build_index.py                      # build only if the data changed
+    python build_index.py --force              # always rebuild
+    python build_index.py --model qwen3-0.6b   # build a different model's index
+    python build_index.py --list-models        # what can this machine run?
 """
 
 import argparse
@@ -11,6 +13,7 @@ import sys
 import time
 
 import config
+from src import cli
 
 # Windows consoles default to cp1252, which cannot encode Thai or emoji.
 for stream in (sys.stdout, sys.stderr):
@@ -23,6 +26,7 @@ for stream in (sys.stdout, sys.stderr):
 def build(force: bool = False) -> None:
     """Run the full offline pipeline: extract -> chunk -> embed -> index."""
     config.ensure_dirs()
+    print(f"🧬 โมเดล: {config.EMBEDDING_KEY} ({config.EMBEDDING_MODEL})")
 
     from src.hybrid_retriever import BM25Index
     from src.index_meta import is_stale, read_meta
@@ -35,7 +39,8 @@ def build(force: bool = False) -> None:
     meta = read_meta(config.INDEX_META_FILE)
     built = config.FAISS_INDEX_FILE.exists() and meta is not None
     if built and not force and not is_stale(config.SOURCE_FILES, config.INDEX_META_FILE):
-        print(f"✅ index ตรงกับข้อมูลอยู่แล้ว ({meta['n_chunks']} chunks, สร้างเมื่อ {meta['built_at']})")
+        print(f"✅ index ของ {config.EMBEDDING_KEY} ตรงกับข้อมูลอยู่แล้ว "
+              f"({meta['n_chunks']} chunks, สร้างเมื่อ {meta['built_at']})")
         print("   ใส่ --force ถ้าต้องการสร้างใหม่")
         return
 
@@ -77,7 +82,9 @@ def main() -> None:
         action="store_true",
         help="rebuild even when the index fingerprint still matches the dataset",
     )
+    cli.add_model_arg(parser)
     args = parser.parse_args()
+    cli.apply(args)
     build(force=args.force)
 
 
