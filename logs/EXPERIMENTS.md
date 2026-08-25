@@ -1059,3 +1059,27 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   ]
 }
 ```
+
+## ✅ 2026-08-25 20:14 — pipeline steps 1-7: bge-m3
+
+- **ทดลองอะไร:** รัน pipeline ขั้น 1-7 ด้วย embedding model bge-m3
+- **ทำอย่างไร:** 23 ไฟล์จาก ['curriculum'], chunk_size=150, overlap=30, max_seq=768, device=auto
+- **ผลลัพธ์:** รวม 978.1s, ครบทุกขั้น
+
+```json
+{
+  "model": "bge-m3",
+  "hf_id": "BAAI/bge-m3",
+  "step_seconds": {
+    "1/7 แยกข้อความจาก PDF": 4.51,
+    "2/7 ตัด chunk": 8.46,
+    "3/7 สร้าง embeddings": 927.67,
+    "4/7 สร้าง FAISS index": 0.68,
+    "5/7 แปลงคำถามเป็นเวกเตอร์": 13.76,
+    "6/7 ค้นหาด้วย similarity": 9.19,
+    "7/7 retrieval ครบระบบ": 12.36
+  },
+  "total_seconds": 978.12,
+  "failed_steps": []
+}
+```

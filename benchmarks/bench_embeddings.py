@@ -42,7 +42,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import numpy as np  # noqa: E402
 
 import config  # noqa: E402
-from evaluation import metrics  # noqa: E402
+from evaluation import golden_set, metrics  # noqa: E402
 from src import cli, journal  # noqa: E402
 from src.embedding_model import EmbeddingModel  # noqa: E402
 from src.index_meta import build_meta, write_meta  # noqa: E402
@@ -74,15 +74,11 @@ def load_inputs() -> tuple[list[dict], list[dict]]:
         raise FileNotFoundError(
             f"{config.CHUNKS_FILE} — รัน run_pipeline.py --steps 1-2 ก่อน"
         )
-    golden_path = config.DATA_DIR / "golden_set.json"
-    if not golden_path.exists():
-        raise FileNotFoundError(
-            f"{golden_path} — รัน evaluation/build_golden_set.py ก่อน"
-        )
     with open(config.CHUNKS_FILE, "r", encoding="utf-8") as f:
         chunks = json.load(f)
-    with open(golden_path, "r", encoding="utf-8") as f:
-        golden = json.load(f)
+    # Bound to these chunks, not to whichever ones the set was built from —
+    # scoring against stale positions reads as a model that cannot retrieve.
+    golden, _ = golden_set.load(chunks)
     return chunks, golden
 
 
@@ -179,6 +175,9 @@ def run_one(spec, chunks: list[dict], golden: list[dict]) -> dict:
         "batch_size": config.EMBEDDING_BATCH_SIZE,
         "n_chunks": len(texts),
         "n_queries": len(golden),
+        # Which corpus this was measured on.  Recall@1 from two different
+        # fingerprints are two different questions, not two answers.
+        "corpus": golden_set.fingerprint(chunks),
         "load_seconds": round(model.load_seconds or 0.0, 2),
         "encode_seconds": round(encode_seconds, 2),
         "chunks_per_second": round(len(texts) / encode_seconds, 2),
@@ -282,7 +281,11 @@ def main() -> None:
 
     spec = cli.apply(args)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    chunks, golden = load_inputs()
+    try:
+        chunks, golden = load_inputs()
+    except golden_set.GoldenSetError as exc:
+        print(f"❌ {exc}")
+        sys.exit(1)
 
     with RunLogger(
         f"bench-embed-{spec.key}",

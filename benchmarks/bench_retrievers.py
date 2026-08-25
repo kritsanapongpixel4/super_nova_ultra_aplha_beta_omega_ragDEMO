@@ -33,7 +33,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import numpy as np  # noqa: E402
 
 import config  # noqa: E402
-from evaluation import metrics  # noqa: E402
+from evaluation import golden_set, metrics  # noqa: E402
 from src import cli, journal, sparse_retrievers  # noqa: E402
 from src.embedding_model import EmbeddingModel  # noqa: E402
 from src.hybrid_retriever import exact_code_matches, reciprocal_rank_fusion  # noqa: E402
@@ -106,14 +106,18 @@ def main() -> None:
     args = parser.parse_args()
     spec = cli.apply(args)
 
-    golden_path = config.DATA_DIR / "golden_set.json"
     if not config.FAISS_INDEX_FILE.exists():
         print(f"❌ ไม่พบ index ของ {spec.key} — รัน benchmarks/bench_embeddings.py --model {spec.key} ก่อน")
         sys.exit(1)
-    with open(golden_path, "r", encoding="utf-8") as f:
-        golden = json.load(f)
 
     store = VectorStore.load(config.FAISS_INDEX_FILE, config.CHUNK_STORE_FILE)
+    # Against the indexed chunks, which may lag outputs/chunks.json if the
+    # index was built before the last re-chunk.
+    try:
+        golden, golden_report = golden_set.load(store.chunks)
+    except golden_set.GoldenSetError as exc:
+        print(f"❌ {exc}")
+        sys.exit(1)
     embedder = EmbeddingModel(
         spec.hf_id,
         normalize=config.NORMALIZE_EMBEDDINGS,
@@ -128,6 +132,7 @@ def main() -> None:
         "embedding_model": spec.key,
         "n_chunks": len(store),
         "n_queries": len(golden),
+        "corpus": golden_report["corpus_now"],
         "measured_at": datetime.now().isoformat(timespec="seconds"),
         "build_seconds": {},
         "sparse_only": {},
