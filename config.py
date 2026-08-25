@@ -151,9 +151,24 @@ RRF_K = 60                # Reciprocal Rank Fusion smoothing constant.  Do not
 DENSE_WEIGHT = 0.5        # dense vs BM25 weighting when fusing by score
 
 # Which sparse retriever the hybrid pipeline pairs with the dense one.
-# "bm25" is the measured default; benchmarks/bench_retrievers.py compares it
-# against the alternatives in src/sparse_retrievers.py.
-SPARSE_METHOD = os.environ.get("RAG_SPARSE_METHOD") or "bm25"
+# benchmarks/bench_retrievers.py compares every option in
+# src/sparse_retrievers.py; measured on e5-base / 3,237 chunks (2026-08-25):
+#
+#                    sparse เดี่ยว   + dense    + dense + ปักหมุด
+#   bm25plus            32.8%         89.8%        97.7%   ← ที่ใช้จริง
+#   bm25                33.6%         89.1%        96.9%
+#   dirichlet-lm        26.6%         92.2%        94.5%
+#   tfidf-word          10.2%         79.7%        91.4%
+#   tfidf-char           3.9%         62.5%        90.6%
+#   bm25l               12.5%         50.0%        86.7%
+#
+# คอลัมน์ที่ใช้ตัดสินคือคอลัมน์ขวาสุด เพราะ HybridRetriever.retrieve() ตั้ง
+# pin_exact_codes=True เป็นค่าเริ่มต้น — นั่นคือของที่รันจริง
+#
+# dirichlet-lm ชนะตอนไม่ปักหมุด (92.2%) แต่แพ้ตอนปัก (94.5%) เพราะสิ่งที่มัน
+# เก่งกว่าคือการหาการ์ดวิชาจากรหัส ซึ่งการปักหมุดทำได้อยู่แล้วและทำได้เป๊ะกว่า
+# พอทับซ้อนกัน สิ่งที่เหลือให้วัดคือคำถามที่เหลือ ซึ่ง bm25plus ทำได้ดีกว่า
+SPARSE_METHOD = os.environ.get("RAG_SPARSE_METHOD") or "bm25plus"
 
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
 USE_RERANKER = False      # It works — it lifted the right chunk from hybrid
@@ -175,11 +190,19 @@ LLM_MODEL = "gemini-3.5-flash"    # 3.7-flash/flash-latest คืน 503 บ่�
 # โควตา free tier นับแยกรายโมเดลและรีเซ็ตไม่พร้อมกัน — วันหนึ่งตัวหนึ่งหมด
 # อีกตัวยังว่าง  Generator จะไล่ตามลำดับนี้เองเมื่อเจอ 429/503
 # แล้วพักโมเดลที่หมดไว้ 10 นาทีก่อนกลับมาลองใหม่
+# เรียงตามผลวัดจริง (benchmarks/bench_llm_apis.py, 2026-08-25 สองรอบ รอบละ 6 ครั้ง)
+# ไม่ใช่ตามเลขเวอร์ชัน — ลำดับเดิมเรียงกลับด้านกับผลวัด คือเอา 3.7-flash
+# ที่ล้มเหลว 8 ใน 12 ครั้งและรอ 75-79 วินาที ไว้เป็นตัวสำรองอันดับแรก
+#
+#   flash-lite     ผ่าน 12/12  TTFT 1.11-3.37s
+#   3-flash-preview ผ่าน 11/12  TTFT 7.26-7.37s
+#   3.6-flash      ผ่าน 11/12  TTFT 9.52-30.98s
+#   3.7-flash      ผ่าน  4/12  TTFT 75.1-79.5s   ← ท้ายสุด ดีกว่าไม่ตอบเฉยๆ
 LLM_FALLBACK_MODELS = (
+    "gemini-3.1-flash-lite",
+    "gemini-3-flash-preview",
     "gemini-3.6-flash",
     "gemini-3.7-flash",
-    "gemini-3-flash-preview",
-    "gemini-3.1-flash-lite",
 )
 
 LLM_MAX_TOKENS = 16000

@@ -1083,3 +1083,281 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   "failed_steps": []
 }
 ```
+
+## ✅ 2026-08-25 20:38 — benchmark embedding: e5-base
+
+- **ทดลองอะไร:** วัดความเร็วและคุณภาพของ intfloat/multilingual-e5-base (278M, มิติ 768)
+- **ทำอย่างไร:** เข้ารหัส 3237 chunks บน cuda, batch=32, max_seq=512; ประเมิน dense-only ด้วย golden set 128 คำถาม
+- **ผลลัพธ์:** โหลด 9.34s, เข้ารหัส 17.47s (185.29 chunks/s), ต่อคำถาม p50 9.57ms, Recall@1 72.7%, MRR 0.803
+
+```json
+{
+  "model_key": "e5-base",
+  "hf_id": "intfloat/multilingual-e5-base",
+  "params_m": 278,
+  "dim": 768,
+  "max_seq_length": 512,
+  "device": "cuda",
+  "batch_size": 32,
+  "n_chunks": 3237,
+  "n_queries": 128,
+  "corpus": {
+    "n_chunks": 3237,
+    "n_sources": 23,
+    "chunks_sha1": "558fa8e941670876",
+    "key_version": 1
+  },
+  "load_seconds": 9.34,
+  "encode_seconds": 17.47,
+  "chunks_per_second": 185.29,
+  "index_seconds": 0.031,
+  "query_ms_mean": 10.1,
+  "query_ms_p50": 9.57,
+  "query_ms_p95": 12.34,
+  "embeddings_mb": 9.5,
+  "rss_before_gb": 0.5,
+  "rss_after_gb": 1.75,
+  "measured_at": "2026-08-25T20:38:02",
+  "quality": {
+    "all": {
+      "mrr": 0.803351314484127,
+      "hit@1": 0.7265625,
+      "recall@1": 0.7265625,
+      "ndcg@1": 0.7265625,
+      "hit@3": 0.859375,
+      "recall@3": 0.859375,
+      "ndcg@3": 0.8052434143973242,
+      "hit@5": 0.890625,
+      "recall@5": 0.890625,
+      "ndcg@5": 0.8187020568371177,
+      "hit@10": 0.9609375,
+      "recall@10": 0.9609375,
+      "ndcg@10": 0.8411341036043546
+    },
+    "by_name": {
+      "mrr": 0.9609375,
+      "hit@1": 0.921875,
+      "recall@1": 0.921875,
+      "ndcg@1": 0.921875,
+      "hit@3": 1.0,
+      "recall@3": 1.0,
+      "ndcg@3": 0.9711663869977701,
+      "hit@5": 1.0,
+      "recall@5": 1.0,
+      "ndcg@5": 0.9711663869977701,
+      "hit@10": 1.0,
+      "recall@10": 1.0,
+      "ndcg@10": 0.9711663869977701
+    },
+    "by_code": {
+      "mrr": 0.645765128968254,
+      "hit@1": 0.53125,
+      "recall@1": 0.53125,
+      "ndcg@1": 0.53125,
+      "hit@3": 0.71875,
+      "recall@3": 0.71875,
+      "ndcg@3": 0.6393204417968782,
+      "hit@5": 0.78125,
+      "recall@5": 0.78125,
+      "ndcg@5": 0.6662377266764652,
+      "hit@10": 0.921875,
+      "recall@10": 0.921875,
+      "ndcg@10": 0.711101820210939
+    }
+  }
+}
+```
+
+## ✅ 2026-08-25 20:39 — benchmark embedding: bge-m3
+
+- **ทดลองอะไร:** วัดความเร็วและคุณภาพของ BAAI/bge-m3 (568M, มิติ 1024)
+- **ทำอย่างไร:** เข้ารหัส 3237 chunks บน cuda, batch=32, max_seq=768; ประเมิน dense-only ด้วย golden set 128 คำถาม
+- **ผลลัพธ์:** โหลด 9.79s, เข้ารหัส 51.73s (62.58 chunks/s), ต่อคำถาม p50 17.06ms, Recall@1 63.3%, MRR 0.707
+
+```json
+{
+  "model_key": "bge-m3",
+  "hf_id": "BAAI/bge-m3",
+  "params_m": 568,
+  "dim": 1024,
+  "max_seq_length": 768,
+  "device": "cuda",
+  "batch_size": 32,
+  "n_chunks": 3237,
+  "n_queries": 128,
+  "corpus": {
+    "n_chunks": 3237,
+    "n_sources": 23,
+    "chunks_sha1": "558fa8e941670876",
+    "key_version": 1
+  },
+  "load_seconds": 9.79,
+  "encode_seconds": 51.73,
+  "chunks_per_second": 62.58,
+  "index_seconds": 0.035,
+  "query_ms_mean": 18.41,
+  "query_ms_p50": 17.06,
+  "query_ms_p95": 22.24,
+  "embeddings_mb": 12.6,
+  "rss_before_gb": 0.5,
+  "rss_after_gb": 1.73,
+  "measured_at": "2026-08-25T20:39:31",
+  "quality": {
+    "all": {
+      "mrr": 0.7066282242063492,
+      "hit@1": 0.6328125,
+      "recall@1": 0.6328125,
+      "ndcg@1": 0.6328125,
+      "hit@3": 0.75,
+      "recall@3": 0.75,
+      "ndcg@3": 0.6995893595982161,
+      "hit@5": 0.8125,
+      "recall@5": 0.8125,
+      "ndcg@5": 0.724452406157232,
+      "hit@10": 0.8984375,
+      "recall@10": 0.8984375,
+      "ndcg@10": 0.7518128680205951
+    },
+    "by_name": {
+      "mrr": 0.9791666666666666,
+      "hit@1": 0.96875,
+      "recall@1": 0.96875,
+      "ndcg@1": 0.96875,
+      "hit@3": 0.984375,
+      "recall@3": 0.984375,
+      "ndcg@3": 0.978608277399554,
+      "hit@5": 0.984375,
+      "recall@5": 0.984375,
+      "ndcg@5": 0.978608277399554,
+      "hit@10": 1.0,
+      "recall@10": 1.0,
+      "ndcg@10": 0.9841740146981168
+    },
+    "by_code": {
+      "mrr": 0.43408978174603174,
+      "hit@1": 0.296875,
+      "recall@1": 0.296875,
+      "ndcg@1": 0.296875,
+      "hit@3": 0.515625,
+      "recall@3": 0.515625,
+      "ndcg@3": 0.4205704417968782,
+      "hit@5": 0.640625,
+      "recall@5": 0.640625,
+      "ndcg@5": 0.47029653491490997,
+      "hit@10": 0.796875,
+      "recall@10": 0.796875,
+      "ndcg@10": 0.5194517213430734
+    }
+  }
+}
+```
+
+## ✅ 2026-08-25 20:41 — benchmark sparse retrievers (dense=e5-base)
+
+- **ทดลองอะไร:** เทียบ 6 วิธี sparse นอกเหนือจาก BM25 ทั้งแบบเดี่ยวและ fuse กับ dense
+- **ทำอย่างไร:** golden set 128 คำถาม, dense index จาก e5-base, RRF k=60, candidate_k=20
+- **ผลลัพธ์:** sparse เดี่ยวดีสุด: bm25 Recall@1 33.6%; hybrid ดีสุด: dense+dirichlet-lm Recall@1 92.2%
+
+```json
+{
+  "methods": [
+    "bm25",
+    "bm25l",
+    "bm25plus",
+    "tfidf-word",
+    "tfidf-char",
+    "dirichlet-lm"
+  ],
+  "build_seconds": {
+    "bm25": 2.29,
+    "bm25l": 1.94,
+    "bm25plus": 1.95,
+    "tfidf-word": 2.05,
+    "tfidf-char": 3.26,
+    "dirichlet-lm": 1.92
+  },
+  "sparse_recall_at_1": {
+    "bm25": 0.3359,
+    "bm25l": 0.125,
+    "bm25plus": 0.3281,
+    "tfidf-word": 0.1016,
+    "tfidf-char": 0.0391,
+    "dirichlet-lm": 0.2656
+  },
+  "hybrid_recall_at_1": {
+    "bm25": 0.8906,
+    "bm25l": 0.5,
+    "bm25plus": 0.8984,
+    "tfidf-word": 0.7969,
+    "tfidf-char": 0.625,
+    "dirichlet-lm": 0.9219
+  },
+  "hybrid_pinned_recall_at_1": {
+    "bm25": 0.9688,
+    "bm25l": 0.8672,
+    "bm25plus": 0.9766,
+    "tfidf-word": 0.9141,
+    "tfidf-char": 0.9062,
+    "dirichlet-lm": 0.9453
+  }
+}
+```
+
+## ❌ 2026-08-25 20:44 — บั๊ก: golden set ผูกกับตำแหน่ง chunk จึงเพี้ยนเงียบๆ ตอนเพิ่มข้อมูล
+
+- **ทดลองอะไร:** ตรวจว่าตัวเลข Recall/MRR ที่บันทึกไว้ยังใช้เทียบกับ corpus ปัจจุบันได้หรือไม่
+- **ทำอย่างไร:** ไล่ดูว่า relevant_chunk_ids ใน data/golden_set.json ชี้ไปที่ chunk ไหนใน outputs/chunks.json ตอนนี้
+- **ผลลัพธ์:** chunk_id เป็นเลขตำแหน่ง พอเพิ่มไฟล์ทะเบียน 14 ไฟล์ที่เรียงมาก่อน CLOs ทุก chunk ถูกนับใหม่ เฉลย "0" ที่เคยเป็นการ์ดวิชา กลายเป็นหน้าปกของ 00_สารบัญ (ที่ถูกคือ 109) ทั้ง 128 คำถามชี้ผิดหมด ไม่มี error ฟ้อง เพราะ guard เดิมเช็คแค่ว่า id มีอยู่จริง ซึ่ง "0" มีอยู่เสมอ — eval จะอ่านได้ 0% เงียบๆ
+
+```json
+{
+  "root_cause": "relevant_chunk_ids เป็นตำแหน่ง ไม่ใช่ identity",
+  "detection_gap": "build_golden_set.py เช็คว่า id resolve ได้ แต่ไม่เช็คว่า resolve ไปถูกตัว",
+  "fix": "evaluation/golden_set.py: relevant_chunk_keys = sha1(source+text)[:16] + loader ที่ผูก id ใหม่ทุกครั้ง"
+}
+```
+
+## ✅ 2026-08-25 20:44 — ปรับ default ให้ตรงกับผลวัด: e5-base + bm25plus + เรียง LLM fallback ใหม่
+
+- **ทดลองอะไร:** ค่า default ใน config หลายตัวขัดกับผลวัดของตัวเอง ค้างเป็น open item มาตั้งแต่รอบ 19:32
+- **ทำอย่างไร:** ซ่อม golden set ก่อน แล้ววัด e5-base กับ bge-m3 ใหม่บน corpus ปัจจุบัน 3,237 chunks บน RTX 5050 ผ่าน .venv-gpu จากนั้นเทียบ sparse 6 วิธีบน dense ตัวที่ชนะ
+- **ผลลัพธ์:** e5-base ยืนยันชนะบน corpus ใหม่ (Recall@1 72.7% เทียบ 63.3%, encode เร็วกว่า 3 เท่า) → DEFAULT_MODEL; bm25plus ชนะในคอลัมน์ที่ใช้จริงคือ hybrid+ปักหมุด (97.7% เทียบ bm25 96.9%, dirichlet-lm 94.5%) → SPARSE_METHOD; LLM fallback เรียงใหม่ตามความน่าเชื่อถือ เอา 3.1-flash-lite (ผ่าน 12/12, TTFT 1.1-3.4s) ขึ้นหัว และ 3.7-flash (ผ่าน 4/12, TTFT 75-79s) ลงท้าย
+
+```json
+{
+  "changed": {
+    "src/model_registry.py": "DEFAULT_MODEL: bge-m3 -> e5-base",
+    "config.py": "SPARSE_METHOD: bm25 -> bm25plus; LLM_FALLBACK_MODELS เรียงใหม่",
+    "src/generator.py": "default model: gemini-3.6-flash -> gemini-3.5-flash (ขัดกับ config)"
+  },
+  "embedding": {
+    "e5-base": {
+      "recall@1": 0.727,
+      "encode_s": 17.5
+    },
+    "bge-m3": {
+      "recall@1": 0.633,
+      "encode_s": 51.7
+    }
+  },
+  "sparse_hybrid_pinned": {
+    "bm25plus": 0.977,
+    "bm25": 0.969,
+    "dirichlet-lm": 0.945,
+    "tfidf-word": 0.914,
+    "tfidf-char": 0.906,
+    "bm25l": 0.867
+  },
+  "corpus": {
+    "n_chunks": 3237,
+    "n_sources": 23,
+    "chunks_sha1": "558fa8e941670876"
+  },
+  "still_open": [
+    "ยังไม่ลบ index กำพร้า ~38MB",
+    "reranker ยังไม่วัดบน GPU",
+    "golden set ยังครอบคลุมแค่ CLOs 64/3237 chunks",
+    "PDF สแกน 2 ไฟล์ยังไม่ OCR"
+  ]
+}
+```

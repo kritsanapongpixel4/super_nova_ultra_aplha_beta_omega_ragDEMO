@@ -54,7 +54,11 @@ class Generator:
 
     def __init__(
         self,
-        model: str = "gemini-3.6-flash",
+        # Mirrors config.LLM_MODEL.  Kept as a literal rather than importing
+        # config, to keep this module usable on its own — but it had drifted
+        # to 3.6-flash, which the latency benchmark puts at 9.5-31s TTFT
+        # against 3.9s for the model config actually selects.
+        model: str = "gemini-3.5-flash",
         max_tokens: int = 16000,
         system_prompt: str = prompt_templates.SYSTEM_PROMPT,
         fallback_models: tuple[str, ...] = (),

@@ -222,7 +222,17 @@ MODELS: dict[str, EmbeddingSpec] = {
     )
 }
 
-DEFAULT_MODEL = "bge-m3"
+# วัดบน corpus ปัจจุบัน 3,237 chunks / golden set 128 คำถาม (2026-08-25, RTX 5050)
+#
+#             Recall@1  Recall@5    MRR   เข้ารหัส   ต่อคำถาม
+#   e5-base     72.7%     89.1%   0.803    17.5s      9.6ms
+#   bge-m3      63.3%     81.2%   0.707    51.7s     17.1ms
+#
+# e5-base ชนะทุกด้าน ทั้งที่เล็กกว่าครึ่ง (278M เทียบ 568M) และมิติต่ำกว่า
+# (768 เทียบ 1024) ที่ต่างกันชัดคือคำถามที่ถามด้วยรหัสวิชา: e5-base 53.1%
+# เทียบ bge-m3 29.7% — bge-m3 ชนะเฉพาะตอนถามด้วยชื่อวิชา (96.9% เทียบ 92.2%)
+# ซึ่งเป็นด้านที่ทั้งคู่ทำได้ดีอยู่แล้ว
+DEFAULT_MODEL = "e5-base"
 
 #: Keys the benchmark runs by default — everything the machine can finish.
 RUNNABLE = [key for key, spec in MODELS.items() if spec.tier != "infeasible"]
