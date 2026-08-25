@@ -6,24 +6,24 @@
   "max_seq_length": 512,
   "device": "cuda",
   "batch_size": 32,
-  "n_chunks": 3237,
+  "n_chunks": 2202,
   "n_queries": 128,
   "corpus": {
-    "n_chunks": 3237,
-    "n_sources": 23,
-    "chunks_sha1": "558fa8e941670876",
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
     "key_version": 1
   },
-  "load_seconds": 9.34,
-  "encode_seconds": 17.47,
-  "chunks_per_second": 185.29,
-  "index_seconds": 0.031,
-  "query_ms_mean": 10.1,
-  "query_ms_p50": 9.57,
-  "query_ms_p95": 12.34,
-  "embeddings_mb": 9.5,
+  "load_seconds": 10.69,
+  "encode_seconds": 11.73,
+  "chunks_per_second": 187.71,
+  "index_seconds": 0.18,
+  "query_ms_mean": 32.9,
+  "query_ms_p50": 31.7,
+  "query_ms_p95": 38.65,
+  "embeddings_mb": 6.5,
   "rss_before_gb": 0.5,
-  "rss_after_gb": 1.75,
+  "rss_after_gb": 1.73,
   "quality": {
     "all": {
       "mrr": 0.803351314484127,
@@ -71,5 +71,5 @@
       "ndcg@10": 0.711101820210939
     }
   },
-  "measured_at": "2026-08-25T20:38:02"
+  "measured_at": "2026-08-25T21:22:27"
 }

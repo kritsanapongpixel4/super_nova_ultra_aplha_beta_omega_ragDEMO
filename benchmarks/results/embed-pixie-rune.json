@@ -6,18 +6,24 @@
   "max_seq_length": 768,
   "device": "cuda",
   "batch_size": 32,
-  "n_chunks": 3128,
+  "n_chunks": 2202,
   "n_queries": 128,
-  "load_seconds": 17.11,
-  "encode_seconds": 56.41,
-  "chunks_per_second": 55.46,
-  "index_seconds": 0.149,
-  "query_ms_mean": 27.26,
-  "query_ms_p50": 24.89,
-  "query_ms_p95": 40.32,
-  "embeddings_mb": 12.2,
+  "corpus": {
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
+    "key_version": 1
+  },
+  "load_seconds": 14.95,
+  "encode_seconds": 42.22,
+  "chunks_per_second": 52.15,
+  "index_seconds": 0.041,
+  "query_ms_mean": 38.93,
+  "query_ms_p50": 38.12,
+  "query_ms_p95": 46.97,
+  "embeddings_mb": 8.6,
   "rss_before_gb": 0.5,
-  "rss_after_gb": 1.74,
+  "rss_after_gb": 1.7,
   "quality": {
     "all": {
       "mrr": 0.7033203125,
@@ -65,5 +71,5 @@
       "ndcg@10": 0.5229234684850981
     }
   },
-  "measured_at": "2026-08-25T19:01:53"
+  "measured_at": "2026-08-25T21:24:56"
 }

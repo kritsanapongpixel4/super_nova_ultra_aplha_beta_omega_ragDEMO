@@ -1,11 +1,11 @@
 {
   "meta": {
-    "built_at": "2026-08-25T20:35:42",
+    "built_at": "2026-08-25T21:21:44",
     "n_queries": 128,
     "corpus": {
-      "n_chunks": 3237,
-      "n_sources": 23,
-      "chunks_sha1": "558fa8e941670876",
+      "n_chunks": 2202,
+      "n_sources": 18,
+      "chunks_sha1": "30cffcd2a35ff359",
       "key_version": 1
     },
     "chunk_size": 150,
@@ -16,7 +16,7 @@
       "query_id": 1,
       "question": "วิชาปฏิบัติการควบคุมเวอร์ชันมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "109"
+        "101"
       ],
       "relevant_chunk_keys": [
         "99128aece891b013"
@@ -29,7 +29,7 @@
       "query_id": 2,
       "question": "CLO ของวิชา 04-620-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "109"
+        "101"
       ],
       "relevant_chunk_keys": [
         "99128aece891b013"
@@ -42,7 +42,7 @@
       "query_id": 3,
       "question": "วิชาปฏิบัติการโปรแกรมภาษาไพธอนมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "110"
+        "102"
       ],
       "relevant_chunk_keys": [
         "74c65343ede26247"
@@ -55,7 +55,7 @@
       "query_id": 4,
       "question": "CLO ของวิชา 04-620-202 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "110"
+        "102"
       ],
       "relevant_chunk_keys": [
         "74c65343ede26247"
@@ -68,7 +68,7 @@
       "query_id": 5,
       "question": "วิชาสัมมนาทางวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "111"
+        "103"
       ],
       "relevant_chunk_keys": [
         "c1a70b4e71cd171e"
@@ -81,7 +81,7 @@
       "query_id": 6,
       "question": "CLO ของวิชา 04-620-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "111"
+        "103"
       ],
       "relevant_chunk_keys": [
         "c1a70b4e71cd171e"
@@ -94,7 +94,7 @@
       "query_id": 7,
       "question": "วิชาการเขียนโปรแกรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "112"
+        "104"
       ],
       "relevant_chunk_keys": [
         "57acad85637fd9fa"
@@ -107,7 +107,7 @@
       "query_id": 8,
       "question": "CLO ของวิชา 04-621-101 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "112"
+        "104"
       ],
       "relevant_chunk_keys": [
         "57acad85637fd9fa"
@@ -120,7 +120,7 @@
       "query_id": 9,
       "question": "วิชาวงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "113"
+        "105"
       ],
       "relevant_chunk_keys": [
         "138dc0cc88649eb7"
@@ -133,7 +133,7 @@
       "query_id": 10,
       "question": "CLO ของวิชา 04-621-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "113"
+        "105"
       ],
       "relevant_chunk_keys": [
         "138dc0cc88649eb7"
@@ -146,7 +146,7 @@
       "query_id": 11,
       "question": "วิชาวงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "114"
+        "106"
       ],
       "relevant_chunk_keys": [
         "7d73fbe05febbe1b"
@@ -159,7 +159,7 @@
       "query_id": 12,
       "question": "CLO ของวิชา 04-621-202 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "114"
+        "106"
       ],
       "relevant_chunk_keys": [
         "7d73fbe05febbe1b"
@@ -172,7 +172,7 @@
       "query_id": 13,
       "question": "วิชาการออกแบบวงจรดิจิทัลและตรรกะมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "115"
+        "107"
       ],
       "relevant_chunk_keys": [
         "b846bb41547a864d"
@@ -185,7 +185,7 @@
       "query_id": 14,
       "question": "CLO ของวิชา 04-621-203 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "115"
+        "107"
       ],
       "relevant_chunk_keys": [
         "b846bb41547a864d"
@@ -198,7 +198,7 @@
       "query_id": 15,
       "question": "วิชาปฏิบัติการเครือข่ายคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "116"
+        "108"
       ],
       "relevant_chunk_keys": [
         "d1f457322b882736"
@@ -211,7 +211,7 @@
       "query_id": 16,
       "question": "CLO ของวิชา 04-623-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "116"
+        "108"
       ],
       "relevant_chunk_keys": [
         "d1f457322b882736"
@@ -224,7 +224,7 @@
       "query_id": 17,
       "question": "วิชาไมโครคอนโทรลเลอร์และการเชื่อมต่อมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "117"
+        "109"
       ],
       "relevant_chunk_keys": [
         "46bc4a6464772141"
@@ -237,7 +237,7 @@
       "query_id": 18,
       "question": "CLO ของวิชา 04-621-204 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "117"
+        "109"
       ],
       "relevant_chunk_keys": [
         "46bc4a6464772141"
@@ -250,7 +250,7 @@
       "query_id": 19,
       "question": "วิชาองค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "118"
+        "110"
       ],
       "relevant_chunk_keys": [
         "b6f923ecd06461b6"
@@ -263,7 +263,7 @@
       "query_id": 20,
       "question": "CLO ของวิชา 04-621-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "118"
+        "110"
       ],
       "relevant_chunk_keys": [
         "b6f923ecd06461b6"
@@ -276,7 +276,7 @@
       "query_id": 21,
       "question": "วิชาอินเตอร์เน็ตของสรรพสิ่งมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "119"
+        "111"
       ],
       "relevant_chunk_keys": [
         "407fdc3387271229"
@@ -289,7 +289,7 @@
       "query_id": 22,
       "question": "CLO ของวิชา 04-621-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "119"
+        "111"
       ],
       "relevant_chunk_keys": [
         "407fdc3387271229"
@@ -302,7 +302,7 @@
       "query_id": 23,
       "question": "วิชาระบบปฏิบัติการมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "120"
+        "112"
       ],
       "relevant_chunk_keys": [
         "12f18dcfcdcba6c3"
@@ -315,7 +315,7 @@
       "query_id": 24,
       "question": "CLO ของวิชา 04-621-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "120"
+        "112"
       ],
       "relevant_chunk_keys": [
         "12f18dcfcdcba6c3"
@@ -328,7 +328,7 @@
       "query_id": 25,
       "question": "วิชาโครงสร้างข้อมูลและอัลกอริทึมมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "121"
+        "113"
       ],
       "relevant_chunk_keys": [
         "f64723cec3f329f8"
@@ -341,7 +341,7 @@
       "query_id": 26,
       "question": "CLO ของวิชา 04-622-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "121"
+        "113"
       ],
       "relevant_chunk_keys": [
         "f64723cec3f329f8"
@@ -354,7 +354,7 @@
       "query_id": 27,
       "question": "วิชาระบบฐานข้อมูลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "122"
+        "114"
       ],
       "relevant_chunk_keys": [
         "f814237e6ecf59fa"
@@ -367,7 +367,7 @@
       "query_id": 28,
       "question": "CLO ของวิชา 04-622-202 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "122"
+        "114"
       ],
       "relevant_chunk_keys": [
         "f814237e6ecf59fa"
@@ -380,7 +380,7 @@
       "query_id": 29,
       "question": "วิชาการเขียนโปรแกรมเชิงวัตถุมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "123"
+        "115"
       ],
       "relevant_chunk_keys": [
         "2e27005c9ca81b69"
@@ -393,7 +393,7 @@
       "query_id": 30,
       "question": "CLO ของวิชา 04-622-203 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "123"
+        "115"
       ],
       "relevant_chunk_keys": [
         "2e27005c9ca81b69"
@@ -406,7 +406,7 @@
       "query_id": 31,
       "question": "วิชาการพัฒนาเว็บเต็มรูปแบบมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "124"
+        "116"
       ],
       "relevant_chunk_keys": [
         "5f3e5e3a3fd8884d"
@@ -419,7 +419,7 @@
       "query_id": 32,
       "question": "CLO ของวิชา 04-622-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "124"
+        "116"
       ],
       "relevant_chunk_keys": [
         "5f3e5e3a3fd8884d"
@@ -432,7 +432,7 @@
       "query_id": 33,
       "question": "วิชาวิศวกรรมซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "125"
+        "117"
       ],
       "relevant_chunk_keys": [
         "8f20811871fd9172"
@@ -445,7 +445,7 @@
       "query_id": 34,
       "question": "CLO ของวิชา 04-622-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "125"
+        "117"
       ],
       "relevant_chunk_keys": [
         "8f20811871fd9172"
@@ -458,7 +458,7 @@
       "query_id": 35,
       "question": "วิชาการโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "126"
+        "118"
       ],
       "relevant_chunk_keys": [
         "4427ebb41dee6ac1"
@@ -471,7 +471,7 @@
       "query_id": 36,
       "question": "CLO ของวิชา 04-622-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "126"
+        "118"
       ],
       "relevant_chunk_keys": [
         "4427ebb41dee6ac1"
@@ -484,7 +484,7 @@
       "query_id": 37,
       "question": "วิชาการสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "127"
+        "119"
       ],
       "relevant_chunk_keys": [
         "59430d29ae258907"
@@ -497,7 +497,7 @@
       "query_id": 38,
       "question": "CLO ของวิชา 04-623-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "127"
+        "119"
       ],
       "relevant_chunk_keys": [
         "59430d29ae258907"
@@ -510,7 +510,7 @@
       "query_id": 39,
       "question": "วิชาระบบเครือข่ายแบบทีซีพีไอพีมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "128"
+        "120"
       ],
       "relevant_chunk_keys": [
         "81b26fbc6978fae5"
@@ -523,7 +523,7 @@
       "query_id": 40,
       "question": "CLO ของวิชา 04-623-202 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "128"
+        "120"
       ],
       "relevant_chunk_keys": [
         "81b26fbc6978fae5"
@@ -536,7 +536,7 @@
       "query_id": 41,
       "question": "วิชาทฤษฎีการคำนวณมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "129"
+        "121"
       ],
       "relevant_chunk_keys": [
         "7e171ea4c4bff6bc"
@@ -549,7 +549,7 @@
       "query_id": 42,
       "question": "CLO ของวิชา 04-624-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "129"
+        "121"
       ],
       "relevant_chunk_keys": [
         "7e171ea4c4bff6bc"
@@ -562,7 +562,7 @@
       "query_id": 43,
       "question": "วิชาการประมวลผลภาพและการมองเห็นของคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "130"
+        "122"
       ],
       "relevant_chunk_keys": [
         "a41cf76754ba0ee1"
@@ -575,7 +575,7 @@
       "query_id": 44,
       "question": "CLO ของวิชา 04-624-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "130"
+        "122"
       ],
       "relevant_chunk_keys": [
         "a41cf76754ba0ee1"
@@ -588,7 +588,7 @@
       "query_id": 45,
       "question": "วิชาปฏิบัติการบูรณาการระบบคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "131"
+        "123"
       ],
       "relevant_chunk_keys": [
         "23281445ef47ea9e"
@@ -601,7 +601,7 @@
       "query_id": 46,
       "question": "CLO ของวิชา 04-620-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "131"
+        "123"
       ],
       "relevant_chunk_keys": [
         "23281445ef47ea9e"
@@ -614,7 +614,7 @@
       "query_id": 47,
       "question": "วิชาการเตรียมโครงงานวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "132"
+        "124"
       ],
       "relevant_chunk_keys": [
         "a31feff75f869a25"
@@ -627,7 +627,7 @@
       "query_id": 48,
       "question": "CLO ของวิชา 04-620-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "132"
+        "124"
       ],
       "relevant_chunk_keys": [
         "a31feff75f869a25"
@@ -640,7 +640,7 @@
       "query_id": 49,
       "question": "วิชาโครงงานวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "133"
+        "125"
       ],
       "relevant_chunk_keys": [
         "7ea9c172dcb09b04"
@@ -653,7 +653,7 @@
       "query_id": 50,
       "question": "CLO ของวิชา 04-620-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "133"
+        "125"
       ],
       "relevant_chunk_keys": [
         "7ea9c172dcb09b04"
@@ -666,7 +666,7 @@
       "query_id": 51,
       "question": "วิชาเซ็นเซอร์และตัวขับเคลื่อนมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "134"
+        "126"
       ],
       "relevant_chunk_keys": [
         "b6489429cbfe85f8"
@@ -679,7 +679,7 @@
       "query_id": 52,
       "question": "CLO ของวิชา 04-621-304 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "134"
+        "126"
       ],
       "relevant_chunk_keys": [
         "b6489429cbfe85f8"
@@ -692,7 +692,7 @@
       "query_id": 53,
       "question": "วิชาการออกแบบระบบดิจิทัลและการทวนสอบมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "135"
+        "127"
       ],
       "relevant_chunk_keys": [
         "b9916bd7f4938579"
@@ -705,7 +705,7 @@
       "query_id": 54,
       "question": "CLO ของวิชา 04-621-305 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "135"
+        "127"
       ],
       "relevant_chunk_keys": [
         "b9916bd7f4938579"
@@ -718,7 +718,7 @@
       "query_id": 55,
       "question": "วิชาสถาปัตยกรรมคอมพิวเตอร์ขั้นสูงมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "136"
+        "128"
       ],
       "relevant_chunk_keys": [
         "2ffc680a2690941e"
@@ -731,7 +731,7 @@
       "query_id": 56,
       "question": "CLO ของวิชา 04-621-306 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "136"
+        "128"
       ],
       "relevant_chunk_keys": [
         "2ffc680a2690941e"
@@ -744,7 +744,7 @@
       "query_id": 57,
       "question": "วิชาระบบสมองกลฝังตัวมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "137"
+        "129"
       ],
       "relevant_chunk_keys": [
         "f9885e7dbc980487"
@@ -757,7 +757,7 @@
       "query_id": 58,
       "question": "CLO ของวิชา 04-621-307 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "137"
+        "129"
       ],
       "relevant_chunk_keys": [
         "f9885e7dbc980487"
@@ -770,7 +770,7 @@
       "query_id": 59,
       "question": "วิชาระบบปฏิบัติการแบบทันกาลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "138"
+        "130"
       ],
       "relevant_chunk_keys": [
         "4d4f448853deda10"
@@ -783,7 +783,7 @@
       "query_id": 60,
       "question": "CLO ของวิชา 04-621-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "138"
+        "130"
       ],
       "relevant_chunk_keys": [
         "4d4f448853deda10"
@@ -796,7 +796,7 @@
       "query_id": 61,
       "question": "วิชาอินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรมมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "139"
+        "131"
       ],
       "relevant_chunk_keys": [
         "d770568ba2b8b99c"
@@ -809,7 +809,7 @@
       "query_id": 62,
       "question": "CLO ของวิชา 04-621-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "139"
+        "131"
       ],
       "relevant_chunk_keys": [
         "d770568ba2b8b99c"
@@ -822,7 +822,7 @@
       "query_id": 63,
       "question": "วิชาการออกแบบวงจรรวมแอนะล็อกมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "140"
+        "132"
       ],
       "relevant_chunk_keys": [
         "2e6ee75263cea74e"
@@ -835,7 +835,7 @@
       "query_id": 64,
       "question": "CLO ของวิชา 04-621-403 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "140"
+        "132"
       ],
       "relevant_chunk_keys": [
         "2e6ee75263cea74e"
@@ -848,7 +848,7 @@
       "query_id": 65,
       "question": "วิชาการออกแบบวงจรรวมดิจิทัลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "141"
+        "133"
       ],
       "relevant_chunk_keys": [
         "c94730e9712f34ed"
@@ -861,7 +861,7 @@
       "query_id": 66,
       "question": "CLO ของวิชา 04-621-404 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "141"
+        "133"
       ],
       "relevant_chunk_keys": [
         "c94730e9712f34ed"
@@ -874,7 +874,7 @@
       "query_id": 67,
       "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "142"
+        "134"
       ],
       "relevant_chunk_keys": [
         "995b65e590e0a98d"
@@ -887,7 +887,7 @@
       "query_id": 68,
       "question": "CLO ของวิชา 04-621-405 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "142"
+        "134"
       ],
       "relevant_chunk_keys": [
         "995b65e590e0a98d"
@@ -900,7 +900,7 @@
       "query_id": 69,
       "question": "วิชาหัวข้อขั้นสูงทางคอมพิวเตอร์ฮาร์ดแวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "143"
+        "135"
       ],
       "relevant_chunk_keys": [
         "9c55680c2a716efe"
@@ -913,7 +913,7 @@
       "query_id": 70,
       "question": "CLO ของวิชา 04-621-406 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "143"
+        "135"
       ],
       "relevant_chunk_keys": [
         "9c55680c2a716efe"
@@ -926,7 +926,7 @@
       "query_id": 71,
       "question": "วิชาการโปรแกรมเกมมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "144"
+        "136"
       ],
       "relevant_chunk_keys": [
         "e28633afb1ff29bc"
@@ -939,7 +939,7 @@
       "query_id": 72,
       "question": "CLO ของวิชา 04-622-304 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "144"
+        "136"
       ],
       "relevant_chunk_keys": [
         "e28633afb1ff29bc"
@@ -952,7 +952,7 @@
       "query_id": 73,
       "question": "วิชาการเขียนโปรแกรมบนระบบยูนิกซ์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "145"
+        "137"
       ],
       "relevant_chunk_keys": [
         "abcc46ca192f3487"
@@ -965,7 +965,7 @@
       "query_id": 74,
       "question": "CLO ของวิชา 04-622-305 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "145"
+        "137"
       ],
       "relevant_chunk_keys": [
         "abcc46ca192f3487"
@@ -978,7 +978,7 @@
       "query_id": 75,
       "question": "วิชาการเขียนโปรแกรมคอมพิวเตอร์ขั้นสูงมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "146"
+        "138"
       ],
       "relevant_chunk_keys": [
         "9f8f0521821ffdbb"
@@ -991,7 +991,7 @@
       "query_id": 76,
       "question": "CLO ของวิชา 04-622-306 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "146"
+        "138"
       ],
       "relevant_chunk_keys": [
         "9f8f0521821ffdbb"
@@ -1004,7 +1004,7 @@
       "query_id": 77,
       "question": "วิชาการทดสอบซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "147"
+        "139"
       ],
       "relevant_chunk_keys": [
         "eb8abce770ff3db4"
@@ -1017,7 +1017,7 @@
       "query_id": 78,
       "question": "CLO ของวิชา 04-622-307 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "147"
+        "139"
       ],
       "relevant_chunk_keys": [
         "eb8abce770ff3db4"
@@ -1030,7 +1030,7 @@
       "query_id": 79,
       "question": "วิชากระบวนการพัฒนาซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "148"
+        "140"
       ],
       "relevant_chunk_keys": [
         "cb9a01ec6a29af1b"
@@ -1043,7 +1043,7 @@
       "query_id": 80,
       "question": "CLO ของวิชา 04-622-308 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "148"
+        "140"
       ],
       "relevant_chunk_keys": [
         "cb9a01ec6a29af1b"
@@ -1056,7 +1056,7 @@
       "query_id": 81,
       "question": "วิชาระบบฐานข้อมูลขั้นสูงมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "149"
+        "141"
       ],
       "relevant_chunk_keys": [
         "3e123ea4856f0c3a"
@@ -1069,7 +1069,7 @@
       "query_id": 82,
       "question": "CLO ของวิชา 04-622-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "149"
+        "141"
       ],
       "relevant_chunk_keys": [
         "3e123ea4856f0c3a"
@@ -1082,7 +1082,7 @@
       "query_id": 83,
       "question": "วิชาฐานข้อมูลไม่สัมพันธ์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "150"
+        "142"
       ],
       "relevant_chunk_keys": [
         "3482308deec205f0"
@@ -1095,7 +1095,7 @@
       "query_id": 84,
       "question": "CLO ของวิชา 04-622-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "150"
+        "142"
       ],
       "relevant_chunk_keys": [
         "3482308deec205f0"
@@ -1108,7 +1108,7 @@
       "query_id": 85,
       "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "151"
+        "143"
       ],
       "relevant_chunk_keys": [
         "72e8fe21f3fda332"
@@ -1121,7 +1121,7 @@
       "query_id": 86,
       "question": "CLO ของวิชา 04-622-403 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "151"
+        "143"
       ],
       "relevant_chunk_keys": [
         "72e8fe21f3fda332"
@@ -1134,7 +1134,7 @@
       "query_id": 87,
       "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "152"
+        "144"
       ],
       "relevant_chunk_keys": [
         "8ee1ece8cf507e2f"
@@ -1147,7 +1147,7 @@
       "query_id": 88,
       "question": "CLO ของวิชา 04-622-404 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "152"
+        "144"
       ],
       "relevant_chunk_keys": [
         "8ee1ece8cf507e2f"
@@ -1160,7 +1160,7 @@
       "query_id": 89,
       "question": "วิชาข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้นมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "153"
+        "145"
       ],
       "relevant_chunk_keys": [
         "36eca511e4df8d87"
@@ -1173,7 +1173,7 @@
       "query_id": 90,
       "question": "CLO ของวิชา 04-623-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "153"
+        "145"
       ],
       "relevant_chunk_keys": [
         "36eca511e4df8d87"
@@ -1186,7 +1186,7 @@
       "query_id": 91,
       "question": "วิชาเครือข่ายเซ็นเซอร์ไร้สายมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "154"
+        "146"
       ],
       "relevant_chunk_keys": [
         "aaf6749235fc73cb"
@@ -1199,7 +1199,7 @@
       "query_id": 92,
       "question": "CLO ของวิชา 04-623-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "154"
+        "146"
       ],
       "relevant_chunk_keys": [
         "aaf6749235fc73cb"
@@ -1212,7 +1212,7 @@
       "query_id": 93,
       "question": "วิชาความปลอดภัยไซเบอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "155"
+        "147"
       ],
       "relevant_chunk_keys": [
         "c96b12c2b81086c8"
@@ -1225,7 +1225,7 @@
       "query_id": 94,
       "question": "CLO ของวิชา 04-623-304 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "155"
+        "147"
       ],
       "relevant_chunk_keys": [
         "c96b12c2b81086c8"
@@ -1238,7 +1238,7 @@
       "query_id": 95,
       "question": "วิชาความมั่นคงในระบบเครือข่ายมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "156"
+        "148"
       ],
       "relevant_chunk_keys": [
         "9be8a0b1ccc5eba9"
@@ -1251,7 +1251,7 @@
       "query_id": 96,
       "question": "CLO ของวิชา 04-623-305 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "156"
+        "148"
       ],
       "relevant_chunk_keys": [
         "9be8a0b1ccc5eba9"
@@ -1264,7 +1264,7 @@
       "query_id": 97,
       "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์เครือข่ายมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "157"
+        "149"
       ],
       "relevant_chunk_keys": [
         "ca6cecfb08886317"
@@ -1277,7 +1277,7 @@
       "query_id": 98,
       "question": "CLO ของวิชา 04-623-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "157"
+        "149"
       ],
       "relevant_chunk_keys": [
         "ca6cecfb08886317"
@@ -1290,7 +1290,7 @@
       "query_id": 99,
       "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่ายมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "158"
+        "150"
       ],
       "relevant_chunk_keys": [
         "1ca205cf5cf34ac8"
@@ -1303,7 +1303,7 @@
       "query_id": 100,
       "question": "CLO ของวิชา 04-623-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "158"
+        "150"
       ],
       "relevant_chunk_keys": [
         "1ca205cf5cf34ac8"
@@ -1316,7 +1316,7 @@
       "query_id": 101,
       "question": "วิชาการเรียนรู้ของเครื่องมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "159"
+        "151"
       ],
       "relevant_chunk_keys": [
         "88cba970b83fab70"
@@ -1329,7 +1329,7 @@
       "query_id": 102,
       "question": "CLO ของวิชา 04-624-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "159"
+        "151"
       ],
       "relevant_chunk_keys": [
         "88cba970b83fab70"
@@ -1342,7 +1342,7 @@
       "query_id": 103,
       "question": "วิชาการเรียนรู้เชิงลึกเบื้องต้นมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "160"
+        "152"
       ],
       "relevant_chunk_keys": [
         "46a98dfadec241c3"
@@ -1355,7 +1355,7 @@
       "query_id": 104,
       "question": "CLO ของวิชา 04-624-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "160"
+        "152"
       ],
       "relevant_chunk_keys": [
         "46a98dfadec241c3"
@@ -1368,7 +1368,7 @@
       "query_id": 105,
       "question": "วิชาการรู้จำเสียงพูดมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "161"
+        "153"
       ],
       "relevant_chunk_keys": [
         "7cf9eadc198888ce"
@@ -1381,7 +1381,7 @@
       "query_id": 106,
       "question": "CLO ของวิชา 04-624-304 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "161"
+        "153"
       ],
       "relevant_chunk_keys": [
         "7cf9eadc198888ce"
@@ -1394,7 +1394,7 @@
       "query_id": 107,
       "question": "วิชาข้อมูลขนาดใหญ่มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "162"
+        "154"
       ],
       "relevant_chunk_keys": [
         "9f837b0851a8e2a6"
@@ -1407,7 +1407,7 @@
       "query_id": 108,
       "question": "CLO ของวิชา 04-624-305 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "162"
+        "154"
       ],
       "relevant_chunk_keys": [
         "9f837b0851a8e2a6"
@@ -1420,7 +1420,7 @@
       "query_id": 109,
       "question": "วิชาวิศวกรรมข้อมูลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "163"
+        "155"
       ],
       "relevant_chunk_keys": [
         "e4a32f2624d6b125"
@@ -1433,7 +1433,7 @@
       "query_id": 110,
       "question": "CLO ของวิชา 04-624-306 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "163"
+        "155"
       ],
       "relevant_chunk_keys": [
         "e4a32f2624d6b125"
@@ -1446,7 +1446,7 @@
       "query_id": 111,
       "question": "วิชาการเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "164"
+        "156"
       ],
       "relevant_chunk_keys": [
         "2fc0310b63976c8c"
@@ -1459,7 +1459,7 @@
       "query_id": 112,
       "question": "CLO ของวิชา 04-624-307 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "164"
+        "156"
       ],
       "relevant_chunk_keys": [
         "2fc0310b63976c8c"
@@ -1472,7 +1472,7 @@
       "query_id": 113,
       "question": "วิชาปัญหาพิเศษทางปัญญาประดิษฐ์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "165"
+        "157"
       ],
       "relevant_chunk_keys": [
         "ff798f3b7e6876bb"
@@ -1485,7 +1485,7 @@
       "query_id": 114,
       "question": "CLO ของวิชา 04-624-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "165"
+        "157"
       ],
       "relevant_chunk_keys": [
         "ff798f3b7e6876bb"
@@ -1498,7 +1498,7 @@
       "query_id": 115,
       "question": "วิชาหัวข้อขั้นสูงทางปัญญาประดิษฐ์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "166"
+        "158"
       ],
       "relevant_chunk_keys": [
         "1b633c2f8a854c2e"
@@ -1511,7 +1511,7 @@
       "query_id": 116,
       "question": "CLO ของวิชา 04-624-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "166"
+        "158"
       ],
       "relevant_chunk_keys": [
         "1b633c2f8a854c2e"
@@ -1524,7 +1524,7 @@
       "query_id": 117,
       "question": "วิชาการเตรียมความพร้อมฝึกประสบการณ์วิชาชีพมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "167"
+        "159"
       ],
       "relevant_chunk_keys": [
         "275fbc3985b638c9"
@@ -1537,7 +1537,7 @@
       "query_id": 118,
       "question": "CLO ของวิชา 04-000-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "167"
+        "159"
       ],
       "relevant_chunk_keys": [
         "275fbc3985b638c9"
@@ -1550,7 +1550,7 @@
       "query_id": 119,
       "question": "วิชาสหกิจศึกษามี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "168"
+        "160"
       ],
       "relevant_chunk_keys": [
         "cfcddd75804f0375"
@@ -1563,7 +1563,7 @@
       "query_id": 120,
       "question": "CLO ของวิชา 04-000-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "168"
+        "160"
       ],
       "relevant_chunk_keys": [
         "cfcddd75804f0375"
@@ -1576,7 +1576,7 @@
       "query_id": 121,
       "question": "วิชาสหกิจศึกษาต่างประเทศมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "169"
+        "161"
       ],
       "relevant_chunk_keys": [
         "839cc66571acd61e"
@@ -1589,7 +1589,7 @@
       "query_id": 122,
       "question": "CLO ของวิชา 04-000-403 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "169"
+        "161"
       ],
       "relevant_chunk_keys": [
         "839cc66571acd61e"
@@ -1602,7 +1602,7 @@
       "query_id": 123,
       "question": "วิชาฝึกงานมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "170"
+        "162"
       ],
       "relevant_chunk_keys": [
         "c97dd1f0fbfbb44f"
@@ -1615,7 +1615,7 @@
       "query_id": 124,
       "question": "CLO ของวิชา 04-000-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "170"
+        "162"
       ],
       "relevant_chunk_keys": [
         "c97dd1f0fbfbb44f"
@@ -1628,7 +1628,7 @@
       "query_id": 125,
       "question": "วิชาฝึกงานต่างประเทศมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "171"
+        "163"
       ],
       "relevant_chunk_keys": [
         "1d800927ccde68c6"
@@ -1641,7 +1641,7 @@
       "query_id": 126,
       "question": "CLO ของวิชา 04-000-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "171"
+        "163"
       ],
       "relevant_chunk_keys": [
         "1d800927ccde68c6"
@@ -1654,7 +1654,7 @@
       "query_id": 127,
       "question": "วิชาปัญหาพิเศษจากสถานประกอบการมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
-        "172"
+        "164"
       ],
       "relevant_chunk_keys": [
         "662051fb8e844ac0"
@@ -1667,7 +1667,7 @@
       "query_id": 128,
       "question": "CLO ของวิชา 04-000-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
-        "172"
+        "164"
       ],
       "relevant_chunk_keys": [
         "662051fb8e844ac0"
