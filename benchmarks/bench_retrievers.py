@@ -85,17 +85,17 @@ def table(rows: list[tuple[str, dict]], title: str) -> str:
     lines = [
         f"### {title}",
         "",
-        "| วิธี | Recall@1 | Recall@5 | MRR | nDCG@10 | ถามด้วยชื่อ | ถามด้วยรหัส | ต่อคำถาม (p50) |",
+        "| วิธี | Hit@1 | Hit@5 | MRR | nDCG@10 | ถามด้วยชื่อ | ถามด้วยรหัส | ต่อคำถาม (p50) |",
         "|---|---|---|---|---|---|---|---|",
     ]
     for name, r in sorted(
-        rows, key=lambda item: item[1]["all"]["recall@1"], reverse=True
+        rows, key=lambda item: item[1]["all"]["hit@1"], reverse=True
     ):
         a = r["all"]
         lines.append(
-            f"| {name} | {a['recall@1']:.1%} | {a['recall@5']:.1%} | {a['mrr']:.3f} | "
-            f"{a['ndcg@10']:.3f} | {r.get('by_name', {}).get('recall@1', 0):.1%} | "
-            f"{r.get('by_code', {}).get('recall@1', 0):.1%} | {r['ms_p50']:.1f} ms |"
+            f"| {name} | {a['hit@1']:.1%} | {a['hit@5']:.1%} | {a['mrr']:.3f} | "
+            f"{a['ndcg@10']:.3f} | {r.get('by_name', {}).get('hit@1', 0):.1%} | "
+            f"{r.get('by_code', {}).get('hit@1', 0):.1%} | {r['ms_p50']:.1f} ms |"
         )
     return "\n".join(lines)
 
@@ -163,7 +163,7 @@ def main() -> None:
             payload["sparse_only"][name] = score_all(
                 lambda q, ix=index: ix.search(q, max(config.EVAL_K_VALUES)), golden
             )
-            print(f"   {name:14s} Recall@1 {payload['sparse_only'][name]['all']['recall@1']:.1%}")
+            print(f"   {name:14s} Hit@1 {payload['sparse_only'][name]['all']['hit@1']:.1%}")
 
         # 3. Dense alone, and dense fused with each sparse method.
         print("\n── dense และ hybrid (RRF)")
@@ -173,7 +173,7 @@ def main() -> None:
             return store.search(embedder.encode_query(question), top)
 
         payload["dense_only"] = score_all(dense_only, golden)
-        print(f"   {'dense':14s} Recall@1 {payload['dense_only']['all']['recall@1']:.1%}")
+        print(f"   {'dense':14s} Hit@1 {payload['dense_only']['all']['hit@1']:.1%}")
 
         def hybrid(question: str, index, pin: bool = False) -> list[dict]:
             dense_hits = store.search(
@@ -200,7 +200,7 @@ def main() -> None:
             payload["hybrid"][name] = score_all(
                 lambda q, ix=index: hybrid(q, ix), golden
             )
-            print(f"   dense+{name:9s} Recall@1 {payload['hybrid'][name]['all']['recall@1']:.1%}")
+            print(f"   dense+{name:9s} Hit@1 {payload['hybrid'][name]['all']['hit@1']:.1%}")
 
         # 4. Does pinning still help, for each fusion?
         print("\n── hybrid + ปักหมุดรหัสวิชา")
@@ -209,8 +209,8 @@ def main() -> None:
             payload["hybrid_pinned"][name] = score_all(
                 lambda q, ix=index: hybrid(q, ix, pin=True), golden
             )
-            print(f"   dense+{name:9s}+pin Recall@1 "
-                  f"{payload['hybrid_pinned'][name]['all']['recall@1']:.1%}")
+            print(f"   dense+{name:9s}+pin Hit@1 "
+                  f"{payload['hybrid_pinned'][name]['all']['hit@1']:.1%}")
 
     text = "\n\n".join(
         [
@@ -239,10 +239,10 @@ def main() -> None:
     print(f"\n💾 {out_md}\n💾 {out_json}")
 
     best_sparse = max(
-        payload["sparse_only"].items(), key=lambda kv: kv[1]["all"]["recall@1"]
+        payload["sparse_only"].items(), key=lambda kv: kv[1]["all"]["hit@1"]
     )
     best_hybrid = max(
-        payload["hybrid"].items(), key=lambda kv: kv[1]["all"]["recall@1"]
+        payload["hybrid"].items(), key=lambda kv: kv[1]["all"]["hit@1"]
     )
     journal.append(
         f"benchmark sparse retrievers (dense={spec.key})",
@@ -252,21 +252,21 @@ def main() -> None:
             f"RRF k={config.RRF_K}, candidate_k={config.CANDIDATE_K}"
         ),
         result=(
-            f"sparse เดี่ยวดีสุด: {best_sparse[0]} Recall@1 "
-            f"{best_sparse[1]['all']['recall@1']:.1%}; "
-            f"hybrid ดีสุด: dense+{best_hybrid[0]} Recall@1 "
-            f"{best_hybrid[1]['all']['recall@1']:.1%}"
+            f"sparse เดี่ยวดีสุด: {best_sparse[0]} Hit@1 "
+            f"{best_sparse[1]['all']['hit@1']:.1%}; "
+            f"hybrid ดีสุด: dense+{best_hybrid[0]} Hit@1 "
+            f"{best_hybrid[1]['all']['hit@1']:.1%}"
         ),
         methods=METHODS,
         build_seconds=payload["build_seconds"],
         sparse_recall_at_1={
-            k: round(v["all"]["recall@1"], 4) for k, v in payload["sparse_only"].items()
+            k: round(v["all"]["hit@1"], 4) for k, v in payload["sparse_only"].items()
         },
         hybrid_recall_at_1={
-            k: round(v["all"]["recall@1"], 4) for k, v in payload["hybrid"].items()
+            k: round(v["all"]["hit@1"], 4) for k, v in payload["hybrid"].items()
         },
         hybrid_pinned_recall_at_1={
-            k: round(v["all"]["recall@1"], 4)
+            k: round(v["all"]["hit@1"], 4)
             for k, v in payload["hybrid_pinned"].items()
         },
     )

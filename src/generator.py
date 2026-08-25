@@ -101,6 +101,54 @@ class Generator:
             )
         return self._client
 
+    def _call(self, contents: list[Any], config: Any) -> str:
+        """Try each model in turn until one answers.
+
+        Free-tier quota is per model and per day — 20 requests for a flash
+        model — so the fallback chain is not a safety net, it is the only way
+        a run of any length finishes.  Everything that talks to Gemini goes
+        through here for that reason.
+        """
+        now = time.monotonic()
+        available = [m for m in self.models if self._cooldown.get(m, 0) <= now]
+        # Everything is cooling down — try them all anyway rather than refuse
+        # outright, since the cooldown is only a guess at when quota returns.
+        for model in available or self.models:
+            try:
+                response = self.client.models.generate_content(
+                    model=model, contents=contents, config=config
+                )
+            except Exception as exc:
+                if not _is_exhausted(exc):
+                    raise
+                self._cooldown[model] = time.monotonic() + self.cooldown_seconds
+                logger.warning("โมเดล %s ใช้ไม่ได้ชั่วคราว — ลองตัวถัดไป", model)
+                continue
+
+            self.last_model = model
+            # response.text is None when the model returns no text part at
+            # all — a safety block, or output cut off before anything was
+            # written.
+            return (response.text or "").strip()
+
+        raise RuntimeError(
+            "โมเดลทั้งหมดใช้ไม่ได้ในตอนนี้ (" + ", ".join(self.models) + ")"
+        )
+
+    def complete(self, prompt: str, max_tokens: int = 500) -> str:
+        """Send one plain prompt, with the same fallback chain as generate().
+
+        No system prompt and no retrieved context — for callers that need the
+        model for something other than answering from documents, such as the
+        LLM judge in ``evaluation/eval_generation.py``.
+        """
+        from google.genai import types
+
+        return self._call(
+            [types.Content(role="user", parts=[types.Part(text=prompt)])],
+            types.GenerateContentConfig(max_output_tokens=max_tokens),
+        )
+
     def generate(
         self,
         question: str,
@@ -129,33 +177,10 @@ class Generator:
             )
         )
 
-        config = types.GenerateContentConfig(
-            system_instruction=self.system_prompt,
-            max_output_tokens=self.max_tokens,
-        )
-
-        now = time.monotonic()
-        available = [m for m in self.models if self._cooldown.get(m, 0) <= now]
-        # Everything is cooling down — try them all anyway rather than refuse
-        # outright, since the cooldown is only a guess at when quota returns.
-        for model in available or self.models:
-            try:
-                response = self.client.models.generate_content(
-                    model=model, contents=contents, config=config
-                )
-            except Exception as exc:
-                if not _is_exhausted(exc):
-                    raise
-                self._cooldown[model] = time.monotonic() + self.cooldown_seconds
-                logger.warning("โมเดล %s ใช้ไม่ได้ชั่วคราว — ลองตัวถัดไป", model)
-                continue
-
-            self.last_model = model
-            # response.text is None when the model returns no text part at
-            # all — a safety block, or output cut off before anything was
-            # written.
-            return (response.text or "").strip()
-
-        raise RuntimeError(
-            "โมเดลทั้งหมดใช้ไม่ได้ในตอนนี้ (" + ", ".join(self.models) + ")"
+        return self._call(
+            contents,
+            types.GenerateContentConfig(
+                system_instruction=self.system_prompt,
+                max_output_tokens=self.max_tokens,
+            ),
         )

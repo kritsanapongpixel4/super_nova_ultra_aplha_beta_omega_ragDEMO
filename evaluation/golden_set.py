@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -80,6 +81,7 @@ def load(
     path: Path | None = None,
     *,
     quiet: bool = False,
+    include_unanswerable: bool = False,
 ) -> tuple[list[dict], dict]:
     """Return (entries, report) with every ``relevant_chunk_ids`` re-resolved.
 
@@ -87,6 +89,13 @@ def load(
         chunks: the chunks the retriever under test actually indexed.
         path:   golden set file; defaults to ``data/golden_set.json``.
         quiet:  suppress the summary line.
+        include_unanswerable: keep the questions that have no gold chunk.
+            Off by default because every retrieval metric scores them 0 by
+            construction — ``recall_at_k`` divides by a relevant set that is
+            empty — which would drag a retriever's numbers down for answering
+            correctly.  ``eval_generation.py`` turns them on: they are the
+            only questions that can show whether the system admits it does
+            not know.
 
     Raises:
         GoldenSetError: the file is missing, predates content keys, or its
@@ -112,6 +121,10 @@ def load(
             "เฉลยผูกกับตำแหน่ง chunk จึงเชื่อถือไม่ได้เมื่อข้อมูลเปลี่ยน\n"
             "   รัน python evaluation/build_golden_set.py เพื่อสร้างใหม่"
         )
+
+    unanswerable = [e for e in entries if not e["relevant_chunk_keys"]]
+    if not include_unanswerable:
+        entries = [e for e in entries if e["relevant_chunk_keys"]]
 
     by_key = {chunk_key(chunk): str(chunk["chunk_id"]) for chunk in chunks}
     rebound, unresolved = 0, []
@@ -140,6 +153,15 @@ def load(
     built_on = meta.get("corpus", {})
     report = {
         "n_queries": len(entries),
+        "n_unanswerable": len(unanswerable),
+        "categories": dict(Counter(e.get("category", "?") for e in entries)),
+        # Which questions were asked, not just which corpus they were asked
+        # about.  Two runs can share a corpus fingerprint and still be
+        # incomparable because the question set grew between them — which is
+        # exactly what happened when the FAQ questions were added.
+        "questions_sha1": hashlib.sha1(
+            "\n".join(sorted(e["question"] for e in entries)).encode("utf-8")
+        ).hexdigest()[:16],
         "rebound": rebound,
         "corpus_now": now,
         "corpus_built_on": built_on or None,
@@ -147,8 +169,12 @@ def load(
     }
 
     if not quiet:
-        print(f"🏆 golden set {len(entries)} คำถาม · corpus {now['n_chunks']} chunks "
-              f"จาก {now['n_sources']} ไฟล์ ({now['chunks_sha1']})")
+        spread = " + ".join(f"{n} {c}" for c, n in sorted(report["categories"].items()))
+        print(f"🏆 golden set {len(entries)} คำถาม ({spread}) · corpus "
+              f"{now['n_chunks']} chunks จาก {now['n_sources']} ไฟล์ ({now['chunks_sha1']})")
+        if unanswerable and not include_unanswerable:
+            print(f"   ตัดคำถามที่ไม่มีเฉลยออก {len(unanswerable)} ข้อ "
+                  "(วัด retrieval ไม่ได้ — ใช้ include_unanswerable=True ถ้าต้องการ)")
         if rebound:
             print(f"   ↻ ผูกเฉลยใหม่ {rebound} คำถาม — chunk_id เลื่อนตำแหน่งตั้งแต่สร้าง set")
         if report["corpus_changed"]:

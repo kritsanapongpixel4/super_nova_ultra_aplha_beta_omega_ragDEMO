@@ -68,7 +68,7 @@ def peak_rss_gb() -> float | None:
         return None
 
 
-def load_inputs() -> tuple[list[dict], list[dict]]:
+def load_inputs() -> tuple[list[dict], list[dict], dict]:
     """The chunks to encode and the questions to score against."""
     if not config.CHUNKS_FILE.exists():
         raise FileNotFoundError(
@@ -78,8 +78,8 @@ def load_inputs() -> tuple[list[dict], list[dict]]:
         chunks = json.load(f)
     # Bound to these chunks, not to whichever ones the set was built from —
     # scoring against stale positions reads as a model that cannot retrieve.
-    golden, _ = golden_set.load(chunks)
-    return chunks, golden
+    golden, report = golden_set.load(chunks)
+    return chunks, golden, report
 
 
 def evaluate(
@@ -114,7 +114,7 @@ def evaluate(
     return result, latencies
 
 
-def run_one(spec, chunks: list[dict], golden: list[dict]) -> dict:
+def run_one(spec, chunks: list[dict], golden: list[dict], golden_report: dict) -> dict:
     """Encode, index, evaluate — and leave the index behind for real use."""
     texts = [chunk["text"] for chunk in chunks]
     rss_before = peak_rss_gb()
@@ -178,6 +178,12 @@ def run_one(spec, chunks: list[dict], golden: list[dict]) -> dict:
         # Which corpus this was measured on.  Recall@1 from two different
         # fingerprints are two different questions, not two answers.
         "corpus": golden_set.fingerprint(chunks),
+        # And which question set produced them — see golden_set.load().
+        "golden": {
+            "n_queries": golden_report["n_queries"],
+            "categories": golden_report["categories"],
+            "questions_sha1": golden_report["questions_sha1"],
+        },
         "load_seconds": round(model.load_seconds or 0.0, 2),
         "encode_seconds": round(encode_seconds, 2),
         "chunks_per_second": round(len(texts) / encode_seconds, 2),
@@ -206,11 +212,15 @@ def show(result: dict) -> None:
     print(f"  สร้าง FAISS       {result['index_seconds']:>9.3f} s")
     print(f"  ต่อคำถาม          {result['query_ms_mean']:>9.1f} ms  "
           f"(p50 {result['query_ms_p50']}, p95 {result['query_ms_p95']})")
-    print(f"  {'':16s} {'Recall@1':>9s} {'Recall@5':>9s} {'MRR':>7s} {'nDCG@10':>8s}")
-    for name in ("all", "by_name", "by_code"):
+    # hit@k, not recall@k: an FAQ answer that straddles a chunk boundary has
+    # two gold chunks, and recall divides by that count, so finding either one
+    # would score 0.5.  For the CLO entries (one gold chunk) the two agree, so
+    # numbers measured before the FAQ questions existed stay comparable.
+    print(f"  {'':16s} {'Hit@1':>9s} {'Hit@5':>9s} {'MRR':>7s} {'nDCG@10':>8s}")
+    for name in ("all", "by_name", "by_code", "faq"):
         if name in q:
             row = q[name]
-            print(f"  {name:16s} {row['recall@1']:>8.1%} {row['recall@5']:>9.1%} "
+            print(f"  {name:16s} {row['hit@1']:>8.1%} {row['hit@5']:>9.1%} "
                   f"{row['mrr']:>7.3f} {row['ndcg@10']:>8.3f}")
 
 
@@ -225,10 +235,10 @@ def report() -> None:
     for path in files:
         with open(path, "r", encoding="utf-8") as f:
             results.append(json.load(f))
-    results.sort(key=lambda r: r["quality"]["all"]["recall@1"], reverse=True)
+    results.sort(key=lambda r: r["quality"]["all"]["hit@1"], reverse=True)
 
     lines = [
-        "| โมเดล | params | มิติ | อุปกรณ์ | โหลด | เข้ารหัส 3,128 chunks | chunks/s | ต่อคำถาม (p50) | Recall@1 | Recall@5 | MRR |",
+        "| โมเดล | params | มิติ | อุปกรณ์ | โหลด | เข้ารหัส | chunks/s | ต่อคำถาม (p50) | Hit@1 | Hit@5 | MRR |",
         "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for r in results:
@@ -237,21 +247,22 @@ def report() -> None:
             f"| {r['model_key']} | {r['params_m']}M | {r['dim']} | {r['device']} | "
             f"{r['load_seconds']:.0f}s | {r['encode_seconds']:.0f}s | "
             f"{r['chunks_per_second']:.1f} | {r['query_ms_p50']:.1f} ms | "
-            f"{q['recall@1']:.1%} | {q['recall@5']:.1%} | {q['mrr']:.3f} |"
+            f"{q['hit@1']:.1%} | {q['hit@5']:.1%} | {q['mrr']:.3f} |"
         )
 
     split = [
         "",
-        "แยกตามสำนวนคำถาม (Recall@1)",
+        "แยกตามหมวดคำถาม (Hit@1)",
         "",
-        "| โมเดล | ถามด้วยชื่อวิชา | ถามด้วยรหัสวิชา |",
-        "|---|---|---|",
+        "| โมเดล | CLO ถามด้วยชื่อ | CLO ถามด้วยรหัส | FAQ เอกสารทะเบียน |",
+        "|---|---|---|---|",
     ]
     for r in results:
         q = r["quality"]
-        name = q.get("by_name", {}).get("recall@1", 0)
-        code = q.get("by_code", {}).get("recall@1", 0)
-        split.append(f"| {r['model_key']} | {name:.1%} | {code:.1%} |")
+        name = q.get("by_name", {}).get("hit@1", 0)
+        code = q.get("by_code", {}).get("hit@1", 0)
+        faq = q.get("faq", {}).get("hit@1", 0)
+        split.append(f"| {r['model_key']} | {name:.1%} | {code:.1%} | {faq:.1%} |")
 
     text = "\n".join(lines + split)
     print(text)
@@ -282,7 +293,7 @@ def main() -> None:
     spec = cli.apply(args)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     try:
-        chunks, golden = load_inputs()
+        chunks, golden, golden_report = load_inputs()
     except golden_set.GoldenSetError as exc:
         print(f"❌ {exc}")
         sys.exit(1)
@@ -296,7 +307,7 @@ def main() -> None:
         n_queries=len(golden),
     ) as run:
         try:
-            result = run_one(spec, chunks, golden)
+            result = run_one(spec, chunks, golden, golden_report)
         except Exception as exc:
             # A model that cannot be downloaded, cannot be loaded, or runs the
             # machine out of memory is a result too — the whole point of the
@@ -337,7 +348,7 @@ def main() -> None:
         result=(
             f"โหลด {result['load_seconds']}s, เข้ารหัส {result['encode_seconds']}s "
             f"({result['chunks_per_second']} chunks/s), ต่อคำถาม p50 "
-            f"{result['query_ms_p50']}ms, Recall@1 {q['recall@1']:.1%}, MRR {q['mrr']:.3f}"
+            f"{result['query_ms_p50']}ms, Hit@1 {q['hit@1']:.1%}, MRR {q['mrr']:.3f}"
         ),
         **{k: v for k, v in result.items() if k != "quality"},
         quality=result["quality"],

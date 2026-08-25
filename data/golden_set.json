@@ -1,7 +1,14 @@
 {
   "meta": {
-    "built_at": "2026-08-25T21:21:44",
-    "n_queries": 128,
+    "built_at": "2026-08-25T23:56:30",
+    "n_queries": 205,
+    "by_category": {
+      "clo": 128,
+      "faq": 55,
+      "unanswerable": 22
+    },
+    "chunks_covered": 87,
+    "coverage": 0.0395,
     "corpus": {
       "n_chunks": 2202,
       "n_sources": 18,
@@ -13,7 +20,6 @@
   },
   "queries": [
     {
-      "query_id": 1,
       "question": "วิชาปฏิบัติการควบคุมเวอร์ชันมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "101"
@@ -21,12 +27,14 @@
       "relevant_chunk_keys": [
         "99128aece891b013"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-201",
-      "course_name": "ปฏิบัติการควบคุมเวอร์ชัน"
+      "course_name": "ปฏิบัติการควบคุมเวอร์ชัน",
+      "query_id": 1
     },
     {
-      "query_id": 2,
       "question": "CLO ของวิชา 04-620-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "101"
@@ -34,12 +42,14 @@
       "relevant_chunk_keys": [
         "99128aece891b013"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-201",
-      "course_name": "ปฏิบัติการควบคุมเวอร์ชัน"
+      "course_name": "ปฏิบัติการควบคุมเวอร์ชัน",
+      "query_id": 2
     },
     {
-      "query_id": 3,
       "question": "วิชาปฏิบัติการโปรแกรมภาษาไพธอนมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "102"
@@ -47,12 +57,14 @@
       "relevant_chunk_keys": [
         "74c65343ede26247"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-202",
-      "course_name": "ปฏิบัติการโปรแกรมภาษาไพธอน"
+      "course_name": "ปฏิบัติการโปรแกรมภาษาไพธอน",
+      "query_id": 3
     },
     {
-      "query_id": 4,
       "question": "CLO ของวิชา 04-620-202 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "102"
@@ -60,12 +72,14 @@
       "relevant_chunk_keys": [
         "74c65343ede26247"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-202",
-      "course_name": "ปฏิบัติการโปรแกรมภาษาไพธอน"
+      "course_name": "ปฏิบัติการโปรแกรมภาษาไพธอน",
+      "query_id": 4
     },
     {
-      "query_id": 5,
       "question": "วิชาสัมมนาทางวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "103"
@@ -73,12 +87,14 @@
       "relevant_chunk_keys": [
         "c1a70b4e71cd171e"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-301",
-      "course_name": "สัมมนาทางวิศวกรรมคอมพิวเตอร์"
+      "course_name": "สัมมนาทางวิศวกรรมคอมพิวเตอร์",
+      "query_id": 5
     },
     {
-      "query_id": 6,
       "question": "CLO ของวิชา 04-620-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "103"
@@ -86,12 +102,14 @@
       "relevant_chunk_keys": [
         "c1a70b4e71cd171e"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-301",
-      "course_name": "สัมมนาทางวิศวกรรมคอมพิวเตอร์"
+      "course_name": "สัมมนาทางวิศวกรรมคอมพิวเตอร์",
+      "query_id": 6
     },
     {
-      "query_id": 7,
       "question": "วิชาการเขียนโปรแกรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "104"
@@ -99,12 +117,14 @@
       "relevant_chunk_keys": [
         "57acad85637fd9fa"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-101",
-      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์"
+      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์",
+      "query_id": 7
     },
     {
-      "query_id": 8,
       "question": "CLO ของวิชา 04-621-101 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "104"
@@ -112,12 +132,14 @@
       "relevant_chunk_keys": [
         "57acad85637fd9fa"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-101",
-      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์"
+      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์",
+      "query_id": 8
     },
     {
-      "query_id": 9,
       "question": "วิชาวงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "105"
@@ -125,12 +147,14 @@
       "relevant_chunk_keys": [
         "138dc0cc88649eb7"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-201",
-      "course_name": "วงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์"
+      "course_name": "วงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์",
+      "query_id": 9
     },
     {
-      "query_id": 10,
       "question": "CLO ของวิชา 04-621-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "105"
@@ -138,12 +162,14 @@
       "relevant_chunk_keys": [
         "138dc0cc88649eb7"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-201",
-      "course_name": "วงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์"
+      "course_name": "วงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์",
+      "query_id": 10
     },
     {
-      "query_id": 11,
       "question": "วิชาวงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "106"
@@ -151,12 +177,14 @@
       "relevant_chunk_keys": [
         "7d73fbe05febbe1b"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-202",
-      "course_name": "วงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์"
+      "course_name": "วงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์",
+      "query_id": 11
     },
     {
-      "query_id": 12,
       "question": "CLO ของวิชา 04-621-202 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "106"
@@ -164,12 +192,14 @@
       "relevant_chunk_keys": [
         "7d73fbe05febbe1b"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-202",
-      "course_name": "วงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์"
+      "course_name": "วงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์",
+      "query_id": 12
     },
     {
-      "query_id": 13,
       "question": "วิชาการออกแบบวงจรดิจิทัลและตรรกะมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "107"
@@ -177,12 +207,14 @@
       "relevant_chunk_keys": [
         "b846bb41547a864d"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-203",
-      "course_name": "การออกแบบวงจรดิจิทัลและตรรกะ"
+      "course_name": "การออกแบบวงจรดิจิทัลและตรรกะ",
+      "query_id": 13
     },
     {
-      "query_id": 14,
       "question": "CLO ของวิชา 04-621-203 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "107"
@@ -190,12 +222,14 @@
       "relevant_chunk_keys": [
         "b846bb41547a864d"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-203",
-      "course_name": "การออกแบบวงจรดิจิทัลและตรรกะ"
+      "course_name": "การออกแบบวงจรดิจิทัลและตรรกะ",
+      "query_id": 14
     },
     {
-      "query_id": 15,
       "question": "วิชาปฏิบัติการเครือข่ายคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "108"
@@ -203,12 +237,14 @@
       "relevant_chunk_keys": [
         "d1f457322b882736"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-301",
-      "course_name": "ปฏิบัติการเครือข่ายคอมพิวเตอร์"
+      "course_name": "ปฏิบัติการเครือข่ายคอมพิวเตอร์",
+      "query_id": 15
     },
     {
-      "query_id": 16,
       "question": "CLO ของวิชา 04-623-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "108"
@@ -216,12 +252,14 @@
       "relevant_chunk_keys": [
         "d1f457322b882736"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-301",
-      "course_name": "ปฏิบัติการเครือข่ายคอมพิวเตอร์"
+      "course_name": "ปฏิบัติการเครือข่ายคอมพิวเตอร์",
+      "query_id": 16
     },
     {
-      "query_id": 17,
       "question": "วิชาไมโครคอนโทรลเลอร์และการเชื่อมต่อมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "109"
@@ -229,12 +267,14 @@
       "relevant_chunk_keys": [
         "46bc4a6464772141"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-204",
-      "course_name": "ไมโครคอนโทรลเลอร์และการเชื่อมต่อ"
+      "course_name": "ไมโครคอนโทรลเลอร์และการเชื่อมต่อ",
+      "query_id": 17
     },
     {
-      "query_id": 18,
       "question": "CLO ของวิชา 04-621-204 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "109"
@@ -242,12 +282,14 @@
       "relevant_chunk_keys": [
         "46bc4a6464772141"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-204",
-      "course_name": "ไมโครคอนโทรลเลอร์และการเชื่อมต่อ"
+      "course_name": "ไมโครคอนโทรลเลอร์และการเชื่อมต่อ",
+      "query_id": 18
     },
     {
-      "query_id": 19,
       "question": "วิชาองค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "110"
@@ -255,12 +297,14 @@
       "relevant_chunk_keys": [
         "b6f923ecd06461b6"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-301",
-      "course_name": "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์"
+      "course_name": "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์",
+      "query_id": 19
     },
     {
-      "query_id": 20,
       "question": "CLO ของวิชา 04-621-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "110"
@@ -268,12 +312,14 @@
       "relevant_chunk_keys": [
         "b6f923ecd06461b6"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-301",
-      "course_name": "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์"
+      "course_name": "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์",
+      "query_id": 20
     },
     {
-      "query_id": 21,
       "question": "วิชาอินเตอร์เน็ตของสรรพสิ่งมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "111"
@@ -281,12 +327,14 @@
       "relevant_chunk_keys": [
         "407fdc3387271229"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-302",
-      "course_name": "อินเตอร์เน็ตของสรรพสิ่ง"
+      "course_name": "อินเตอร์เน็ตของสรรพสิ่ง",
+      "query_id": 21
     },
     {
-      "query_id": 22,
       "question": "CLO ของวิชา 04-621-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "111"
@@ -294,12 +342,14 @@
       "relevant_chunk_keys": [
         "407fdc3387271229"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-302",
-      "course_name": "อินเตอร์เน็ตของสรรพสิ่ง"
+      "course_name": "อินเตอร์เน็ตของสรรพสิ่ง",
+      "query_id": 22
     },
     {
-      "query_id": 23,
       "question": "วิชาระบบปฏิบัติการมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "112"
@@ -307,12 +357,14 @@
       "relevant_chunk_keys": [
         "12f18dcfcdcba6c3"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-303",
-      "course_name": "ระบบปฏิบัติการ"
+      "course_name": "ระบบปฏิบัติการ",
+      "query_id": 23
     },
     {
-      "query_id": 24,
       "question": "CLO ของวิชา 04-621-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "112"
@@ -320,12 +372,14 @@
       "relevant_chunk_keys": [
         "12f18dcfcdcba6c3"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-303",
-      "course_name": "ระบบปฏิบัติการ"
+      "course_name": "ระบบปฏิบัติการ",
+      "query_id": 24
     },
     {
-      "query_id": 25,
       "question": "วิชาโครงสร้างข้อมูลและอัลกอริทึมมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "113"
@@ -333,12 +387,14 @@
       "relevant_chunk_keys": [
         "f64723cec3f329f8"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-201",
-      "course_name": "โครงสร้างข้อมูลและอัลกอริทึม"
+      "course_name": "โครงสร้างข้อมูลและอัลกอริทึม",
+      "query_id": 25
     },
     {
-      "query_id": 26,
       "question": "CLO ของวิชา 04-622-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "113"
@@ -346,12 +402,14 @@
       "relevant_chunk_keys": [
         "f64723cec3f329f8"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-201",
-      "course_name": "โครงสร้างข้อมูลและอัลกอริทึม"
+      "course_name": "โครงสร้างข้อมูลและอัลกอริทึม",
+      "query_id": 26
     },
     {
-      "query_id": 27,
       "question": "วิชาระบบฐานข้อมูลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "114"
@@ -359,12 +417,14 @@
       "relevant_chunk_keys": [
         "f814237e6ecf59fa"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-202",
-      "course_name": "ระบบฐานข้อมูล"
+      "course_name": "ระบบฐานข้อมูล",
+      "query_id": 27
     },
     {
-      "query_id": 28,
       "question": "CLO ของวิชา 04-622-202 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "114"
@@ -372,12 +432,14 @@
       "relevant_chunk_keys": [
         "f814237e6ecf59fa"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-202",
-      "course_name": "ระบบฐานข้อมูล"
+      "course_name": "ระบบฐานข้อมูล",
+      "query_id": 28
     },
     {
-      "query_id": 29,
       "question": "วิชาการเขียนโปรแกรมเชิงวัตถุมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "115"
@@ -385,12 +447,14 @@
       "relevant_chunk_keys": [
         "2e27005c9ca81b69"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-203",
-      "course_name": "การเขียนโปรแกรมเชิงวัตถุ"
+      "course_name": "การเขียนโปรแกรมเชิงวัตถุ",
+      "query_id": 29
     },
     {
-      "query_id": 30,
       "question": "CLO ของวิชา 04-622-203 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "115"
@@ -398,12 +462,14 @@
       "relevant_chunk_keys": [
         "2e27005c9ca81b69"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-203",
-      "course_name": "การเขียนโปรแกรมเชิงวัตถุ"
+      "course_name": "การเขียนโปรแกรมเชิงวัตถุ",
+      "query_id": 30
     },
     {
-      "query_id": 31,
       "question": "วิชาการพัฒนาเว็บเต็มรูปแบบมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "116"
@@ -411,12 +477,14 @@
       "relevant_chunk_keys": [
         "5f3e5e3a3fd8884d"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-301",
-      "course_name": "การพัฒนาเว็บเต็มรูปแบบ"
+      "course_name": "การพัฒนาเว็บเต็มรูปแบบ",
+      "query_id": 31
     },
     {
-      "query_id": 32,
       "question": "CLO ของวิชา 04-622-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "116"
@@ -424,12 +492,14 @@
       "relevant_chunk_keys": [
         "5f3e5e3a3fd8884d"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-301",
-      "course_name": "การพัฒนาเว็บเต็มรูปแบบ"
+      "course_name": "การพัฒนาเว็บเต็มรูปแบบ",
+      "query_id": 32
     },
     {
-      "query_id": 33,
       "question": "วิชาวิศวกรรมซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "117"
@@ -437,12 +507,14 @@
       "relevant_chunk_keys": [
         "8f20811871fd9172"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-302",
-      "course_name": "วิศวกรรมซอฟต์แวร์"
+      "course_name": "วิศวกรรมซอฟต์แวร์",
+      "query_id": 33
     },
     {
-      "query_id": 34,
       "question": "CLO ของวิชา 04-622-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "117"
@@ -450,12 +522,14 @@
       "relevant_chunk_keys": [
         "8f20811871fd9172"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-302",
-      "course_name": "วิศวกรรมซอฟต์แวร์"
+      "course_name": "วิศวกรรมซอฟต์แวร์",
+      "query_id": 34
     },
     {
-      "query_id": 35,
       "question": "วิชาการโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "118"
@@ -463,12 +537,14 @@
       "relevant_chunk_keys": [
         "4427ebb41dee6ac1"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-303",
-      "course_name": "การโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัล"
+      "course_name": "การโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัล",
+      "query_id": 35
     },
     {
-      "query_id": 36,
       "question": "CLO ของวิชา 04-622-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "118"
@@ -476,12 +552,14 @@
       "relevant_chunk_keys": [
         "4427ebb41dee6ac1"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-303",
-      "course_name": "การโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัล"
+      "course_name": "การโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัล",
+      "query_id": 36
     },
     {
-      "query_id": 37,
       "question": "วิชาการสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "119"
@@ -489,12 +567,14 @@
       "relevant_chunk_keys": [
         "59430d29ae258907"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-201",
-      "course_name": "การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์"
+      "course_name": "การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",
+      "query_id": 37
     },
     {
-      "query_id": 38,
       "question": "CLO ของวิชา 04-623-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "119"
@@ -502,12 +582,14 @@
       "relevant_chunk_keys": [
         "59430d29ae258907"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-201",
-      "course_name": "การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์"
+      "course_name": "การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",
+      "query_id": 38
     },
     {
-      "query_id": 39,
       "question": "วิชาระบบเครือข่ายแบบทีซีพีไอพีมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "120"
@@ -515,12 +597,14 @@
       "relevant_chunk_keys": [
         "81b26fbc6978fae5"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-202",
-      "course_name": "ระบบเครือข่ายแบบทีซีพีไอพี"
+      "course_name": "ระบบเครือข่ายแบบทีซีพีไอพี",
+      "query_id": 39
     },
     {
-      "query_id": 40,
       "question": "CLO ของวิชา 04-623-202 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "120"
@@ -528,12 +612,14 @@
       "relevant_chunk_keys": [
         "81b26fbc6978fae5"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-202",
-      "course_name": "ระบบเครือข่ายแบบทีซีพีไอพี"
+      "course_name": "ระบบเครือข่ายแบบทีซีพีไอพี",
+      "query_id": 40
     },
     {
-      "query_id": 41,
       "question": "วิชาทฤษฎีการคำนวณมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "121"
@@ -541,12 +627,14 @@
       "relevant_chunk_keys": [
         "7e171ea4c4bff6bc"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-201",
-      "course_name": "ทฤษฎีการคำนวณ"
+      "course_name": "ทฤษฎีการคำนวณ",
+      "query_id": 41
     },
     {
-      "query_id": 42,
       "question": "CLO ของวิชา 04-624-201 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "121"
@@ -554,12 +642,14 @@
       "relevant_chunk_keys": [
         "7e171ea4c4bff6bc"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-201",
-      "course_name": "ทฤษฎีการคำนวณ"
+      "course_name": "ทฤษฎีการคำนวณ",
+      "query_id": 42
     },
     {
-      "query_id": 43,
       "question": "วิชาการประมวลผลภาพและการมองเห็นของคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "122"
@@ -567,12 +657,14 @@
       "relevant_chunk_keys": [
         "a41cf76754ba0ee1"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-301",
-      "course_name": "การประมวลผลภาพและการมองเห็นของคอมพิวเตอร์"
+      "course_name": "การประมวลผลภาพและการมองเห็นของคอมพิวเตอร์",
+      "query_id": 43
     },
     {
-      "query_id": 44,
       "question": "CLO ของวิชา 04-624-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "122"
@@ -580,12 +672,14 @@
       "relevant_chunk_keys": [
         "a41cf76754ba0ee1"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-301",
-      "course_name": "การประมวลผลภาพและการมองเห็นของคอมพิวเตอร์"
+      "course_name": "การประมวลผลภาพและการมองเห็นของคอมพิวเตอร์",
+      "query_id": 44
     },
     {
-      "query_id": 45,
       "question": "วิชาปฏิบัติการบูรณาการระบบคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "123"
@@ -593,12 +687,14 @@
       "relevant_chunk_keys": [
         "23281445ef47ea9e"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-302",
-      "course_name": "ปฏิบัติการบูรณาการระบบคอมพิวเตอร์"
+      "course_name": "ปฏิบัติการบูรณาการระบบคอมพิวเตอร์",
+      "query_id": 45
     },
     {
-      "query_id": 46,
       "question": "CLO ของวิชา 04-620-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "123"
@@ -606,12 +702,14 @@
       "relevant_chunk_keys": [
         "23281445ef47ea9e"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-302",
-      "course_name": "ปฏิบัติการบูรณาการระบบคอมพิวเตอร์"
+      "course_name": "ปฏิบัติการบูรณาการระบบคอมพิวเตอร์",
+      "query_id": 46
     },
     {
-      "query_id": 47,
       "question": "วิชาการเตรียมโครงงานวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "124"
@@ -619,12 +717,14 @@
       "relevant_chunk_keys": [
         "a31feff75f869a25"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-303",
-      "course_name": "การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์"
+      "course_name": "การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์",
+      "query_id": 47
     },
     {
-      "query_id": 48,
       "question": "CLO ของวิชา 04-620-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "124"
@@ -632,12 +732,14 @@
       "relevant_chunk_keys": [
         "a31feff75f869a25"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-303",
-      "course_name": "การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์"
+      "course_name": "การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์",
+      "query_id": 48
     },
     {
-      "query_id": 49,
       "question": "วิชาโครงงานวิศวกรรมคอมพิวเตอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "125"
@@ -645,12 +747,14 @@
       "relevant_chunk_keys": [
         "7ea9c172dcb09b04"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-401",
-      "course_name": "โครงงานวิศวกรรมคอมพิวเตอร์"
+      "course_name": "โครงงานวิศวกรรมคอมพิวเตอร์",
+      "query_id": 49
     },
     {
-      "query_id": 50,
       "question": "CLO ของวิชา 04-620-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "125"
@@ -658,12 +762,14 @@
       "relevant_chunk_keys": [
         "7ea9c172dcb09b04"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-620-401",
-      "course_name": "โครงงานวิศวกรรมคอมพิวเตอร์"
+      "course_name": "โครงงานวิศวกรรมคอมพิวเตอร์",
+      "query_id": 50
     },
     {
-      "query_id": 51,
       "question": "วิชาเซ็นเซอร์และตัวขับเคลื่อนมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "126"
@@ -671,12 +777,14 @@
       "relevant_chunk_keys": [
         "b6489429cbfe85f8"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-304",
-      "course_name": "เซ็นเซอร์และตัวขับเคลื่อน"
+      "course_name": "เซ็นเซอร์และตัวขับเคลื่อน",
+      "query_id": 51
     },
     {
-      "query_id": 52,
       "question": "CLO ของวิชา 04-621-304 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "126"
@@ -684,12 +792,14 @@
       "relevant_chunk_keys": [
         "b6489429cbfe85f8"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-304",
-      "course_name": "เซ็นเซอร์และตัวขับเคลื่อน"
+      "course_name": "เซ็นเซอร์และตัวขับเคลื่อน",
+      "query_id": 52
     },
     {
-      "query_id": 53,
       "question": "วิชาการออกแบบระบบดิจิทัลและการทวนสอบมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "127"
@@ -697,12 +807,14 @@
       "relevant_chunk_keys": [
         "b9916bd7f4938579"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-305",
-      "course_name": "การออกแบบระบบดิจิทัลและการทวนสอบ"
+      "course_name": "การออกแบบระบบดิจิทัลและการทวนสอบ",
+      "query_id": 53
     },
     {
-      "query_id": 54,
       "question": "CLO ของวิชา 04-621-305 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "127"
@@ -710,12 +822,14 @@
       "relevant_chunk_keys": [
         "b9916bd7f4938579"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-305",
-      "course_name": "การออกแบบระบบดิจิทัลและการทวนสอบ"
+      "course_name": "การออกแบบระบบดิจิทัลและการทวนสอบ",
+      "query_id": 54
     },
     {
-      "query_id": 55,
       "question": "วิชาสถาปัตยกรรมคอมพิวเตอร์ขั้นสูงมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "128"
@@ -723,12 +837,14 @@
       "relevant_chunk_keys": [
         "2ffc680a2690941e"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-306",
-      "course_name": "สถาปัตยกรรมคอมพิวเตอร์ขั้นสูง"
+      "course_name": "สถาปัตยกรรมคอมพิวเตอร์ขั้นสูง",
+      "query_id": 55
     },
     {
-      "query_id": 56,
       "question": "CLO ของวิชา 04-621-306 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "128"
@@ -736,12 +852,14 @@
       "relevant_chunk_keys": [
         "2ffc680a2690941e"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-306",
-      "course_name": "สถาปัตยกรรมคอมพิวเตอร์ขั้นสูง"
+      "course_name": "สถาปัตยกรรมคอมพิวเตอร์ขั้นสูง",
+      "query_id": 56
     },
     {
-      "query_id": 57,
       "question": "วิชาระบบสมองกลฝังตัวมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "129"
@@ -749,12 +867,14 @@
       "relevant_chunk_keys": [
         "f9885e7dbc980487"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-307",
-      "course_name": "ระบบสมองกลฝังตัว"
+      "course_name": "ระบบสมองกลฝังตัว",
+      "query_id": 57
     },
     {
-      "query_id": 58,
       "question": "CLO ของวิชา 04-621-307 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "129"
@@ -762,12 +882,14 @@
       "relevant_chunk_keys": [
         "f9885e7dbc980487"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-307",
-      "course_name": "ระบบสมองกลฝังตัว"
+      "course_name": "ระบบสมองกลฝังตัว",
+      "query_id": 58
     },
     {
-      "query_id": 59,
       "question": "วิชาระบบปฏิบัติการแบบทันกาลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "130"
@@ -775,12 +897,14 @@
       "relevant_chunk_keys": [
         "4d4f448853deda10"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-401",
-      "course_name": "ระบบปฏิบัติการแบบทันกาล"
+      "course_name": "ระบบปฏิบัติการแบบทันกาล",
+      "query_id": 59
     },
     {
-      "query_id": 60,
       "question": "CLO ของวิชา 04-621-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "130"
@@ -788,12 +912,14 @@
       "relevant_chunk_keys": [
         "4d4f448853deda10"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-401",
-      "course_name": "ระบบปฏิบัติการแบบทันกาล"
+      "course_name": "ระบบปฏิบัติการแบบทันกาล",
+      "query_id": 60
     },
     {
-      "query_id": 61,
       "question": "วิชาอินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรมมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "131"
@@ -801,12 +927,14 @@
       "relevant_chunk_keys": [
         "d770568ba2b8b99c"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-402",
-      "course_name": "อินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรม"
+      "course_name": "อินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรม",
+      "query_id": 61
     },
     {
-      "query_id": 62,
       "question": "CLO ของวิชา 04-621-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "131"
@@ -814,12 +942,14 @@
       "relevant_chunk_keys": [
         "d770568ba2b8b99c"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-402",
-      "course_name": "อินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรม"
+      "course_name": "อินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรม",
+      "query_id": 62
     },
     {
-      "query_id": 63,
       "question": "วิชาการออกแบบวงจรรวมแอนะล็อกมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "132"
@@ -827,12 +957,14 @@
       "relevant_chunk_keys": [
         "2e6ee75263cea74e"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-403",
-      "course_name": "การออกแบบวงจรรวมแอนะล็อก"
+      "course_name": "การออกแบบวงจรรวมแอนะล็อก",
+      "query_id": 63
     },
     {
-      "query_id": 64,
       "question": "CLO ของวิชา 04-621-403 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "132"
@@ -840,12 +972,14 @@
       "relevant_chunk_keys": [
         "2e6ee75263cea74e"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-403",
-      "course_name": "การออกแบบวงจรรวมแอนะล็อก"
+      "course_name": "การออกแบบวงจรรวมแอนะล็อก",
+      "query_id": 64
     },
     {
-      "query_id": 65,
       "question": "วิชาการออกแบบวงจรรวมดิจิทัลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "133"
@@ -853,12 +987,14 @@
       "relevant_chunk_keys": [
         "c94730e9712f34ed"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-404",
-      "course_name": "การออกแบบวงจรรวมดิจิทัล"
+      "course_name": "การออกแบบวงจรรวมดิจิทัล",
+      "query_id": 65
     },
     {
-      "query_id": 66,
       "question": "CLO ของวิชา 04-621-404 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "133"
@@ -866,12 +1002,14 @@
       "relevant_chunk_keys": [
         "c94730e9712f34ed"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-404",
-      "course_name": "การออกแบบวงจรรวมดิจิทัล"
+      "course_name": "การออกแบบวงจรรวมดิจิทัล",
+      "query_id": 66
     },
     {
-      "query_id": 67,
       "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "134"
@@ -879,12 +1017,14 @@
       "relevant_chunk_keys": [
         "995b65e590e0a98d"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-405",
-      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์"
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์",
+      "query_id": 67
     },
     {
-      "query_id": 68,
       "question": "CLO ของวิชา 04-621-405 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "134"
@@ -892,12 +1032,14 @@
       "relevant_chunk_keys": [
         "995b65e590e0a98d"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-405",
-      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์"
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์",
+      "query_id": 68
     },
     {
-      "query_id": 69,
       "question": "วิชาหัวข้อขั้นสูงทางคอมพิวเตอร์ฮาร์ดแวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "135"
@@ -905,12 +1047,14 @@
       "relevant_chunk_keys": [
         "9c55680c2a716efe"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-406",
-      "course_name": "หัวข้อขั้นสูงทางคอมพิวเตอร์ฮาร์ดแวร์"
+      "course_name": "หัวข้อขั้นสูงทางคอมพิวเตอร์ฮาร์ดแวร์",
+      "query_id": 69
     },
     {
-      "query_id": 70,
       "question": "CLO ของวิชา 04-621-406 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "135"
@@ -918,12 +1062,14 @@
       "relevant_chunk_keys": [
         "9c55680c2a716efe"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-621-406",
-      "course_name": "หัวข้อขั้นสูงทางคอมพิวเตอร์ฮาร์ดแวร์"
+      "course_name": "หัวข้อขั้นสูงทางคอมพิวเตอร์ฮาร์ดแวร์",
+      "query_id": 70
     },
     {
-      "query_id": 71,
       "question": "วิชาการโปรแกรมเกมมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "136"
@@ -931,12 +1077,14 @@
       "relevant_chunk_keys": [
         "e28633afb1ff29bc"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-304",
-      "course_name": "การโปรแกรมเกม"
+      "course_name": "การโปรแกรมเกม",
+      "query_id": 71
     },
     {
-      "query_id": 72,
       "question": "CLO ของวิชา 04-622-304 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "136"
@@ -944,12 +1092,14 @@
       "relevant_chunk_keys": [
         "e28633afb1ff29bc"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-304",
-      "course_name": "การโปรแกรมเกม"
+      "course_name": "การโปรแกรมเกม",
+      "query_id": 72
     },
     {
-      "query_id": 73,
       "question": "วิชาการเขียนโปรแกรมบนระบบยูนิกซ์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "137"
@@ -957,12 +1107,14 @@
       "relevant_chunk_keys": [
         "abcc46ca192f3487"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-305",
-      "course_name": "การเขียนโปรแกรมบนระบบยูนิกซ์"
+      "course_name": "การเขียนโปรแกรมบนระบบยูนิกซ์",
+      "query_id": 73
     },
     {
-      "query_id": 74,
       "question": "CLO ของวิชา 04-622-305 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "137"
@@ -970,12 +1122,14 @@
       "relevant_chunk_keys": [
         "abcc46ca192f3487"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-305",
-      "course_name": "การเขียนโปรแกรมบนระบบยูนิกซ์"
+      "course_name": "การเขียนโปรแกรมบนระบบยูนิกซ์",
+      "query_id": 74
     },
     {
-      "query_id": 75,
       "question": "วิชาการเขียนโปรแกรมคอมพิวเตอร์ขั้นสูงมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "138"
@@ -983,12 +1137,14 @@
       "relevant_chunk_keys": [
         "9f8f0521821ffdbb"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-306",
-      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์ขั้นสูง"
+      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์ขั้นสูง",
+      "query_id": 75
     },
     {
-      "query_id": 76,
       "question": "CLO ของวิชา 04-622-306 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "138"
@@ -996,12 +1152,14 @@
       "relevant_chunk_keys": [
         "9f8f0521821ffdbb"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-306",
-      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์ขั้นสูง"
+      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์ขั้นสูง",
+      "query_id": 76
     },
     {
-      "query_id": 77,
       "question": "วิชาการทดสอบซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "139"
@@ -1009,12 +1167,14 @@
       "relevant_chunk_keys": [
         "eb8abce770ff3db4"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-307",
-      "course_name": "การทดสอบซอฟต์แวร์"
+      "course_name": "การทดสอบซอฟต์แวร์",
+      "query_id": 77
     },
     {
-      "query_id": 78,
       "question": "CLO ของวิชา 04-622-307 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "139"
@@ -1022,12 +1182,14 @@
       "relevant_chunk_keys": [
         "eb8abce770ff3db4"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-307",
-      "course_name": "การทดสอบซอฟต์แวร์"
+      "course_name": "การทดสอบซอฟต์แวร์",
+      "query_id": 78
     },
     {
-      "query_id": 79,
       "question": "วิชากระบวนการพัฒนาซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "140"
@@ -1035,12 +1197,14 @@
       "relevant_chunk_keys": [
         "cb9a01ec6a29af1b"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-308",
-      "course_name": "กระบวนการพัฒนาซอฟต์แวร์"
+      "course_name": "กระบวนการพัฒนาซอฟต์แวร์",
+      "query_id": 79
     },
     {
-      "query_id": 80,
       "question": "CLO ของวิชา 04-622-308 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "140"
@@ -1048,12 +1212,14 @@
       "relevant_chunk_keys": [
         "cb9a01ec6a29af1b"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-308",
-      "course_name": "กระบวนการพัฒนาซอฟต์แวร์"
+      "course_name": "กระบวนการพัฒนาซอฟต์แวร์",
+      "query_id": 80
     },
     {
-      "query_id": 81,
       "question": "วิชาระบบฐานข้อมูลขั้นสูงมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "141"
@@ -1061,12 +1227,14 @@
       "relevant_chunk_keys": [
         "3e123ea4856f0c3a"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-401",
-      "course_name": "ระบบฐานข้อมูลขั้นสูง"
+      "course_name": "ระบบฐานข้อมูลขั้นสูง",
+      "query_id": 81
     },
     {
-      "query_id": 82,
       "question": "CLO ของวิชา 04-622-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "141"
@@ -1074,12 +1242,14 @@
       "relevant_chunk_keys": [
         "3e123ea4856f0c3a"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-401",
-      "course_name": "ระบบฐานข้อมูลขั้นสูง"
+      "course_name": "ระบบฐานข้อมูลขั้นสูง",
+      "query_id": 82
     },
     {
-      "query_id": 83,
       "question": "วิชาฐานข้อมูลไม่สัมพันธ์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "142"
@@ -1087,12 +1257,14 @@
       "relevant_chunk_keys": [
         "3482308deec205f0"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-402",
-      "course_name": "ฐานข้อมูลไม่สัมพันธ์"
+      "course_name": "ฐานข้อมูลไม่สัมพันธ์",
+      "query_id": 83
     },
     {
-      "query_id": 84,
       "question": "CLO ของวิชา 04-622-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "142"
@@ -1100,12 +1272,14 @@
       "relevant_chunk_keys": [
         "3482308deec205f0"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-402",
-      "course_name": "ฐานข้อมูลไม่สัมพันธ์"
+      "course_name": "ฐานข้อมูลไม่สัมพันธ์",
+      "query_id": 84
     },
     {
-      "query_id": 85,
       "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "143"
@@ -1113,12 +1287,14 @@
       "relevant_chunk_keys": [
         "72e8fe21f3fda332"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-403",
-      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์"
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์",
+      "query_id": 85
     },
     {
-      "query_id": 86,
       "question": "CLO ของวิชา 04-622-403 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "143"
@@ -1126,12 +1302,14 @@
       "relevant_chunk_keys": [
         "72e8fe21f3fda332"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-403",
-      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์"
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์",
+      "query_id": 86
     },
     {
-      "query_id": 87,
       "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "144"
@@ -1139,12 +1317,14 @@
       "relevant_chunk_keys": [
         "8ee1ece8cf507e2f"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-404",
-      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์"
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์",
+      "query_id": 87
     },
     {
-      "query_id": 88,
       "question": "CLO ของวิชา 04-622-404 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "144"
@@ -1152,12 +1332,14 @@
       "relevant_chunk_keys": [
         "8ee1ece8cf507e2f"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-622-404",
-      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์"
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์",
+      "query_id": 88
     },
     {
-      "query_id": 89,
       "question": "วิชาข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้นมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "145"
@@ -1165,12 +1347,14 @@
       "relevant_chunk_keys": [
         "36eca511e4df8d87"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-302",
-      "course_name": "ข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้น"
+      "course_name": "ข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้น",
+      "query_id": 89
     },
     {
-      "query_id": 90,
       "question": "CLO ของวิชา 04-623-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "145"
@@ -1178,12 +1362,14 @@
       "relevant_chunk_keys": [
         "36eca511e4df8d87"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-302",
-      "course_name": "ข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้น"
+      "course_name": "ข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้น",
+      "query_id": 90
     },
     {
-      "query_id": 91,
       "question": "วิชาเครือข่ายเซ็นเซอร์ไร้สายมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "146"
@@ -1191,12 +1377,14 @@
       "relevant_chunk_keys": [
         "aaf6749235fc73cb"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-303",
-      "course_name": "เครือข่ายเซ็นเซอร์ไร้สาย"
+      "course_name": "เครือข่ายเซ็นเซอร์ไร้สาย",
+      "query_id": 91
     },
     {
-      "query_id": 92,
       "question": "CLO ของวิชา 04-623-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "146"
@@ -1204,12 +1392,14 @@
       "relevant_chunk_keys": [
         "aaf6749235fc73cb"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-303",
-      "course_name": "เครือข่ายเซ็นเซอร์ไร้สาย"
+      "course_name": "เครือข่ายเซ็นเซอร์ไร้สาย",
+      "query_id": 92
     },
     {
-      "query_id": 93,
       "question": "วิชาความปลอดภัยไซเบอร์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "147"
@@ -1217,12 +1407,14 @@
       "relevant_chunk_keys": [
         "c96b12c2b81086c8"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-304",
-      "course_name": "ความปลอดภัยไซเบอร์"
+      "course_name": "ความปลอดภัยไซเบอร์",
+      "query_id": 93
     },
     {
-      "query_id": 94,
       "question": "CLO ของวิชา 04-623-304 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "147"
@@ -1230,12 +1422,14 @@
       "relevant_chunk_keys": [
         "c96b12c2b81086c8"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-304",
-      "course_name": "ความปลอดภัยไซเบอร์"
+      "course_name": "ความปลอดภัยไซเบอร์",
+      "query_id": 94
     },
     {
-      "query_id": 95,
       "question": "วิชาความมั่นคงในระบบเครือข่ายมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "148"
@@ -1243,12 +1437,14 @@
       "relevant_chunk_keys": [
         "9be8a0b1ccc5eba9"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-305",
-      "course_name": "ความมั่นคงในระบบเครือข่าย"
+      "course_name": "ความมั่นคงในระบบเครือข่าย",
+      "query_id": 95
     },
     {
-      "query_id": 96,
       "question": "CLO ของวิชา 04-623-305 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "148"
@@ -1256,12 +1452,14 @@
       "relevant_chunk_keys": [
         "9be8a0b1ccc5eba9"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-305",
-      "course_name": "ความมั่นคงในระบบเครือข่าย"
+      "course_name": "ความมั่นคงในระบบเครือข่าย",
+      "query_id": 96
     },
     {
-      "query_id": 97,
       "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์เครือข่ายมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "149"
@@ -1269,12 +1467,14 @@
       "relevant_chunk_keys": [
         "ca6cecfb08886317"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-401",
-      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์เครือข่าย"
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์เครือข่าย",
+      "query_id": 97
     },
     {
-      "query_id": 98,
       "question": "CLO ของวิชา 04-623-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "149"
@@ -1282,12 +1482,14 @@
       "relevant_chunk_keys": [
         "ca6cecfb08886317"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-401",
-      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์เครือข่าย"
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์เครือข่าย",
+      "query_id": 98
     },
     {
-      "query_id": 99,
       "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่ายมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "150"
@@ -1295,12 +1497,14 @@
       "relevant_chunk_keys": [
         "1ca205cf5cf34ac8"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-402",
-      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่าย"
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่าย",
+      "query_id": 99
     },
     {
-      "query_id": 100,
       "question": "CLO ของวิชา 04-623-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "150"
@@ -1308,12 +1512,14 @@
       "relevant_chunk_keys": [
         "1ca205cf5cf34ac8"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-623-402",
-      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่าย"
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่าย",
+      "query_id": 100
     },
     {
-      "query_id": 101,
       "question": "วิชาการเรียนรู้ของเครื่องมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "151"
@@ -1321,12 +1527,14 @@
       "relevant_chunk_keys": [
         "88cba970b83fab70"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-302",
-      "course_name": "การเรียนรู้ของเครื่อง"
+      "course_name": "การเรียนรู้ของเครื่อง",
+      "query_id": 101
     },
     {
-      "query_id": 102,
       "question": "CLO ของวิชา 04-624-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "151"
@@ -1334,12 +1542,14 @@
       "relevant_chunk_keys": [
         "88cba970b83fab70"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-302",
-      "course_name": "การเรียนรู้ของเครื่อง"
+      "course_name": "การเรียนรู้ของเครื่อง",
+      "query_id": 102
     },
     {
-      "query_id": 103,
       "question": "วิชาการเรียนรู้เชิงลึกเบื้องต้นมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "152"
@@ -1347,12 +1557,14 @@
       "relevant_chunk_keys": [
         "46a98dfadec241c3"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-303",
-      "course_name": "การเรียนรู้เชิงลึกเบื้องต้น"
+      "course_name": "การเรียนรู้เชิงลึกเบื้องต้น",
+      "query_id": 103
     },
     {
-      "query_id": 104,
       "question": "CLO ของวิชา 04-624-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "152"
@@ -1360,12 +1572,14 @@
       "relevant_chunk_keys": [
         "46a98dfadec241c3"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-303",
-      "course_name": "การเรียนรู้เชิงลึกเบื้องต้น"
+      "course_name": "การเรียนรู้เชิงลึกเบื้องต้น",
+      "query_id": 104
     },
     {
-      "query_id": 105,
       "question": "วิชาการรู้จำเสียงพูดมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "153"
@@ -1373,12 +1587,14 @@
       "relevant_chunk_keys": [
         "7cf9eadc198888ce"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-304",
-      "course_name": "การรู้จำเสียงพูด"
+      "course_name": "การรู้จำเสียงพูด",
+      "query_id": 105
     },
     {
-      "query_id": 106,
       "question": "CLO ของวิชา 04-624-304 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "153"
@@ -1386,12 +1602,14 @@
       "relevant_chunk_keys": [
         "7cf9eadc198888ce"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-304",
-      "course_name": "การรู้จำเสียงพูด"
+      "course_name": "การรู้จำเสียงพูด",
+      "query_id": 106
     },
     {
-      "query_id": 107,
       "question": "วิชาข้อมูลขนาดใหญ่มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "154"
@@ -1399,12 +1617,14 @@
       "relevant_chunk_keys": [
         "9f837b0851a8e2a6"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-305",
-      "course_name": "ข้อมูลขนาดใหญ่"
+      "course_name": "ข้อมูลขนาดใหญ่",
+      "query_id": 107
     },
     {
-      "query_id": 108,
       "question": "CLO ของวิชา 04-624-305 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "154"
@@ -1412,12 +1632,14 @@
       "relevant_chunk_keys": [
         "9f837b0851a8e2a6"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-305",
-      "course_name": "ข้อมูลขนาดใหญ่"
+      "course_name": "ข้อมูลขนาดใหญ่",
+      "query_id": 108
     },
     {
-      "query_id": 109,
       "question": "วิชาวิศวกรรมข้อมูลมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "155"
@@ -1425,12 +1647,14 @@
       "relevant_chunk_keys": [
         "e4a32f2624d6b125"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-306",
-      "course_name": "วิศวกรรมข้อมูล"
+      "course_name": "วิศวกรรมข้อมูล",
+      "query_id": 109
     },
     {
-      "query_id": 110,
       "question": "CLO ของวิชา 04-624-306 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "155"
@@ -1438,12 +1662,14 @@
       "relevant_chunk_keys": [
         "e4a32f2624d6b125"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-306",
-      "course_name": "วิศวกรรมข้อมูล"
+      "course_name": "วิศวกรรมข้อมูล",
+      "query_id": 110
     },
     {
-      "query_id": 111,
       "question": "วิชาการเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "156"
@@ -1451,12 +1677,14 @@
       "relevant_chunk_keys": [
         "2fc0310b63976c8c"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-307",
-      "course_name": "การเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบ"
+      "course_name": "การเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบ",
+      "query_id": 111
     },
     {
-      "query_id": 112,
       "question": "CLO ของวิชา 04-624-307 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "156"
@@ -1464,12 +1692,14 @@
       "relevant_chunk_keys": [
         "2fc0310b63976c8c"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-307",
-      "course_name": "การเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบ"
+      "course_name": "การเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบ",
+      "query_id": 112
     },
     {
-      "query_id": 113,
       "question": "วิชาปัญหาพิเศษทางปัญญาประดิษฐ์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "157"
@@ -1477,12 +1707,14 @@
       "relevant_chunk_keys": [
         "ff798f3b7e6876bb"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-401",
-      "course_name": "ปัญหาพิเศษทางปัญญาประดิษฐ์"
+      "course_name": "ปัญหาพิเศษทางปัญญาประดิษฐ์",
+      "query_id": 113
     },
     {
-      "query_id": 114,
       "question": "CLO ของวิชา 04-624-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "157"
@@ -1490,12 +1722,14 @@
       "relevant_chunk_keys": [
         "ff798f3b7e6876bb"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-401",
-      "course_name": "ปัญหาพิเศษทางปัญญาประดิษฐ์"
+      "course_name": "ปัญหาพิเศษทางปัญญาประดิษฐ์",
+      "query_id": 114
     },
     {
-      "query_id": 115,
       "question": "วิชาหัวข้อขั้นสูงทางปัญญาประดิษฐ์มี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "158"
@@ -1503,12 +1737,14 @@
       "relevant_chunk_keys": [
         "1b633c2f8a854c2e"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-402",
-      "course_name": "หัวข้อขั้นสูงทางปัญญาประดิษฐ์"
+      "course_name": "หัวข้อขั้นสูงทางปัญญาประดิษฐ์",
+      "query_id": 115
     },
     {
-      "query_id": 116,
       "question": "CLO ของวิชา 04-624-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "158"
@@ -1516,12 +1752,14 @@
       "relevant_chunk_keys": [
         "1b633c2f8a854c2e"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-624-402",
-      "course_name": "หัวข้อขั้นสูงทางปัญญาประดิษฐ์"
+      "course_name": "หัวข้อขั้นสูงทางปัญญาประดิษฐ์",
+      "query_id": 116
     },
     {
-      "query_id": 117,
       "question": "วิชาการเตรียมความพร้อมฝึกประสบการณ์วิชาชีพมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "159"
@@ -1529,12 +1767,14 @@
       "relevant_chunk_keys": [
         "275fbc3985b638c9"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-301",
-      "course_name": "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ"
+      "course_name": "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ",
+      "query_id": 117
     },
     {
-      "query_id": 118,
       "question": "CLO ของวิชา 04-000-301 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "159"
@@ -1542,12 +1782,14 @@
       "relevant_chunk_keys": [
         "275fbc3985b638c9"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-301",
-      "course_name": "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ"
+      "course_name": "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ",
+      "query_id": 118
     },
     {
-      "query_id": 119,
       "question": "วิชาสหกิจศึกษามี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "160"
@@ -1555,12 +1797,14 @@
       "relevant_chunk_keys": [
         "cfcddd75804f0375"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-401",
-      "course_name": "สหกิจศึกษา"
+      "course_name": "สหกิจศึกษา",
+      "query_id": 119
     },
     {
-      "query_id": 120,
       "question": "CLO ของวิชา 04-000-401 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "160"
@@ -1568,12 +1812,14 @@
       "relevant_chunk_keys": [
         "cfcddd75804f0375"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-401",
-      "course_name": "สหกิจศึกษา"
+      "course_name": "สหกิจศึกษา",
+      "query_id": 120
     },
     {
-      "query_id": 121,
       "question": "วิชาสหกิจศึกษาต่างประเทศมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "161"
@@ -1581,12 +1827,14 @@
       "relevant_chunk_keys": [
         "839cc66571acd61e"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-403",
-      "course_name": "สหกิจศึกษาต่างประเทศ"
+      "course_name": "สหกิจศึกษาต่างประเทศ",
+      "query_id": 121
     },
     {
-      "query_id": 122,
       "question": "CLO ของวิชา 04-000-403 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "161"
@@ -1594,12 +1842,14 @@
       "relevant_chunk_keys": [
         "839cc66571acd61e"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-403",
-      "course_name": "สหกิจศึกษาต่างประเทศ"
+      "course_name": "สหกิจศึกษาต่างประเทศ",
+      "query_id": 122
     },
     {
-      "query_id": 123,
       "question": "วิชาฝึกงานมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "162"
@@ -1607,12 +1857,14 @@
       "relevant_chunk_keys": [
         "c97dd1f0fbfbb44f"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-302",
-      "course_name": "ฝึกงาน"
+      "course_name": "ฝึกงาน",
+      "query_id": 123
     },
     {
-      "query_id": 124,
       "question": "CLO ของวิชา 04-000-302 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "162"
@@ -1620,12 +1872,14 @@
       "relevant_chunk_keys": [
         "c97dd1f0fbfbb44f"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-302",
-      "course_name": "ฝึกงาน"
+      "course_name": "ฝึกงาน",
+      "query_id": 124
     },
     {
-      "query_id": 125,
       "question": "วิชาฝึกงานต่างประเทศมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "163"
@@ -1633,12 +1887,14 @@
       "relevant_chunk_keys": [
         "1d800927ccde68c6"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-303",
-      "course_name": "ฝึกงานต่างประเทศ"
+      "course_name": "ฝึกงานต่างประเทศ",
+      "query_id": 125
     },
     {
-      "query_id": 126,
       "question": "CLO ของวิชา 04-000-303 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "163"
@@ -1646,12 +1902,14 @@
       "relevant_chunk_keys": [
         "1d800927ccde68c6"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-303",
-      "course_name": "ฝึกงานต่างประเทศ"
+      "course_name": "ฝึกงานต่างประเทศ",
+      "query_id": 126
     },
     {
-      "query_id": 127,
       "question": "วิชาปัญหาพิเศษจากสถานประกอบการมี CLO อะไรบ้าง",
       "relevant_chunk_ids": [
         "164"
@@ -1659,12 +1917,14 @@
       "relevant_chunk_keys": [
         "662051fb8e844ac0"
       ],
+      "category": "clo",
       "phrasing": "by_name",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-402",
-      "course_name": "ปัญหาพิเศษจากสถานประกอบการ"
+      "course_name": "ปัญหาพิเศษจากสถานประกอบการ",
+      "query_id": 127
     },
     {
-      "query_id": 128,
       "question": "CLO ของวิชา 04-000-402 มีอะไรบ้าง",
       "relevant_chunk_ids": [
         "164"
@@ -1672,9 +1932,994 @@
       "relevant_chunk_keys": [
         "662051fb8e844ac0"
       ],
+      "category": "clo",
       "phrasing": "by_code",
+      "source": "CLOs-Computer_Engineering-RMUTT.pdf",
       "course_code": "04-000-402",
-      "course_name": "ปัญหาพิเศษจากสถานประกอบการ"
+      "course_name": "ปัญหาพิเศษจากสถานประกอบการ",
+      "query_id": 128
+    },
+    {
+      "question": "แจ้งจบในระบบไม่ทันต้องทำอย่างไร",
+      "relevant_chunk_ids": [
+        "5"
+      ],
+      "relevant_chunk_keys": [
+        "5801da93a74e6a14"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "01_ขอสำเร็จการศึกษา.pdf",
+      "reference_answer": "เขียนคำร้องขอสำเร็จการศึกษาและคำร้องขอขึ้นทะเบียนบัณฑิตตามแบบฟอร์ม แล้วเข้าระบบ นักศึกษาเพื่อปริ้นใบจ่ายค่าขึ้นทะเบียนบัณฑิต",
+      "query_id": 129
+    },
+    {
+      "question": "ค่าปรับกรณีชำระค่าขึ้นทะเบียนบัณฑิตล่าช้าเท่าไหร่",
+      "relevant_chunk_ids": [
+        "6"
+      ],
+      "relevant_chunk_keys": [
+        "e2ad27e3a1ec5527"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "01_ขอสำเร็จการศึกษา.pdf",
+      "reference_answer": "500 บาท",
+      "query_id": 130
+    },
+    {
+      "question": "แจ้งจบเสร็จแล้วต้องส่งเอกสารที่ไหน",
+      "relevant_chunk_ids": [
+        "6"
+      ],
+      "relevant_chunk_keys": [
+        "e2ad27e3a1ec5527"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "01_ขอสำเร็จการศึกษา.pdf",
+      "reference_answer": "ส่งที่ภาควิชาฯ ของนักศึกษา",
+      "query_id": 131
+    },
+    {
+      "question": "ต้องปริ้นเอกสารตอนไหน",
+      "relevant_chunk_ids": [
+        "6"
+      ],
+      "relevant_chunk_keys": [
+        "e2ad27e3a1ec5527"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "01_ขอสำเร็จการศึกษา.pdf",
+      "reference_answer": "หลังจากแจ้งสำเร็จการศึกษาในระบบนักศึกษาเรียบร้อยแล้ว จึงปริ้นเอกสารและใบชำระเงิน",
+      "query_id": 132
+    },
+    {
+      "question": "ได้เกรด D เทียบโอนได้ไหม",
+      "relevant_chunk_ids": [
+        "13"
+      ],
+      "relevant_chunk_keys": [
+        "94b89cd782af0e63"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
+      "reference_answer": "ไม่ได้ เทียบโอนได้เฉพาะรายวิชาที่ได้เกรดตั้งแต่ C ขึ้นไป",
+      "query_id": 133
+    },
+    {
+      "question": "ลงทะเบียนและเข้าสอบวิชานั้นไปแล้ว ยังโอนได้ไหม",
+      "relevant_chunk_ids": [
+        "13"
+      ],
+      "relevant_chunk_keys": [
+        "94b89cd782af0e63"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
+      "reference_answer": "ไม่ได้ หากลงทะเบียนแล้วเข้าสอบแล้ว จะไม่อนุญาตให้โอนรายวิชา",
+      "query_id": 134
+    },
+    {
+      "question": "เทียบโอนต้องทำภายในเมื่อไหร่",
+      "relevant_chunk_ids": [
+        "14"
+      ],
+      "relevant_chunk_keys": [
+        "68b9ddeced61eede"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
+      "reference_answer": "ภายในภาคการศึกษาแรกที่ขึ้นทะเบียนเป็นนักศึกษา",
+      "query_id": 135
+    },
+    {
+      "question": "ยื่นใบเสร็จแล้วต้องรอนานแค่ไหน",
+      "relevant_chunk_ids": [
+        "14"
+      ],
+      "relevant_chunk_keys": [
+        "68b9ddeced61eede"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
+      "reference_answer": "เข้าไปตรวจสอบได้หลังยื่นใบเสร็จประมาณ 7 วันทำการ",
+      "query_id": 136
+    },
+    {
+      "question": "ทรานสคริปมาจากมหาวิทยาลัยอื่นต้องใช้เอกสารเพิ่มไหม",
+      "relevant_chunk_ids": [
+        "14"
+      ],
+      "relevant_chunk_keys": [
+        "68b9ddeced61eede"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
+      "reference_answer": "ต้องแนบคำอธิบายรายวิชาเพิ่มด้วย",
+      "query_id": 137
+    },
+    {
+      "question": "เปลี่ยนนามสกุลหลังแต่งงานต้องใช้อะไรบ้าง",
+      "relevant_chunk_ids": [
+        "21"
+      ],
+      "relevant_chunk_keys": [
+        "91b28cdc600e58db"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
+      "reference_answer": "คำร้องทั่วไป สำเนาใบเปลี่ยนชื่อ/นามสกุล และสำเนาบัตรประชาชนที่เป็นชื่อใหม่",
+      "query_id": 138
+    },
+    {
+      "question": "ข้อมูลประวัติในระบบผิด ต้องยื่นคำร้องแบบไหน",
+      "relevant_chunk_ids": [
+        "21"
+      ],
+      "relevant_chunk_keys": [
+        "91b28cdc600e58db"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
+      "reference_answer": "ใช้คำร้องทั่วไป ติ๊กช่องอื่น ๆ ระบุว่าขอแก้ไข เนื่องจากบันทึกประวัติผิดพลาด",
+      "query_id": 139
+    },
+    {
+      "question": "ได้รับยศใหม่ต้องใช้เอกสารอะไร",
+      "relevant_chunk_ids": [
+        "21",
+        "22"
+      ],
+      "relevant_chunk_keys": [
+        "91b28cdc600e58db",
+        "1f419799a51d623d"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
+      "reference_answer": "คำร้องทั่วไป พร้อมสำเนาแต่งตั้งยศ",
+      "query_id": 140
+    },
+    {
+      "question": "ส่งเอกสารแล้วกี่วันจึงตรวจสอบได้",
+      "relevant_chunk_ids": [
+        "22"
+      ],
+      "relevant_chunk_keys": [
+        "1f419799a51d623d"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
+      "reference_answer": "ประมาณ 5-7 วันทำการ",
+      "query_id": 141
+    },
+    {
+      "question": "ขอเงินคืนต้องใช้เอกสารกี่อย่าง",
+      "relevant_chunk_ids": [
+        "29"
+      ],
+      "relevant_chunk_keys": [
+        "dcfb868f10301ba1"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "04_การขอเงินคืน.pdf",
+      "reference_answer": "5 อย่าง คือ คำร้องขอเงินคืน ใบเสร็จ ใบเสร็จอิเล็กทรอนิกส์ ใบแจ้งยอด และสำเนาหน้าสมุดบัญชี",
+      "query_id": 142
+    },
+    {
+      "question": "ต้องให้ใครลงนาม",
+      "relevant_chunk_ids": [
+        "29"
+      ],
+      "relevant_chunk_keys": [
+        "dcfb868f10301ba1"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "04_การขอเงินคืน.pdf",
+      "reference_answer": "อาจารย์ที่ปรึกษาเป็นผู้ลงนามในคำร้อง",
+      "query_id": 143
+    },
+    {
+      "question": "ยื่นเอกสารที่ไหน",
+      "relevant_chunk_ids": [
+        "29"
+      ],
+      "relevant_chunk_keys": [
+        "dcfb868f10301ba1"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "04_การขอเงินคืน.pdf",
+      "reference_answer": "ส่งที่ภาควิชาฯ หลังจากอาจารย์ที่ปรึกษาลงนามแล้ว",
+      "query_id": 144
+    },
+    {
+      "question": "ทำไมต้องแนบสำเนาสมุดบัญชี",
+      "relevant_chunk_ids": [
+        "29"
+      ],
+      "relevant_chunk_keys": [
+        "dcfb868f10301ba1"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "04_การขอเงินคืน.pdf",
+      "reference_answer": "ใช้เป็นบัญชีปลายทางสำหรับรับเงินคืน",
+      "query_id": 145
+    },
+    {
+      "question": "ถูกถอนชื่อเพราะไม่ได้ลงทะเบียน ต้องทำอย่างไร",
+      "relevant_chunk_ids": [
+        "37"
+      ],
+      "relevant_chunk_keys": [
+        "7fa4c6a5c1a9b8fd"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "05_ขอคืนสภาพนักศึกษา.pdf",
+      "reference_answer": "ยื่นขอคืนสภาพพร้อมลาพักการศึกษา",
+      "query_id": 146
+    },
+    {
+      "question": "เรียนครบหลักสูตรแล้วแต่ยังไม่ผ่านภาษาอังกฤษและถูกถอนชื่อ ต้องทำอย่างไร",
+      "relevant_chunk_ids": [
+        "37"
+      ],
+      "relevant_chunk_keys": [
+        "7fa4c6a5c1a9b8fd"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "05_ขอคืนสภาพนักศึกษา.pdf",
+      "reference_answer": "ยื่นขอคืนสภาพพร้อมรักษาสภาพการเป็นนักศึกษา",
+      "query_id": 147
+    },
+    {
+      "question": "ลงทะเบียนแล้วแต่ไม่ได้จ่ายค่าเทอมจนถูกถอนชื่อ ต้องทำอย่างไร",
+      "relevant_chunk_ids": [
+        "37"
+      ],
+      "relevant_chunk_keys": [
+        "7fa4c6a5c1a9b8fd"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "05_ขอคืนสภาพนักศึกษา.pdf",
+      "reference_answer": "ยื่นขอคืนสภาพพร้อมชำระค่าเทอม",
+      "query_id": 148
+    },
+    {
+      "question": "ยื่นคำร้องคืนสภาพที่ไหน",
+      "relevant_chunk_ids": [
+        "38"
+      ],
+      "relevant_chunk_keys": [
+        "8d18295a084d4dd6"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "05_ขอคืนสภาพนักศึกษา.pdf",
+      "reference_answer": "ยื่นผ่านคำร้องออนไลน์ในระบบนักศึกษา แล้วปริ้นเอกสารส่งภาควิชาฯ",
+      "query_id": 149
+    },
+    {
+      "question": "ต้องส่งเอกสารอะไรบ้างที่ภาควิชา",
+      "relevant_chunk_ids": [
+        "38"
+      ],
+      "relevant_chunk_keys": [
+        "8d18295a084d4dd6"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "05_ขอคืนสภาพนักศึกษา.pdf",
+      "reference_answer": "คำร้องขอคืนสภาพ คำร้องรักษาสภาพหรือลาพักการศึกษา และใบเสร็จ",
+      "query_id": 150
+    },
+    {
+      "question": "ค่ารักษาสภาพเท่าไหร่",
+      "relevant_chunk_ids": [
+        "45"
+      ],
+      "relevant_chunk_keys": [
+        "f43aa763df540e85"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
+      "reference_answer": "1,000 บาท",
+      "query_id": 151
+    },
+    {
+      "question": "ใครยื่นรักษาสภาพได้",
+      "relevant_chunk_ids": [
+        "45"
+      ],
+      "relevant_chunk_keys": [
+        "f43aa763df540e85"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
+      "reference_answer": "นักศึกษาที่มีผลการเรียนครบตามหลักสูตรแล้ว และอยู่ระหว่างรอดำเนินการตามเงื่อนไขการสำเร็จการ",
+      "query_id": 152
+    },
+    {
+      "question": "รักษาสภาพต่างจากลาพักการศึกษาอย่างไร",
+      "relevant_chunk_ids": [
+        "45",
+        "46"
+      ],
+      "relevant_chunk_keys": [
+        "f43aa763df540e85",
+        "3f0c5af00d8cf771"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
+      "reference_answer": "รักษาสภาพใช้กับผู้ที่เรียนครบหลักสูตรแล้วรอเงื่อนไขจบ ส่วนลาพักการศึกษาใช้กับผู้ที่ยังเรียนไม่ครบ",
+      "query_id": 153
+    },
+    {
+      "question": "ยื่นคำร้องแล้วกี่วันจึงตรวจสอบสถานะได้",
+      "relevant_chunk_ids": [
+        "46"
+      ],
+      "relevant_chunk_keys": [
+        "3f0c5af00d8cf771"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
+      "reference_answer": "ประมาณ 7 วันทำการ",
+      "query_id": 154
+    },
+    {
+      "question": "ลงทะเบียนต่ำกว่ากี่หน่วยกิตจึงต้องยื่นคำร้อง",
+      "relevant_chunk_ids": [
+        "53"
+      ],
+      "relevant_chunk_keys": [
+        "0853af5e152e7675"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
+      "reference_answer": "ต่ำกว่า 9 หน่วยกิต ในเทอม 1 และเทอม 2",
+      "query_id": 155
+    },
+    {
+      "question": "ลงทะเบียนเกินเกณฑ์ได้กี่ครั้ง",
+      "relevant_chunk_ids": [
+        "53"
+      ],
+      "relevant_chunk_keys": [
+        "0853af5e152e7675"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
+      "reference_answer": "2 ครั้งตลอดการศึกษา",
+      "query_id": 156
+    },
+    {
+      "question": "ลงเกินเกณฑ์ครั้งแรกต้องมีเกรดเฉลี่ยเท่าไหร่",
+      "relevant_chunk_ids": [
+        "53"
+      ],
+      "relevant_chunk_keys": [
+        "0853af5e152e7675"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
+      "reference_answer": "เกรดเฉลี่ยต้องได้ 2.00",
+      "query_id": 157
+    },
+    {
+      "question": "ลงเกินเกณฑ์ครั้งที่สองมีเงื่อนไขอะไร",
+      "relevant_chunk_ids": [
+        "53"
+      ],
+      "relevant_chunk_keys": [
+        "0853af5e152e7675"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
+      "reference_answer": "ต้องจบการศึกษาในเทอมที่ขอลงทะเบียนเกินเท่านั้น",
+      "query_id": 158
+    },
+    {
+      "question": "ต้องแนบใบผลการศึกษาไหม",
+      "relevant_chunk_ids": [
+        "53",
+        "54"
+      ],
+      "relevant_chunk_keys": [
+        "0853af5e152e7675",
+        "aec2bae1dda399ed"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
+      "reference_answer": "ต้องแนบ โดยปริ้นจากระบบนักศึกษา",
+      "query_id": 159
+    },
+    {
+      "question": "จ่ายค่าเทอมไปแล้วต้องจ่ายค่าลาพักอีกไหม",
+      "relevant_chunk_ids": [
+        "60"
+      ],
+      "relevant_chunk_keys": [
+        "6723b4b267f83867"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "08_ลาพักการศึกษา.pdf",
+      "reference_answer": "ไม่ต้อง นักศึกษาที่ชำระค่าลงทะเบียนแล้วไม่ต้องชำระค่าลาพักการศึกษา",
+      "query_id": 160
+    },
+    {
+      "question": "ยื่นลาพักการศึกษาที่ไหน",
+      "relevant_chunk_ids": [
+        "60"
+      ],
+      "relevant_chunk_keys": [
+        "6723b4b267f83867"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "08_ลาพักการศึกษา.pdf",
+      "reference_answer": "ยื่นผ่านคำร้องออนไลน์ในระบบนักศึกษา",
+      "query_id": 161
+    },
+    {
+      "question": "ยื่นแล้วต้องทำอะไรต่อ",
+      "relevant_chunk_ids": [
+        "60"
+      ],
+      "relevant_chunk_keys": [
+        "6723b4b267f83867"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "08_ลาพักการศึกษา.pdf",
+      "reference_answer": "ปริ้นคำร้องพร้อมใบชำระเงิน ให้อาจารย์ที่ปรึกษาให้ความเห็น ชำระค่าธรรมเนียม แล้วส่งคำร้องพร้อม",
+      "query_id": 162
+    },
+    {
+      "question": "ตรวจสอบผลได้เมื่อไหร่",
+      "relevant_chunk_ids": [
+        "60"
+      ],
+      "relevant_chunk_keys": [
+        "6723b4b267f83867"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "08_ลาพักการศึกษา.pdf",
+      "reference_answer": "ประมาณ 7 วันทำการหลังยื่นคำร้อง",
+      "query_id": 163
+    },
+    {
+      "question": "อยากลาออกต้องทำอย่างไร",
+      "relevant_chunk_ids": [
+        "66"
+      ],
+      "relevant_chunk_keys": [
+        "7d88092916364268"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "09_นักศึกษาขอลาออก.pdf",
+      "reference_answer": "กรอกคำร้องขอลาออกตามแบบฟอร์ม เข้าพบอาจารย์ที่ปรึกษาเพื่อลงนาม แล้วส่งเอกสารที่ธุรการภาค",
+      "query_id": 164
+    },
+    {
+      "question": "ลาออกต้องให้ใครเซ็น",
+      "relevant_chunk_ids": [
+        "66"
+      ],
+      "relevant_chunk_keys": [
+        "7d88092916364268"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "09_นักศึกษาขอลาออก.pdf",
+      "reference_answer": "อาจารย์ที่ปรึกษา",
+      "query_id": 165
+    },
+    {
+      "question": "ส่งคำร้องแล้วรู้ผลเมื่อไหร่",
+      "relevant_chunk_ids": [
+        "66"
+      ],
+      "relevant_chunk_keys": [
+        "7d88092916364268"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "09_นักศึกษาขอลาออก.pdf",
+      "reference_answer": "ตรวจสอบสถานะได้หลังส่งเอกสารประมาณ 7 วันทำการ",
+      "query_id": 166
+    },
+    {
+      "question": "GPA เท่าไหร่ได้เกียรตินิยมอันดับ 1",
+      "relevant_chunk_ids": [
+        "72",
+        "73"
+      ],
+      "relevant_chunk_keys": [
+        "b8a9625297faf3fd",
+        "8b1236e0ecd3137d"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
+      "reference_answer": "ไม่ต่ำกว่า 3.50",
+      "query_id": 167
+    },
+    {
+      "question": "GPA เท่าไหร่ได้เกียรตินิยมอันดับ 2",
+      "relevant_chunk_ids": [
+        "73"
+      ],
+      "relevant_chunk_keys": [
+        "8b1236e0ecd3137d"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
+      "reference_answer": "ไม่ต่ำกว่า 3.25",
+      "query_id": 168
+    },
+    {
+      "question": "ติดเกรด D จะได้เกียรตินิยมไหม",
+      "relevant_chunk_ids": [
+        "74"
+      ],
+      "relevant_chunk_keys": [
+        "9ea4a5bf33211480"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
+      "reference_answer": "ไม่ได้ เพราะต้องไม่มีผลการเรียนต่ำกว่าระดับ C ในรายวิชาใดวิชาหนึ่ง",
+      "query_id": 169
+    },
+    {
+      "question": "เคยลาพักการศึกษาจะเสียสิทธิ์เกียรตินิยมไหม",
+      "relevant_chunk_ids": [
+        "74"
+      ],
+      "relevant_chunk_keys": [
+        "9ea4a5bf33211480"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
+      "reference_answer": "ไม่เสีย เพราะไม่นับระยะเวลาที่ขอลาพักการศึกษารวมในระยะเวลาที่หลักสูตรกำหนด",
+      "query_id": 170
+    },
+    {
+      "question": "เหรียญทองกับเหรียญเงินต่างกันอย่างไร",
+      "relevant_chunk_ids": [
+        "74"
+      ],
+      "relevant_chunk_keys": [
+        "9ea4a5bf33211480"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
+      "reference_answer": "เหรียญทองต้องได้เกียรตินิยมอันดับ 1 และมี GPA สูงสุดในคณะ ส่วนเหรียญเงินได้เกียรตินิยมอันดับ 1 หรือ 2 ที่มี GPA อันดับ 2 ในคณะ หรือเกียรตินิยมอันดับ 2 ที่มี GPA สูงสุดในคณะ",
+      "query_id": 171
+    },
+    {
+      "question": "จะจบต้องมี GPA เท่าไหร่",
+      "relevant_chunk_ids": [
+        "79"
+      ],
+      "relevant_chunk_keys": [
+        "81b11d3f68eab7b3"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
+      "reference_answer": "ไม่ต่ำกว่า 2.00",
+      "query_id": 172
+    },
+    {
+      "question": "มีอะไรบ้างที่ต้องผ่านก่อนจบ",
+      "relevant_chunk_ids": [
+        "79",
+        "80"
+      ],
+      "relevant_chunk_keys": [
+        "81b11d3f68eab7b3",
+        "8e261b23c05f5393"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
+      "reference_answer": "เรียนครบหลักสูตร GPA ไม่ต่ำกว่า 2.00, ไม่มีหนี้สินผูกพันต่อมหาวิทยาลัย, ผ่าน English Exit Exam, ผ่านการทดสอบสมรรถนะด้านสารสนเทศ (ICT) และผ่านการทดสอบสมรรถนะด้านวิชาชีพครบตามหลักสูตร",
+      "query_id": 173
+    },
+    {
+      "question": "เรียนครบหน่วยกิตแล้วแต่ยังไม่ผ่านภาษาอังกฤษ จบได้ไหม",
+      "relevant_chunk_ids": [
+        "80"
+      ],
+      "relevant_chunk_keys": [
+        "8e261b23c05f5393"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
+      "reference_answer": "ยังจบไม่ได้ ต้องผ่าน English Exit Exam ก่อน",
+      "query_id": 174
+    },
+    {
+      "question": "TOEIC ต้องได้กี่คะแนน",
+      "relevant_chunk_ids": [
+        "88"
+      ],
+      "relevant_chunk_keys": [
+        "04d6d4127e7b27fb"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "12_English-Exit-Exam.pdf",
+      "reference_answer": "ไม่น้อยกว่า 400 คะแนน",
+      "query_id": 175
+    },
+    {
+      "question": "IELTS ต้องได้เท่าไหร่",
+      "relevant_chunk_ids": [
+        "88"
+      ],
+      "relevant_chunk_keys": [
+        "04d6d4127e7b27fb"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "12_English-Exit-Exam.pdf",
+      "reference_answer": "ไม่น้อยกว่า 3.5",
+      "query_id": 176
+    },
+    {
+      "question": "CEFR ต้องระดับไหน",
+      "relevant_chunk_ids": [
+        "88",
+        "89"
+      ],
+      "relevant_chunk_keys": [
+        "04d6d4127e7b27fb",
+        "551ccd8c4e838d73"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "12_English-Exit-Exam.pdf",
+      "reference_answer": "ไม่น้อยกว่าระดับ B1",
+      "query_id": 177
+    },
+    {
+      "question": "สอบไม่ผ่านหลายครั้งต้องทำอย่างไร",
+      "relevant_chunk_ids": [
+        "88",
+        "89"
+      ],
+      "relevant_chunk_keys": [
+        "04d6d4127e7b27fb",
+        "551ccd8c4e838d73"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "12_English-Exit-Exam.pdf",
+      "reference_answer": "หากผลไม่เป็นไปตามเกณฑ์ไม่น้อยกว่า 2 ครั้ง ต้องเข้าอบรมภาษาอังกฤษกับศูนย์พัฒนาศักยภาพด้าน ภาษาและอุตสาหกรรมการบริการ คณะศิลปศาสตร์ โดยเสียค่าใช้จ่ายเอง และต้องผ่านเกณฑ์ของศูนย์ฯ ไม่ต่ำ",
+      "query_id": 178
+    },
+    {
+      "question": "ต้องสอบให้ผ่านทุกมาตรฐานไหม",
+      "relevant_chunk_ids": [
+        "89"
+      ],
+      "relevant_chunk_keys": [
+        "551ccd8c4e838d73"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "12_English-Exit-Exam.pdf",
+      "reference_answer": "ไม่ต้อง ผ่านเกณฑ์มาตรฐานใดมาตรฐานหนึ่งก็เพียงพอ",
+      "query_id": 179
+    },
+    {
+      "question": "ลาพักการศึกษาไว้ อยากกลับมาเรียนต้องทำอย่างไร",
+      "relevant_chunk_ids": [
+        "96"
+      ],
+      "relevant_chunk_keys": [
+        "af14e89abc4fa964"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "13_ขอกลับเข้าศึกษา.pdf",
+      "reference_answer": "เขียนคำร้องขอกลับเข้าศึกษาตามแบบฟอร์ม ให้อาจารย์ที่ปรึกษาลงนาม แล้วส่งที่ธุรการภาควิชาฯ",
+      "query_id": 180
+    },
+    {
+      "question": "ควรยื่นคำร้องขอกลับเข้าศึกษาเมื่อไหร่",
+      "relevant_chunk_ids": [
+        "96"
+      ],
+      "relevant_chunk_keys": [
+        "af14e89abc4fa964"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "13_ขอกลับเข้าศึกษา.pdf",
+      "reference_answer": "ก่อนวันลงทะเบียนอย่างน้อย 2 สัปดาห์",
+      "query_id": 181
+    },
+    {
+      "question": "ขอกลับเข้าศึกษาเสียเงินไหม",
+      "relevant_chunk_ids": [
+        "96"
+      ],
+      "relevant_chunk_keys": [
+        "af14e89abc4fa964"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "13_ขอกลับเข้าศึกษา.pdf",
+      "reference_answer": "ไม่ต้องเสียค่าธรรมเนียม",
+      "query_id": 182
+    },
+    {
+      "question": "ถูกถอนชื่อแล้วอยากกลับมาเรียน ต้องเสียเงินเท่าไหร่",
+      "relevant_chunk_ids": [
+        "96"
+      ],
+      "relevant_chunk_keys": [
+        "af14e89abc4fa964"
+      ],
+      "category": "faq",
+      "phrasing": "faq",
+      "source": "13_ขอกลับเข้าศึกษา.pdf",
+      "reference_answer": "ต้องขอคืนสภาพ 1,000 บาท และลาพักการศึกษา 1,000 บาท รวม 2,000 บาท ส่วนคำร้องขอกลับเข้า",
+      "query_id": 183
+    },
+    {
+      "question": "จำนวนเงินค่าขึ้นทะเบียนบัณฑิต",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "01_ขอสำเร็จการศึกษา.pdf",
+      "query_id": 184
+    },
+    {
+      "question": "วันสุดท้ายของการแจ้งสำเร็จการศึกษาในระบบ ให้ดูจากปฏิทินการศึกษาของแต่ละภาคการศึกษา",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "01_ขอสำเร็จการศึกษา.pdf",
+      "query_id": 185
+    },
+    {
+      "question": "จำนวนหน่วยกิตสูงสุดที่เทียบโอนได้",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
+      "query_id": 186
+    },
+    {
+      "question": "ระยะเวลาพิจารณาอนุมัติก่อนถึงขั้นตอนชำระเงิน",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
+      "query_id": 187
+    },
+    {
+      "question": "ค่าธรรมเนียมของคำร้องทั้ง 3 ประเภท",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
+      "query_id": 188
+    },
+    {
+      "question": "ระยะเวลาที่เงินจะโอนเข้าบัญชีหลังยื่นคำร้อง",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "04_การขอเงินคืน.pdf",
+      "query_id": 189
+    },
+    {
+      "question": "เงื่อนไขว่ากรณีใดบ้างที่มีสิทธิ์ขอเงินคืน",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "04_การขอเงินคืน.pdf",
+      "query_id": 190
+    },
+    {
+      "question": "กำหนดเวลาว่าต้องยื่นขอคืนสภาพภายในกี่วันหลังถูกถอนชื่อ",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "05_ขอคืนสภาพนักศึกษา.pdf",
+      "query_id": 191
+    },
+    {
+      "question": "จำนวนภาคการศึกษาสูงสุดที่ขอรักษาสภาพต่อเนื่องได้",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
+      "query_id": 192
+    },
+    {
+      "question": "จำนวนหน่วยกิตสูงสุดที่ลงทะเบียนเกินเกณฑ์ได้",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
+      "query_id": 193
+    },
+    {
+      "question": "ค่าธรรมเนียมของคำร้องนี้",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
+      "query_id": 194
+    },
+    {
+      "question": "1,000 บาท",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "08_ลาพักการศึกษา.pdf",
+      "query_id": 195
+    },
+    {
+      "question": "จำนวนภาคการศึกษาสูงสุดที่ลาพักต่อเนื่องได้",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "08_ลาพักการศึกษา.pdf",
+      "query_id": 196
+    },
+    {
+      "question": "ผลกระทบด้านการเงิน เช่น การคืนเงินค่าเทอมหรือหนี้สินคงค้างหลังลาออก",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "09_นักศึกษาขอลาออก.pdf",
+      "query_id": 197
+    },
+    {
+      "question": "ค่าธรรมเนียมของคำร้องขอลาออก",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "09_นักศึกษาขอลาออก.pdf",
+      "query_id": 198
+    },
+    {
+      "question": "วิธีการเสนอชื่อและช่วงเวลาประกาศผลผู้ได้รับเกียรตินิยม",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
+      "query_id": 199
+    },
+    {
+      "question": "รายละเอียดการสอบสมรรถนะด้านสารสนเทศ เช่น วิธีสมัคร เกณฑ์ผ่าน และค่าใช้จ่าย",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
+      "query_id": 200
+    },
+    {
+      "question": "รายละเอียดการทดสอบสมรรถนะด้านวิชาชีพของแต่ละหลักสูตร",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
+      "query_id": 201
+    },
+    {
+      "question": "วิธีสมัครสอบ ตารางสอบ และค่าสมัครสอบของแต่ละมาตรฐาน",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "12_English-Exit-Exam.pdf",
+      "query_id": 202
+    },
+    {
+      "question": "ช่องทางและกำหนดเวลาการยื่นผลคะแนนให้คณะ",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "12_English-Exit-Exam.pdf",
+      "query_id": 203
+    },
+    {
+      "question": "กำหนดเวลาที่ต้องยื่นขอกลับเข้าศึกษาอย่างช้าที่สุด (ระบุเพียงว่าควรยื่นก่อนวันลงทะเบียนอย่างน้อย 2",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "13_ขอกลับเข้าศึกษา.pdf",
+      "query_id": 204
+    },
+    {
+      "question": "สัปดาห์)",
+      "relevant_chunk_ids": [],
+      "relevant_chunk_keys": [],
+      "category": "unanswerable",
+      "phrasing": "unanswerable",
+      "source": "13_ขอกลับเข้าศึกษา.pdf",
+      "query_id": 205
     }
   ]
 }
