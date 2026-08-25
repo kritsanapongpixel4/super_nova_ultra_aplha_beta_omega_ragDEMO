@@ -38,7 +38,10 @@ def build(force: bool = False) -> None:
 
     meta = read_meta(config.INDEX_META_FILE)
     built = config.FAISS_INDEX_FILE.exists() and meta is not None
-    if built and not force and not is_stale(config.SOURCE_FILES, config.INDEX_META_FILE):
+    fresh = built and not is_stale(
+        config.SOURCE_FILES, config.INDEX_META_FILE, config.index_settings()
+    )
+    if fresh and not force:
         print(f"✅ index ของ {config.EMBEDDING_KEY} ตรงกับข้อมูลอยู่แล้ว "
               f"({meta['n_chunks']} chunks, สร้างเมื่อ {meta['built_at']})")
         print("   ใส่ --force ถ้าต้องการสร้างใหม่")

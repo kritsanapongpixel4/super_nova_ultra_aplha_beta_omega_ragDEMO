@@ -223,6 +223,11 @@ logs/
 .venv-gpu/
 benchmarks/results/
 outputs/embeddings/
+# FAISS index, chunk_store และ sparse index สร้างใหม่ได้ด้วย build_index.py
+# ทั้งหมด และเขียนทับทั้งไฟล์ทุกครั้งที่ rebuild — chunk_store.json ไฟล์เดียว
+# เป็น diff 13,000 บรรทัดต่อรอบ เก็บไว้ใน git มีแต่ทำให้ประวัติบวม
+vector_db/
+!vector_db/.gitkeep
 # ยกเว้นสมุดทดลองกับผลเปรียบเทียบ ซึ่งเป็นผลลัพธ์ของงาน ไม่ใช่ไฟล์ชั่วคราว
 !logs/EXPERIMENTS.md
 !benchmarks/results/*.md

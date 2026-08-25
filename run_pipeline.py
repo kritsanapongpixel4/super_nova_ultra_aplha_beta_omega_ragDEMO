@@ -26,6 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import config  # noqa: E402
 from src import cli, journal  # noqa: E402
+from src.embedding_model import pick_device  # noqa: E402
 from src.run_logger import RunLogger  # noqa: E402
 
 for stream in (sys.stdout, sys.stderr):
@@ -104,6 +105,12 @@ def main() -> None:
         sys.exit(1)
 
     config.ensure_dirs()
+
+    # Resolve now, and record the answer rather than the request.  Logging
+    # "auto" hid a run that fell back to CPU and took 978s where CUDA takes
+    # 70 — the journal said device=auto for both, so nothing looked wrong.
+    device = pick_device(config.EMBEDDING_DEVICE)
+
     started = time.perf_counter()
     timings: dict[str, float] = {}
     failed: list[int] = []
@@ -112,7 +119,7 @@ def main() -> None:
         f"pipeline-{spec.key}",
         model=spec.key,
         hf_id=spec.hf_id,
-        device=config.EMBEDDING_DEVICE or "auto",
+        device=device,
         steps=args.steps,
         sources=len(config.SOURCE_FILES),
         chunk_size=config.CHUNK_SIZE,
@@ -120,6 +127,13 @@ def main() -> None:
     ) as run:
         print(f"\n🧬 โมเดล {spec.key} ({spec.hf_id})")
         print(f"📂 {len(config.SOURCE_FILES)} ไฟล์ จาก {config.SOURCE_CATEGORIES}")
+        print(f"⚙️  อุปกรณ์: {device}")
+        if device == "cpu":
+            run.problem(
+                "running-on-cpu",
+                "ไม่พบ CUDA — ขั้นสร้าง embeddings จะช้ากว่า GPU ราว 10-15 เท่า "
+                "(ลองรันด้วย .venv-gpu)",
+            )
         print(f"📝 log: {run.log_path.name}\n")
 
         for number, title, module_path, needs_question in steps:
@@ -179,7 +193,7 @@ def main() -> None:
         how=(
             f"{len(config.SOURCE_FILES)} ไฟล์จาก {config.SOURCE_CATEGORIES}, "
             f"chunk_size={config.CHUNK_SIZE}, overlap={config.CHUNK_OVERLAP}, "
-            f"max_seq={spec.max_seq_length}, device={config.EMBEDDING_DEVICE or 'auto'}"
+            f"max_seq={spec.max_seq_length}, device={device}"
         ),
         result=(
             f"รวม {total:.1f}s"

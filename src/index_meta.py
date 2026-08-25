@@ -80,14 +80,32 @@ def read_meta(path: Path) -> dict[str, Any] | None:
         return json.load(f)
 
 
-def is_stale(source_paths: list[Path], meta_path: Path) -> bool:
+def is_stale(
+    source_paths: list[Path],
+    meta_path: Path,
+    expected: dict[str, Any] | None = None,
+) -> bool:
     """True if the data no longer matches what the index was built from.
+
+    ``expected`` names settings that must still agree — chunk size, which
+    embedder built it.  The documents alone are not enough: changing
+    CHUNK_SIZE leaves every file in data/ untouched, so the fingerprint still
+    matches and the index keeps being served at whatever chunking it was
+    actually built with.  ``build_meta`` already records these; nothing read
+    them back.
 
     A missing meta file is *not* stale — older indexes were built before this
     check existed, and refusing to serve them would be worse than not knowing.
-    Callers that care should check ``read_meta`` for None themselves.
+    Callers that care should check ``read_meta`` for None themselves.  A key
+    missing from the meta is skipped for the same reason.
     """
     meta = read_meta(meta_path)
     if meta is None:
         return False
-    return meta.get("sources_fingerprint") != sources_fingerprint(source_paths)
+    if meta.get("sources_fingerprint") != sources_fingerprint(source_paths):
+        return True
+    return any(
+        meta[key] != value
+        for key, value in (expected or {}).items()
+        if key in meta
+    )

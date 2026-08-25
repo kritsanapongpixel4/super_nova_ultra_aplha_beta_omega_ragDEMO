@@ -212,6 +212,21 @@ MEMORY_MAX_TURNS = 6      # conversation turns kept in the prompt
 EVAL_K_VALUES = (1, 3, 5, 10)
 
 
+def index_settings() -> dict[str, object]:
+    """The settings an index must have been built with to still be valid.
+
+    Keys match what ``src.index_meta.build_meta`` records, and the values are
+    read live so a change here is a change there.  Passed to ``is_stale`` by
+    everything that loads an index.
+    """
+    return {
+        "chunk_size": CHUNK_SIZE,
+        "chunk_overlap": CHUNK_OVERLAP,
+        "embedding_key": EMBEDDING_KEY,
+        "embedding_dim": EMBEDDING_DIM,
+    }
+
+
 def ensure_dirs() -> None:
     """Create the output directories if they do not exist yet."""
     for directory in (

@@ -5,6 +5,8 @@ SYSTEM_PROMPT = """You answer questions using ONLY the context provided below.
 Rules:
 - If the context does not contain the answer, say so plainly. Never invent facts.
 - Cite the source number of every chunk you use, like [1] or [2].
+- Each chunk is labelled with the document it came from. When two documents
+  disagree, name them instead of picking one silently.
 - Answer in the same language the user asked in.
 - Keep the tone factual, clear, and non-judgmental."""
 
@@ -15,7 +17,12 @@ Question: {question}
 
 Answer:"""
 
-CHUNK_TEMPLATE = "[{index}] (lines {line_start}-{line_end})\n{text}"
+# The document name, not the line range.  line_start/line_end belong to the
+# record a chunk was split out of, so every chunk from the same record repeats
+# the same span — 31% of chunks share theirs with another — which told the
+# model nothing and told it wrongly.  The filename is what distinguishes two
+# chunks that disagree, e.g. คู่มือนักศึกษา67 against คู่มือนักศึกษา69.
+CHUNK_TEMPLATE = "[{index}] {source}\n{text}"
 
 NO_CONTEXT_MESSAGE = "I could not find anything about that in the documents."
 
@@ -25,8 +32,7 @@ def format_context(chunks: list[dict]) -> str:
     return "\n\n".join(
         CHUNK_TEMPLATE.format(
             index=i,
-            line_start=chunk.get("line_start", "?"),
-            line_end=chunk.get("line_end", "?"),
+            source=chunk.get("source") or "ไม่ทราบแหล่งที่มา",
             text=chunk["text"],
         )
         for i, chunk in enumerate(chunks, start=1)

@@ -1772,3 +1772,57 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   }
 }
 ```
+
+## ✅ 2026-08-25 23:37 — pipeline steps 2: e5-base
+
+- **ทดลองอะไร:** รัน pipeline ขั้น 2 ด้วย embedding model e5-base
+- **ทำอย่างไร:** 18 ไฟล์จาก ['curriculum'], chunk_size=150, overlap=30, max_seq=512, device=cuda
+- **ผลลัพธ์:** รวม 4.9s, ครบทุกขั้น
+
+```json
+{
+  "model": "e5-base",
+  "hf_id": "intfloat/multilingual-e5-base",
+  "step_seconds": {
+    "2/7 ตัด chunk": 4.89
+  },
+  "total_seconds": 4.94,
+  "failed_steps": []
+}
+```
+
+## ✅ 2026-08-25 23:37 — pipeline steps 2: e5-base
+
+- **ทดลองอะไร:** รัน pipeline ขั้น 2 ด้วย embedding model e5-base
+- **ทำอย่างไร:** 18 ไฟล์จาก ['curriculum'], chunk_size=150, overlap=30, max_seq=512, device=cuda
+- **ผลลัพธ์:** รวม 4.7s, ครบทุกขั้น
+
+```json
+{
+  "model": "e5-base",
+  "hf_id": "intfloat/multilingual-e5-base",
+  "step_seconds": {
+    "2/7 ตัด chunk": 4.65
+  },
+  "total_seconds": 4.7,
+  "failed_steps": []
+}
+```
+
+## ✅ 2026-08-25 23:38 — pipeline steps 2: e5-base
+
+- **ทดลองอะไร:** รัน pipeline ขั้น 2 ด้วย embedding model e5-base
+- **ทำอย่างไร:** 18 ไฟล์จาก ['curriculum'], chunk_size=150, overlap=30, max_seq=512, device=cpu
+- **ผลลัพธ์:** รวม 6.0s, ครบทุกขั้น
+
+```json
+{
+  "model": "e5-base",
+  "hf_id": "intfloat/multilingual-e5-base",
+  "step_seconds": {
+    "2/7 ตัด chunk": 4.57
+  },
+  "total_seconds": 5.99,
+  "failed_steps": []
+}
+```

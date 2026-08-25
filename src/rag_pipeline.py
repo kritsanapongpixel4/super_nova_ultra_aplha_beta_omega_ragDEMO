@@ -55,10 +55,13 @@ class RAGPipeline:
             raise FileNotFoundError(
                 f"ไม่พบ {config.FAISS_INDEX_FILE} — รัน pipeline/create_vector_db.py ก่อน"
             )
-        if is_stale(config.SOURCE_FILES, config.INDEX_META_FILE):
+        if is_stale(
+            config.SOURCE_FILES, config.INDEX_META_FILE, config.index_settings()
+        ):
             raise RuntimeError(
-                "index ไม่ตรงกับข้อมูลใน data/ แล้ว — รัน pipeline/extract_text.py "
-                "→ chunking.py → create_embeddings.py → create_vector_db.py ใหม่"
+                "index ไม่ตรงกับข้อมูลหรือการตั้งค่าใน config.py แล้ว — รัน "
+                "pipeline/extract_text.py → chunking.py → create_embeddings.py "
+                "→ create_vector_db.py ใหม่"
             )
         if read_meta(config.INDEX_META_FILE) is None:
             logger.warning("⚠️  ไม่มี index_meta.json — ข้ามการตรวจว่า index ตรงกับข้อมูล")
