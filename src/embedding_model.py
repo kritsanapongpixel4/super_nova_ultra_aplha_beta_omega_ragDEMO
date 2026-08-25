@@ -179,10 +179,12 @@ class EmbeddingModel:
     def dim(self) -> int:
         """Dimensionality of the vectors this model produces."""
         self.load()
-        # sentence-transformers renamed this between major versions; the
-        # registry's declared dimension is the last resort so that a model
-        # not in the registry still reports something real.
-        for name in ("get_sentence_embedding_dimension", "get_embedding_dimension"):
+        # sentence-transformers renamed this between major versions.  Newest
+        # name first: calling the old one on 5.6 works but emits a
+        # FutureWarning on every load.  The registry's declared dimension is
+        # the last resort, so a model not in the registry still reports
+        # something real.
+        for name in ("get_embedding_dimension", "get_sentence_embedding_dimension"):
             getter = getattr(self._model, name, None)
             if getter is not None:
                 value = getter()

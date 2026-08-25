@@ -1,0 +1,500 @@
+{
+  "measured_at": "2026-08-25T19:11:39",
+  "providers_with_keys": {
+    "gemini": true,
+    "openai": false,
+    "anthropic": false
+  },
+  "embedding_model": "bge-m3",
+  "repeat": 2,
+  "questions": [
+    "วิชา 04-620-201 มี CLO อะไรบ้าง",
+    "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต",
+    "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+  ],
+  "results": {
+    "gemini-3.5-flash": {
+      "samples": [
+        {
+          "ok": true,
+          "ttft_s": 3.62,
+          "total_s": 3.968,
+          "input_tokens": 1403,
+          "output_tokens": 209,
+          "output_chars": 549,
+          "tokens_per_s": 600.9,
+          "preview": "วิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ดังนี้ครับ [1]:  *   **CLO 1** สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ์แ",
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 2.93,
+          "total_s": 3.597,
+          "input_tokens": 1403,
+          "output_tokens": 205,
+          "output_chars": 543,
+          "tokens_per_s": 307.3,
+          "preview": "รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ดังต่อไปนี้ [1]:  * **CLO 1** สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ",
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 2.732,
+          "total_s": 2.735,
+          "input_tokens": 1153,
+          "output_tokens": 33,
+          "output_chars": 87,
+          "tokens_per_s": 13558.5,
+          "preview": "หลักสูตรวิศวกรรมคอมพิวเตอร์ มีจำนวนหน่วยกิตที่เรียนตลอดหลักสูตรทั้งหมด 143 หน่วยกิต [3]",
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": true,
+          "ttft_s": 2.158,
+          "total_s": 2.163,
+          "input_tokens": 1153,
+          "output_tokens": 33,
+          "output_chars": 86,
+          "tokens_per_s": 7355.7,
+          "preview": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีจำนวนหน่วยกิตที่เรียนตลอดหลักสูตรทั้งหมด 143 หน่วยกิต [3]",
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": true,
+          "ttft_s": 6.862,
+          "total_s": 7.073,
+          "input_tokens": 1315,
+          "output_tokens": 120,
+          "output_chars": 420,
+          "tokens_per_s": 569.2,
+          "preview": "จากการตรวจสอบเอกสารที่กำหนดให้ ไม่พบข้อมูลระบุถึงขั้นตอนหรือวิธีการปฏิบัติในการยื่นขอลาพักการศึกษาตามปกติทั่วไป   อย่างไ",
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        },
+        {
+          "ok": true,
+          "ttft_s": 5.145,
+          "total_s": 5.613,
+          "input_tokens": 1315,
+          "output_tokens": 169,
+          "output_chars": 528,
+          "tokens_per_s": 360.5,
+          "preview": "จากการตรวจสอบข้อมูลในเอกสารที่กำหนด ไม่ได้มีการระบุถึงขั้นตอนหรือวิธีการขอลาพักการศึกษาในกรณีทั่วไปไว้อย่างชัดเจน [1], [",
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        }
+      ],
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 3.908,
+        "min": 2.158,
+        "max": 6.862
+      },
+      "total_s": {
+        "mean": 4.192,
+        "min": 2.163,
+        "max": 7.073
+      },
+      "tokens_per_s": {
+        "mean": 3792.017,
+        "min": 307.3,
+        "max": 13558.5
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 128.167,
+        "min": 33,
+        "max": 209
+      }
+    },
+    "gemini-3.6-flash": {
+      "samples": [
+        {
+          "ok": true,
+          "ttft_s": 23.583,
+          "total_s": 24.486,
+          "input_tokens": 1403,
+          "output_tokens": 218,
+          "output_chars": 560,
+          "tokens_per_s": 241.4,
+          "preview": "วิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ดังนี้ [1]:  * **CLO 1:** สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ์และเชล",
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 4.972,
+          "total_s": 5.523,
+          "input_tokens": 1403,
+          "output_tokens": 219,
+          "output_chars": 563,
+          "tokens_per_s": 397.4,
+          "preview": "รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ดังนี้ [1]:  * **CLO 1:** สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ์และ",
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 4.486,
+          "total_s": 4.487,
+          "input_tokens": 1153,
+          "output_tokens": 32,
+          "output_chars": 79,
+          "tokens_per_s": 20706.6,
+          "preview": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีจำนวนหน่วยกิตที่เรียนตลอดหลักสูตร 143 หน่วยกิต [3]",
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": true,
+          "ttft_s": 10.25,
+          "total_s": 10.505,
+          "input_tokens": 1153,
+          "output_tokens": 33,
+          "output_chars": 86,
+          "tokens_per_s": 129.7,
+          "preview": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีจำนวนหน่วยกิตที่เรียนตลอดหลักสูตรทั้งหมด 143 หน่วยกิต [3]",
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": true,
+          "ttft_s": 6.384,
+          "total_s": 6.558,
+          "input_tokens": 1315,
+          "output_tokens": 97,
+          "output_chars": 296,
+          "tokens_per_s": 557.1,
+          "preview": "จากเอกสารบริบทที่กำหนดให้ ไม่ได้มีข้อมูลระบุถึงขั้นตอนการลาพักการศึกษาไว้อย่างชัดเจน [1], [8]   (ในบริบทระบุเพียงข้อมูลก",
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        },
+        {
+          "ok": true,
+          "ttft_s": 7.435,
+          "total_s": 8.041,
+          "input_tokens": 1315,
+          "output_tokens": 98,
+          "output_chars": 313,
+          "tokens_per_s": 161.6,
+          "preview": "จากข้อมูลในเอกสาร ไม่ได้ระบุขั้นตอนการลาพักการศึกษาทั่วไปไว้อย่างชัดเจน [1][8]  เอกสารระบุไว้เพียงว่า หากนักศึกษาไม่ลงทะ",
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        }
+      ],
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 9.518,
+        "min": 4.486,
+        "max": 23.583
+      },
+      "total_s": {
+        "mean": 9.933,
+        "min": 4.487,
+        "max": 24.486
+      },
+      "tokens_per_s": {
+        "mean": 3698.967,
+        "min": 129.7,
+        "max": 20706.6
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 116.167,
+        "min": 32,
+        "max": 219
+      }
+    },
+    "gemini-3.7-flash": {
+      "samples": [
+        {
+          "ok": false,
+          "error": "ReadTimeout: The read operation timed out",
+          "total_s": 120.01,
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 100.609,
+          "total_s": 100.741,
+          "input_tokens": 1403,
+          "output_tokens": 221,
+          "output_chars": 569,
+          "tokens_per_s": 1664.1,
+          "preview": "รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ดังต่อไปนี้ [1]:  * **CLO 1:** สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุก",
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 41.759,
+          "total_s": 41.76,
+          "input_tokens": 1153,
+          "output_tokens": 33,
+          "output_chars": 87,
+          "tokens_per_s": 28730.6,
+          "preview": "หลักสูตรวิศวกรรมคอมพิวเตอร์ มีจำนวนหน่วยกิตที่เรียนตลอดหลักสูตรทั้งหมด 143 หน่วยกิต [3]",
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": false,
+          "error": "ReadTimeout: The read operation timed out",
+          "total_s": 120.01,
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": false,
+          "error": "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "total_s": 9.359,
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        },
+        {
+          "ok": true,
+          "ttft_s": 83.064,
+          "total_s": 83.065,
+          "input_tokens": 1315,
+          "output_tokens": 15,
+          "output_chars": 59,
+          "tokens_per_s": 9602.5,
+          "preview": "ในเอกสารที่ให้มาไม่มีข้อมูลเกี่ยวกับขั้นตอนการลาพักการศึกษา",
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        }
+      ],
+      "calls": 6,
+      "ok": 3,
+      "failed": 3,
+      "errors": [
+        "ReadTimeout: The read operation timed out",
+        "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      ],
+      "ttft_s": {
+        "mean": 75.144,
+        "min": 41.759,
+        "max": 100.609
+      },
+      "total_s": {
+        "mean": 75.189,
+        "min": 41.76,
+        "max": 100.741
+      },
+      "tokens_per_s": {
+        "mean": 13332.4,
+        "min": 1664.1,
+        "max": 28730.6
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 89.667,
+        "min": 15,
+        "max": 221
+      }
+    },
+    "gemini-3-flash-preview": {
+      "samples": [
+        {
+          "ok": true,
+          "ttft_s": 4.525,
+          "total_s": 4.927,
+          "input_tokens": 1403,
+          "output_tokens": 172,
+          "output_chars": 474,
+          "tokens_per_s": 427.8,
+          "preview": "รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ดังนี้:  *   **CLO 1:** สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ์และเช",
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 10.591,
+          "total_s": 11.004,
+          "input_tokens": 1403,
+          "output_tokens": 171,
+          "output_chars": 471,
+          "tokens_per_s": 414.3,
+          "preview": "วิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ดังนี้:  *   **CLO 1:** สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ์และเชลล์",
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 5.044,
+          "total_s": 5.045,
+          "input_tokens": 1153,
+          "output_tokens": 32,
+          "output_chars": 79,
+          "tokens_per_s": 37669.2,
+          "preview": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีจำนวนหน่วยกิตที่เรียนตลอดหลักสูตร 143 หน่วยกิต [3]",
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": true,
+          "ttft_s": 2.886,
+          "total_s": 2.886,
+          "input_tokens": 1153,
+          "output_tokens": 32,
+          "output_chars": 79,
+          "tokens_per_s": 55353.7,
+          "preview": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีจำนวนหน่วยกิตที่เรียนตลอดหลักสูตร 143 หน่วยกิต [3]",
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": true,
+          "ttft_s": 14.797,
+          "total_s": 15.43,
+          "input_tokens": 1315,
+          "output_tokens": 183,
+          "output_chars": 567,
+          "tokens_per_s": 289.1,
+          "preview": "ในข้อมูลที่ปรากฏ ไม่มีการระบุขั้นตอนการลาพักการศึกษาสำหรับนักศึกษาในสถานะปกติ แต่มีการระบุขั้นตอนการดำเนินการในกรณีที่นั",
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        },
+        {
+          "ok": true,
+          "ttft_s": 6.351,
+          "total_s": 7.128,
+          "input_tokens": 1315,
+          "output_tokens": 164,
+          "output_chars": 524,
+          "tokens_per_s": 211.0,
+          "preview": "จากข้อมูลที่ปรากฏในบริบท มีการระบุขั้นตอนในกรณีที่นักศึกษาถูกถอนชื่อออกจากทะเบียนเนื่องจากไม่ได้ลงทะเบียนเรียนและไม่ได้ล",
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        }
+      ],
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 7.366,
+        "min": 2.886,
+        "max": 14.797
+      },
+      "total_s": {
+        "mean": 7.737,
+        "min": 2.886,
+        "max": 15.43
+      },
+      "tokens_per_s": {
+        "mean": 15727.517,
+        "min": 211.0,
+        "max": 55353.7
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 125.667,
+        "min": 32,
+        "max": 183
+      }
+    },
+    "gemini-3.1-flash-lite": {
+      "samples": [
+        {
+          "ok": true,
+          "ttft_s": 3.642,
+          "total_s": 3.84,
+          "input_tokens": 1403,
+          "output_tokens": 159,
+          "output_chars": 457,
+          "tokens_per_s": 803.2,
+          "preview": "รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ดังนี้ [1]  *   **CLO 1:** สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ์แล",
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 7.825,
+          "total_s": 8.132,
+          "input_tokens": 1403,
+          "output_tokens": 160,
+          "output_chars": 458,
+          "tokens_per_s": 520.8,
+          "preview": "รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ดังนี้ [1]  *   **CLO 1:** สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ์แล",
+          "question": "วิชา 04-620-201 มี CLO อะไรบ้าง"
+        },
+        {
+          "ok": true,
+          "ttft_s": 1.027,
+          "total_s": 1.028,
+          "input_tokens": 1153,
+          "output_tokens": 32,
+          "output_chars": 79,
+          "tokens_per_s": 40952.1,
+          "preview": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีจำนวนหน่วยกิตที่เรียนตลอดหลักสูตร 143 หน่วยกิต [3]",
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": true,
+          "ttft_s": 1.158,
+          "total_s": 1.161,
+          "input_tokens": 1153,
+          "output_tokens": 33,
+          "output_chars": 86,
+          "tokens_per_s": 10265.3,
+          "preview": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีจำนวนหน่วยกิตที่เรียนตลอดหลักสูตรทั้งหมด 143 หน่วยกิต [3]",
+          "question": "หลักสูตรวิศวกรรมคอมพิวเตอร์มีกี่หน่วยกิต"
+        },
+        {
+          "ok": true,
+          "ttft_s": 5.519,
+          "total_s": 5.616,
+          "input_tokens": 1315,
+          "output_tokens": 75,
+          "output_chars": 246,
+          "tokens_per_s": 770.8,
+          "preview": "หากนักศึกษาไม่ลงทะเบียนเรียนและไม่ลาพักการศึกษา จะถูกปรับสถานะถอนชื่อออกจากทะเบียนนักศึกษา หากต้องการขอคืนสภาพ ต้องดำเนิ",
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        },
+        {
+          "ok": true,
+          "ttft_s": 1.041,
+          "total_s": 1.056,
+          "input_tokens": 1315,
+          "output_tokens": 82,
+          "output_chars": 254,
+          "tokens_per_s": 5852.0,
+          "preview": "หากนักศึกษาไม่ลงทะเบียนเรียนและไม่ลาพักการศึกษา จะถูกปรับสถานะถอนชื่อออกจากทะเบียนนักศึกษา [3], [7], [8] หากต้องการขอคืน",
+          "question": "ขั้นตอนการลาพักการศึกษาต้องทำอย่างไร"
+        }
+      ],
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 3.369,
+        "min": 1.027,
+        "max": 7.825
+      },
+      "total_s": {
+        "mean": 3.472,
+        "min": 1.028,
+        "max": 8.132
+      },
+      "tokens_per_s": {
+        "mean": 9860.7,
+        "min": 520.8,
+        "max": 40952.1
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 90.167,
+        "min": 32,
+        "max": 160
+      }
+    }
+  }
+}

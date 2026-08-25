@@ -413,3 +413,372 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   }
 }
 ```
+
+## ❌ 2026-08-25 19:07 — benchmark embedding: octen-0.6b
+
+- **ทดลองอะไร:** วัดความเร็วและคุณภาพของ bflhc/Octen-Embedding-0.6B
+- **ทำอย่างไร:** device=cuda, max_seq=768, chunks=3128
+- **ผลลัพธ์:** ล้มเหลว: ValueError: Unrecognized processing class in bflhc/Octen-Embedding-0.6B. Can't instantiate a processor, a tokenizer, an image processor, a video processor or a feature extractor for this model. Make sure the repository contains the files of at least one of those processing classes.
+
+```json
+{
+  "model": "octen-0.6b",
+  "error_type": "ValueError"
+}
+```
+
+## ✅ 2026-08-25 19:11 — benchmark LLM API latency
+
+- **ทดลองอะไร:** วัดเวลาตอบกลับของโมเดลภาษาแต่ละตัว (TTFT, เวลารวม, tokens/วินาที)
+- **ทำอย่างไร:** 3 คำถามจริง × 2 ครั้ง/โมเดล, prompt สร้างจาก hybrid retrieval บน index ของ bge-m3, เรียกแบบ streaming ไม่มี retry
+- **ผลลัพธ์:** gemini-3.5-flash: TTFT 3.908s รวม 4.192s, gemini-3.6-flash: TTFT 9.518s รวม 9.933s, gemini-3.7-flash: TTFT 75.144s รวม 75.189s, gemini-3-flash-preview: TTFT 7.366s รวม 7.737s, gemini-3.1-flash-lite: TTFT 3.369s รวม 3.472s
+
+```json
+{
+  "providers_with_keys": {
+    "gemini": true,
+    "openai": false,
+    "anthropic": false
+  },
+  "summary": {
+    "gemini-3.5-flash": {
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 3.908,
+        "min": 2.158,
+        "max": 6.862
+      },
+      "total_s": {
+        "mean": 4.192,
+        "min": 2.163,
+        "max": 7.073
+      },
+      "tokens_per_s": {
+        "mean": 3792.017,
+        "min": 307.3,
+        "max": 13558.5
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 128.167,
+        "min": 33,
+        "max": 209
+      }
+    },
+    "gemini-3.6-flash": {
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 9.518,
+        "min": 4.486,
+        "max": 23.583
+      },
+      "total_s": {
+        "mean": 9.933,
+        "min": 4.487,
+        "max": 24.486
+      },
+      "tokens_per_s": {
+        "mean": 3698.967,
+        "min": 129.7,
+        "max": 20706.6
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 116.167,
+        "min": 32,
+        "max": 219
+      }
+    },
+    "gemini-3.7-flash": {
+      "calls": 6,
+      "ok": 3,
+      "failed": 3,
+      "errors": [
+        "ReadTimeout: The read operation timed out",
+        "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      ],
+      "ttft_s": {
+        "mean": 75.144,
+        "min": 41.759,
+        "max": 100.609
+      },
+      "total_s": {
+        "mean": 75.189,
+        "min": 41.76,
+        "max": 100.741
+      },
+      "tokens_per_s": {
+        "mean": 13332.4,
+        "min": 1664.1,
+        "max": 28730.6
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 89.667,
+        "min": 15,
+        "max": 221
+      }
+    },
+    "gemini-3-flash-preview": {
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 7.366,
+        "min": 2.886,
+        "max": 14.797
+      },
+      "total_s": {
+        "mean": 7.737,
+        "min": 2.886,
+        "max": 15.43
+      },
+      "tokens_per_s": {
+        "mean": 15727.517,
+        "min": 211.0,
+        "max": 55353.7
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 125.667,
+        "min": 32,
+        "max": 183
+      }
+    },
+    "gemini-3.1-flash-lite": {
+      "calls": 6,
+      "ok": 6,
+      "failed": 0,
+      "errors": [],
+      "ttft_s": {
+        "mean": 3.369,
+        "min": 1.027,
+        "max": 7.825
+      },
+      "total_s": {
+        "mean": 3.472,
+        "min": 1.028,
+        "max": 8.132
+      },
+      "tokens_per_s": {
+        "mean": 9860.7,
+        "min": 520.8,
+        "max": 40952.1
+      },
+      "input_tokens": {
+        "mean": 1290.333,
+        "min": 1153,
+        "max": 1403
+      },
+      "output_tokens": {
+        "mean": 90.167,
+        "min": 32,
+        "max": 160
+      }
+    }
+  }
+}
+```
+
+## ✅ 2026-08-25 19:15 — benchmark embedding: octen-0.6b
+
+- **ทดลองอะไร:** วัดความเร็วและคุณภาพของ bflhc/Octen-Embedding-0.6B (596M, มิติ 1024)
+- **ทำอย่างไร:** เข้ารหัส 3128 chunks บน cuda, batch=32, max_seq=768; ประเมิน dense-only ด้วย golden set 128 คำถาม
+- **ผลลัพธ์:** โหลด 17.82s, เข้ารหัส 78.07s (40.06 chunks/s), ต่อคำถาม p50 87.63ms, Recall@1 47.7%, MRR 0.519
+
+```json
+{
+  "model_key": "octen-0.6b",
+  "hf_id": "bflhc/Octen-Embedding-0.6B",
+  "params_m": 596,
+  "dim": 1024,
+  "max_seq_length": 768,
+  "device": "cuda",
+  "batch_size": 32,
+  "n_chunks": 3128,
+  "n_queries": 128,
+  "load_seconds": 17.82,
+  "encode_seconds": 78.07,
+  "chunks_per_second": 40.06,
+  "index_seconds": 0.091,
+  "query_ms_mean": 87.96,
+  "query_ms_p50": 87.63,
+  "query_ms_p95": 116.92,
+  "embeddings_mb": 12.2,
+  "rss_before_gb": 0.5,
+  "rss_after_gb": 1.84,
+  "measured_at": "2026-08-25T19:15:58",
+  "quality": {
+    "all": {
+      "mrr": 0.5191437251984127,
+      "hit@1": 0.4765625,
+      "recall@1": 0.4765625,
+      "ndcg@1": 0.4765625,
+      "hit@3": 0.5390625,
+      "recall@3": 0.5390625,
+      "ndcg@3": 0.511904054799108,
+      "hit@5": 0.5546875,
+      "recall@5": 0.5546875,
+      "ndcg@5": 0.5182910029655763,
+      "hit@10": 0.65625,
+      "recall@10": 0.65625,
+      "ndcg@10": 0.5506151667058069
+    },
+    "by_name": {
+      "mrr": 0.9423363095238095,
+      "hit@1": 0.90625,
+      "recall@1": 0.90625,
+      "ndcg@1": 0.90625,
+      "hit@3": 0.984375,
+      "recall@3": 0.984375,
+      "ndcg@3": 0.9514498321986621,
+      "hit@5": 0.984375,
+      "recall@5": 0.984375,
+      "ndcg@5": 0.9514498321986621,
+      "hit@10": 1.0,
+      "recall@10": 1.0,
+      "ndcg@10": 0.9566581655319955
+    },
+    "by_code": {
+      "mrr": 0.09595114087301587,
+      "hit@1": 0.046875,
+      "recall@1": 0.046875,
+      "ndcg@1": 0.046875,
+      "hit@3": 0.09375,
+      "recall@3": 0.09375,
+      "ndcg@3": 0.07235827739955403,
+      "hit@5": 0.125,
+      "recall@5": 0.125,
+      "ndcg@5": 0.0851321737324905,
+      "hit@10": 0.3125,
+      "recall@10": 0.3125,
+      "ndcg@10": 0.1445721678796184
+    }
+  }
+}
+```
+
+## ✅ 2026-08-25 19:18 — benchmark sparse retrievers (dense=bge-m3)
+
+- **ทดลองอะไร:** เทียบ 6 วิธี sparse นอกเหนือจาก BM25 ทั้งแบบเดี่ยวและ fuse กับ dense
+- **ทำอย่างไร:** golden set 128 คำถาม, dense index จาก bge-m3, RRF k=60, candidate_k=20
+- **ผลลัพธ์:** sparse เดี่ยวดีสุด: dirichlet-lm Recall@1 34.4%; hybrid ดีสุด: dense+dirichlet-lm Recall@1 87.5%
+
+```json
+{
+  "methods": [
+    "bm25",
+    "bm25l",
+    "bm25plus",
+    "tfidf-word",
+    "tfidf-char",
+    "dirichlet-lm"
+  ],
+  "build_seconds": {
+    "bm25": 1.89,
+    "bm25l": 1.72,
+    "bm25plus": 1.36,
+    "tfidf-word": 1.53,
+    "tfidf-char": 2.67,
+    "dirichlet-lm": 1.53
+  },
+  "sparse_recall_at_1": {
+    "bm25": 0.3281,
+    "bm25l": 0.1016,
+    "bm25plus": 0.3281,
+    "tfidf-word": 0.0938,
+    "tfidf-char": 0.0234,
+    "dirichlet-lm": 0.3438
+  },
+  "hybrid_recall_at_1": {
+    "bm25": 0.7734,
+    "bm25l": 0.4766,
+    "bm25plus": 0.7812,
+    "tfidf-word": 0.6875,
+    "tfidf-char": 0.4531,
+    "dirichlet-lm": 0.875
+  },
+  "hybrid_pinned_recall_at_1": {
+    "bm25": 0.9766,
+    "bm25l": 0.8906,
+    "bm25plus": 0.9844,
+    "tfidf-word": 0.8828,
+    "tfidf-char": 0.8359,
+    "dirichlet-lm": 0.9688
+  }
+}
+```
+
+## ✅ 2026-08-25 19:20 — benchmark sparse retrievers (dense=bge-m3)
+
+- **ทดลองอะไร:** เทียบ 6 วิธี sparse นอกเหนือจาก BM25 ทั้งแบบเดี่ยวและ fuse กับ dense
+- **ทำอย่างไร:** golden set 128 คำถาม, dense index จาก bge-m3, RRF k=60, candidate_k=20
+- **ผลลัพธ์:** sparse เดี่ยวดีสุด: dirichlet-lm Recall@1 34.4%; hybrid ดีสุด: dense+dirichlet-lm Recall@1 87.5%
+
+```json
+{
+  "methods": [
+    "bm25",
+    "bm25l",
+    "bm25plus",
+    "tfidf-word",
+    "tfidf-char",
+    "dirichlet-lm"
+  ],
+  "build_seconds": {
+    "bm25": 2.05,
+    "bm25l": 1.58,
+    "bm25plus": 1.37,
+    "tfidf-word": 1.45,
+    "tfidf-char": 2.76,
+    "dirichlet-lm": 1.3
+  },
+  "sparse_recall_at_1": {
+    "bm25": 0.3281,
+    "bm25l": 0.1016,
+    "bm25plus": 0.3281,
+    "tfidf-word": 0.0938,
+    "tfidf-char": 0.0391,
+    "dirichlet-lm": 0.3438
+  },
+  "hybrid_recall_at_1": {
+    "bm25": 0.7734,
+    "bm25l": 0.4766,
+    "bm25plus": 0.7812,
+    "tfidf-word": 0.6875,
+    "tfidf-char": 0.5,
+    "dirichlet-lm": 0.875
+  },
+  "hybrid_pinned_recall_at_1": {
+    "bm25": 0.9766,
+    "bm25l": 0.8906,
+    "bm25plus": 0.9844,
+    "tfidf-word": 0.8828,
+    "tfidf-char": 0.875,
+    "dirichlet-lm": 0.9688
+  }
+}
+```

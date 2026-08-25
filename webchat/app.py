@@ -22,6 +22,7 @@ sys.path.insert(0, str(ROOT))
 from flask import Flask, jsonify, request, send_from_directory  # noqa: E402
 
 import config  # noqa: E402
+from src import model_registry  # noqa: E402
 from src.memory import ConversationMemory  # noqa: E402
 from src.rag_pipeline import RAGPipeline  # noqa: E402
 
@@ -120,6 +121,8 @@ def info():
             },
             "retrieval": {
                 "embedding_model": config.EMBEDDING_MODEL,
+                "embedding_key": config.EMBEDDING_KEY,
+                "embedding_dim": config.EMBEDDING_DIM,
                 "top_k": config.TOP_K,
                 "candidate_k": config.CANDIDATE_K,
                 "rrf_k": config.RRF_K,
@@ -143,6 +146,83 @@ def info():
             "stats": {k: v for k, v in _stats.items() if not k.startswith("_")},
         }
     )
+
+
+@app.get("/api/models")
+def list_models():
+    """Every registered embedding model, and whether its index is built.
+
+    "Built" is what decides whether switching to it is instant or impossible,
+    so the browser needs it to know which entries to offer.
+    """
+    models = []
+    for key, spec in model_registry.MODELS.items():
+        index_file = config.VECTOR_DB_DIR / spec.slug / "document.index"
+        models.append(
+            {
+                "key": key,
+                "hf_id": spec.hf_id,
+                "params_m": spec.params_m,
+                "dim": spec.dim,
+                "tier": spec.tier,
+                "gated": spec.gated,
+                "note": spec.note,
+                "built": index_file.exists(),
+                "active": key == config.EMBEDDING_KEY,
+            }
+        )
+    return jsonify(models)
+
+
+@app.post("/api/model")
+def switch_model():
+    """Point the running pipeline at a different embedding model.
+
+    The whole pipeline is rebuilt rather than having its embedder swapped:
+    the FAISS index, the chunk store and the query encoder have to come from
+    the same model, and replacing one of the three would leave the system
+    searching a bge-m3 index with e5 vectors — which returns confident
+    nonsense rather than an error.
+    """
+    global _pipeline
+
+    payload = request.get_json(silent=True) or {}
+    key = (payload.get("model") or "").strip()
+    if not key:
+        return jsonify({"error": "ไม่ได้ระบุโมเดล"}), 400
+
+    previous = config.EMBEDDING_KEY
+    started = time.perf_counter()
+    try:
+        with _lock:
+            config.use_model(key)
+            if not config.FAISS_INDEX_FILE.exists():
+                config.use_model(previous)
+                return jsonify({
+                    "error": f"ยังไม่ได้สร้าง index ของ {key} — "
+                             f"รัน python build_index.py --model {key} ก่อน"
+                }), 400
+            _pipeline = RAGPipeline.from_config(use_memory=True)
+            _pipeline.retriever.embedder.load()
+    except Exception as exc:
+        # Put the old model back before returning, or the process is left
+        # pointing at an index it failed to load.
+        config.use_model(previous)
+        with _lock:
+            _pipeline = RAGPipeline.from_config(use_memory=True)
+        logging.exception("switch model failed")
+        return jsonify({"error": f"สลับไม่สำเร็จ: {exc}"}), 500
+
+    elapsed = round(time.perf_counter() - started, 1)
+    logging.info("สลับ embedding model %s → %s ใน %ss", previous, key, elapsed)
+    return jsonify({
+        "ok": True,
+        "model": config.EMBEDDING_KEY,
+        "previous": previous,
+        "chunks": len(_pipeline.retriever.store),
+        "dim": _pipeline.retriever.store.dim,
+        "seconds": elapsed,
+    })
 
 
 @app.get("/api/conversations")
@@ -250,6 +330,15 @@ def chat():
 def main() -> None:
     global _pipeline
 
+    import argparse
+
+    from src import cli
+
+    parser = argparse.ArgumentParser(description="Run the RAG web chat.")
+    cli.add_model_arg(parser)
+    args = parser.parse_args()
+    cli.apply(args)
+
     print("กำลังโหลด RAG pipeline (ครั้งแรกใช้เวลาสักครู่)...")
     started = datetime.now()
     try:
@@ -265,6 +354,7 @@ def main() -> None:
     elapsed = (datetime.now() - started).total_seconds()
     print(f"พร้อมใช้งานใน {elapsed:.0f}s")
     print(f"  chunks   : {len(_pipeline.retriever.store)}")
+    print(f"  embedding: {config.EMBEDDING_KEY} ({config.EMBEDDING_MODEL})")
     print(f"  โมเดลตอบ : {config.LLM_MODEL}")
     print("\n  http://127.0.0.1:5000\n")
 

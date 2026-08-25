@@ -114,11 +114,13 @@ def call_gemini(client, model: str, prompt: str) -> dict:
     ttft = None
     text_parts: list[str] = []
     usage = None
+    chunk_count = 0
     try:
         stream = client.models.generate_content_stream(
             model=model, contents=prompt, config=settings
         )
         for piece in stream:
+            chunk_count += 1
             if ttft is None:
                 # First chunk with actual text, not the first empty frame —
                 # an empty keepalive would report a TTFT the user never saw.
@@ -139,20 +141,25 @@ def call_gemini(client, model: str, prompt: str) -> dict:
     answer = "".join(text_parts)
     out_tokens = getattr(usage, "candidates_token_count", None)
     in_tokens = getattr(usage, "prompt_token_count", None)
-    # Throughput measured after the first token: including TTFT would fold
-    # queueing time into a number that is meant to describe generation speed.
-    streaming_s = (total - ttft) if (ttft is not None and total > ttft) else None
+
+    # Throughput is output tokens over the *whole* call.  The tempting
+    # alternative — tokens over (total - ttft), the streaming phase only —
+    # is unusable here: Gemini frequently returns a short answer in a single
+    # frame, so total - ttft is a rounding error and the division reports
+    # tens of thousands of tokens per second.  Measured 2026-08-25, that bug
+    # produced "55,353 tok/s" for a 32-token answer.  Dividing by the full
+    # call is always well defined, and for a user waiting on an answer it is
+    # the honest number anyway.
     return {
         "ok": True,
         "ttft_s": round(ttft, 3) if ttft is not None else None,
         "total_s": round(total, 3),
+        "stream_chunks": chunk_count,
         "input_tokens": in_tokens,
         "output_tokens": out_tokens,
         "output_chars": len(answer),
         "tokens_per_s": (
-            round(out_tokens / streaming_s, 1)
-            if out_tokens and streaming_s and streaming_s > 0
-            else None
+            round(out_tokens / total, 1) if out_tokens and total > 0 else None
         ),
         "preview": answer[:120].replace("\n", " "),
     }

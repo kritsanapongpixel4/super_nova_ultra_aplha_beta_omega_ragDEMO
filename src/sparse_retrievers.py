@@ -59,7 +59,12 @@ class SparseIndex:
     def _fit(self, corpus: list[list[str]]) -> None:
         raise NotImplementedError
 
-    def _scores(self, tokens: list[str]) -> list[float]:
+    def _scores(self, query: str, tokens: list[str]) -> list[float]:
+        """One score per chunk.  Both forms of the query are supplied:
+        *query* is the raw text, *tokens* the segmented form.  A character
+        n-gram index needs the raw text — segmenting it and rejoining changes
+        the whitespace, and whitespace is exactly what ``char_wb`` uses to
+        find word boundaries."""
         raise NotImplementedError
 
     # ── Common ──────────────────────────────────────────────────────────
@@ -77,7 +82,7 @@ class SparseIndex:
         if not tokens or not self.chunks:
             return []
 
-        scores = self._scores(tokens)
+        scores = self._scores(query, tokens)
         order = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)
 
         results: list[dict[str, Any]] = []
@@ -120,7 +125,7 @@ class RankBM25Index(SparseIndex):
             raise ValueError(f"unknown BM25 variant {self.variant!r}")
         self.bm25 = classes[self.variant](corpus)
 
-    def _scores(self, tokens: list[str]) -> list[float]:
+    def _scores(self, query: str, tokens: list[str]) -> list[float]:
         return list(self.bm25.get_scores(tokens))
 
 
@@ -158,9 +163,15 @@ class TfidfIndex(SparseIndex):
             )
         self.matrix = self.vectorizer.fit_transform(documents)
 
-    def _scores(self, tokens: list[str]) -> list[float]:
-        query = " ".join(tokens) if self.analyzer == "word" else "".join(tokens)
-        vector = self.vectorizer.transform([query])
+    def _scores(self, query: str, tokens: list[str]) -> list[float]:
+        # The word index was fitted on space-joined tokens, so a query has to
+        # be presented the same way.  The character index was fitted on raw
+        # chunk text, so the query must stay raw — rejoining tokens without
+        # spaces would erase the word boundaries char_wb keys off, and the
+        # query would be n-grammed differently from every document it is
+        # being compared against.
+        prepared = " ".join(tokens) if self.analyzer == "word" else query.lower()
+        vector = self.vectorizer.transform([prepared])
         # Both sides are L2-normalised by TfidfVectorizer, so the dot product
         # is already the cosine.
         return list((self.matrix @ vector.T).toarray().ravel())
@@ -197,7 +208,7 @@ class DirichletLMIndex(SparseIndex):
             term: count / total for term, count in collection_counts.items()
         }
 
-    def _scores(self, tokens: list[str]) -> list[float]:
+    def _scores(self, query: str, tokens: list[str]) -> list[float]:
         scores: list[float] = []
         for freqs, length in zip(self.term_freqs, self.lengths):
             total = 0.0
