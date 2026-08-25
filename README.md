@@ -1,303 +1,353 @@
-# 🚀 Super Nova Ultra Alpha Beta Omega RAG DEMO
+# RAG หลักสูตรวิศวกรรมคอมพิวเตอร์ มทร.ธัญบุรี
 
-> **3 RMUTT CPE students who if not finish this project they can't graduated 💀**
+ระบบถาม-ตอบภาษาไทยที่ตอบจากเอกสารหลักสูตรจริง พร้อมอ้างอิงกลับไปยังเอกสารต้นทางทุกคำตอบ
+สร้างด้วย Retrieval-Augmented Generation — ค้นหาข้อความที่เกี่ยวข้องจากคลังเอกสารก่อน
+แล้วจึงให้โมเดลภาษาเรียบเรียงคำตอบจากข้อความนั้นเท่านั้น
 
-ระบบ **Retrieval-Augmented Generation (RAG)** สำหรับตอบคำถามเกี่ยวกับเอกสารของมหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี (RMUTT) ภาควิชาวิศวกรรมคอมพิวเตอร์ — รวมถึงแบบฟอร์มต่าง ๆ, หลักสูตร, CLOs, ข้อกำหนดสหกิจ, ตำราเรียน และอื่น ๆ
-
----
-
-## 📐 สถาปัตยกรรมระบบ (Architecture)
+ตัวอย่างคำถามที่ระบบตอบได้:
 
 ```
-                        ┌────────────────────┐
-                        │   📂 data/          │  ← PDF / TXT / DOCX / MD
-                        └────────┬───────────┘
-                                 │
-                    ┌────────────▼────────────┐
-                    │  1. Extract Text         │  pipeline/extract_text.py
-                    │  (PyMuPDF อ่าน PDF)      │  → outputs/extracted_text.json
-                    └────────────┬────────────┘
-                                 │
-                    ┌────────────▼────────────┐
-                    │  2. Chunking             │  pipeline/chunking.py
-                    │  (PyThaiNLP + Recursive) │  → outputs/chunks.json
-                    └────────────┬────────────┘
-                                 │
-                    ┌────────────▼────────────┐
-                    │  3. Embedding            │  pipeline/create_embeddings.py
-                    │  (BAAI/bge-m3)           │  → outputs/embeddings.npy
-                    └────────────┬────────────┘
-                                 │
-              ┌──────────────────┼──────────────────┐
-              │                  │                   │
-    ┌─────────▼─────────┐  ┌────▼─────────┐  ┌──────▼──────────┐
-    │  4a. FAISS Index   │  │ 4b. BM25     │  │ 4c. Chunk Store │
-    │  (Dense Search)    │  │ (Sparse)     │  │ (JSON)          │
-    └─────────┬─────────┘  └────┬─────────┘  └──────┬──────────┘
-              │                  │                   │
-              └──────────────────┼───────────────────┘
-                                 │
-                    ┌────────────▼────────────┐
-                    │  5. Hybrid Retrieval     │  src/hybrid_retriever.py
-                    │  (RRF Fusion)            │
-                    └────────────┬────────────┘
-                                 │
-                    ┌────────────▼────────────┐
-                    │  6. Cross-Encoder        │  src/rerankers.py
-                    │  Reranking (bge-reranker)│
-                    └────────────┬────────────┘
-                                 │
-                    ┌────────────▼────────────┐
-                    │  7. LLM Generation       │  src/generator.py
-                    │  (Claude Opus 5)         │
-                    └────────────┴────────────┘
-                                 │
-                           ✅ คำตอบ + แหล่งอ้างอิง
+> วิชา 04-620-201 มี CLO อะไรบ้าง
+รายวิชา 04-620-201 ปฏิบัติการควบคุมเวอร์ชัน มี CLO ทั้งหมด 5 ข้อ [1]
+  CLO 1 สามารถประยุกต์ใช้งานคำสั่งพื้นฐานลินุกซ์และเชลล์สคริปต์ได้ (PLO2) [1]
+  ...
+[1] CLOs-Computer_Engineering-RMUTT.pdf หน้า 1
 ```
 
 ---
 
-## 🗂️ โครงสร้างโปรเจกต์
+## เริ่มใช้งาน
 
+```bash
+pip install -r requirements.txt
+
+# ใส่ API key ลงไฟล์ .env
+echo "GEMINI_API_KEY=<คีย์ของคุณ>" > .env
+
+python build_index.py                  # สร้าง index (ครั้งแรกใช้เวลาราว 10 นาที)
+python main.py "หลักสูตรมีกี่หน่วยกิต"   # ถามผ่าน command line
+python webchat/app.py                  # เปิดเว็บแชทที่ localhost:5000
 ```
-super_nova_ultra_aplha_beta_omega_ragDEMO/
-├── config.py                    # ⚙️  ค่า config ทั้งหมด (paths, models, params)
-├── main.py                      # 🚪 Entry point — chat / ถามคำถามเดี่ยว
-├── build_index.py               # 🔨 สร้าง index ทั้งหมดในครั้งเดียว
-│
-├── data/                        # 📂 ไฟล์ต้นฉบับ (29 PDF)
-│   ├── 01-แบบคำร้องทั่วไป.pdf
-│   ├── หลักสูตร-683.pdf
-│   ├── CLOs-Computer_Engineering-RMUTT.pdf
-│   ├── การสื่อสารข้อมูลA4-2_pub.pdf
-│   └── ... (รวม 29 ไฟล์)
-│
-├── pipeline/                    # 🔄 แต่ละ step รันแยกได้
-│   ├── extract_text.py          # Step 1: ดึงข้อความจาก PDF
-│   ├── chunking.py              # Step 2: แบ่ง chunk (Thai-aware)
-│   ├── create_embeddings.py     # Step 3: สร้าง embeddings
-│   ├── create_vector_db.py      # Step 4: สร้าง FAISS + BM25 index
-│   ├── query_embedding.py       # Step 5: embed คำถาม
-│   ├── similarity_search.py     # Step 6: ค้นหา
-│   └── complete_retrieval.py    # Step 7: retrieval + rerank
-│
-├── src/                         # 📦 Core modules
-│   ├── document_loader.py       # อ่านไฟล์ PDF/TXT/DOCX/MD
-│   ├── text_splitter.py         # Thai chunking (PyThaiNLP + LangChain)
-│   ├── embedding_model.py       # wrapper สำหรับ embedding model
-│   ├── vector_store.py          # FAISS index management
-│   ├── hybrid_retriever.py      # BM25 + Dense + RRF fusion
-│   ├── rerankers.py             # Cross-encoder reranking
-│   ├── generator.py             # Claude LLM generation
-│   ├── prompt_templates.py      # Prompt engineering
-│   ├── memory.py                # Conversation history
-│   ├── query_transform.py       # Query rewriting
-│   ├── retriever.py             # Base retriever interface
-│   ├── index_meta.py            # Index freshness tracking
-│   └── rag_pipeline.py          # End-to-end pipeline orchestrator
-│
-├── evaluation/                  # 📊 Evaluation tools
-│   ├── build_golden_set.py      # สร้าง golden Q&A set
-│   ├── eval_retrieval.py        # ประเมิน retrieval (Recall@K, MRR)
-│   ├── eval_generation.py       # ประเมิน generation quality
-│   └── metrics.py               # Metric functions
-│
-├── outputs/                     # 📤 ผลลัพธ์ระหว่าง pipeline
-│   ├── extracted_text.json
-│   ├── chunks.json
-│   └── embeddings.npy
-│
-└── vector_db/                   # 💾 Indexes ที่ build แล้ว
-    ├── document.index           # FAISS
-    ├── bm25_index.pkl           # BM25
-    ├── chunk_store.json         # chunk metadata
-    └── index_meta.json          # fingerprint
-```
+
+`build_index.py` จะข้ามการสร้างใหม่ถ้าเอกสารไม่เปลี่ยน ใช้ `--force` เพื่อบังคับสร้างใหม่
 
 ---
 
-## 🧠 ทำไมถึงเลือก Model เหล่านี้?
+## ทำงานอย่างไร
 
-### Embedding: `BAAI/bge-m3` (dim=1024)
+ระบบแบ่งเป็นสองฝั่ง — ฝั่งเตรียมข้อมูล (รันครั้งเดียวตอนเอกสารเปลี่ยน) และฝั่งตอบคำถาม (รันทุกครั้งที่ถาม)
 
-| เหตุผล | รายละเอียด |
-|--------|-----------|
-| 🌏 **Multilingual** | รองรับ 100+ ภาษา รวมถึง **ภาษาไทย** โดยตรง — ไม่ต้อง fine-tune เพิ่ม |
-| 📏 **Multi-Granularity** | M3 = Multi-lingual, Multi-Functionality, Multi-Granularity สามารถ embed ได้ทั้งประโยคสั้นและย่อหน้ายาว ซึ่งเหมาะกับข้อมูลของเราที่มีตั้งแต่ช่องกรอกฟอร์มสั้น ๆ ไปจนถึงเนื้อหาตำราเรียน |
-| 🏆 **Performance** | ติด Top MTEB leaderboard สำหรับ multilingual tasks |
-| 🔄 **Dense + Sparse** | bge-m3 รองรับทั้ง dense embedding และ sparse (lexical) ในโมเดลเดียว ซึ่งช่วย hybrid retrieval |
-| 📐 **1024 dim** | มิติสูงพอสำหรับ semantic nuance แต่ไม่ใหญ่เกินจนช้า |
-| 🆓 **Open-source** | ใช้ผ่าน `sentence-transformers` ได้ฟรี ไม่ต้องจ่ายค่า API |
+```
+เตรียมข้อมูล (build_index.py)
+  PDF ──► ดึงข้อความ ──► ซ่อมอักขระไทย ──► ตัด chunk ──► สร้างเวกเตอร์ ──► FAISS + BM25
+          PyMuPDF        thai_normalize    PyThaiNLP      bge-m3
 
-**ทำไมไม่ใช้ตัวอื่น?**
-- `text-embedding-ada-002` (OpenAI) → เสียเงิน + ไม่ค่อยแม่นกับภาษาไทย
-- `multilingual-e5-large` → ดีกับไทย แต่ bge-m3 มี sparse mode ด้วย
-- `WangchanBERTa` → เฉพาะไทย ไม่รองรับ mixed Thai-English content ดี
+ตอบคำถาม (main.py / webchat)
+  คำถาม ──► เขียนคำถามใหม่ให้สมบูรณ์ ──┬─► ค้นด้วยเวกเตอร์ (FAISS) ──┐
+            (ถ้าเป็นคำถามต่อเนื่อง)      ├─► ค้นด้วยคำ (BM25) ────────┼─► รวมอันดับ (RRF)
+                                        └─► ปักหมุดรหัสวิชาที่พบ ─────┘         │
+                                                                                 ▼
+                                                     คำตอบ + อ้างอิง ◄── Gemini ◄── 8 chunks
+```
 
-### Reranker: `BAAI/bge-reranker-v2-m3`
-
-| เหตุผล | รายละเอียด |
-|--------|-----------|
-| 🎯 **Cross-Encoder** | อ่าน query + document พร้อมกัน → แม่นกว่า bi-encoder (embedding) มาก |
-| 🤝 **คู่กับ bge-m3** | ออกแบบมาคู่กันจาก BAAI — embedding ดึงแบบหยาบ, reranker จัดลำดับแบบละเอียด |
-| 🌏 **Multilingual** | รองรับภาษาไทยเหมือน bge-m3 |
-
-### LLM Generation: `Claude Opus 5`
-
-| เหตุผล | รายละเอียด |
-|--------|-----------|
-| 📚 **Long Context** | รองรับ context ยาว → ใส่ chunks ได้เยอะ |
-| 🇹🇭 **ภาษาไทยดี** | เข้าใจและตอบภาษาไทยได้เป็นธรรมชาติ |
-| 🎯 **Instruction Following** | ทำตาม prompt template ได้แม่นยำ — ไม่แต่งคำตอบเอง |
+รันแยกทีละขั้นเพื่อดูผลระหว่างทางได้ที่ `pipeline/` (7 สคริปต์ เรียงตามลำดับ 1-7)
 
 ---
 
-## ✂️ ระบบ Chunking (Thai-Aware)
+## ทำไมเลือก embedding model ตัวนี้
 
-เราใช้ **PyThaiNLP + LangChain RecursiveCharacterTextSplitter** แทนการตัดแบบ character ธรรมดา:
+Embedding model คือส่วนที่แปลงข้อความเป็นเวกเตอร์ ถ้าเลือกผิดระบบจะค้นไม่เจอตั้งแต่ต้น
+ไม่ว่าโมเดลภาษาจะเก่งแค่ไหนก็ช่วยไม่ได้
+
+แทนที่จะเลือกตามคะแนน benchmark สาธารณะ เราวัดบนคลังเอกสารของโปรเจกต์นี้เอง
+ชุดทดสอบสร้างจากตาราง CLO โดยตรง — แต่ละวิชาถูกถามสองสำนวน (ด้วยชื่อวิชา และด้วยรหัสวิชา)
+รวม 128 คำถาม โดยการ์ดของวิชานั้นคือคำตอบที่ถูกต้องเพียงคำตอบเดียว
+
+```
+Recall@1 - ถามด้วยชื่อวิชา  (สูงกว่าดีกว่า)
+
+bge-m3                ████████████████████████████████████████████▋   97%
+multilingual-e5-base  ██████████████████████████████████████████▍     92%
+paraphrase-MiniLM     ██████████████████████████████████████▉         84%
+e5-base-v2 (English)                                                  0%
+
+Recall@1 - ถามด้วยรหัสวิชา  (จุดอ่อนของทุกโมเดล)
+
+multilingual-e5-base  ████████████████████▉                           45%
+bge-m3                ██████████████▍                                 31%
+paraphrase-MiniLM     ▊                                               2%
+e5-base-v2 (English)                                                  0%
+```
+
+| โมเดล | มิติ | ขนาด | Recall@1 | Recall@5 | MRR | สร้าง index | ต่อคำถาม |
+|---|---|---|---|---|---|---|---|
+| multilingual-e5-base | 768 | 278M | **68.8%** | **88.3%** | **0.781** | **64 วิ.** | **9.4 ms** |
+| bge-m3 (ที่ใช้อยู่) | 1024 | 568M | 64.1% | 78.9% | 0.707 | 218 วิ. | 30.0 ms |
+| paraphrase-multilingual-MiniLM | 384 | 118M | 43.0% | 52.3% | 0.484 | 18 วิ. | 2.8 ms |
+| e5-base-v2 (อังกฤษล้วน) | 768 | 109M | 0.0% | 0.0% | 0.008 | 56 วิ. | 7.0 ms |
+
+อ่านจากผลนี้ได้สามเรื่อง
+
+**โมเดลที่ไม่รองรับภาษาไทยใช้ไม่ได้เลย ไม่ใช่แค่แย่กว่า** — `e5-base-v2` ได้ 0% ทั้งสองสำนวน
+ไม่ใช่เพราะโมเดลไม่ดี แต่เพราะ tokenizer ไม่รู้จักอักษรไทย ข้อความไทยทั้งคลังจึงกลายเป็น
+token เดียวกันหมด นี่คือเหตุผลที่ต้องใช้โมเดล multilingual ไม่ใช่แค่ "ควรใช้"
+
+**ขนาดโมเดลไม่ได้แปรผันตรงกับความแม่นยำ** — bge-m3 ใหญ่กว่า multilingual-e5-base สองเท่า
+ใช้เวลาสร้าง index มากกว่าสามเท่า แต่ทำคะแนนได้ต่ำกว่าในชุดทดสอบนี้
+
+**คำถามที่มีรหัสวิชาเป็นจุดอ่อนของทุกโมเดล** — สำนวน "ถามด้วยชื่อวิชา" ทำได้ 84-97%
+แต่ "ถามด้วยรหัสวิชา" ตกลงเหลือ 2-45% เพราะรหัสวิชาเป็นตัวเลข 10 หลักในข้อความ 200 tokens
+ที่การ์ดทุกใบมีโครงสร้างเหมือนกัน embedding จึงแทบไม่เห็นความต่าง
+ปัญหานี้แก้ที่ชั้น retrieval ไม่ใช่ที่ตัวโมเดล (ดูหัวข้อถัดไป)
+
+### ข้อจำกัดของการวัดนี้
+
+ชุดทดสอบครอบคลุมเฉพาะการ์ดวิชาจากตาราง CLO (64 วิชา) ยังไม่ได้ทดสอบกับเนื้อความยาว
+ในเอกสารหลักสูตร ซึ่งเป็นข้อมูลอีกกว่า 1,700 chunks ผลจึงบอกได้แค่ว่าโมเดลไหนดีกว่า
+**สำหรับการค้นการ์ดวิชา** เท่านั้น
+
+ระบบยังใช้ `bge-m3` อยู่ เพราะ index ปัจจุบันสร้างด้วยโมเดลนี้และคำถามส่วนใหญ่ที่ทดสอบจริง
+ตอบได้ถูกต้อง การเปลี่ยนไปใช้ `multilingual-e5-base` ต้องสร้าง index ใหม่ทั้งหมด
+และควรทำหลังจากมี golden set ที่ครอบคลุมเอกสารทุกประเภทแล้ว — ตัวเลขจากชุดทดสอบชุดเดียว
+ยังไม่พอสำหรับตัดสินใจเปลี่ยนองค์ประกอบหลักของระบบ
+
+---
+
+## ทำไมเลือกโมเดลภาษาตัวนี้
+
+```
+ราคาต่อ 1 ล้าน token (USD) - input และ output อยู่สเกลเดียวกัน
+
+GPT-5.6 Luna            ▍                                               $0.2    input
+                        ██▎                                             $1.2    output
+
+Gemini 3.5 Flash-Lite   ▌                                               $0.3    input
+                        ████▋                                           $2.5    output
+
+Gemini 3.6 / 3.7 Flash  █▍                                              $0.75   input
+                        ██████▉                                         $3.75   output
+
+Claude Haiku 4.5        █▉                                              $1      input
+                        █████████▎                                      $5      output
+
+Gemini 3.5 Flash        ██▊                                             $1.5    input
+                        ████████████████▌                               $9      output
+
+Claude Sonnet 5         ███▋                                            $2      input
+                        ██████████████████▍                             $10     output
+
+GPT-5.6 Terra           ███▋                                            $2      input
+                        ██████████████████████▏                         $12     output
+
+GPT-5.6 Sol             ███████▍                                        $4      input
+                        ████████████████████████████████████▊           $20     output
+
+Claude Opus 5           █████████▎                                      $5      input
+                        ██████████████████████████████████████████████  $25     output
+```
+
+| โมเดล | input / 1M token | output / 1M token |
+|---|---|---|
+| Gemini 3.5 Flash-Lite | $0.30 | $2.50 |
+| Gemini 3.6 / 3.7 Flash | $0.75 | $3.75 |
+| Gemini 3.5 Flash | $1.50 | $9.00 |
+| Claude Haiku 4.5 | $1.00 | $5.00 |
+| Claude Sonnet 5 | $2.00 | $10.00 |
+| Claude Opus 5 | $5.00 | $25.00 |
+| GPT-5.6 Luna | $0.20 | $1.20 |
+| GPT-5.6 Terra | $2.00 | $12.00 |
+| GPT-5.6 Sol | $4.00 | $20.00 |
+
+ราคาตรวจสอบจากหน้าเว็บทางการของแต่ละเจ้าเมื่อ 25 สิงหาคม 2026 (ลิงก์ที่ท้ายไฟล์)
+
+**เหตุผลที่เลือก Gemini คือ free tier ไม่ใช่ความสามารถ** ทุกโมเดล Gemini ในตารางใช้งานได้ฟรี
+ภายใต้โควตารายวัน ซึ่งทำให้โปรเจกต์นักศึกษาที่ต้องทดสอบซ้ำหลายร้อยครั้งเป็นไปได้โดยไม่มีค่าใช้จ่าย
+ถ้าเทียบเฉพาะความสามารถ โมเดลระดับบนของ Anthropic และ OpenAI ทำคะแนนสูงกว่า —
+Artificial Analysis จัด Claude Opus 5 ไว้ที่ 63 และ GPT-5.6 Sol ที่ 61 บน Intelligence Index
+(ดึงข้อมูลเมื่อ 25 ส.ค. 2026 หน้าเว็บไม่ได้แสดงคะแนนของ Gemini ในส่วนที่ดึงมาได้
+จึงไม่นำมาเปรียบเทียบตรงนี้)
+
+สำหรับงานนี้ความสามารถระดับ Flash เพียงพอ เพราะโมเดลไม่ได้ต้องคิดวิเคราะห์เอง
+หน้าที่คือเรียบเรียงคำตอบจากข้อความที่ retrieval หามาให้แล้ว งานหนักอยู่ที่ชั้น retrieval
+
+### โควตาหมดเป็นปัญหาจริง และแก้ด้วยระบบสำรอง
+
+โควตา free tier นับแยกรายโมเดลและรีเซ็ตไม่พร้อมกัน วันหนึ่งโมเดลหนึ่งหมดขณะที่อีกตัวยังว่าง
+การล็อกโมเดลเดียวจึงพังเป็นระยะโดยคาดเดาไม่ได้
+
+`src/generator.py` จึงไล่ลำดับโมเดลสำรองเองเมื่อเจอ 429 หรือ 503 แล้วพักโมเดลที่หมดไว้ 10 นาที
+ก่อนกลับมาลองใหม่ ในการทดสอบครั้งหนึ่งโควตาหมดไป 3 โมเดลระหว่างตอบคำถาม 6 ข้อ
+แต่ผู้ใช้ไม่เห็นข้อผิดพลาดเลย
+
+---
+
+## กลยุทธ์การค้นคืน
+
+ระบบใช้สามชั้นซ้อนกัน แต่ละชั้นแก้จุดอ่อนของชั้นก่อนหน้า
+
+**Dense (FAISS + bge-m3)** จับความหมาย ถาม "ขั้นตอนลาป่วย" แล้วเจอ "การลากิจส่วนตัว" ได้
+แต่มองไม่เห็นรหัสวิชาที่เป็นตัวเลข
+
+**BM25** จับคำตรงตัว เจอรหัสวิชาได้ แต่ไม่เข้าใจคำพ้องความหมาย
+
+**RRF** รวมสองอันดับเข้าด้วยกันโดยไม่ต้องทำให้คะแนนอยู่สเกลเดียวกัน `score = Σ 1/(60 + rank)`
+
+**ปักหมุดรหัสวิชา** เป็นชั้นที่เพิ่มทีหลังจากการวัด — เมื่อพบรูปแบบ `นn-nnn-nnn` ในคำถาม
+ระบบดึงการ์ดวิชานั้นมาไว้อันดับ 1 โดยตรง
+
+เหตุผลที่ต้องมีชั้นนี้เห็นได้จากตัวเลข อันดับของการ์ดวิชาที่ถูกต้องสำหรับคำถามที่มีรหัสวิชา
+
+| สำนวนคำถาม | dense | BM25 | RRF | + ปักหมุด |
+|---|---|---|---|---|
+| CLO ของวิชา 04-620-201 มีกี่ข้อ | ไม่ติด 20 อันดับ | 6 | 14 | **1** |
+| CLO ของวิชา 04-620-201 มีกี่ข้อ อะไรบ้าง | 19 | 6 | 6 | **1** |
+| วิชา 04-620-201 มี CLO อะไรบ้าง | 9 | 6 | 3 | **1** |
+| 04-620-201 | ไม่ติด 20 อันดับ | 8 | 16 | **1** |
+
+จุดที่ขัดกับความคาดหมายคือ **RRF ให้ผลแย่กว่า BM25 เดี่ยว ๆ** ในคำถามสองข้อแรก
+เพราะ RRF ให้รางวัลกับ chunk ที่ติดอันดับในทั้งสองลิสต์ พอ dense มองไม่เห็นการ์ดเป้าหมายเลย
+การ์ดนั้นได้คะแนนขาเดียวแล้วแพ้การ์ดวิชาอื่นที่ติดกลาง ๆ ทั้งสองลิสต์
+ยิ่ง dense ผิดมากเท่าไหร่ RRF ยิ่งลากผลรวมให้ผิดตาม
+
+คำถามที่ไม่มีรหัสวิชาได้ผลเหมือนเดิมทุกประการ การปักหมุดจึงไม่มีผลข้างเคียง
+
+### Reranker: มีโค้ดแต่ปิดไว้
+
+Cross-encoder (`bge-reranker-v2-m3`) แก้ปัญหาเดียวกันได้ — ดันการ์ดเป้าหมายจากอันดับ 6 ขึ้นมาที่ 2
+แต่ใช้เวลา **291 วินาทีต่อคำถาม** บนเครื่องที่ไม่มี GPU ขณะที่การปักหมุดรหัสวิชาแก้ปัญหาเดียวกัน
+ได้ในระดับมิลลิวินาที `USE_RERANKER` จึงตั้งเป็น `False`
+
+โค้ดยังอยู่ครบและเปิดใช้ได้ด้วย `python pipeline/complete_retrieval.py --rerank`
+สำหรับการเปรียบเทียบในบทประเมินผล
+
+---
+
+## ข้อมูล
+
+`data/` แบ่งเป็นสี่หมวด รวม 29 ไฟล์ PDF
+
+| หมวด | ไฟล์ | เข้า index แล้ว |
+|---|---|---|
+| `curriculum/` | 3 | ใช่ |
+| `forms/` | 23 | ยัง |
+| `regulations/` | 2 | ยัง |
+| `textbook/` | 1 | ยัง |
+
+`config.SOURCE_CATEGORIES` เป็นตัวเลือกว่าจะ index หมวดไหน ปัจจุบันตั้งเป็น `["curriculum"]`
+ได้ **2,054 records → 1,782 chunks**
+
+### ปัญหาที่พบในข้อมูลจริง
+
+**อักขระไทยเพี้ยนจากฟอนต์เก่า** — PDF บางไฟล์ฝังฟอนต์ที่ map สระและวรรณยุกต์ไปยัง
+Private Use Area ทำให้ `ข้าพเจ้า` ถูกดึงออกมาเป็น `ข<U+F70B>าพเจ<U+F70B>า` คือวรรณยุกต์กลายเป็น
+อักขระที่ไม่มีความหมาย ทั้ง embedding และ BM25 จึงมองไม่เห็น อาการนี้สังเกตยากเพราะข้อความ
+ยัง "ดูเหมือน" ภาษาไทยตอนพิมพ์ออกมา
+
+`src/thai_normalize.py` แปลงกลับเป็น Unicode จริงก่อนเข้า pipeline พร้อมซ่อมกรณี `ำ`
+ถูกแยกเป็นช่องว่าง (`ค าสั่ง` → `คำสั่ง`) ซึ่งพบ 538 จุดในคลังข้อมูล
+
+**ตาราง CLO ต้องมี parser เฉพาะ** — `CLOs-Computer_Engineering-RMUTT.pdf` เป็นตารางเมทริกซ์
+23 หน้า การดึงข้อความแบบปกติทำให้เหลือ chunk ที่มีเนื้อหาเพียง `✓` หลายร้อยอัน
+`src/clo_parser.py` ประกอบความสัมพันธ์กลับจากพิกัดคำ แล้วเขียนเป็นประโยค
+หนึ่งวิชาต่อหนึ่ง chunk
+
+หมายเหตุ: ไม่ได้ใช้ `page.find_tables()` ของ PyMuPDF เพราะมันประกอบสระ/วรรณยุกต์ไทยผิด
+(ได้ `ความสัมพนั ธ์` แทน `ความสัมพันธ์`) ขณะที่ `get_text("words")` ให้ผลถูกต้อง
+
+**7 ไฟล์ยังใช้ไม่ได้** — 3 ไฟล์เป็นภาพสแกนล้วน อีก 4 ไฟล์ฝังฟอนต์ที่ไม่มีตาราง ToUnicode
+ดึงออกมาได้เป็นอักขระควบคุมดิบ ทั้งสองกรณีต้องใช้ OCR ซึ่งยังไม่ได้ทำ
+ผลคือหัวข้อสหกิจศึกษายังไม่มีในคลังข้อมูล
+
+---
+
+## โครงสร้างโปรเจกต์
+
+```
+config.py              ค่าที่ปรับได้ทั้งหมดอยู่ไฟล์นี้ไฟล์เดียว
+build_index.py         สร้าง index ทั้งหมดในคำสั่งเดียว
+main.py                ถามผ่าน command line
+
+src/
+  document_loader.py   อ่าน PDF/TXT/DOCX/MD
+  thai_normalize.py    ซ่อมอักขระไทยจากฟอนต์เก่า
+  clo_parser.py        parser เฉพาะตาราง PLO x CLO
+  text_splitter.py     ตัด chunk ตามคำไทย (PyThaiNLP)
+  embedding_model.py   ห่อ sentence-transformers
+  vector_store.py      FAISS index
+  retriever.py         ค้นด้วยเวกเตอร์อย่างเดียว
+  hybrid_retriever.py  BM25 + RRF + ปักหมุดรหัสวิชา
+  rerankers.py         cross-encoder (ปิดไว้)
+  generator.py         เรียก Gemini พร้อมระบบสำรองโมเดล
+  prompt_templates.py  prompt ที่บังคับให้ตอบจากเอกสารเท่านั้น
+  memory.py            เก็บบทสนทนา
+  query_transform.py   เขียนคำถามต่อเนื่องให้สมบูรณ์
+  rag_pipeline.py      ประกอบทุกชิ้นเข้าด้วยกัน
+  index_meta.py        ตรวจว่า index ตรงกับข้อมูลหรือยัง
+
+pipeline/              7 สคริปต์ รันทีละขั้นเพื่อดูผลระหว่างทาง
+webchat/               เว็บแชท Flask + หน้าเว็บ
+evaluation/            ยังไม่ได้เขียน
+docs/                  กราฟเวอร์ชันภาพ สำหรับนำไปใส่รูปเล่มรายงาน
+```
+
+กราฟสองรูปในไฟล์นี้มีเวอร์ชันภาพความละเอียดสูงอยู่ที่
+[`docs/embedding-comparison.png`](docs/embedding-comparison.png) และ
+[`docs/llm-pricing.png`](docs/llm-pricing.png) สำหรับนำไปวางในรูปเล่ม
+สร้างใหม่ได้จากข้อมูลชุดเดียวกัน
+
+---
+
+## ค่าที่ตั้งไว้
 
 ```python
-# chunk_size วัดเป็น "จำนวนคำไทย" ไม่ใช่ตัวอักษร
-from pythainlp.tokenize import word_tokenize  # engine="newmm"
-```
-
-**ค่าที่ tune แล้ว (จากการวิเคราะห์ข้อมูลจริง):**
-
-| Parameter | ค่า | เหตุผล |
-|-----------|-----|--------|
-| `CHUNK_SIZE` | **150 tokens** | 73.5% ของ records < 50 tokens, median = 18 → ค่าเล็กรักษา granularity |
-| `CHUNK_OVERLAP` | **30 tokens** | 20% overlap เพียงพอสำหรับความต่อเนื่อง |
-
-**Separators (ลำดับความสำคัญ):**
-`\n\n` → `\n` → `space` → `ๆ` → character-level fallback
-
----
-
-## 🔍 Hybrid Retrieval Strategy
-
-```
-Query → ┌─── Dense Search (FAISS + bge-m3) ───── top 20 candidates
-         │
-         └─── Sparse Search (BM25 + PyThaiNLP tokenize) ── top 20 candidates
-                                    │
-                    ┌───────────────▼───────────────┐
-                    │  Reciprocal Rank Fusion (RRF)  │
-                    │  score = Σ 1/(60 + rank)       │
-                    └───────────────┬───────────────┘
-                                    │
-                    ┌───────────────▼───────────────┐
-                    │  Cross-Encoder Reranking       │
-                    │  (bge-reranker-v2-m3)          │
-                    └───────────────┬───────────────┘
-                                    │
-                              Top 5 chunks → LLM
-```
-
-**ทำไมต้อง Hybrid?**
-- **Dense (embedding)** จับ _ความหมาย_ ได้ดี — ถามว่า "ขั้นตอนลาป่วย" จะเจอ "การลากิจส่วนตัว"
-- **BM25 (keyword)** จับ _คำเฉพาะ_ ได้ดี — ถามว่า "ศรม.13" จะเจอฟอร์มตรง ๆ
-- **RRF** รวม ranking ทั้งสองแบบ โดยไม่ต้องทำให้ score scale เท่ากัน
-
----
-
-## ⚡ Quick Start
-
-### 1. ติดตั้ง Dependencies
-
-```bash
-pip install pythainlp pymupdf langchain-text-splitters sentence-transformers faiss-cpu anthropic rank-bm25
-```
-
-### 2. สร้าง Index (ครั้งแรก / เมื่อเพิ่มเอกสาร)
-
-```bash
-# รันทีละ step เพื่อดูผลแต่ละขั้น
-python pipeline/extract_text.py     # 1. ดึงข้อความจาก PDF
-python pipeline/chunking.py         # 2. แบ่ง chunk
-python pipeline/create_embeddings.py # 3. สร้าง embeddings
-python pipeline/create_vector_db.py  # 4. สร้าง FAISS + BM25
-
-# หรือรันทีเดียว
-python build_index.py
-```
-
-### 3. ถามคำถาม
-
-```bash
-# คำถามเดียว
-python main.py "ขั้นตอนการลาพักการศึกษาเป็นอย่างไร?"
-
-# Interactive chat
-python main.py
-```
-
----
-
-## 📊 สถิติข้อมูล (Data Stats)
-
-| รายการ | จำนวน |
-|--------|-------|
-| ไฟล์ทั้งหมดใน `data/` | 29 PDF |
-| ไฟล์ที่ extract ได้ | 26 ไฟล์ (3 ไฟล์เป็น scanned image) |
-| Records ที่ได้ | 5,304 records |
-| Median token length | 18 tokens/record |
-| ไฟล์ใหญ่สุด | การสื่อสารข้อมูล (2,011 records) |
-
----
-
-## 📋 สถานะการพัฒนา
-
-| Module | สถานะ | หมายเหตุ |
-|--------|--------|---------|
-| `document_loader.py` | ✅ เสร็จ | รองรับ PDF/TXT/DOCX/MD |
-| `text_splitter.py` | ✅ เสร็จ | PyThaiNLP + Recursive |
-| `extract_text.py` | ✅ เสร็จ | Auto-discover ทุกไฟล์ |
-| `chunking.py` | ✅ เสร็จ | Thai-aware chunking |
-| `embedding_model.py` | 🚧 TODO | wrapper skeleton อยู่ |
-| `vector_store.py` | 🚧 TODO | FAISS wrapper |
-| `hybrid_retriever.py` | 🚧 TODO | BM25 + Dense + RRF |
-| `rerankers.py` | 🚧 TODO | Cross-encoder |
-| `generator.py` | ✅ เสร็จ | Claude Opus 5 |
-| `prompt_templates.py` | ✅ เสร็จ | Grounded answering |
-| `rag_pipeline.py` | 🚧 TODO | Orchestrator |
-| `main.py` | 🚧 TODO | Chat interface |
-| `build_index.py` | 🚧 TODO | Full pipeline runner |
-| Evaluation | 🚧 TODO | Retrieval + Generation eval |
-
----
-
-## 🛠️ Tech Stack
-
-| Component | Technology |
-|-----------|------------|
-| Language | Python 3.14 |
-| PDF Extraction | PyMuPDF |
-| Thai Tokenization | PyThaiNLP (newmm engine) |
-| Text Splitting | LangChain RecursiveCharacterTextSplitter |
-| Embedding | BAAI/bge-m3 (via sentence-transformers) |
-| Vector DB | FAISS |
-| Sparse Retrieval | BM25 (rank-bm25) |
-| Reranking | BAAI/bge-reranker-v2-m3 |
-| LLM | Claude Opus 5 (Anthropic API) |
-| Fusion | Reciprocal Rank Fusion (RRF) |
-
----
-
-## 📝 Config ทั้งหมด (อยู่ใน `config.py`)
-
-ทุกค่าที่ tune ได้อยู่ใน [`config.py`](config.py) ที่เดียว — ไม่ต้องไปหาตาม source code:
-
-```python
-CHUNK_SIZE = 150           # Thai tokens per chunk
-CHUNK_OVERLAP = 30         # overlap between chunks
+SOURCE_CATEGORIES = ["curriculum"]      # หมวดเอกสารที่ index
+CHUNK_SIZE = 150                        # คำไทยต่อ chunk
+CHUNK_OVERLAP = 30
+MIN_CHUNK_LETTERS = 10                  # ตัด chunk ที่มีแต่เลขหน้า/สัญลักษณ์
 EMBEDDING_MODEL = "BAAI/bge-m3"
-EMBEDDING_DIM = 1024
-TOP_K = 5                  # chunks ส่งให้ LLM
-CANDIDATE_K = 20           # chunks ดึงก่อน rerank
-RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
-LLM_MODEL = "claude-opus-5"
+TOP_K = 8                               # chunks ที่ส่งให้โมเดลภาษา
+CANDIDATE_K = 20                        # ดึงมาก่อนรวมอันดับ
+RRF_K = 60                              # อย่าลดค่านี้ ดูหมายเหตุใน config.py
+USE_RERANKER = False
+LLM_MODEL = "gemini-3.5-flash"
+LLM_FALLBACK_MODELS = (...)             # ใช้เมื่อโควตาหมด
 ```
+
+ทุกค่ามีคอมเมนต์กำกับใน [`config.py`](config.py) ว่าทำไมถึงตั้งค่านั้น หลายค่ามาจากการวัด
+ไม่ใช่ค่าเริ่มต้นของไลบรารี
 
 ---
 
-*พัฒนาโดยนักศึกษา CPE, RMUTT — 67 💀*
+## สถานะ
+
+ใช้งานได้แล้ว: pipeline ครบทั้ง 7 ขั้น, hybrid retrieval, เว็บแชท, ระบบสำรองโมเดล
+
+ยังไม่ได้ทำ:
+
+- `evaluation/` ทั้งโฟลเดอร์ — metrics, golden set, การประเมิน retrieval และ generation
+  เป็นส่วนที่จำเป็นสำหรับพิสูจน์ว่าระบบดีแค่ไหน
+- OCR สำหรับ 7 ไฟล์ที่ดึงข้อความไม่ได้
+- index เอกสารหมวด `forms/`, `regulations/`, `textbook/`
+- `query_transform.multi_query` และ `hyde` — เทคนิคเสริม ยังเป็นโครง
+
+---
+
+## เทคโนโลยีที่ใช้
+
+Python 3.14 · PyMuPDF · PyThaiNLP · LangChain text-splitters · sentence-transformers ·
+FAISS · rank-bm25 · google-genai · Flask
+
+---
+
+## แหล่งอ้างอิงราคาและคะแนน
+
+- Gemini — https://ai.google.dev/gemini-api/docs/pricing
+- Claude — https://platform.claude.com/docs/en/about-claude/pricing
+- OpenAI — https://developers.openai.com/api/docs/pricing
+- Intelligence Index — https://artificialanalysis.ai/models
+
+ตรวจสอบทั้งหมดเมื่อ 25 สิงหาคม 2026 ราคาอาจเปลี่ยนแปลงได้
+
+---
+
+จัดทำโดยนักศึกษาภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี
