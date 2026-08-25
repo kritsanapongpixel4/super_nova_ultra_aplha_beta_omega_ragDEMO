@@ -231,6 +231,7 @@ body {
 .conv-list { overflow-y: auto; padding: 4px 10px 10px; min-height: 0; }
 
 .conv {
+  position: relative;          /* anchors .conv-del */
   display: grid;
   grid-template-columns: 40px 1fr auto;
   gap: 11px;
@@ -267,7 +268,43 @@ body {
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
-.conv-time { font-size: 11px; color: var(--ink-faint); align-self: start; padding-top: 3px; }
+.conv-time {
+  font-size: 11px; color: var(--ink-faint);
+  align-self: start; padding-top: 3px;
+  transition: opacity 0.14s ease;
+}
+
+/* The delete control takes the timestamp's place on hover rather than
+   claiming a column of its own — a fourth column would reflow every row the
+   moment one of them is pointed at. */
+.conv-del {
+  position: absolute;
+  top: 50%; right: 10px;
+  transform: translateY(-50%);
+  display: grid; place-items: center;
+  width: 26px; height: 26px;
+  border: 0; border-radius: 8px;
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--ink-dim);
+  cursor: pointer;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.14s ease, background 0.14s ease, color 0.14s ease;
+}
+
+.conv-del svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2; }
+
+.conv:hover .conv-del,
+.conv:focus-within .conv-del { opacity: 1; pointer-events: auto; }
+
+.conv:hover .conv-time,
+.conv:focus-within .conv-time { opacity: 0; }
+
+.conv-del:hover {
+  background: rgba(232, 90, 84, 0.22);
+  color: #ffb3ae;
+}
+
+.conv-del:active { transform: translateY(-50%) scale(0.92); }
 
 .sidebar-foot {
   display: flex;

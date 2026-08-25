@@ -72,23 +72,83 @@ const clock = () => new Date().toTimeString().slice(0, 5);
 
 /* ── conversations ───────────────────────────────────────── */
 
+/* An empty thread carries nothing worth keeping, and one is created on every
+   press of "+". Without this, a session's sidebar fills up with identical
+   blank rows that the user has to delete by hand. */
+function dropEmptyThreads(exceptId) {
+  for (const conv of [...conversations]) {
+    if (conv.id !== exceptId && !conv.messages.length) {
+      conversations = conversations.filter((c) => c.id !== conv.id);
+      fetch(`/api/conversations/${conv.id}`, { method: "DELETE" }).catch(() => {});
+    }
+  }
+}
+
+async function deleteConversation(id) {
+  conversations = conversations.filter((c) => c.id !== id);
+  await fetch(`/api/conversations/${id}`, { method: "DELETE" }).catch(() => {});
+  if (activeId === id) {
+    if (conversations.length) {
+      activeId = conversations[0].id;
+    } else {
+      await newConversation();
+      return;
+    }
+  }
+  drawConversations();
+  drawThread();
+}
+
+async function clearAllConversations() {
+  if (!conversations.length) return;
+  if (!confirm(`ลบบทสนทนาทั้งหมด ${conversations.length} รายการ?`)) return;
+  const res = await fetch("/api/conversations", { method: "DELETE" });
+  const data = await res.json();
+  conversations = [data.conversation];
+  activeId = data.conversation.id;
+  drawConversations();
+  drawThread();
+}
+
 function drawConversations() {
   convList.innerHTML = "";
+  $("clearAll").hidden = conversations.length < 2;
+
   for (const conv of conversations) {
-    const item = document.createElement("button");
+    // A div, not a button: the delete control nests inside, and a button
+    // inside a button is invalid markup that browsers rearrange.
+    const item = document.createElement("div");
     item.className = "conv" + (conv.id === activeId ? " active" : "");
+    item.tabIndex = 0;
+    item.setAttribute("role", "button");
     item.innerHTML = `
       <div class="avatar" style="background:${tint(conv.id)}">${avatarMark(conv.id)}</div>
       <div class="conv-body">
         <div class="conv-name">${escapeHtml(conv.title)}</div>
         <div class="conv-preview">${escapeHtml(conv.preview)}</div>
       </div>
-      <div class="conv-time">${escapeHtml(conv.time)}</div>`;
-    item.onclick = () => {
-      if (busy) return;
+      <div class="conv-time">${escapeHtml(conv.time)}</div>
+      <button class="conv-del" title="ลบบทสนทนานี้" aria-label="ลบบทสนทนานี้">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>`;
+
+    const open = () => {
+      if (busy || conv.id === activeId) return;
+      dropEmptyThreads(conv.id);
       activeId = conv.id;
       drawConversations();
       drawThread();
+    };
+    item.onclick = open;
+    item.onkeydown = (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        open();
+      }
+    };
+    item.querySelector(".conv-del").onclick = (e) => {
+      e.stopPropagation();          // do not also open the thread
+      if (!busy) deleteConversation(conv.id);
     };
     convList.appendChild(item);
   }
@@ -355,6 +415,7 @@ async function loadConversations() {
 
 async function newConversation() {
   const conv = await (await fetch("/api/conversations", { method: "POST" })).json();
+  dropEmptyThreads(conv.id);   // clear out any blank thread left behind
   conversations.push(conv);
   activeId = conv.id;
   drawConversations();
@@ -427,6 +488,7 @@ function toggleDrawer(open) {
 }
 
 $("newChat").onclick = () => !busy && newConversation();
+$("clearAll").onclick = () => !busy && clearAllConversations();
 $("infoBtn").onclick = () => toggleDrawer();
 $("closeDrawer").onclick = () => toggleDrawer(false);
 document.addEventListener("keydown", (e) => {

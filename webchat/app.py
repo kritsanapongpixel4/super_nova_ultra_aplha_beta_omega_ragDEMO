@@ -161,6 +161,15 @@ def delete_conversation(conversation_id: str):
     return jsonify({"ok": True})
 
 
+@app.delete("/api/conversations")
+def clear_conversations():
+    """Drop every thread and hand back one empty one to land in."""
+    removed = len(_conversations)
+    _conversations.clear()
+    return jsonify({"ok": True, "removed": removed,
+                    "conversation": _public(_new_conversation())})
+
+
 @app.post("/api/chat")
 def chat():
     payload = request.get_json(silent=True) or {}
