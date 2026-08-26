@@ -101,6 +101,7 @@ class RAGPipeline:
             generator=Generator(
                 model=config.LLM_MODEL,
                 max_tokens=config.LLM_MAX_TOKENS,
+                temperature=config.LLM_TEMPERATURE,
                 fallback_models=config.LLM_FALLBACK_MODELS,
             ),
             reranker=(

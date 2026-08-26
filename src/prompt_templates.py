@@ -24,7 +24,15 @@ Answer:"""
 # chunks that disagree, e.g. คู่มือนักศึกษา67 against คู่มือนักศึกษา69.
 CHUNK_TEMPLATE = "[{index}] {source}\n{text}"
 
-NO_CONTEXT_MESSAGE = "I could not find anything about that in the documents."
+# Returned without calling the model at all, when retrieval found nothing.  In
+# Thai because every user of this system asks in Thai — the English string was
+# the one place the interface switched languages, and it did so exactly when
+# the system had already failed to help.  Points somewhere useful rather than
+# stopping at "no".
+NO_CONTEXT_MESSAGE = (
+    "ขออภัย ไม่พบข้อมูลเรื่องนี้ในเอกสารที่มีอยู่ "
+    "แนะนำให้ติดต่อภาควิชาฯ หรืองานทะเบียนและวัดผล คณะวิศวกรรมศาสตร์ โดยตรง"
+)
 
 
 def format_context(chunks: list[dict]) -> str:

@@ -206,6 +206,15 @@ LLM_FALLBACK_MODELS = (
 )
 
 LLM_MAX_TOKENS = 16000
+
+# Left unset until now, which meant every call ran at whatever the API
+# defaults to — a number Google chooses and can change, not one this project
+# picked.  It matters most for evaluation: eval_generation.py grades answers,
+# so an answer that varies between runs moves the score for a reason that has
+# nothing to do with what is being tested.  Low, not zero: the job is
+# rephrasing retrieved text, and there is no upside to sampling widely.
+LLM_TEMPERATURE = 0.2
+
 MEMORY_MAX_TURNS = 6      # conversation turns kept in the prompt
 
 # --- Evaluation ----------------------------------------------------------

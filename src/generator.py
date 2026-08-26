@@ -60,12 +60,16 @@ class Generator:
         # against 3.9s for the model config actually selects.
         model: str = "gemini-3.5-flash",
         max_tokens: int = 16000,
+        # Mirrors config.LLM_TEMPERATURE.  Explicit rather than the API's
+        # default so a run is reproducible and the setting is ours to change.
+        temperature: float = 0.2,
         system_prompt: str = prompt_templates.SYSTEM_PROMPT,
         fallback_models: tuple[str, ...] = (),
         cooldown_seconds: float = 600.0,
     ) -> None:
         self.model = model
         self.max_tokens = max_tokens
+        self.temperature = temperature
         self.system_prompt = system_prompt
         # Free-tier quota is counted per model and the models do not reset
         # together — on any given day some are exhausted while others are
@@ -146,7 +150,9 @@ class Generator:
 
         return self._call(
             [types.Content(role="user", parts=[types.Part(text=prompt)])],
-            types.GenerateContentConfig(max_output_tokens=max_tokens),
+            types.GenerateContentConfig(
+                max_output_tokens=max_tokens, temperature=self.temperature
+            ),
         )
 
     def generate(
@@ -182,5 +188,6 @@ class Generator:
             types.GenerateContentConfig(
                 system_instruction=self.system_prompt,
                 max_output_tokens=self.max_tokens,
+                temperature=self.temperature,
             ),
         )
