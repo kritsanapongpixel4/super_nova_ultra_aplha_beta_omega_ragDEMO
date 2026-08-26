@@ -64,7 +64,11 @@ def score_all(runner, golden: list[dict]) -> dict:
 
         retrieved = [str(hit["chunk_id"]) for hit in hits]
         scores = metrics.score_one(
-            retrieved, set(entry["relevant_chunk_ids"]), k_values
+            retrieved,
+            set(entry["relevant_chunk_ids"]),
+            k_values,
+            retrieved_sources=[hit.get("source", "") for hit in hits],
+            relevant_source=entry.get("source"),
         )
         per_query.append(scores)
         by_phrasing.setdefault(entry.get("phrasing", "all"), []).append(scores)

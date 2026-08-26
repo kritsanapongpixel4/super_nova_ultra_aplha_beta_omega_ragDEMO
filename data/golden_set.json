@@ -1,14 +1,14 @@
 {
   "meta": {
-    "built_at": "2026-08-26T00:29:39",
+    "built_at": "2026-08-26T10:43:43",
     "n_queries": 205,
     "by_category": {
       "clo": 128,
       "faq": 55,
       "unanswerable": 22
     },
-    "chunks_covered": 87,
-    "coverage": 0.0395,
+    "chunks_covered": 105,
+    "coverage": 0.0477,
     "corpus": {
       "n_chunks": 2202,
       "n_sources": 18,
@@ -1957,10 +1957,18 @@
     {
       "question": "จ่ายเงินค่าขึ้นทะเบียนจบช้ามีค่าปรับกี่บาท",
       "relevant_chunk_ids": [
-        "6"
+        "3",
+        "4",
+        "6",
+        "7",
+        "8"
       ],
       "relevant_chunk_keys": [
-        "e2ad27e3a1ec5527"
+        "afe27c6c4f787845",
+        "2cc426e373d1a4b7",
+        "e2ad27e3a1ec5527",
+        "e3918a2fae91298f",
+        "9d33aaf07571e2aa"
       ],
       "category": "faq",
       "phrasing": "faq",
@@ -2017,10 +2025,12 @@
     {
       "question": "เรียนวิชานั้นไปแล้วรวมถึงสอบไปแล้วด้วย ยังทำเรื่องโอนได้อีกมั้ย",
       "relevant_chunk_ids": [
-        "13"
+        "13",
+        "14"
       ],
       "relevant_chunk_keys": [
-        "94b89cd782af0e63"
+        "94b89cd782af0e63",
+        "68b9ddeced61eede"
       ],
       "category": "faq",
       "phrasing": "faq",
@@ -2032,9 +2042,11 @@
     {
       "question": "ต้องรีบยื่นเรื่องเทียบโอนภายในกี่วัน",
       "relevant_chunk_ids": [
+        "11",
         "14"
       ],
       "relevant_chunk_keys": [
+        "6dfa2a5874e20f6b",
         "68b9ddeced61eede"
       ],
       "category": "faq",
@@ -2229,10 +2241,12 @@
     {
       "question": "จ่ายค่าเทอมไม่ทันจนโดนตัดชื่อ ต้องติดต่อเรื่องยังไง",
       "relevant_chunk_ids": [
-        "37"
+        "37",
+        "38"
       ],
       "relevant_chunk_keys": [
-        "7fa4c6a5c1a9b8fd"
+        "7fa4c6a5c1a9b8fd",
+        "8d18295a084d4dd6"
       ],
       "category": "faq",
       "phrasing": "faq",
@@ -2274,9 +2288,13 @@
     {
       "question": "จ่ายตังค์ค่าคงสภาพกี่บาท",
       "relevant_chunk_ids": [
+        "43",
+        "44",
         "45"
       ],
       "relevant_chunk_keys": [
+        "4e0ee232ac4a183a",
+        "21ff23891803eafc",
         "f43aa763df540e85"
       ],
       "category": "faq",
@@ -2321,9 +2339,11 @@
     {
       "question": "ส่งเรื่องไปแล้วต้องรอนานกี่วันถึงเช็กสถานะได้",
       "relevant_chunk_ids": [
+        "45",
         "46"
       ],
       "relevant_chunk_keys": [
+        "f43aa763df540e85",
         "3f0c5af00d8cf771"
       ],
       "category": "faq",
@@ -2351,9 +2371,11 @@
     {
       "question": "ขอลงเรียนเกินลิมิตได้สูงสุดกี่รอบ",
       "relevant_chunk_ids": [
+        "52",
         "53"
       ],
       "relevant_chunk_keys": [
+        "400cb46acd3ffbb2",
         "0853af5e152e7675"
       ],
       "category": "faq",
@@ -2381,9 +2403,11 @@
     {
       "question": "ถ้าจะขอลงเกินรอบสองมีเงื่อนไขอะไรบ้าง",
       "relevant_chunk_ids": [
+        "51",
         "53"
       ],
       "relevant_chunk_keys": [
+        "b5e5baf5383c61ec",
         "0853af5e152e7675"
       ],
       "category": "faq",
@@ -2488,10 +2512,14 @@
     {
       "question": "ใบลาออกนี่ต้องให้ใครเซ็นชื่อรับรองบ้าง",
       "relevant_chunk_ids": [
-        "66"
+        "65",
+        "66",
+        "68"
       ],
       "relevant_chunk_keys": [
-        "7d88092916364268"
+        "4ab2c0b8d9988a1c",
+        "7d88092916364268",
+        "6fc055601ad1d46d"
       ],
       "category": "faq",
       "phrasing": "faq",
@@ -2518,10 +2546,12 @@
     {
       "question": "ต้องได้เกรดเฉลี่ยเท่าไหร่ถึงจะได้เกียรตินิยมเหรียญทอง",
       "relevant_chunk_ids": [
+        "71",
         "72",
         "73"
       ],
       "relevant_chunk_keys": [
+        "2d14a2b408e081a7",
         "b8a9625297faf3fd",
         "8b1236e0ecd3137d"
       ],
@@ -2535,9 +2565,11 @@
     {
       "question": "เกรดรวมต้องถึงเท่าไหร่ถึงจะได้เกียรตินิยมเหรียญเงิน",
       "relevant_chunk_ids": [
+        "71",
         "73"
       ],
       "relevant_chunk_keys": [
+        "2d14a2b408e081a7",
         "8b1236e0ecd3137d"
       ],
       "category": "faq",
@@ -2595,10 +2627,14 @@
     {
       "question": "เรียนจบต้องทำเกรดเฉลี่ยให้ได้ประมาณเท่าไหร่",
       "relevant_chunk_ids": [
-        "79"
+        "78",
+        "79",
+        "80"
       ],
       "relevant_chunk_keys": [
-        "81b11d3f68eab7b3"
+        "60b5d832e15ceaa0",
+        "81b11d3f68eab7b3",
+        "8e261b23c05f5393"
       ],
       "category": "faq",
       "phrasing": "faq",
@@ -2672,10 +2708,14 @@
     {
       "question": "มาตรฐานภาษาอังกฤษต้องได้ระดับไหนถึงจะจบได้",
       "relevant_chunk_ids": [
+        "85",
+        "86",
         "88",
         "89"
       ],
       "relevant_chunk_keys": [
+        "ee35ef88e98a8e8e",
+        "eeba20f352852812",
         "04d6d4127e7b27fb",
         "551ccd8c4e838d73"
       ],
@@ -2736,10 +2776,12 @@
     {
       "question": "ต้องรีบไปแจ้งเรื่องขอเรียนต่อนี่ช่วงไหน",
       "relevant_chunk_ids": [
-        "96"
+        "96",
+        "97"
       ],
       "relevant_chunk_keys": [
-        "af14e89abc4fa964"
+        "af14e89abc4fa964",
+        "e410e4c46299a415"
       ],
       "category": "faq",
       "phrasing": "faq",
@@ -2751,9 +2793,13 @@
     {
       "question": "เรื่องขอรีไทร์กลับมาเรียนเนี่ยต้องจ่ายตังค์เพิ่มมั้ย",
       "relevant_chunk_ids": [
+        "94",
+        "95",
         "96"
       ],
       "relevant_chunk_keys": [
+        "28676c6582510c64",
+        "88ff99da50191900",
         "af14e89abc4fa964"
       ],
       "category": "faq",

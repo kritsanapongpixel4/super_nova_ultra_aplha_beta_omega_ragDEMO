@@ -68,11 +68,30 @@ def score_one(
     retrieved: list[str],
     relevant: set[str],
     k_values: tuple[int, ...] = (1, 3, 5, 10),
+    *,
+    retrieved_sources: list[str] | None = None,
+    relevant_source: str | None = None,
 ) -> dict[str, float]:
-    """Every metric for one query, keyed the way the report tables want them."""
+    """Every metric for one query, keyed the way the report tables want them.
+
+    Pass the source filenames too and ``doc_hit@k`` is added: did the top k
+    include *any* chunk from the document the answer lives in?
+
+    It is reported next to ``hit@k``, not instead of it, because the two
+    disagree for a reason worth seeing.  Several registrar documents carry the
+    same sentence — "ส่งที่ภาควิชาฯ", "7 วันทำการ" — so a question can have a
+    genuinely correct answer in a chunk the golden set does not name, and
+    ``hit@k`` scores that 0.  ``doc_hit@k`` is the looser reading; the gap
+    between them is how much of the miss is labelling rather than retrieval.
+    """
     scores: dict[str, float] = {"mrr": mrr(retrieved, relevant)}
     for k in k_values:
         scores[f"hit@{k}"] = hit_at_k(retrieved, relevant, k)
         scores[f"recall@{k}"] = recall_at_k(retrieved, relevant, k)
         scores[f"ndcg@{k}"] = ndcg_at_k(retrieved, relevant, k)
+    if retrieved_sources is not None and relevant_source:
+        for k in k_values:
+            scores[f"doc_hit@{k}"] = (
+                1.0 if relevant_source in retrieved_sources[:k] else 0.0
+            )
     return scores

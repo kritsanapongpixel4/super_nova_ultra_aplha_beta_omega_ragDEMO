@@ -104,7 +104,13 @@ def evaluate(
 
         retrieved = [str(hit["chunk_id"]) for hit in hits]
         relevant = set(entry["relevant_chunk_ids"])
-        scores = metrics.score_one(retrieved, relevant, k_values)
+        scores = metrics.score_one(
+            retrieved,
+            relevant,
+            k_values,
+            retrieved_sources=[hit.get("source", "") for hit in hits],
+            relevant_source=entry.get("source"),
+        )
         per_query.append(scores)
         by_phrasing.setdefault(entry.get("phrasing", "all"), []).append(scores)
 
@@ -216,12 +222,17 @@ def show(result: dict) -> None:
     # two gold chunks, and recall divides by that count, so finding either one
     # would score 0.5.  For the CLO entries (one gold chunk) the two agree, so
     # numbers measured before the FAQ questions existed stay comparable.
-    print(f"  {'':16s} {'Hit@1':>9s} {'Hit@5':>9s} {'MRR':>7s} {'nDCG@10':>8s}")
+    print(f"  {'':16s} {'Hit@1':>9s} {'Hit@5':>9s} {'MRR':>7s} {'nDCG@10':>8s} "
+          f"{'Doc@1':>8s} {'Doc@5':>8s}")
     for name in ("all", "by_name", "by_code", "faq"):
         if name in q:
             row = q[name]
+            # Doc@k next to Hit@k: the gap between them is the share of
+            # "misses" where the right document was on top and only the
+            # golden set's choice of chunk disagreed.
             print(f"  {name:16s} {row['hit@1']:>8.1%} {row['hit@5']:>9.1%} "
-                  f"{row['mrr']:>7.3f} {row['ndcg@10']:>8.3f}")
+                  f"{row['mrr']:>7.3f} {row['ndcg@10']:>8.3f} "
+                  f"{row.get('doc_hit@1', 0):>8.1%} {row.get('doc_hit@5', 0):>8.1%}")
 
 
 def report() -> None:

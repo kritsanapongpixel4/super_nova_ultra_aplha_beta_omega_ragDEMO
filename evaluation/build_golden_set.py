@@ -173,8 +173,18 @@ def build_faq(records: list[dict], chunks: list[dict]) -> list[dict]:
         for match in _FAQ_PAIR.finditer(record.get("text", "")):
             question = _flat(match.group(1))
             answer = _flat(match.group(2))
+            # Both the question and the answer locate the pair, and either
+            # chunk answers it.  Searching only for the question missed the
+            # case where an answer runs past a chunk boundary: the tail chunk
+            # holds the actual answer text but not the question, so a
+            # retriever that found it scored 0.  Exact substring both ways —
+            # no fuzzy matching, because a golden set built on guesses is the
+            # bug this whole file exists to avoid.
+            probe = answer[:35]
             found = [
-                chunk for chunk, flat in by_source.get(source, []) if question in flat
+                chunk
+                for chunk, flat in by_source.get(source, [])
+                if question in flat or probe in flat
             ]
             if not found:
                 # The pair survived extraction but not chunking — most likely
