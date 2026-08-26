@@ -135,7 +135,28 @@ class RAGPipeline:
             candidate_k=self.candidate_k,
             rrf_k=config.RRF_K,
         )
-        return self.reranker.rerank(query, candidates, self.top_k)
+        ranked = self.reranker.rerank(query, candidates, self.candidate_k)
+
+        # Then put the exact course-code matches back on top.  The retriever
+        # pins them at rank 1, and the reranker — which scores every pair on
+        # its own and knows nothing about that — reorders them away: measured
+        # 2026-08-26, "CLO ของวิชา 04-620-201" fell from 100% Hit@1 to 84.4%.
+        # Re-pinning recovers all of it and keeps what reranking won
+        # elsewhere (asking by course name went 92.2% -> 98.4%).
+        from .hybrid_retriever import exact_code_matches
+
+        pinned = exact_code_matches(query, self.retriever.store.chunks)
+        seen: set[Any] = set()
+        out: list[dict[str, Any]] = []
+        for chunk in [*pinned, *ranked]:
+            chunk_id = chunk.get("chunk_id")
+            if chunk_id in seen:
+                continue
+            seen.add(chunk_id)
+            out.append(chunk)
+            if len(out) >= self.top_k:
+                break
+        return out
 
     def answer(self, query: str) -> dict[str, Any]:
         """Answer a question.

@@ -171,14 +171,27 @@ DENSE_WEIGHT = 0.5        # dense vs BM25 weighting when fusing by score
 SPARSE_METHOD = os.environ.get("RAG_SPARSE_METHOD") or "bm25plus"
 
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
-USE_RERANKER = False      # It works — it lifted the right chunk from hybrid
-                          # rank 6 to 2 — but costs ~291s per query on this
-                          # CPU-only box.  Pinning exact course codes
-                          # (hybrid_retriever.exact_code_matches) fixes the
-                          # same queries outright, in milliseconds.  Turn the
-                          # reranker on for the evaluation comparison
-                          # (pipeline/complete_retrieval.py --rerank), not for
-                          # interactive use.
+
+# On, since 2026-08-26.  The 291s-per-query that kept it off was measured on
+# CPU; on the RTX 5050 through .venv-gpu it is 749ms, and it wins on every
+# aggregate — measured over the 183-question golden set:
+#
+#                        hybrid+pin   +rerank   +rerank+re-pin
+#   Hit@1 รวม               85.8%      82.0%       87.4%
+#   CLO ถามด้วยชื่อ          92.2%      98.4%       98.4%
+#   CLO ถามด้วยรหัส         100.0%      84.4%      100.0%
+#   Hit@5 รวม               95.6%      96.7%       96.7%
+#   ต่อคำถาม                  17ms      682ms       749ms
+#
+# The middle column is why RAGPipeline.retrieve() re-pins afterwards: the
+# reranker scores each pair on its own and does not know a chunk was pinned,
+# so it reorders exact code matches away and takes by_code down 15.6 points.
+# Re-pinning recovers that and keeps the 6.2 points reranking wins on
+# by_name, which pinning cannot help with.
+#
+# Needs CUDA.  On a CPU-only box set this back to False — 291s per question
+# is not a chat interface.
+USE_RERANKER = True
 
 # --- Generation ----------------------------------------------------------
 LLM_PROVIDER = "gemini"           # ผู้ให้บริการที่ src/generator.py เรียกใช้
