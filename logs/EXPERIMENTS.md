@@ -3579,3 +3579,63 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   "golden": "f6ee0c6f12db5a1b"
 }
 ```
+
+## ✅ 2026-08-26 11:07 — eval generation: e5-base + gemini-3.5-flash
+
+- **ทดลองอะไร:** วัดคุณภาพคำตอบ ไม่ใช่แค่ว่าค้น chunk เจอ
+- **ทำอย่างไร:** 40 คำถามจาก golden set, ตอบด้วย gemini-3.5-flash, ตรวจด้วย gemini-3.5-flash (LLM judge)
+- **ผลลัพธ์:** faithfulness 1.0, relevance 1.0, citation 1.0, ยอมรับว่าไม่รู้ 0.667
+
+```json
+{
+  "summary": {
+    "all": {
+      "n": 30,
+      "graded": 30,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "citation_valid": 1.0,
+      "citations_in_range": 1.0,
+      "abstained": 0.667
+    },
+    "clo": {
+      "n": 23,
+      "graded": 23,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "citation_valid": 1.0,
+      "citations_in_range": 1.0,
+      "abstained": null
+    },
+    "faq": {
+      "n": 4,
+      "graded": 4,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "citation_valid": 1.0,
+      "citations_in_range": 1.0,
+      "abstained": null
+    },
+    "unanswerable": {
+      "n": 3,
+      "graded": 3,
+      "context_recall": null,
+      "faithfulness": null,
+      "relevance": null,
+      "citation_valid": null,
+      "citations_in_range": 1.0,
+      "abstained": 0.667
+    }
+  },
+  "judge_model": "gemini-3.5-flash",
+  "corpus": {
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
+    "key_version": 1
+  }
+}
+```

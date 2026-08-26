@@ -29,12 +29,34 @@ Measured per unanswerable question:
                     documents themselves define the right behaviour.
 
 Two API calls per question — one to answer, one to judge — so the free-tier
-quota is the binding constraint.  ``--limit`` samples proportionally across
-categories rather than taking the first N, which would be all CLO.
+quota is the binding constraint: 20 requests per model per day, and 205
+questions need 410.  ``--limit`` samples proportionally across categories
+rather than taking the first N, which would be all CLO.
 
-The judge is an LLM grading an LLM, and by default both are Gemini.  That is
-a real weakness: shared blind spots go unmeasured.  ``--judge`` exists so the
-grading can be moved to another family once a second API key is available.
+So the run is **resumable**.  Every answer and every verdict is written to
+``outputs/eval_cache.json`` as it arrives, and a later run reuses whatever is
+already there.  Without that the script was all-or-nothing: quota ran out
+partway, the process kept going but recorded errors, and the next attempt
+started from zero — which is why the first real run produced six graded
+questions out of 205.  Now each day's quota adds to the pile.
+
+Run it again after the quota resets and it picks up where it stopped:
+
+    python evaluation/eval_generation.py            # ทำต่อจากที่ค้างไว้
+    python evaluation/eval_generation.py --fresh    # ทิ้งแคช เริ่มใหม่
+
+The cache is keyed by the corpus fingerprint and the model that produced the
+text, so re-chunking or switching models invalidates the affected entries by
+itself rather than silently mixing two systems' results.
+
+The judge is an LLM grading an LLM.  With both sides on Gemini that is a real
+weakness — shared blind spots go unmeasured, and the first 30-question run
+came back 100% on faithfulness, relevance and citations, which says more
+about the grader than the system.  ``--judge ollama:<model>`` moves the
+grading to a model running locally: a different family, and no quota, so all
+205 questions can be graded in one sitting.
+
+    python evaluation/eval_generation.py --judge ollama:qwen3:8b
 
 Run: python evaluation/eval_generation.py  ->  outputs/eval_generation.json
 """
@@ -66,6 +88,22 @@ for stream in (sys.stdout, sys.stderr):
         pass
 
 _CITATION = re.compile(r"\[(\d+)\]")
+
+CACHE_FILE = config.OUTPUTS_DIR / "eval_cache.json"
+
+
+def load_cache(fresh: bool) -> dict:
+    if fresh or not CACHE_FILE.exists():
+        return {}
+    with open(CACHE_FILE, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_cache(cache: dict) -> None:
+    """Write after every question — a run that dies must keep its progress."""
+    CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(CACHE_FILE, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
 
 _JUDGE_ANSWERABLE = """คุณคือผู้ตรวจคุณภาพคำตอบของระบบถาม-ตอบจากเอกสาร
 
@@ -244,8 +282,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate answer quality.")
     parser.add_argument("--limit", type=int, default=0,
                         help="ประเมินกี่คำถาม (0 = ทั้งหมด), สุ่มกระจายทุกหมวด")
+    parser.add_argument("--fresh", action="store_true",
+                        help="ทิ้งแคชแล้วเริ่มใหม่ (ค่าเริ่มต้นคือทำต่อจากที่ค้างไว้)")
     parser.add_argument("--judge", default=None,
-                        help=f"โมเดลที่ใช้ตรวจ (ค่าเริ่มต้น {config.LLM_MODEL})")
+                        help=f"โมเดลที่ใช้ตรวจ — ชื่อโมเดล Gemini หรือ ollama:<model> "
+                             f"เพื่อใช้โมเดลในเครื่อง (ค่าเริ่มต้น {config.LLM_MODEL})")
     cli.add_model_arg(parser)
     args = parser.parse_args()
     spec = cli.apply(args)
@@ -254,20 +295,47 @@ def main() -> None:
     pipeline = RAGPipeline.from_config(use_memory=False)
     # Its own Generator, so the judge's cooldowns are tracked separately from
     # the answering side's — one running out must not rest the other.
-    judge = Generator(
-        model=judge_model,
-        fallback_models=tuple(
-            m for m in (config.LLM_MODEL, *config.LLM_FALLBACK_MODELS)
-            if m != judge_model
-        ),
-    )
+    if judge_model.startswith("ollama:"):
+        # No quota and a different model family from the one being graded —
+        # the two reasons the judge is worth moving off Gemini.
+        from src.local_llm import OllamaGenerator
+
+        judge = OllamaGenerator(judge_model.split(":", 1)[1])
+        try:
+            judge.check()
+        except Exception as exc:
+            print(f"❌ {exc}")
+            sys.exit(1)
+    else:
+        # Its own Generator, so the judge's cooldowns are tracked separately
+        # from the answering side's — one running out must not rest the other.
+        judge = Generator(
+            model=judge_model,
+            fallback_models=tuple(
+                m for m in (config.LLM_MODEL, *config.LLM_FALLBACK_MODELS)
+                if m != judge_model
+            ),
+        )
     with open(config.CHUNKS_FILE, "r", encoding="utf-8") as f:
         chunks = json.load(f)
     entries, _ = golden_set.load(chunks, include_unanswerable=True)
     entries = stratified(entries, args.limit)
 
+    corpus = golden_set.fingerprint(chunks)
+    cache = load_cache(args.fresh)
+    done = sum(
+        1
+        for e in entries
+        if (cache.get(f"{e['query_id']}:{corpus['chunks_sha1']}") or {}).get(
+            "judge_model"
+        )
+        == judge_model
+    )
+
     print(f"🧬 ตอบด้วย {spec.key} + {config.LLM_MODEL} · ตรวจด้วย {judge_model}")
-    print(f"❓ {len(entries)} คำถาม ({2 * len(entries)} เรียก API)\n")
+    print(f"❓ {len(entries)} คำถาม · ตรวจไปแล้ว {done} · เหลือ {len(entries) - done} "
+          f"(~{2 * (len(entries) - done)} เรียก API)")
+    print(f"💾 แคช: {CACHE_FILE.name}\n")
 
     rows: list[dict] = []
     with RunLogger(
@@ -276,25 +344,60 @@ def main() -> None:
         judge=judge_model,
         n_queries=len(entries),
     ) as run:
+        called = reused = 0
         for number, entry in enumerate(entries, start=1):
-            print(f"  [{number}/{len(entries)}] {entry['question'][:56]}", flush=True)
-            try:
-                result = pipeline.answer(entry["question"])
-            except Exception as exc:
-                run.problem("answer-failed", f"q{entry['query_id']}: {exc}")
-                rows.append({
-                    "query_id": entry["query_id"],
-                    "category": entry["category"],
-                    "question": entry["question"],
-                    "judge": {"_error": f"answer failed: {type(exc).__name__}"},
-                })
+            key = f"{entry['query_id']}:{corpus['chunks_sha1']}"
+            slot = cache.get(key) or {}
+            head = f"  [{number}/{len(entries)}] {entry['question'][:52]}"
+
+            # 1. The answer.  Belongs to the answering model, not the judge —
+            #    changing --judge must not throw away work that cost quota.
+            result = slot.get("result") if slot.get("answer_model") == config.LLM_MODEL else None
+            if result is None:
+                try:
+                    result = pipeline.answer(entry["question"])
+                except Exception as exc:
+                    run.problem("answer-failed", f"q{entry['query_id']}: {exc}")
+                    print(f"{head}  ❌ ตอบไม่ได้ (จะลองใหม่รอบหน้า)", flush=True)
+                    continue
+                called += 1
+                slot = {
+                    "result": {"answer": result["answer"], "sources": result["sources"]},
+                    "answer_model": config.LLM_MODEL,
+                }
+                cache[key] = slot
+                save_cache(cache)
+                result = slot["result"]
+
+            # 2. The verdict.  Re-judged when the judge changes, since a score
+            #    from a different grader is not comparable.
+            if slot.get("judge_model") == judge_model and "row" in slot:
+                rows.append(slot["row"])
+                reused += 1
+                print(f"{head}  ↩ ใช้ของเดิม", flush=True)
                 continue
+
             row = grade(entry, result, judge)
+            called += 1
             if "_error" in (row.get("judge") or {}):
                 run.problem("judge-failed", f"q{entry['query_id']}: {row['judge']['_error']}")
+                print(f"{head}  ⚠️  ตรวจไม่ได้ (จะลองใหม่รอบหน้า)", flush=True)
+                # Not cached: an ungraded row must not look done next time.
+                continue
+
+            slot["row"] = row
+            slot["judge_model"] = judge_model
+            cache[key] = slot
+            save_cache(cache)
             rows.append(row)
-            # The free tier counts per minute as well as per day.
-            time.sleep(1.0)
+            print(f"{head}  ✓", flush=True)
+            # The free tier counts per minute as well as per day.  A local
+            # judge has no such limit, and 205 one-second sleeps is 3 minutes
+            # of doing nothing.
+            if not judge_model.startswith("ollama:"):
+                time.sleep(1.0)
+
+        print(f"\n📞 เรียก API {called} ครั้ง · ใช้ผลเดิม {reused} ข้อ")
 
     summary = summarise(rows)
     show(summary)
@@ -304,7 +407,7 @@ def main() -> None:
         "embedding_model": spec.key,
         "answer_model": config.LLM_MODEL,
         "judge_model": judge_model,
-        "corpus": golden_set.fingerprint(chunks),
+        "corpus": corpus,
         "summary": summary,
         "rows": rows,
     }
