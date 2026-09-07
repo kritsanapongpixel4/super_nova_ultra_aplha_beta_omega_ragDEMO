@@ -1,14 +1,15 @@
 {
   "meta": {
-    "built_at": "2026-08-26T10:43:43",
-    "n_queries": 205,
+    "built_at": "2026-09-07T18:23:49",
+    "n_queries": 493,
     "by_category": {
       "clo": 128,
+      "curriculum": 288,
       "faq": 55,
       "unanswerable": 22
     },
-    "chunks_covered": 105,
-    "coverage": 0.0477,
+    "chunks_covered": 263,
+    "coverage": 0.1194,
     "corpus": {
       "n_chunks": 2202,
       "n_sources": 18,
@@ -1940,6 +1941,5878 @@
       "query_id": 128
     },
     {
+      "question": "วิชาอัตลักษณ์แห่งราชมงคลธัญบุรีรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1527"
+      ],
+      "relevant_chunk_keys": [
+        "75e7a80f3f304aef"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-101",
+      "course_name": "อัตลักษณ์แห่งราชมงคลธัญบุรี",
+      "credits": "2",
+      "query_id": 129
+    },
+    {
+      "question": "วิชา 00-100-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1527"
+      ],
+      "relevant_chunk_keys": [
+        "75e7a80f3f304aef"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-101",
+      "course_name": "อัตลักษณ์แห่งราชมงคลธัญบุรี",
+      "credits": "2",
+      "query_id": 130
+    },
+    {
+      "question": "วิชาอัตลักษณ์แห่งราชมงคลธัญบุรีรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "728"
+      ],
+      "relevant_chunk_keys": [
+        "a04ff529f926adf7"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-102",
+      "course_name": "อัตลักษณ์แห่งราชมงคลธัญบุรี",
+      "credits": "3",
+      "query_id": 131
+    },
+    {
+      "question": "วิชา 00-100-102 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "728"
+      ],
+      "relevant_chunk_keys": [
+        "a04ff529f926adf7"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-102",
+      "course_name": "อัตลักษณ์แห่งราชมงคลธัญบุรี",
+      "credits": "3",
+      "query_id": 132
+    },
+    {
+      "question": "วิชาความเป็นผู้ประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "661"
+      ],
+      "relevant_chunk_keys": [
+        "aec91a80e936cad5"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-103",
+      "course_name": "ความเป็นผู้ประกอบการ",
+      "credits": "3",
+      "query_id": 133
+    },
+    {
+      "question": "วิชา 00-100-103 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "661"
+      ],
+      "relevant_chunk_keys": [
+        "aec91a80e936cad5"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-103",
+      "course_name": "ความเป็นผู้ประกอบการ",
+      "credits": "3",
+      "query_id": 134
+    },
+    {
+      "question": "วิชามหาวิทยาลัยสีเขียวรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1527"
+      ],
+      "relevant_chunk_keys": [
+        "75e7a80f3f304aef"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-201",
+      "course_name": "มหาวิทยาลัยสีเขียว",
+      "credits": "1",
+      "query_id": 135
+    },
+    {
+      "question": "วิชา 00-100-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1527"
+      ],
+      "relevant_chunk_keys": [
+        "75e7a80f3f304aef"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-201",
+      "course_name": "มหาวิทยาลัยสีเขียว",
+      "credits": "1",
+      "query_id": 136
+    },
+    {
+      "question": "วิชาการคิดเชิงออกแบบรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1527"
+      ],
+      "relevant_chunk_keys": [
+        "75e7a80f3f304aef"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-202",
+      "course_name": "การคิดเชิงออกแบบ",
+      "credits": "1",
+      "query_id": 137
+    },
+    {
+      "question": "วิชา 00-100-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1527"
+      ],
+      "relevant_chunk_keys": [
+        "75e7a80f3f304aef"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-202",
+      "course_name": "การคิดเชิงออกแบบ",
+      "credits": "1",
+      "query_id": 138
+    },
+    {
+      "question": "วิชามหาวิทยาลัยสีเขียวรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "634"
+      ],
+      "relevant_chunk_keys": [
+        "5b8efd715ca03b5b"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-203",
+      "course_name": "มหาวิทยาลัยสีเขียว",
+      "credits": "3",
+      "query_id": 139
+    },
+    {
+      "question": "วิชา 00-100-203 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "634"
+      ],
+      "relevant_chunk_keys": [
+        "5b8efd715ca03b5b"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-203",
+      "course_name": "มหาวิทยาลัยสีเขียว",
+      "credits": "3",
+      "query_id": 140
+    },
+    {
+      "question": "วิชาการคิดเชิงออกแบบรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "635"
+      ],
+      "relevant_chunk_keys": [
+        "7c07acdf3df93f14"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-204",
+      "course_name": "การคิดเชิงออกแบบ",
+      "credits": "3",
+      "query_id": 141
+    },
+    {
+      "question": "วิชา 00-100-204 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "635"
+      ],
+      "relevant_chunk_keys": [
+        "7c07acdf3df93f14"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-204",
+      "course_name": "การคิดเชิงออกแบบ",
+      "credits": "3",
+      "query_id": 142
+    },
+    {
+      "question": "วิชาความเป็นผู้ประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1527"
+      ],
+      "relevant_chunk_keys": [
+        "75e7a80f3f304aef"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-301",
+      "course_name": "ความเป็นผู้ประกอบการ",
+      "credits": "1",
+      "query_id": 143
+    },
+    {
+      "question": "วิชา 00-100-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1527"
+      ],
+      "relevant_chunk_keys": [
+        "75e7a80f3f304aef"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-301",
+      "course_name": "ความเป็นผู้ประกอบการ",
+      "credits": "1",
+      "query_id": 144
+    },
+    {
+      "question": "วิชานวัตกรรมเพื่อชุมชนรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1528"
+      ],
+      "relevant_chunk_keys": [
+        "85c4b9c89ee73a9d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-302",
+      "course_name": "นวัตกรรมเพื่อชุมชน",
+      "credits": "3",
+      "query_id": 145
+    },
+    {
+      "question": "วิชา 00-100-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1528"
+      ],
+      "relevant_chunk_keys": [
+        "85c4b9c89ee73a9d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "00-100-302",
+      "course_name": "นวัตกรรมเพื่อชุมชน",
+      "credits": "3",
+      "query_id": 146
+    },
+    {
+      "question": "วิชานวัตกรรมเพื่อชุมชนรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "659"
+      ],
+      "relevant_chunk_keys": [
+        "92938469059e5ba8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-304",
+      "course_name": "นวัตกรรมเพื่อชุมชน",
+      "credits": "3",
+      "query_id": 147
+    },
+    {
+      "question": "วิชา 00-100-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "659"
+      ],
+      "relevant_chunk_keys": [
+        "92938469059e5ba8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-304",
+      "course_name": "นวัตกรรมเพื่อชุมชน",
+      "credits": "3",
+      "query_id": 148
+    },
+    {
+      "question": "วิชานวัตกรรมเพื่ออุตสาหกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "660",
+        "805"
+      ],
+      "relevant_chunk_keys": [
+        "4099638e905aff9a",
+        "820793ec21b9684e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-305",
+      "course_name": "นวัตกรรมเพื่ออุตสาหกรรม",
+      "credits": "3",
+      "query_id": 149
+    },
+    {
+      "question": "วิชา 00-100-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "660",
+        "805"
+      ],
+      "relevant_chunk_keys": [
+        "4099638e905aff9a",
+        "820793ec21b9684e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "00-100-305",
+      "course_name": "นวัตกรรมเพื่ออุตสาหกรรม",
+      "credits": "3",
+      "query_id": 150
+    },
+    {
+      "question": "วิชาสังคมกับสิ่งแวดล้อมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "615",
+        "711",
+        "1516"
+      ],
+      "relevant_chunk_keys": [
+        "0fdd3c54dd67e629",
+        "a1717755ccb99f5a",
+        "7b6630e163913bb1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-004",
+      "course_name": "สังคมกับสิ่งแวดล้อม",
+      "credits": "3",
+      "query_id": 151
+    },
+    {
+      "question": "วิชา 01-110-004 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "615",
+        "711",
+        "1516"
+      ],
+      "relevant_chunk_keys": [
+        "0fdd3c54dd67e629",
+        "a1717755ccb99f5a",
+        "7b6630e163913bb1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-004",
+      "course_name": "สังคมกับสิ่งแวดล้อม",
+      "credits": "3",
+      "query_id": 152
+    },
+    {
+      "question": "วิชาการพัฒนาคุณภาพชีวิตและสังคมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "616",
+        "1516"
+      ],
+      "relevant_chunk_keys": [
+        "eac8783dd9abb2ac",
+        "7b6630e163913bb1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-009",
+      "course_name": "การพัฒนาคุณภาพชีวิตและสังคม",
+      "credits": "3",
+      "query_id": 153
+    },
+    {
+      "question": "วิชา 01-110-009 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "616",
+        "1516"
+      ],
+      "relevant_chunk_keys": [
+        "eac8783dd9abb2ac",
+        "7b6630e163913bb1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-009",
+      "course_name": "การพัฒนาคุณภาพชีวิตและสังคม",
+      "credits": "3",
+      "query_id": 154
+    },
+    {
+      "question": "วิชาปรัชญาเศรษฐกิจพอเพียงเพื่อการพัฒนาที่ยั่งยืนรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "617"
+      ],
+      "relevant_chunk_keys": [
+        "89443d7811d34a7a"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-110-012",
+      "course_name": "ปรัชญาเศรษฐกิจพอเพียงเพื่อการพัฒนาที่ยั่งยืน",
+      "credits": "3",
+      "query_id": 155
+    },
+    {
+      "question": "วิชา 01-110-012 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "617"
+      ],
+      "relevant_chunk_keys": [
+        "89443d7811d34a7a"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-110-012",
+      "course_name": "ปรัชญาเศรษฐกิจพอเพียงเพื่อการพัฒนาที่ยั่งยืน",
+      "credits": "3",
+      "query_id": 156
+    },
+    {
+      "question": "วิชาคุณภาพชีวิตที่ดีของพลเมืองยุคใหม่รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "618",
+        "1516"
+      ],
+      "relevant_chunk_keys": [
+        "7f197742d6e9ca7e",
+        "7b6630e163913bb1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-017",
+      "course_name": "คุณภาพชีวิตที่ดีของพลเมืองยุคใหม่",
+      "credits": "3",
+      "query_id": 157
+    },
+    {
+      "question": "วิชา 01-110-017 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "618",
+        "1516"
+      ],
+      "relevant_chunk_keys": [
+        "7f197742d6e9ca7e",
+        "7b6630e163913bb1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-017",
+      "course_name": "คุณภาพชีวิตที่ดีของพลเมืองยุคใหม่",
+      "credits": "3",
+      "query_id": 158
+    },
+    {
+      "question": "วิชาชีวิตในสังคมพหุวัฒนธรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1516",
+        "1517"
+      ],
+      "relevant_chunk_keys": [
+        "7b6630e163913bb1",
+        "23453c5ab28ef8cc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-021",
+      "course_name": "ชีวิตในสังคมพหุวัฒนธรรม",
+      "credits": "3",
+      "query_id": 159
+    },
+    {
+      "question": "วิชา 01-110-021 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1516",
+        "1517"
+      ],
+      "relevant_chunk_keys": [
+        "7b6630e163913bb1",
+        "23453c5ab28ef8cc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-021",
+      "course_name": "ชีวิตในสังคมพหุวัฒนธรรม",
+      "credits": "3",
+      "query_id": 160
+    },
+    {
+      "question": "วิชาชีวิตที่พอเพียงกับภูมิปัญญาไทยรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1517"
+      ],
+      "relevant_chunk_keys": [
+        "23453c5ab28ef8cc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-024",
+      "course_name": "ชีวิตที่พอเพียงกับภูมิปัญญาไทย",
+      "credits": "3",
+      "query_id": 161
+    },
+    {
+      "question": "วิชา 01-110-024 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1517"
+      ],
+      "relevant_chunk_keys": [
+        "23453c5ab28ef8cc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-110-024",
+      "course_name": "ชีวิตที่พอเพียงกับภูมิปัญญาไทย",
+      "credits": "3",
+      "query_id": 162
+    },
+    {
+      "question": "วิชาปฏิบัติการสีเขียวสู่สังคมคาร์บอนต่ำรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "619"
+      ],
+      "relevant_chunk_keys": [
+        "0729b692246fb7cb"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-110-028",
+      "course_name": "ปฏิบัติการสีเขียวสู่สังคมคาร์บอนต่ำ",
+      "credits": "3",
+      "query_id": 163
+    },
+    {
+      "question": "วิชา 01-110-028 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "619"
+      ],
+      "relevant_chunk_keys": [
+        "0729b692246fb7cb"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-110-028",
+      "course_name": "ปฏิบัติการสีเขียวสู่สังคมคาร์บอนต่ำ",
+      "credits": "3",
+      "query_id": 164
+    },
+    {
+      "question": "วิชาอัตลักษณ์การเมืองกับพลเมืองยุคใหม่รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "620"
+      ],
+      "relevant_chunk_keys": [
+        "fb89a702516b19c6"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-110-029",
+      "course_name": "อัตลักษณ์การเมืองกับพลเมืองยุคใหม่",
+      "credits": "3",
+      "query_id": 165
+    },
+    {
+      "question": "วิชา 01-110-029 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "620"
+      ],
+      "relevant_chunk_keys": [
+        "fb89a702516b19c6"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-110-029",
+      "course_name": "อัตลักษณ์การเมืองกับพลเมืองยุคใหม่",
+      "credits": "3",
+      "query_id": 166
+    },
+    {
+      "question": "วิชาสารสนเทศและการเขียนรายงานทางวิชาการรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "624"
+      ],
+      "relevant_chunk_keys": [
+        "aa724651ede26996"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-210-017",
+      "course_name": "สารสนเทศและการเขียนรายงานทางวิชาการ",
+      "credits": "3",
+      "query_id": 167
+    },
+    {
+      "question": "วิชา 01-210-017 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "624"
+      ],
+      "relevant_chunk_keys": [
+        "aa724651ede26996"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-210-017",
+      "course_name": "สารสนเทศและการเขียนรายงานทางวิชาการ",
+      "credits": "3",
+      "query_id": 168
+    },
+    {
+      "question": "วิชาการพัฒนาบุคลิกภาพรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1518"
+      ],
+      "relevant_chunk_keys": [
+        "829c3d7d5ea87801"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-210-019",
+      "course_name": "การพัฒนาบุคลิกภาพ",
+      "credits": "3",
+      "query_id": 169
+    },
+    {
+      "question": "วิชา 01-210-019 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1518"
+      ],
+      "relevant_chunk_keys": [
+        "829c3d7d5ea87801"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-210-019",
+      "course_name": "การพัฒนาบุคลิกภาพ",
+      "credits": "3",
+      "query_id": 170
+    },
+    {
+      "question": "วิชาจิตวิทยาประยุกต์เพื่อการทำงานรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1518"
+      ],
+      "relevant_chunk_keys": [
+        "829c3d7d5ea87801"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-210-020",
+      "course_name": "จิตวิทยาประยุกต์เพื่อการทำงาน",
+      "credits": "3",
+      "query_id": 171
+    },
+    {
+      "question": "วิชา 01-210-020 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1518"
+      ],
+      "relevant_chunk_keys": [
+        "829c3d7d5ea87801"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-210-020",
+      "course_name": "จิตวิทยาประยุกต์เพื่อการทำงาน",
+      "credits": "3",
+      "query_id": 172
+    },
+    {
+      "question": "วิชาทักษะการเรียนรู้สู่ความสำเร็จรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "625",
+        "1518"
+      ],
+      "relevant_chunk_keys": [
+        "29953c8e55f66ba7",
+        "829c3d7d5ea87801"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-210-024",
+      "course_name": "ทักษะการเรียนรู้สู่ความสำเร็จ",
+      "credits": "3",
+      "query_id": 173
+    },
+    {
+      "question": "วิชา 01-210-024 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "625",
+        "1518"
+      ],
+      "relevant_chunk_keys": [
+        "29953c8e55f66ba7",
+        "829c3d7d5ea87801"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-210-024",
+      "course_name": "ทักษะการเรียนรู้สู่ความสำเร็จ",
+      "credits": "3",
+      "query_id": 174
+    },
+    {
+      "question": "วิชาบุคลิกภาพสู่ความสำเร็จรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "626"
+      ],
+      "relevant_chunk_keys": [
+        "ab4ea30e15ce7e00"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-210-033",
+      "course_name": "บุคลิกภาพสู่ความสำเร็จ",
+      "credits": "3",
+      "query_id": 175
+    },
+    {
+      "question": "วิชา 01-210-033 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "626"
+      ],
+      "relevant_chunk_keys": [
+        "ab4ea30e15ce7e00"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-210-033",
+      "course_name": "บุคลิกภาพสู่ความสำเร็จ",
+      "credits": "3",
+      "query_id": 176
+    },
+    {
+      "question": "วิชาจิตวิทยาเพื่อพัฒนาประสิทธิภาพการทำงานรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "627",
+        "738"
+      ],
+      "relevant_chunk_keys": [
+        "d8d200f4bf97bb60",
+        "283090c993953e03"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-210-034",
+      "course_name": "จิตวิทยาเพื่อพัฒนาประสิทธิภาพการทำงาน",
+      "credits": "3",
+      "query_id": 177
+    },
+    {
+      "question": "วิชา 01-210-034 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "627",
+        "738"
+      ],
+      "relevant_chunk_keys": [
+        "d8d200f4bf97bb60",
+        "283090c993953e03"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-210-034",
+      "course_name": "จิตวิทยาเพื่อพัฒนาประสิทธิภาพการทำงาน",
+      "credits": "3",
+      "query_id": 178
+    },
+    {
+      "question": "วิชาสุนทรียภาพของภาษาไทยในบทเพลงและวรรณกรรมรังสรรค์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "653"
+      ],
+      "relevant_chunk_keys": [
+        "535c041f2b856042"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-310-007",
+      "course_name": "สุนทรียภาพของภาษาไทยในบทเพลงและวรรณกรรมรังสรรค์",
+      "credits": "3",
+      "query_id": 179
+    },
+    {
+      "question": "วิชา 01-310-007 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "653"
+      ],
+      "relevant_chunk_keys": [
+        "535c041f2b856042"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-310-007",
+      "course_name": "สุนทรียภาพของภาษาไทยในบทเพลงและวรรณกรรมรังสรรค์",
+      "credits": "3",
+      "query_id": 180
+    },
+    {
+      "question": "วิชาสุนทรียภาพของภาษาไทยในบทเพลงรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-310-018",
+      "course_name": "สุนทรียภาพของภาษาไทยในบทเพลง",
+      "credits": "3",
+      "query_id": 181
+    },
+    {
+      "question": "วิชา 01-310-018 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-310-018",
+      "course_name": "สุนทรียภาพของภาษาไทยในบทเพลง",
+      "credits": "3",
+      "query_id": 182
+    },
+    {
+      "question": "วิชาภาษาอังกฤษเพื่อการสื่อสารรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "645",
+        "1520"
+      ],
+      "relevant_chunk_keys": [
+        "cd8725fa088f8e9c",
+        "3cd114b6d335b601"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-001",
+      "course_name": "ภาษาอังกฤษเพื่อการสื่อสาร",
+      "credits": "3",
+      "query_id": 183
+    },
+    {
+      "question": "วิชา 01-320-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "645",
+        "1520"
+      ],
+      "relevant_chunk_keys": [
+        "cd8725fa088f8e9c",
+        "3cd114b6d335b601"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-001",
+      "course_name": "ภาษาอังกฤษเพื่อการสื่อสาร",
+      "credits": "3",
+      "query_id": 184
+    },
+    {
+      "question": "วิชาสนทนาภาษาอังกฤษรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "646",
+        "1520"
+      ],
+      "relevant_chunk_keys": [
+        "b33fe9eaae1158f8",
+        "3cd114b6d335b601"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-002",
+      "course_name": "สนทนาภาษาอังกฤษ",
+      "credits": "3",
+      "query_id": 185
+    },
+    {
+      "question": "วิชา 01-320-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "646",
+        "1520"
+      ],
+      "relevant_chunk_keys": [
+        "b33fe9eaae1158f8",
+        "3cd114b6d335b601"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-002",
+      "course_name": "สนทนาภาษาอังกฤษ",
+      "credits": "3",
+      "query_id": 186
+    },
+    {
+      "question": "วิชาการพัฒนาทักษะการอ่านภาษาอังกฤษรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "647"
+      ],
+      "relevant_chunk_keys": [
+        "3f7d3b962e462e72"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-003",
+      "course_name": "การพัฒนาทักษะการอ่านภาษาอังกฤษ",
+      "credits": "3",
+      "query_id": 187
+    },
+    {
+      "question": "วิชา 01-320-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "647"
+      ],
+      "relevant_chunk_keys": [
+        "3f7d3b962e462e72"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-003",
+      "course_name": "การพัฒนาทักษะการอ่านภาษาอังกฤษ",
+      "credits": "3",
+      "query_id": 188
+    },
+    {
+      "question": "วิชาการพัฒนาทักษะการเขียนภาษาอังกฤษรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "648"
+      ],
+      "relevant_chunk_keys": [
+        "e7ef4eb20d1977c3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-004",
+      "course_name": "การพัฒนาทักษะการเขียนภาษาอังกฤษ",
+      "credits": "3",
+      "query_id": 189
+    },
+    {
+      "question": "วิชา 01-320-004 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "648"
+      ],
+      "relevant_chunk_keys": [
+        "e7ef4eb20d1977c3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-004",
+      "course_name": "การพัฒนาทักษะการเขียนภาษาอังกฤษ",
+      "credits": "3",
+      "query_id": 190
+    },
+    {
+      "question": "วิชาภาษาอังกฤษเพื่อการนำเสนอนวัตกรรมและธุรกิจรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "649"
+      ],
+      "relevant_chunk_keys": [
+        "78202fb3d91c186c"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-005",
+      "course_name": "ภาษาอังกฤษเพื่อการนำเสนอนวัตกรรมและธุรกิจ",
+      "credits": "3",
+      "query_id": 191
+    },
+    {
+      "question": "วิชา 01-320-005 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "649"
+      ],
+      "relevant_chunk_keys": [
+        "78202fb3d91c186c"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-005",
+      "course_name": "ภาษาอังกฤษเพื่อการนำเสนอนวัตกรรมและธุรกิจ",
+      "credits": "3",
+      "query_id": 192
+    },
+    {
+      "question": "วิชาภาษาอังกฤษเพื่อการสอบแบบทดสอบมาตรฐานรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "786"
+      ],
+      "relevant_chunk_keys": [
+        "7fb4383e3b6182f4"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-006",
+      "course_name": "ภาษาอังกฤษเพื่อการสอบแบบทดสอบมาตรฐาน",
+      "credits": "3",
+      "query_id": 193
+    },
+    {
+      "question": "วิชา 01-320-006 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "786"
+      ],
+      "relevant_chunk_keys": [
+        "7fb4383e3b6182f4"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-006",
+      "course_name": "ภาษาอังกฤษเพื่อการสอบแบบทดสอบมาตรฐาน",
+      "credits": "3",
+      "query_id": 194
+    },
+    {
+      "question": "วิชาภาษาอังกฤษเพื่อการสมัครงานรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "651",
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "2487dcafe429971b",
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-007",
+      "course_name": "ภาษาอังกฤษเพื่อการสมัครงาน",
+      "credits": "3",
+      "query_id": 195
+    },
+    {
+      "question": "วิชา 01-320-007 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "651",
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "2487dcafe429971b",
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-007",
+      "course_name": "ภาษาอังกฤษเพื่อการสมัครงาน",
+      "credits": "3",
+      "query_id": 196
+    },
+    {
+      "question": "วิชาภาษาอังกฤษเพื่องานวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "652"
+      ],
+      "relevant_chunk_keys": [
+        "422cc697ab3e93bf"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-014",
+      "course_name": "ภาษาอังกฤษเพื่องานวิศวกรรม",
+      "credits": "3",
+      "query_id": 197
+    },
+    {
+      "question": "วิชา 01-320-014 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "652"
+      ],
+      "relevant_chunk_keys": [
+        "422cc697ab3e93bf"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-320-014",
+      "course_name": "ภาษาอังกฤษเพื่องานวิศวกรรม",
+      "credits": "3",
+      "query_id": 198
+    },
+    {
+      "question": "วิชาภาษาอังกฤษเพื่อการเขียนทางวิชาการรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-017",
+      "course_name": "ภาษาอังกฤษเพื่อการเขียนทางวิชาการ",
+      "credits": "3",
+      "query_id": 199
+    },
+    {
+      "question": "วิชา 01-320-017 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-017",
+      "course_name": "ภาษาอังกฤษเพื่อการเขียนทางวิชาการ",
+      "credits": "3",
+      "query_id": 200
+    },
+    {
+      "question": "วิชาการพัฒนาทักษะการเขียนรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-018",
+      "course_name": "การพัฒนาทักษะการเขียน",
+      "credits": "3",
+      "query_id": 201
+    },
+    {
+      "question": "วิชา 01-320-018 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-320-018",
+      "course_name": "การพัฒนาทักษะการเขียน",
+      "credits": "3",
+      "query_id": 202
+    },
+    {
+      "question": "วิชาภาษาจีนพื้นฐานรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "654",
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "ac2a0c3d2b177232",
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-330-001",
+      "course_name": "ภาษาจีนพื้นฐาน",
+      "credits": "3",
+      "query_id": 203
+    },
+    {
+      "question": "วิชา 01-330-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "654",
+        "1522"
+      ],
+      "relevant_chunk_keys": [
+        "ac2a0c3d2b177232",
+        "c4d2f1685f4e2e33"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-330-001",
+      "course_name": "ภาษาจีนพื้นฐาน",
+      "credits": "3",
+      "query_id": 204
+    },
+    {
+      "question": "วิชาสนทนาภาษาจีนเบื้องต้นรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "655",
+        "796",
+        "1522",
+        "1523"
+      ],
+      "relevant_chunk_keys": [
+        "c9c872429ebac4ef",
+        "13cb5b0b6b040b17",
+        "c4d2f1685f4e2e33",
+        "863fc9748d0372cd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-330-002",
+      "course_name": "สนทนาภาษาจีนเบื้องต้น",
+      "credits": "3",
+      "query_id": 205
+    },
+    {
+      "question": "วิชา 01-330-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "655",
+        "796",
+        "1522",
+        "1523"
+      ],
+      "relevant_chunk_keys": [
+        "c9c872429ebac4ef",
+        "13cb5b0b6b040b17",
+        "c4d2f1685f4e2e33",
+        "863fc9748d0372cd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-330-002",
+      "course_name": "สนทนาภาษาจีนเบื้องต้น",
+      "credits": "3",
+      "query_id": 206
+    },
+    {
+      "question": "วิชาภาษาญี่ปุ่นพื้นฐานรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "656",
+        "1523"
+      ],
+      "relevant_chunk_keys": [
+        "7aff90cd1d58a9fe",
+        "863fc9748d0372cd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-330-006",
+      "course_name": "ภาษาญี่ปุ่นพื้นฐาน",
+      "credits": "3",
+      "query_id": 207
+    },
+    {
+      "question": "วิชา 01-330-006 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "656",
+        "1523"
+      ],
+      "relevant_chunk_keys": [
+        "7aff90cd1d58a9fe",
+        "863fc9748d0372cd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-330-006",
+      "course_name": "ภาษาญี่ปุ่นพื้นฐาน",
+      "credits": "3",
+      "query_id": 208
+    },
+    {
+      "question": "วิชาสนทนาภาษาญี่ปุ่นเบื้องต้นรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "657",
+        "1523"
+      ],
+      "relevant_chunk_keys": [
+        "7941a79276222810",
+        "863fc9748d0372cd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-330-007",
+      "course_name": "สนทนาภาษาญี่ปุ่นเบื้องต้น",
+      "credits": "3",
+      "query_id": 209
+    },
+    {
+      "question": "วิชา 01-330-007 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "657",
+        "1523"
+      ],
+      "relevant_chunk_keys": [
+        "7941a79276222810",
+        "863fc9748d0372cd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-330-007",
+      "course_name": "สนทนาภาษาญี่ปุ่นเบื้องต้น",
+      "credits": "3",
+      "query_id": 210
+    },
+    {
+      "question": "วิชานันทนาการรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "629",
+        "1519"
+      ],
+      "relevant_chunk_keys": [
+        "6a3ab7a69d3d5cae",
+        "18512d71a0afa793"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-610-003",
+      "course_name": "นันทนาการ",
+      "credits": "1",
+      "query_id": 211
+    },
+    {
+      "question": "วิชา 01-610-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "629",
+        "1519"
+      ],
+      "relevant_chunk_keys": [
+        "6a3ab7a69d3d5cae",
+        "18512d71a0afa793"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-610-003",
+      "course_name": "นันทนาการ",
+      "credits": "1",
+      "query_id": 212
+    },
+    {
+      "question": "วิชานันทนาการเพื่อการพัฒนาคุณภาพชีวิตรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "743"
+      ],
+      "relevant_chunk_keys": [
+        "35200be01043ecbb"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-610-010",
+      "course_name": "นันทนาการเพื่อการพัฒนาคุณภาพชีวิต",
+      "credits": "3",
+      "query_id": 213
+    },
+    {
+      "question": "วิชา 01-610-010 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "743"
+      ],
+      "relevant_chunk_keys": [
+        "35200be01043ecbb"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-610-010",
+      "course_name": "นันทนาการเพื่อการพัฒนาคุณภาพชีวิต",
+      "credits": "3",
+      "query_id": 214
+    },
+    {
+      "question": "วิชาสุขภาพเพื่อการดำรงชีวิตสำหรับคนรุ่นใหม่รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "631"
+      ],
+      "relevant_chunk_keys": [
+        "77dc52a0e3d0a31d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-610-012",
+      "course_name": "สุขภาพเพื่อการดำรงชีวิตสำหรับคนรุ่นใหม่",
+      "credits": "3",
+      "query_id": 215
+    },
+    {
+      "question": "วิชา 01-610-012 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "631"
+      ],
+      "relevant_chunk_keys": [
+        "77dc52a0e3d0a31d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "01-610-012",
+      "course_name": "สุขภาพเพื่อการดำรงชีวิตสำหรับคนรุ่นใหม่",
+      "credits": "3",
+      "query_id": 216
+    },
+    {
+      "question": "วิชาทักษะกีฬาเพื่อสุขภาพรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "632",
+        "747",
+        "1519"
+      ],
+      "relevant_chunk_keys": [
+        "e2c4a50c04bfd0ee",
+        "6ff01e9c9d86be56",
+        "18512d71a0afa793"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-610-014",
+      "course_name": "ทักษะกีฬาเพื่อสุขภาพ",
+      "credits": "1",
+      "query_id": 217
+    },
+    {
+      "question": "วิชา 01-610-014 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "632",
+        "747",
+        "1519"
+      ],
+      "relevant_chunk_keys": [
+        "e2c4a50c04bfd0ee",
+        "6ff01e9c9d86be56",
+        "18512d71a0afa793"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "01-610-014",
+      "course_name": "ทักษะกีฬาเพื่อสุขภาพ",
+      "credits": "1",
+      "query_id": 218
+    },
+    {
+      "question": "วิชาการจัดประสบการณ์ต้นหลักสูตรรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1617"
+      ],
+      "relevant_chunk_keys": [
+        "1424c6211999844d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-102",
+      "course_name": "การจัดประสบการณ์ต้นหลักสูตร",
+      "credits": "2",
+      "query_id": 219
+    },
+    {
+      "question": "วิชา 04-000-102 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1617"
+      ],
+      "relevant_chunk_keys": [
+        "1424c6211999844d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-102",
+      "course_name": "การจัดประสบการณ์ต้นหลักสูตร",
+      "credits": "2",
+      "query_id": 220
+    },
+    {
+      "question": "วิชาภาษาอังกฤษสำหรับงานวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1521"
+      ],
+      "relevant_chunk_keys": [
+        "f4f59c628f1800cc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-201",
+      "course_name": "ภาษาอังกฤษสำหรับงานวิศวกรรม",
+      "credits": "3",
+      "query_id": 221
+    },
+    {
+      "question": "วิชา 04-000-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1521"
+      ],
+      "relevant_chunk_keys": [
+        "f4f59c628f1800cc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-201",
+      "course_name": "ภาษาอังกฤษสำหรับงานวิศวกรรม",
+      "credits": "3",
+      "query_id": 222
+    },
+    {
+      "question": "วิชาปฏิบัติงานภาคสนามรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1617"
+      ],
+      "relevant_chunk_keys": [
+        "1424c6211999844d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-203",
+      "course_name": "ปฏิบัติงานภาคสนาม",
+      "credits": "2",
+      "query_id": 223
+    },
+    {
+      "question": "วิชา 04-000-203 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1617"
+      ],
+      "relevant_chunk_keys": [
+        "1424c6211999844d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-203",
+      "course_name": "ปฏิบัติงานภาคสนาม",
+      "credits": "2",
+      "query_id": 224
+    },
+    {
+      "question": "วิชาการเตรียมความพร้อมฝึกประสบการณ์วิชาชีพรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "690",
+        "985",
+        "1613"
+      ],
+      "relevant_chunk_keys": [
+        "d215d967aeb6346b",
+        "c59da3a89ddda76e",
+        "80072c5947e0d97f"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-301",
+      "course_name": "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ",
+      "credits": "1",
+      "query_id": 225
+    },
+    {
+      "question": "วิชา 04-000-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "690",
+        "985",
+        "1613"
+      ],
+      "relevant_chunk_keys": [
+        "d215d967aeb6346b",
+        "c59da3a89ddda76e",
+        "80072c5947e0d97f"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-301",
+      "course_name": "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ",
+      "credits": "1",
+      "query_id": 226
+    },
+    {
+      "question": "วิชาฝึกงานรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "691",
+        "993",
+        "1615"
+      ],
+      "relevant_chunk_keys": [
+        "fac4a6fc02a1a5c7",
+        "1bae49dacf654cc1",
+        "7b1f1d740aa9d9e8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-302",
+      "course_name": "ฝึกงาน",
+      "credits": "3",
+      "query_id": 227
+    },
+    {
+      "question": "วิชา 04-000-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "691",
+        "993",
+        "1615"
+      ],
+      "relevant_chunk_keys": [
+        "fac4a6fc02a1a5c7",
+        "1bae49dacf654cc1",
+        "7b1f1d740aa9d9e8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-302",
+      "course_name": "ฝึกงาน",
+      "credits": "3",
+      "query_id": 228
+    },
+    {
+      "question": "วิชาฝึกงานต่างประเทศรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "691",
+        "995",
+        "1615"
+      ],
+      "relevant_chunk_keys": [
+        "fac4a6fc02a1a5c7",
+        "d729fd8165e3a188",
+        "7b1f1d740aa9d9e8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-303",
+      "course_name": "ฝึกงานต่างประเทศ",
+      "credits": "3",
+      "query_id": 229
+    },
+    {
+      "question": "วิชา 04-000-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "691",
+        "995",
+        "1615"
+      ],
+      "relevant_chunk_keys": [
+        "fac4a6fc02a1a5c7",
+        "d729fd8165e3a188",
+        "7b1f1d740aa9d9e8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-303",
+      "course_name": "ฝึกงานต่างประเทศ",
+      "credits": "3",
+      "query_id": 230
+    },
+    {
+      "question": "วิชาการติดตามพฤติกรรมการทำงานรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1617"
+      ],
+      "relevant_chunk_keys": [
+        "1424c6211999844d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-304",
+      "course_name": "การติดตามพฤติกรรมการทำงาน",
+      "credits": "2",
+      "query_id": 231
+    },
+    {
+      "question": "วิชา 04-000-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1617"
+      ],
+      "relevant_chunk_keys": [
+        "1424c6211999844d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-304",
+      "course_name": "การติดตามพฤติกรรมการทำงาน",
+      "credits": "2",
+      "query_id": 232
+    },
+    {
+      "question": "วิชาการฝึกเฉพาะตำแหน่งรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1617"
+      ],
+      "relevant_chunk_keys": [
+        "1424c6211999844d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-305",
+      "course_name": "การฝึกเฉพาะตำแหน่ง",
+      "credits": "3",
+      "query_id": 233
+    },
+    {
+      "question": "วิชา 04-000-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1617"
+      ],
+      "relevant_chunk_keys": [
+        "1424c6211999844d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-305",
+      "course_name": "การฝึกเฉพาะตำแหน่ง",
+      "credits": "3",
+      "query_id": 234
+    },
+    {
+      "question": "วิชาสหกิจศึกษารหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "690",
+        "987",
+        "1614"
+      ],
+      "relevant_chunk_keys": [
+        "d215d967aeb6346b",
+        "09697e4e66d9c233",
+        "508cd6f1f3430c26"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-401",
+      "course_name": "สหกิจศึกษา",
+      "credits": "6",
+      "query_id": 235
+    },
+    {
+      "question": "วิชา 04-000-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "690",
+        "987",
+        "1614"
+      ],
+      "relevant_chunk_keys": [
+        "d215d967aeb6346b",
+        "09697e4e66d9c233",
+        "508cd6f1f3430c26"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-401",
+      "course_name": "สหกิจศึกษา",
+      "credits": "6",
+      "query_id": 236
+    },
+    {
+      "question": "วิชาปัญหาพิเศษจากสถานประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "997",
+        "1615"
+      ],
+      "relevant_chunk_keys": [
+        "bedfe27f0d590c33",
+        "7b1f1d740aa9d9e8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-402",
+      "course_name": "ปัญหาพิเศษจากสถานประกอบการ",
+      "credits": "3",
+      "query_id": 237
+    },
+    {
+      "question": "วิชา 04-000-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "997",
+        "1615"
+      ],
+      "relevant_chunk_keys": [
+        "bedfe27f0d590c33",
+        "7b1f1d740aa9d9e8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-402",
+      "course_name": "ปัญหาพิเศษจากสถานประกอบการ",
+      "credits": "3",
+      "query_id": 238
+    },
+    {
+      "question": "วิชาสหกิจศึกษาต่างประเทศรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "690",
+        "990",
+        "1614"
+      ],
+      "relevant_chunk_keys": [
+        "d215d967aeb6346b",
+        "257e7a5e2d7be16c",
+        "508cd6f1f3430c26"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-403",
+      "course_name": "สหกิจศึกษาต่างประเทศ",
+      "credits": "6",
+      "query_id": 239
+    },
+    {
+      "question": "วิชา 04-000-403 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "690",
+        "990",
+        "1614"
+      ],
+      "relevant_chunk_keys": [
+        "d215d967aeb6346b",
+        "257e7a5e2d7be16c",
+        "508cd6f1f3430c26"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-403",
+      "course_name": "สหกิจศึกษาต่างประเทศ",
+      "credits": "6",
+      "query_id": 240
+    },
+    {
+      "question": "วิชาการฝึกปฏิบัติจริงภายหลังสำเร็จการเรียนทฤษฎีรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1616"
+      ],
+      "relevant_chunk_keys": [
+        "d91507a19df336b5"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-404",
+      "course_name": "การฝึกปฏิบัติจริงภายหลังสำเร็จการเรียนทฤษฎี",
+      "credits": "6",
+      "query_id": 241
+    },
+    {
+      "question": "วิชา 04-000-404 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1616"
+      ],
+      "relevant_chunk_keys": [
+        "d91507a19df336b5"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-000-404",
+      "course_name": "การฝึกปฏิบัติจริงภายหลังสำเร็จการเรียนทฤษฎี",
+      "credits": "6",
+      "query_id": 242
+    },
+    {
+      "question": "วิชากลศาสตร์วิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "667",
+        "831"
+      ],
+      "relevant_chunk_keys": [
+        "ce551861a64e9a80",
+        "6af08277d29e4002"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-313-101",
+      "course_name": "กลศาสตร์วิศวกรรม",
+      "credits": "3",
+      "query_id": 243
+    },
+    {
+      "question": "วิชา 04-313-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "667",
+        "831"
+      ],
+      "relevant_chunk_keys": [
+        "ce551861a64e9a80",
+        "6af08277d29e4002"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-313-101",
+      "course_name": "กลศาสตร์วิศวกรรม",
+      "credits": "3",
+      "query_id": 244
+    },
+    {
+      "question": "วิชาการฝึกพื้นฐานทางวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "667"
+      ],
+      "relevant_chunk_keys": [
+        "ce551861a64e9a80"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-411-101",
+      "course_name": "การฝึกพื้นฐานทางวิศวกรรม",
+      "credits": "3",
+      "query_id": 245
+    },
+    {
+      "question": "วิชา 04-411-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "667"
+      ],
+      "relevant_chunk_keys": [
+        "ce551861a64e9a80"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-411-101",
+      "course_name": "การฝึกพื้นฐานทางวิศวกรรม",
+      "credits": "3",
+      "query_id": 246
+    },
+    {
+      "question": "วิชาเขียนแบบวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "667",
+        "835"
+      ],
+      "relevant_chunk_keys": [
+        "ce551861a64e9a80",
+        "5779a8f7fddbcc83"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-411-102",
+      "course_name": "เขียนแบบวิศวกรรม",
+      "credits": "3",
+      "query_id": 247
+    },
+    {
+      "question": "วิชา 04-411-102 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "667",
+        "835"
+      ],
+      "relevant_chunk_keys": [
+        "ce551861a64e9a80",
+        "5779a8f7fddbcc83"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-411-102",
+      "course_name": "เขียนแบบวิศวกรรม",
+      "credits": "3",
+      "query_id": 248
+    },
+    {
+      "question": "วิชาปฏิบัติการควบคุมเวอร์ชันรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "668",
+        "837"
+      ],
+      "relevant_chunk_keys": [
+        "04dcda314559cedc",
+        "6dd6c81892d9b82e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-201",
+      "course_name": "ปฏิบัติการควบคุมเวอร์ชัน",
+      "credits": "1",
+      "query_id": 249
+    },
+    {
+      "question": "วิชา 04-620-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "668",
+        "837"
+      ],
+      "relevant_chunk_keys": [
+        "04dcda314559cedc",
+        "6dd6c81892d9b82e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-201",
+      "course_name": "ปฏิบัติการควบคุมเวอร์ชัน",
+      "credits": "1",
+      "query_id": 250
+    },
+    {
+      "question": "วิชาปฏิบัติการโปรแกรมภาษาไพธอนรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "668"
+      ],
+      "relevant_chunk_keys": [
+        "04dcda314559cedc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-202",
+      "course_name": "ปฏิบัติการโปรแกรมภาษาไพธอน",
+      "credits": "1",
+      "query_id": 251
+    },
+    {
+      "question": "วิชา 04-620-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "668"
+      ],
+      "relevant_chunk_keys": [
+        "04dcda314559cedc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-202",
+      "course_name": "ปฏิบัติการโปรแกรมภาษาไพธอน",
+      "credits": "1",
+      "query_id": 252
+    },
+    {
+      "question": "วิชาสัมมนาทางวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "668",
+        "841"
+      ],
+      "relevant_chunk_keys": [
+        "04dcda314559cedc",
+        "223dd7354af134c8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-301",
+      "course_name": "สัมมนาทางวิศวกรรมคอมพิวเตอร์",
+      "credits": "1",
+      "query_id": 253
+    },
+    {
+      "question": "วิชา 04-620-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "668",
+        "841"
+      ],
+      "relevant_chunk_keys": [
+        "04dcda314559cedc",
+        "223dd7354af134c8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-301",
+      "course_name": "สัมมนาทางวิศวกรรมคอมพิวเตอร์",
+      "credits": "1",
+      "query_id": 254
+    },
+    {
+      "question": "วิชาปฏิบัติการบูรณาการระบบคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "678"
+      ],
+      "relevant_chunk_keys": [
+        "e4fa697f1da9632a"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-302",
+      "course_name": "ปฏิบัติการบูรณาการระบบคอมพิวเตอร์",
+      "credits": "2",
+      "query_id": 255
+    },
+    {
+      "question": "วิชา 04-620-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "678"
+      ],
+      "relevant_chunk_keys": [
+        "e4fa697f1da9632a"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-302",
+      "course_name": "ปฏิบัติการบูรณาการระบบคอมพิวเตอร์",
+      "credits": "2",
+      "query_id": 256
+    },
+    {
+      "question": "วิชาการเตรียมโครงงานวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "678",
+        "901"
+      ],
+      "relevant_chunk_keys": [
+        "e4fa697f1da9632a",
+        "2bfba061f4adfa36"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-303",
+      "course_name": "การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์",
+      "credits": "1",
+      "query_id": 257
+    },
+    {
+      "question": "วิชา 04-620-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "678",
+        "901"
+      ],
+      "relevant_chunk_keys": [
+        "e4fa697f1da9632a",
+        "2bfba061f4adfa36"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-303",
+      "course_name": "การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์",
+      "credits": "1",
+      "query_id": 258
+    },
+    {
+      "question": "วิชาโครงงานวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "678",
+        "903"
+      ],
+      "relevant_chunk_keys": [
+        "e4fa697f1da9632a",
+        "e183bc6f23a99d97"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-401",
+      "course_name": "โครงงานวิศวกรรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 259
+    },
+    {
+      "question": "วิชา 04-620-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "678",
+        "903"
+      ],
+      "relevant_chunk_keys": [
+        "e4fa697f1da9632a",
+        "e183bc6f23a99d97"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-620-401",
+      "course_name": "โครงงานวิศวกรรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 260
+    },
+    {
+      "question": "วิชาการเขียนโปรแกรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "843"
+      ],
+      "relevant_chunk_keys": [
+        "2bb59b36fd87e26a"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-101",
+      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 261
+    },
+    {
+      "question": "วิชา 04-621-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "843"
+      ],
+      "relevant_chunk_keys": [
+        "2bb59b36fd87e26a"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-101",
+      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 262
+    },
+    {
+      "question": "วิชาวงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "670"
+      ],
+      "relevant_chunk_keys": [
+        "a469f2fe7fa50c61"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-201",
+      "course_name": "วงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 263
+    },
+    {
+      "question": "วิชา 04-621-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "670"
+      ],
+      "relevant_chunk_keys": [
+        "a469f2fe7fa50c61"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-201",
+      "course_name": "วงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 264
+    },
+    {
+      "question": "วิชาวงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "848"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "45435cd42c0550c1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-202",
+      "course_name": "วงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 265
+    },
+    {
+      "question": "วิชา 04-621-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "848"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "45435cd42c0550c1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-202",
+      "course_name": "วงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 266
+    },
+    {
+      "question": "วิชาการออกแบบวงจรดิจิทัลและตรรกะรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "850"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "7c4285650e1278a5"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-203",
+      "course_name": "การออกแบบวงจรดิจิทัลและตรรกะ",
+      "credits": "3",
+      "query_id": 267
+    },
+    {
+      "question": "วิชา 04-621-203 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "850"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "7c4285650e1278a5"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-203",
+      "course_name": "การออกแบบวงจรดิจิทัลและตรรกะ",
+      "credits": "3",
+      "query_id": 268
+    },
+    {
+      "question": "วิชาไมโครคอนโทรลเลอร์และการเชื่อมต่อรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "860"
+      ],
+      "relevant_chunk_keys": [
+        "35f39f44f0f96f84"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-204",
+      "course_name": "ไมโครคอนโทรลเลอร์และการเชื่อมต่อ",
+      "credits": "3",
+      "query_id": 269
+    },
+    {
+      "question": "วิชา 04-621-204 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "860"
+      ],
+      "relevant_chunk_keys": [
+        "35f39f44f0f96f84"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-204",
+      "course_name": "ไมโครคอนโทรลเลอร์และการเชื่อมต่อ",
+      "credits": "3",
+      "query_id": 270
+    },
+    {
+      "question": "วิชาองค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "673",
+        "862"
+      ],
+      "relevant_chunk_keys": [
+        "e2f76ada390bfa91",
+        "ad00b0edf04bf502"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-301",
+      "course_name": "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 271
+    },
+    {
+      "question": "วิชา 04-621-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "673",
+        "862"
+      ],
+      "relevant_chunk_keys": [
+        "e2f76ada390bfa91",
+        "ad00b0edf04bf502"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-301",
+      "course_name": "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 272
+    },
+    {
+      "question": "วิชาอินเตอร์เน็ตของสรรพสิ่งรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "673"
+      ],
+      "relevant_chunk_keys": [
+        "e2f76ada390bfa91"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-302",
+      "course_name": "อินเตอร์เน็ตของสรรพสิ่ง",
+      "credits": "3",
+      "query_id": 273
+    },
+    {
+      "question": "วิชา 04-621-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "673"
+      ],
+      "relevant_chunk_keys": [
+        "e2f76ada390bfa91"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-302",
+      "course_name": "อินเตอร์เน็ตของสรรพสิ่ง",
+      "credits": "3",
+      "query_id": 274
+    },
+    {
+      "question": "วิชาระบบปฏิบัติการรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "674"
+      ],
+      "relevant_chunk_keys": [
+        "6c154235e8e296da"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-303",
+      "course_name": "ระบบปฏิบัติการ",
+      "credits": "3",
+      "query_id": 275
+    },
+    {
+      "question": "วิชา 04-621-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "674"
+      ],
+      "relevant_chunk_keys": [
+        "6c154235e8e296da"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-303",
+      "course_name": "ระบบปฏิบัติการ",
+      "credits": "3",
+      "query_id": 276
+    },
+    {
+      "question": "วิชาเซ็นเซอร์และตัวขับเคลื่อนรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "678",
+        "905"
+      ],
+      "relevant_chunk_keys": [
+        "e4fa697f1da9632a",
+        "251177475de8a624"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-304",
+      "course_name": "เซ็นเซอร์และตัวขับเคลื่อน",
+      "credits": "3",
+      "query_id": 277
+    },
+    {
+      "question": "วิชา 04-621-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "678",
+        "905"
+      ],
+      "relevant_chunk_keys": [
+        "e4fa697f1da9632a",
+        "251177475de8a624"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-304",
+      "course_name": "เซ็นเซอร์และตัวขับเคลื่อน",
+      "credits": "3",
+      "query_id": 278
+    },
+    {
+      "question": "วิชาการออกแบบระบบดิจิทัลและการทวนสอบรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "679",
+        "907"
+      ],
+      "relevant_chunk_keys": [
+        "6a9edbdc2a2590e5",
+        "88b0c830ef07bd75"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-305",
+      "course_name": "การออกแบบระบบดิจิทัลและการทวนสอบ",
+      "credits": "3",
+      "query_id": 279
+    },
+    {
+      "question": "วิชา 04-621-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "679",
+        "907"
+      ],
+      "relevant_chunk_keys": [
+        "6a9edbdc2a2590e5",
+        "88b0c830ef07bd75"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-305",
+      "course_name": "การออกแบบระบบดิจิทัลและการทวนสอบ",
+      "credits": "3",
+      "query_id": 280
+    },
+    {
+      "question": "วิชาสถาปัตยกรรมคอมพิวเตอร์ขั้นสูงรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "910"
+      ],
+      "relevant_chunk_keys": [
+        "e5cc93fc00142507"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-306",
+      "course_name": "สถาปัตยกรรมคอมพิวเตอร์ขั้นสูง",
+      "credits": "3",
+      "query_id": 281
+    },
+    {
+      "question": "วิชา 04-621-306 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "910"
+      ],
+      "relevant_chunk_keys": [
+        "e5cc93fc00142507"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-306",
+      "course_name": "สถาปัตยกรรมคอมพิวเตอร์ขั้นสูง",
+      "credits": "3",
+      "query_id": 282
+    },
+    {
+      "question": "วิชาระบบสมองกลฝังตัวรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "680",
+        "913"
+      ],
+      "relevant_chunk_keys": [
+        "4ff9913986fc9d02",
+        "64390891ee906bfc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-307",
+      "course_name": "ระบบสมองกลฝังตัว",
+      "credits": "3",
+      "query_id": 283
+    },
+    {
+      "question": "วิชา 04-621-307 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "680",
+        "913"
+      ],
+      "relevant_chunk_keys": [
+        "4ff9913986fc9d02",
+        "64390891ee906bfc"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-307",
+      "course_name": "ระบบสมองกลฝังตัว",
+      "credits": "3",
+      "query_id": 284
+    },
+    {
+      "question": "วิชาระบบปฏิบัติการแบบทันกาลรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "680",
+        "915"
+      ],
+      "relevant_chunk_keys": [
+        "4ff9913986fc9d02",
+        "b50d3d997d963111"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-401",
+      "course_name": "ระบบปฏิบัติการแบบทันกาล",
+      "credits": "3",
+      "query_id": 285
+    },
+    {
+      "question": "วิชา 04-621-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "680",
+        "915"
+      ],
+      "relevant_chunk_keys": [
+        "4ff9913986fc9d02",
+        "b50d3d997d963111"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-401",
+      "course_name": "ระบบปฏิบัติการแบบทันกาล",
+      "credits": "3",
+      "query_id": 286
+    },
+    {
+      "question": "วิชาอินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "680",
+        "917"
+      ],
+      "relevant_chunk_keys": [
+        "4ff9913986fc9d02",
+        "eff0827680ddbf1b"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-402",
+      "course_name": "อินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรม",
+      "credits": "3",
+      "query_id": 287
+    },
+    {
+      "question": "วิชา 04-621-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "680",
+        "917"
+      ],
+      "relevant_chunk_keys": [
+        "4ff9913986fc9d02",
+        "eff0827680ddbf1b"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-402",
+      "course_name": "อินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรม",
+      "credits": "3",
+      "query_id": 288
+    },
+    {
+      "question": "วิชาการออกแบบวงจรรวมแอนะล็อกรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "680",
+        "919"
+      ],
+      "relevant_chunk_keys": [
+        "4ff9913986fc9d02",
+        "d6e6ec42f1ebc642"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-403",
+      "course_name": "การออกแบบวงจรรวมแอนะล็อก",
+      "credits": "3",
+      "query_id": 289
+    },
+    {
+      "question": "วิชา 04-621-403 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "680",
+        "919"
+      ],
+      "relevant_chunk_keys": [
+        "4ff9913986fc9d02",
+        "d6e6ec42f1ebc642"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-403",
+      "course_name": "การออกแบบวงจรรวมแอนะล็อก",
+      "credits": "3",
+      "query_id": 290
+    },
+    {
+      "question": "วิชาการออกแบบวงจรรวมดิจิทัลรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "923"
+      ],
+      "relevant_chunk_keys": [
+        "0ee8d2820ebd4ea1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-404",
+      "course_name": "การออกแบบวงจรรวมดิจิทัล",
+      "credits": "3",
+      "query_id": 291
+    },
+    {
+      "question": "วิชา 04-621-404 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "923"
+      ],
+      "relevant_chunk_keys": [
+        "0ee8d2820ebd4ea1"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-404",
+      "course_name": "การออกแบบวงจรรวมดิจิทัล",
+      "credits": "3",
+      "query_id": 292
+    },
+    {
+      "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "681",
+        "926"
+      ],
+      "relevant_chunk_keys": [
+        "a7e0da8d4688eaaa",
+        "cc6ea4ac9133f7fd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-405",
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์",
+      "credits": "3",
+      "query_id": 293
+    },
+    {
+      "question": "วิชา 04-621-405 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "681",
+        "926"
+      ],
+      "relevant_chunk_keys": [
+        "a7e0da8d4688eaaa",
+        "cc6ea4ac9133f7fd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-405",
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์",
+      "credits": "3",
+      "query_id": 294
+    },
+    {
+      "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ฮาร์ดแวร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "681",
+        "928"
+      ],
+      "relevant_chunk_keys": [
+        "a7e0da8d4688eaaa",
+        "bf671fb4fab1cdb8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-406",
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ฮาร์ดแวร์",
+      "credits": "3",
+      "query_id": 295
+    },
+    {
+      "question": "วิชา 04-621-406 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "681",
+        "928"
+      ],
+      "relevant_chunk_keys": [
+        "a7e0da8d4688eaaa",
+        "bf671fb4fab1cdb8"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-621-406",
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ฮาร์ดแวร์",
+      "credits": "3",
+      "query_id": 296
+    },
+    {
+      "question": "วิชาโครงสร้างข้อมูลและอัลกอริทึมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "674",
+        "870"
+      ],
+      "relevant_chunk_keys": [
+        "6c154235e8e296da",
+        "5ca8eb4b525976e7"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-201",
+      "course_name": "โครงสร้างข้อมูลและอัลกอริทึม",
+      "credits": "3",
+      "query_id": 297
+    },
+    {
+      "question": "วิชา 04-622-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "674",
+        "870"
+      ],
+      "relevant_chunk_keys": [
+        "6c154235e8e296da",
+        "5ca8eb4b525976e7"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-201",
+      "course_name": "โครงสร้างข้อมูลและอัลกอริทึม",
+      "credits": "3",
+      "query_id": 298
+    },
+    {
+      "question": "วิชาระบบฐานข้อมูลรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675",
+        "873"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76",
+        "41a6f867ef5180cb"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-202",
+      "course_name": "ระบบฐานข้อมูล",
+      "credits": "3",
+      "query_id": 299
+    },
+    {
+      "question": "วิชา 04-622-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675",
+        "873"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76",
+        "41a6f867ef5180cb"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-202",
+      "course_name": "ระบบฐานข้อมูล",
+      "credits": "3",
+      "query_id": 300
+    },
+    {
+      "question": "วิชาการเขียนโปรแกรมเชิงวัตถุรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675",
+        "875"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76",
+        "7139db11f8b0e9b2"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-203",
+      "course_name": "การเขียนโปรแกรมเชิงวัตถุ",
+      "credits": "3",
+      "query_id": 301
+    },
+    {
+      "question": "วิชา 04-622-203 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675",
+        "875"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76",
+        "7139db11f8b0e9b2"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-203",
+      "course_name": "การเขียนโปรแกรมเชิงวัตถุ",
+      "credits": "3",
+      "query_id": 302
+    },
+    {
+      "question": "วิชาการพัฒนาเว็บเต็มรูปแบบรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-301",
+      "course_name": "การพัฒนาเว็บเต็มรูปแบบ",
+      "credits": "3",
+      "query_id": 303
+    },
+    {
+      "question": "วิชา 04-622-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-301",
+      "course_name": "การพัฒนาเว็บเต็มรูปแบบ",
+      "credits": "3",
+      "query_id": 304
+    },
+    {
+      "question": "วิชาวิศวกรรมซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675",
+        "880"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76",
+        "c7224e07a29ec2a4"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-302",
+      "course_name": "วิศวกรรมซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 305
+    },
+    {
+      "question": "วิชา 04-622-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675",
+        "880"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76",
+        "c7224e07a29ec2a4"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-302",
+      "course_name": "วิศวกรรมซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 306
+    },
+    {
+      "question": "วิชาการโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัลรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675",
+        "884"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76",
+        "a5491591871abe56"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-303",
+      "course_name": "การโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัล",
+      "credits": "3",
+      "query_id": 307
+    },
+    {
+      "question": "วิชา 04-622-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "675",
+        "884"
+      ],
+      "relevant_chunk_keys": [
+        "7087e0e7f20d9b76",
+        "a5491591871abe56"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-303",
+      "course_name": "การโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัล",
+      "credits": "3",
+      "query_id": 308
+    },
+    {
+      "question": "วิชาการโปรแกรมเกมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "682",
+        "930"
+      ],
+      "relevant_chunk_keys": [
+        "22c87f8ff064afd7",
+        "ef818ee52991e937"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-304",
+      "course_name": "การโปรแกรมเกม",
+      "credits": "3",
+      "query_id": 309
+    },
+    {
+      "question": "วิชา 04-622-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "682",
+        "930"
+      ],
+      "relevant_chunk_keys": [
+        "22c87f8ff064afd7",
+        "ef818ee52991e937"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-304",
+      "course_name": "การโปรแกรมเกม",
+      "credits": "3",
+      "query_id": 310
+    },
+    {
+      "question": "วิชาการเขียนโปรแกรมบนระบบยูนิกซ์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "933"
+      ],
+      "relevant_chunk_keys": [
+        "43a0d57a11ac6633"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-305",
+      "course_name": "การเขียนโปรแกรมบนระบบยูนิกซ์",
+      "credits": "3",
+      "query_id": 311
+    },
+    {
+      "question": "วิชา 04-622-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "933"
+      ],
+      "relevant_chunk_keys": [
+        "43a0d57a11ac6633"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-305",
+      "course_name": "การเขียนโปรแกรมบนระบบยูนิกซ์",
+      "credits": "3",
+      "query_id": 312
+    },
+    {
+      "question": "วิชาการเขียนโปรแกรมคอมพิวเตอร์ขั้นสูงรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "935"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "45a742fb67d394fd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-306",
+      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์ขั้นสูง",
+      "credits": "3",
+      "query_id": 313
+    },
+    {
+      "question": "วิชา 04-622-306 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "935"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "45a742fb67d394fd"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-306",
+      "course_name": "การเขียนโปรแกรมคอมพิวเตอร์ขั้นสูง",
+      "credits": "3",
+      "query_id": 314
+    },
+    {
+      "question": "วิชาการทดสอบซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "938"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "50f2e2fb8a198b9b"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-307",
+      "course_name": "การทดสอบซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 315
+    },
+    {
+      "question": "วิชา 04-622-307 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "938"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "50f2e2fb8a198b9b"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-307",
+      "course_name": "การทดสอบซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 316
+    },
+    {
+      "question": "วิชากระบวนการพัฒนาซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "940"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "baa964da2de6636e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-308",
+      "course_name": "กระบวนการพัฒนาซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 317
+    },
+    {
+      "question": "วิชา 04-622-308 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "940"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "baa964da2de6636e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-308",
+      "course_name": "กระบวนการพัฒนาซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 318
+    },
+    {
+      "question": "วิชาระบบฐานข้อมูลขั้นสูงรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "942"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "ee30081407b88583"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-401",
+      "course_name": "ระบบฐานข้อมูลขั้นสูง",
+      "credits": "3",
+      "query_id": 319
+    },
+    {
+      "question": "วิชา 04-622-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "942"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "ee30081407b88583"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-401",
+      "course_name": "ระบบฐานข้อมูลขั้นสูง",
+      "credits": "3",
+      "query_id": 320
+    },
+    {
+      "question": "วิชาฐานข้อมูลไม่สัมพันธ์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "944"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "90010bcf7815c1ed"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-402",
+      "course_name": "ฐานข้อมูลไม่สัมพันธ์",
+      "credits": "3",
+      "query_id": 321
+    },
+    {
+      "question": "วิชา 04-622-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "944"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "90010bcf7815c1ed"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-402",
+      "course_name": "ฐานข้อมูลไม่สัมพันธ์",
+      "credits": "3",
+      "query_id": 322
+    },
+    {
+      "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "946"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "b767525ab904eca6"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-403",
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 323
+    },
+    {
+      "question": "วิชา 04-622-403 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "683",
+        "946"
+      ],
+      "relevant_chunk_keys": [
+        "840470730e5d8098",
+        "b767525ab904eca6"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-403",
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 324
+    },
+    {
+      "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "684",
+        "948"
+      ],
+      "relevant_chunk_keys": [
+        "f49c465709cc4639",
+        "4247108263e3ad86"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-404",
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 325
+    },
+    {
+      "question": "วิชา 04-622-404 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "684",
+        "948"
+      ],
+      "relevant_chunk_keys": [
+        "f49c465709cc4639",
+        "4247108263e3ad86"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-622-404",
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์",
+      "credits": "3",
+      "query_id": 326
+    },
+    {
+      "question": "วิชาการสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "676",
+        "886"
+      ],
+      "relevant_chunk_keys": [
+        "3b1f99ec34b92dc5",
+        "50c5ae65ac24e21e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-201",
+      "course_name": "การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 327
+    },
+    {
+      "question": "วิชา 04-623-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "676",
+        "886"
+      ],
+      "relevant_chunk_keys": [
+        "3b1f99ec34b92dc5",
+        "50c5ae65ac24e21e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-201",
+      "course_name": "การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 328
+    },
+    {
+      "question": "วิชาระบบเครือข่ายแบบทีซีพีไอพีรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "890"
+      ],
+      "relevant_chunk_keys": [
+        "6fc4c542f99c5071"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-202",
+      "course_name": "ระบบเครือข่ายแบบทีซีพีไอพี",
+      "credits": "3",
+      "query_id": 329
+    },
+    {
+      "question": "วิชา 04-623-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "890"
+      ],
+      "relevant_chunk_keys": [
+        "6fc4c542f99c5071"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-202",
+      "course_name": "ระบบเครือข่ายแบบทีซีพีไอพี",
+      "credits": "3",
+      "query_id": 330
+    },
+    {
+      "question": "วิชาปฏิบัติการเครือข่ายคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "853"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "d2f376779d121744"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-301",
+      "course_name": "ปฏิบัติการเครือข่ายคอมพิวเตอร์",
+      "credits": "1",
+      "query_id": 331
+    },
+    {
+      "question": "วิชา 04-623-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "853"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "d2f376779d121744"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-301",
+      "course_name": "ปฏิบัติการเครือข่ายคอมพิวเตอร์",
+      "credits": "1",
+      "query_id": 332
+    },
+    {
+      "question": "วิชาข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้นรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "684",
+        "950"
+      ],
+      "relevant_chunk_keys": [
+        "f49c465709cc4639",
+        "55c5db455b3cc226"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-302",
+      "course_name": "ข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้น",
+      "credits": "3",
+      "query_id": 333
+    },
+    {
+      "question": "วิชา 04-623-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "684",
+        "950"
+      ],
+      "relevant_chunk_keys": [
+        "f49c465709cc4639",
+        "55c5db455b3cc226"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-302",
+      "course_name": "ข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้น",
+      "credits": "3",
+      "query_id": 334
+    },
+    {
+      "question": "วิชาเครือข่ายเซ็นเซอร์ไร้สายรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "684",
+        "954"
+      ],
+      "relevant_chunk_keys": [
+        "f49c465709cc4639",
+        "1301be99869b2039"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-303",
+      "course_name": "เครือข่ายเซ็นเซอร์ไร้สาย",
+      "credits": "3",
+      "query_id": 335
+    },
+    {
+      "question": "วิชา 04-623-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "684",
+        "954"
+      ],
+      "relevant_chunk_keys": [
+        "f49c465709cc4639",
+        "1301be99869b2039"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-303",
+      "course_name": "เครือข่ายเซ็นเซอร์ไร้สาย",
+      "credits": "3",
+      "query_id": 336
+    },
+    {
+      "question": "วิชาความปลอดภัยไซเบอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "958"
+      ],
+      "relevant_chunk_keys": [
+        "e2aa7ebb61b13776"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-304",
+      "course_name": "ความปลอดภัยไซเบอร์",
+      "credits": "3",
+      "query_id": 337
+    },
+    {
+      "question": "วิชา 04-623-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "958"
+      ],
+      "relevant_chunk_keys": [
+        "e2aa7ebb61b13776"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-304",
+      "course_name": "ความปลอดภัยไซเบอร์",
+      "credits": "3",
+      "query_id": 338
+    },
+    {
+      "question": "วิชาความมั่นคงในระบบเครือข่ายรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "685",
+        "961"
+      ],
+      "relevant_chunk_keys": [
+        "6d44aacfb6d7f1de",
+        "5321a06c5bf1ea65"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-305",
+      "course_name": "ความมั่นคงในระบบเครือข่าย",
+      "credits": "3",
+      "query_id": 339
+    },
+    {
+      "question": "วิชา 04-623-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "685",
+        "961"
+      ],
+      "relevant_chunk_keys": [
+        "6d44aacfb6d7f1de",
+        "5321a06c5bf1ea65"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-305",
+      "course_name": "ความมั่นคงในระบบเครือข่าย",
+      "credits": "3",
+      "query_id": 340
+    },
+    {
+      "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์เครือข่ายรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "686",
+        "964"
+      ],
+      "relevant_chunk_keys": [
+        "aae57753d9ad15e9",
+        "2ffe3760eab57d02"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-401",
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์เครือข่าย",
+      "credits": "3",
+      "query_id": 341
+    },
+    {
+      "question": "วิชา 04-623-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "686",
+        "964"
+      ],
+      "relevant_chunk_keys": [
+        "aae57753d9ad15e9",
+        "2ffe3760eab57d02"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-401",
+      "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์เครือข่าย",
+      "credits": "3",
+      "query_id": 342
+    },
+    {
+      "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่ายรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "966"
+      ],
+      "relevant_chunk_keys": [
+        "4bad8ed06c4c0862"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-402",
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่าย",
+      "credits": "3",
+      "query_id": 343
+    },
+    {
+      "question": "วิชา 04-623-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "966"
+      ],
+      "relevant_chunk_keys": [
+        "4bad8ed06c4c0862"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-623-402",
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่าย",
+      "credits": "3",
+      "query_id": 344
+    },
+    {
+      "question": "วิชาทฤษฎีการคำนวณรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "677",
+        "894"
+      ],
+      "relevant_chunk_keys": [
+        "13fe892156d093e9",
+        "2178d3ec738c7284"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-201",
+      "course_name": "ทฤษฎีการคำนวณ",
+      "credits": "3",
+      "query_id": 345
+    },
+    {
+      "question": "วิชา 04-624-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "677",
+        "894"
+      ],
+      "relevant_chunk_keys": [
+        "13fe892156d093e9",
+        "2178d3ec738c7284"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-201",
+      "course_name": "ทฤษฎีการคำนวณ",
+      "credits": "3",
+      "query_id": 346
+    },
+    {
+      "question": "วิชาการประมวลผลภาพและการมองเห็นของคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "896"
+      ],
+      "relevant_chunk_keys": [
+        "3a6587e3792de4d3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-301",
+      "course_name": "การประมวลผลภาพและการมองเห็นของคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 347
+    },
+    {
+      "question": "วิชา 04-624-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "896"
+      ],
+      "relevant_chunk_keys": [
+        "3a6587e3792de4d3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-301",
+      "course_name": "การประมวลผลภาพและการมองเห็นของคอมพิวเตอร์",
+      "credits": "3",
+      "query_id": 348
+    },
+    {
+      "question": "วิชาการเรียนรู้ของเครื่องรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "968"
+      ],
+      "relevant_chunk_keys": [
+        "02791a34e0cf73b0"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-302",
+      "course_name": "การเรียนรู้ของเครื่อง",
+      "credits": "3",
+      "query_id": 349
+    },
+    {
+      "question": "วิชา 04-624-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "968"
+      ],
+      "relevant_chunk_keys": [
+        "02791a34e0cf73b0"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-302",
+      "course_name": "การเรียนรู้ของเครื่อง",
+      "credits": "3",
+      "query_id": 350
+    },
+    {
+      "question": "วิชาการเรียนรู้เชิงลึกเบื้องต้นรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "688",
+        "970"
+      ],
+      "relevant_chunk_keys": [
+        "a6fb1f8ad1526e7f",
+        "00b8722f34c52403"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-303",
+      "course_name": "การเรียนรู้เชิงลึกเบื้องต้น",
+      "credits": "3",
+      "query_id": 351
+    },
+    {
+      "question": "วิชา 04-624-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "688",
+        "970"
+      ],
+      "relevant_chunk_keys": [
+        "a6fb1f8ad1526e7f",
+        "00b8722f34c52403"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-303",
+      "course_name": "การเรียนรู้เชิงลึกเบื้องต้น",
+      "credits": "3",
+      "query_id": 352
+    },
+    {
+      "question": "วิชาการรู้จำเสียงพูดรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "688",
+        "972"
+      ],
+      "relevant_chunk_keys": [
+        "a6fb1f8ad1526e7f",
+        "f423b96476df86f9"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-304",
+      "course_name": "การรู้จำเสียงพูด",
+      "credits": "3",
+      "query_id": 353
+    },
+    {
+      "question": "วิชา 04-624-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "688",
+        "972"
+      ],
+      "relevant_chunk_keys": [
+        "a6fb1f8ad1526e7f",
+        "f423b96476df86f9"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-304",
+      "course_name": "การรู้จำเสียงพูด",
+      "credits": "3",
+      "query_id": 354
+    },
+    {
+      "question": "วิชาข้อมูลขนาดใหญ่รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "974"
+      ],
+      "relevant_chunk_keys": [
+        "bbebbadf4cd2c03f"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-305",
+      "course_name": "ข้อมูลขนาดใหญ่",
+      "credits": "3",
+      "query_id": 355
+    },
+    {
+      "question": "วิชา 04-624-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "974"
+      ],
+      "relevant_chunk_keys": [
+        "bbebbadf4cd2c03f"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-305",
+      "course_name": "ข้อมูลขนาดใหญ่",
+      "credits": "3",
+      "query_id": 356
+    },
+    {
+      "question": "วิชาวิศวกรรมข้อมูลรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "689"
+      ],
+      "relevant_chunk_keys": [
+        "c18bdd3ea54c6caf"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-306",
+      "course_name": "วิศวกรรมข้อมูล",
+      "credits": "3",
+      "query_id": 357
+    },
+    {
+      "question": "วิชา 04-624-306 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "689"
+      ],
+      "relevant_chunk_keys": [
+        "c18bdd3ea54c6caf"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-306",
+      "course_name": "วิศวกรรมข้อมูล",
+      "credits": "3",
+      "query_id": 358
+    },
+    {
+      "question": "วิชาการเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "689",
+        "978"
+      ],
+      "relevant_chunk_keys": [
+        "c18bdd3ea54c6caf",
+        "f5bffa102905db0f"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-307",
+      "course_name": "การเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบ",
+      "credits": "3",
+      "query_id": 359
+    },
+    {
+      "question": "วิชา 04-624-307 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "689",
+        "978"
+      ],
+      "relevant_chunk_keys": [
+        "c18bdd3ea54c6caf",
+        "f5bffa102905db0f"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-307",
+      "course_name": "การเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบ",
+      "credits": "3",
+      "query_id": 360
+    },
+    {
+      "question": "วิชาปัญหาพิเศษทางปัญญาประดิษฐ์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "689",
+        "981"
+      ],
+      "relevant_chunk_keys": [
+        "c18bdd3ea54c6caf",
+        "e3f0774852746753"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-401",
+      "course_name": "ปัญหาพิเศษทางปัญญาประดิษฐ์",
+      "credits": "3",
+      "query_id": 361
+    },
+    {
+      "question": "วิชา 04-624-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "689",
+        "981"
+      ],
+      "relevant_chunk_keys": [
+        "c18bdd3ea54c6caf",
+        "e3f0774852746753"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-401",
+      "course_name": "ปัญหาพิเศษทางปัญญาประดิษฐ์",
+      "credits": "3",
+      "query_id": 362
+    },
+    {
+      "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับปัญญาประดิษฐ์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "689",
+        "983"
+      ],
+      "relevant_chunk_keys": [
+        "c18bdd3ea54c6caf",
+        "126200cf6a5dd19e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-402",
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับปัญญาประดิษฐ์",
+      "credits": "3",
+      "query_id": 363
+    },
+    {
+      "question": "วิชา 04-624-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "689",
+        "983"
+      ],
+      "relevant_chunk_keys": [
+        "c18bdd3ea54c6caf",
+        "126200cf6a5dd19e"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-624-402",
+      "course_name": "หัวข้อขั้นสูงเกี่ยวกับปัญญาประดิษฐ์",
+      "credits": "3",
+      "query_id": 364
+    },
+    {
+      "question": "วิชาการเขียนโปรแกรมโมไบล์แอปพลิเคชันขั้นพื้นฐานรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1612"
+      ],
+      "relevant_chunk_keys": [
+        "83497b1a7d93ccce"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-625-002",
+      "course_name": "การเขียนโปรแกรมโมไบล์แอปพลิเคชันขั้นพื้นฐาน",
+      "credits": "3",
+      "query_id": 365
+    },
+    {
+      "question": "วิชา 04-625-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1612"
+      ],
+      "relevant_chunk_keys": [
+        "83497b1a7d93ccce"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-625-002",
+      "course_name": "การเขียนโปรแกรมโมไบล์แอปพลิเคชันขั้นพื้นฐาน",
+      "credits": "3",
+      "query_id": 366
+    },
+    {
+      "question": "วิชาการออกแบบและพัฒนาเว็บไซต์เบื้องต้นรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1612"
+      ],
+      "relevant_chunk_keys": [
+        "83497b1a7d93ccce"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-625-003",
+      "course_name": "การออกแบบและพัฒนาเว็บไซต์เบื้องต้น",
+      "credits": "3",
+      "query_id": 367
+    },
+    {
+      "question": "วิชา 04-625-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1612"
+      ],
+      "relevant_chunk_keys": [
+        "83497b1a7d93ccce"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-625-003",
+      "course_name": "การออกแบบและพัฒนาเว็บไซต์เบื้องต้น",
+      "credits": "3",
+      "query_id": 368
+    },
+    {
+      "question": "วิชาการเขียนโปรแกรมไพทอนสำหรับวิศวกรรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1612"
+      ],
+      "relevant_chunk_keys": [
+        "83497b1a7d93ccce"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-625-004",
+      "course_name": "การเขียนโปรแกรมไพทอนสำหรับวิศวกร",
+      "credits": "3",
+      "query_id": 369
+    },
+    {
+      "question": "วิชา 04-625-004 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1612"
+      ],
+      "relevant_chunk_keys": [
+        "83497b1a7d93ccce"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "04-625-004",
+      "course_name": "การเขียนโปรแกรมไพทอนสำหรับวิศวกร",
+      "credits": "3",
+      "query_id": 370
+    },
+    {
+      "question": "วิชาเคมีสำหรับวิศวกรรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "855"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "3c523acc4f6afd3c"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-711-101",
+      "course_name": "เคมีสำหรับวิศวกร",
+      "credits": "3",
+      "query_id": 371
+    },
+    {
+      "question": "วิชา 04-711-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "855"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "3c523acc4f6afd3c"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-711-101",
+      "course_name": "เคมีสำหรับวิศวกร",
+      "credits": "3",
+      "query_id": 372
+    },
+    {
+      "question": "วิชาวัสดุวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "857"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "094eee845cb738af"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-720-101",
+      "course_name": "วัสดุวิศวกรรม",
+      "credits": "3",
+      "query_id": 373
+    },
+    {
+      "question": "วิชา 04-720-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "671",
+        "857"
+      ],
+      "relevant_chunk_keys": [
+        "1faa8eda78b374b1",
+        "094eee845cb738af"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "04-720-101",
+      "course_name": "วัสดุวิศวกรรม",
+      "credits": "3",
+      "query_id": 374
+    },
+    {
+      "question": "วิชาเศรษฐศาสตร์ประยุกต์รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "662"
+      ],
+      "relevant_chunk_keys": [
+        "50ee7628e731bd09"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "05-700-101",
+      "course_name": "เศรษฐศาสตร์ประยุกต์",
+      "credits": "3",
+      "query_id": 375
+    },
+    {
+      "question": "วิชา 05-700-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "662"
+      ],
+      "relevant_chunk_keys": [
+        "50ee7628e731bd09"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "05-700-101",
+      "course_name": "เศรษฐศาสตร์ประยุกต์",
+      "credits": "3",
+      "query_id": 376
+    },
+    {
+      "question": "วิชาทักษะการใช้คอมพิวเตอร์และเทคโนโลยีสารสนเทศรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "636",
+        "1524"
+      ],
+      "relevant_chunk_keys": [
+        "b4d12b3f5b040fdc",
+        "14b5886333b007f3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-000-001",
+      "course_name": "ทักษะการใช้คอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+      "credits": "3",
+      "query_id": 377
+    },
+    {
+      "question": "วิชา 09-000-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "636",
+        "1524"
+      ],
+      "relevant_chunk_keys": [
+        "b4d12b3f5b040fdc",
+        "14b5886333b007f3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-000-001",
+      "course_name": "ทักษะการใช้คอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+      "credits": "3",
+      "query_id": 378
+    },
+    {
+      "question": "วิชาการใช้งานโปรแกรมสำเร็จรูปเพื่องานมัลติมีเดียรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "637",
+        "1524"
+      ],
+      "relevant_chunk_keys": [
+        "6f63f88e6271a6d1",
+        "14b5886333b007f3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-000-002",
+      "course_name": "การใช้งานโปรแกรมสำเร็จรูปเพื่องานมัลติมีเดีย",
+      "credits": "3",
+      "query_id": 379
+    },
+    {
+      "question": "วิชา 09-000-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "637",
+        "1524"
+      ],
+      "relevant_chunk_keys": [
+        "6f63f88e6271a6d1",
+        "14b5886333b007f3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-000-002",
+      "course_name": "การใช้งานโปรแกรมสำเร็จรูปเพื่องานมัลติมีเดีย",
+      "credits": "3",
+      "query_id": 380
+    },
+    {
+      "question": "วิชาเทคโนโลยีสารสนเทศเพื่อการตัดสินใจรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1524"
+      ],
+      "relevant_chunk_keys": [
+        "14b5886333b007f3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-000-003",
+      "course_name": "เทคโนโลยีสารสนเทศเพื่อการตัดสินใจ",
+      "credits": "3",
+      "query_id": 381
+    },
+    {
+      "question": "วิชา 09-000-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1524"
+      ],
+      "relevant_chunk_keys": [
+        "14b5886333b007f3"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-000-003",
+      "course_name": "เทคโนโลยีสารสนเทศเพื่อการตัดสินใจ",
+      "credits": "3",
+      "query_id": 382
+    },
+    {
+      "question": "วิชาการจัดการสารสนเทศเพื่อผู้ประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "638",
+        "1528"
+      ],
+      "relevant_chunk_keys": [
+        "75bc1ede76adebb6",
+        "85c4b9c89ee73a9d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-090-013",
+      "course_name": "การจัดการสารสนเทศเพื่อผู้ประกอบการ",
+      "credits": "3",
+      "query_id": 383
+    },
+    {
+      "question": "วิชา 09-090-013 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "638",
+        "1528"
+      ],
+      "relevant_chunk_keys": [
+        "75bc1ede76adebb6",
+        "85c4b9c89ee73a9d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-090-013",
+      "course_name": "การจัดการสารสนเทศเพื่อผู้ประกอบการ",
+      "credits": "3",
+      "query_id": 384
+    },
+    {
+      "question": "วิชาการคิดและการให้เหตุผลรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "639",
+        "1525"
+      ],
+      "relevant_chunk_keys": [
+        "88ce4da62368eff6",
+        "6f6a6c26fcf48887"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-111-001",
+      "course_name": "การคิดและการให้เหตุผล",
+      "credits": "3",
+      "query_id": 385
+    },
+    {
+      "question": "วิชา 09-111-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "639",
+        "1525"
+      ],
+      "relevant_chunk_keys": [
+        "88ce4da62368eff6",
+        "6f6a6c26fcf48887"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-111-001",
+      "course_name": "การคิดและการให้เหตุผล",
+      "credits": "3",
+      "query_id": 386
+    },
+    {
+      "question": "วิชาแคลคูลัสสำหรับวิศวกร 1รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "819"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "d60573318ec65451"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-111-141",
+      "course_name": "แคลคูลัสสำหรับวิศวกร 1",
+      "credits": "3",
+      "query_id": 387
+    },
+    {
+      "question": "วิชา 09-111-141 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "819"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "d60573318ec65451"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-111-141",
+      "course_name": "แคลคูลัสสำหรับวิศวกร 1",
+      "credits": "3",
+      "query_id": 388
+    },
+    {
+      "question": "วิชาแคลคูลัสสำหรับวิศวกร 2รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "821"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "a1eb6bf9cc9d73fe"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-111-142",
+      "course_name": "แคลคูลัสสำหรับวิศวกร 2",
+      "credits": "3",
+      "query_id": 389
+    },
+    {
+      "question": "วิชา 09-111-142 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "821"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "a1eb6bf9cc9d73fe"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-111-142",
+      "course_name": "แคลคูลัสสำหรับวิศวกร 2",
+      "credits": "3",
+      "query_id": 390
+    },
+    {
+      "question": "วิชาสถิติพื้นฐานสำหรับการพัฒนานวัตกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "640"
+      ],
+      "relevant_chunk_keys": [
+        "4d9ed0e3504a05f7"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-121-001",
+      "course_name": "สถิติพื้นฐานสำหรับการพัฒนานวัตกรรม",
+      "credits": "3",
+      "query_id": 391
+    },
+    {
+      "question": "วิชา 09-121-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "640"
+      ],
+      "relevant_chunk_keys": [
+        "4d9ed0e3504a05f7"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-121-001",
+      "course_name": "สถิติพื้นฐานสำหรับการพัฒนานวัตกรรม",
+      "credits": "3",
+      "query_id": 392
+    },
+    {
+      "question": "วิชาสถิติเบื้องต้นสำหรับนวัตกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1525"
+      ],
+      "relevant_chunk_keys": [
+        "6f6a6c26fcf48887"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-121-002",
+      "course_name": "สถิติเบื้องต้นสำหรับนวัตกรรม",
+      "credits": "3",
+      "query_id": 393
+    },
+    {
+      "question": "วิชา 09-121-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1525"
+      ],
+      "relevant_chunk_keys": [
+        "6f6a6c26fcf48887"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-121-002",
+      "course_name": "สถิติเบื้องต้นสำหรับนวัตกรรม",
+      "credits": "3",
+      "query_id": 394
+    },
+    {
+      "question": "วิชาสถิติพื้นฐานสำหรับผู้ประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "815"
+      ],
+      "relevant_chunk_keys": [
+        "6a7180529c0b1a56"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-121-003",
+      "course_name": "สถิติพื้นฐานสำหรับผู้ประกอบการ",
+      "credits": "3",
+      "query_id": 395
+    },
+    {
+      "question": "วิชา 09-121-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "815"
+      ],
+      "relevant_chunk_keys": [
+        "6a7180529c0b1a56"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-121-003",
+      "course_name": "สถิติพื้นฐานสำหรับผู้ประกอบการ",
+      "credits": "3",
+      "query_id": 396
+    },
+    {
+      "question": "วิชาสถิติพื้นฐานสำหรับการลงทุนยุคใหม่รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "664"
+      ],
+      "relevant_chunk_keys": [
+        "306744f16e2c593a"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-121-004",
+      "course_name": "สถิติพื้นฐานสำหรับการลงทุนยุคใหม่",
+      "credits": "3",
+      "query_id": 397
+    },
+    {
+      "question": "วิชา 09-121-004 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "664"
+      ],
+      "relevant_chunk_keys": [
+        "306744f16e2c593a"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-121-004",
+      "course_name": "สถิติพื้นฐานสำหรับการลงทุนยุคใหม่",
+      "credits": "3",
+      "query_id": 398
+    },
+    {
+      "question": "วิชาสถิติทั่วไปรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "824"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "29ecd2dbedaa1b06"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-122-103",
+      "course_name": "สถิติทั่วไป",
+      "credits": "3",
+      "query_id": 399
+    },
+    {
+      "question": "วิชา 09-122-103 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "824"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "29ecd2dbedaa1b06"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-122-103",
+      "course_name": "สถิติทั่วไป",
+      "credits": "3",
+      "query_id": 400
+    },
+    {
+      "question": "วิชาอินเทอร์เน็ตทุกสรรพสิ่งในชีวิตประจำวันรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "641"
+      ],
+      "relevant_chunk_keys": [
+        "7053cf6a9d84e960"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-130-002",
+      "course_name": "อินเทอร์เน็ตทุกสรรพสิ่งในชีวิตประจำวัน",
+      "credits": "3",
+      "query_id": 401
+    },
+    {
+      "question": "วิชา 09-130-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "641"
+      ],
+      "relevant_chunk_keys": [
+        "7053cf6a9d84e960"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-130-002",
+      "course_name": "อินเทอร์เน็ตทุกสรรพสิ่งในชีวิตประจำวัน",
+      "credits": "3",
+      "query_id": 402
+    },
+    {
+      "question": "วิชาวิทยาศาสตร์ ความคิดสร้างสรรค์ และนวัตกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "642",
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "fbdf4b5caa0630d5",
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-210-003",
+      "course_name": "วิทยาศาสตร์ ความคิดสร้างสรรค์ และนวัตกรรม",
+      "credits": "3",
+      "query_id": 403
+    },
+    {
+      "question": "วิชา 09-210-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "642",
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "fbdf4b5caa0630d5",
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-210-003",
+      "course_name": "วิทยาศาสตร์ ความคิดสร้างสรรค์ และนวัตกรรม",
+      "credits": "3",
+      "query_id": 404
+    },
+    {
+      "question": "วิชาเทคโนโลยีสีเขียวรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-210-033",
+      "course_name": "เทคโนโลยีสีเขียว",
+      "credits": "3",
+      "query_id": 405
+    },
+    {
+      "question": "วิชา 09-210-033 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-210-033",
+      "course_name": "เทคโนโลยีสีเขียว",
+      "credits": "3",
+      "query_id": 406
+    },
+    {
+      "question": "วิชาชีวิตกับสิ่งแวดล้อมรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-311-051",
+      "course_name": "ชีวิตกับสิ่งแวดล้อม",
+      "credits": "3",
+      "query_id": 407
+    },
+    {
+      "question": "วิชา 09-311-051 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-311-051",
+      "course_name": "ชีวิตกับสิ่งแวดล้อม",
+      "credits": "3",
+      "query_id": 408
+    },
+    {
+      "question": "วิชาวิทยาศาสตร์เพื่อชีวิตรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-410-002",
+      "course_name": "วิทยาศาสตร์เพื่อชีวิต",
+      "credits": "3",
+      "query_id": 409
+    },
+    {
+      "question": "วิชา 09-410-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "sources": [
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-410-002",
+      "course_name": "วิทยาศาสตร์เพื่อชีวิต",
+      "credits": "3",
+      "query_id": 410
+    },
+    {
+      "question": "วิชาเทคโนโลยีพลังงานทดแทนเพื่อความยั่งยืนรหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "643",
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "98c7908a43a6650d",
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-410-004",
+      "course_name": "เทคโนโลยีพลังงานทดแทนเพื่อความยั่งยืน",
+      "credits": "3",
+      "query_id": 411
+    },
+    {
+      "question": "วิชา 09-410-004 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "643",
+        "1526"
+      ],
+      "relevant_chunk_keys": [
+        "98c7908a43a6650d",
+        "ab35e596a3b398ae"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-410-004",
+      "course_name": "เทคโนโลยีพลังงานทดแทนเพื่อความยั่งยืน",
+      "credits": "3",
+      "query_id": 412
+    },
+    {
+      "question": "วิชาฟิสิกส์สำหรับวิศวกร 1รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "826",
+        "1803"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "05dc827c650771f9",
+        "a314f9d6b788e63d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-410-141",
+      "course_name": "ฟิสิกส์สำหรับวิศวกร 1",
+      "credits": "3",
+      "query_id": 413
+    },
+    {
+      "question": "วิชา 09-410-141 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "826",
+        "1803"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "05dc827c650771f9",
+        "a314f9d6b788e63d"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
+      ],
+      "course_code": "09-410-141",
+      "course_name": "ฟิสิกส์สำหรับวิศวกร 1",
+      "credits": "3",
+      "query_id": 414
+    },
+    {
+      "question": "วิชาปฏิบัติการฟิสิกส์สำหรับวิศวกร 1รหัสวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "828"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "f5fca09c9ee0b427"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_name",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-410-142",
+      "course_name": "ปฏิบัติการฟิสิกส์สำหรับวิศวกร 1",
+      "credits": "1",
+      "query_id": 415
+    },
+    {
+      "question": "วิชา 09-410-142 ชื่อวิชาอะไร และกี่หน่วยกิต",
+      "relevant_chunk_ids": [
+        "666",
+        "828"
+      ],
+      "relevant_chunk_keys": [
+        "d0d2bff34a09b5d4",
+        "f5fca09c9ee0b427"
+      ],
+      "category": "curriculum",
+      "phrasing": "by_code",
+      "source": "หลักสูตร-683.pdf",
+      "sources": [
+        "หลักสูตร-683.pdf"
+      ],
+      "course_code": "09-410-142",
+      "course_name": "ปฏิบัติการฟิสิกส์สำหรับวิศวกร 1",
+      "credits": "1",
+      "query_id": 416
+    },
+    {
       "question": "ถ้ากดแจ้งจบในเว็บไม่ทันต้องแก้ยังไงครับ",
       "relevant_chunk_ids": [
         "5"
@@ -1952,7 +7825,7 @@
       "source": "01_ขอสำเร็จการศึกษา.pdf",
       "document_question": "แจ้งจบในระบบไม่ทันต้องทำอย่างไร",
       "reference_answer": "เขียนคำร้องขอสำเร็จการศึกษาและคำร้องขอขึ้นทะเบียนบัณฑิตตามแบบฟอร์ม แล้วเข้าระบบ นักศึกษาเพื่อปริ้นใบจ่ายค่าขึ้นทะเบียนบัณฑิต",
-      "query_id": 129
+      "query_id": 417
     },
     {
       "question": "จ่ายเงินค่าขึ้นทะเบียนจบช้ามีค่าปรับกี่บาท",
@@ -1975,7 +7848,7 @@
       "source": "01_ขอสำเร็จการศึกษา.pdf",
       "document_question": "ค่าปรับกรณีชำระค่าขึ้นทะเบียนบัณฑิตล่าช้าเท่าไหร่",
       "reference_answer": "500 บาท",
-      "query_id": 130
+      "query_id": 418
     },
     {
       "question": "แจ้งจบในระบบผ่านแล้วต้องเอาเอกสารไปยื่นที่ไหนต่อ",
@@ -1990,7 +7863,7 @@
       "source": "01_ขอสำเร็จการศึกษา.pdf",
       "document_question": "แจ้งจบเสร็จแล้วต้องส่งเอกสารที่ไหน",
       "reference_answer": "ส่งที่ภาควิชาฯ ของนักศึกษา",
-      "query_id": 131
+      "query_id": 419
     },
     {
       "question": "จะสั่งพิมพ์พวกเอกสารได้ตอนไหนบ้าง",
@@ -2005,7 +7878,7 @@
       "source": "01_ขอสำเร็จการศึกษา.pdf",
       "document_question": "ต้องปริ้นเอกสารตอนไหน",
       "reference_answer": "หลังจากแจ้งสำเร็จการศึกษาในระบบนักศึกษาเรียบร้อยแล้ว จึงปริ้นเอกสารและใบชำระเงิน",
-      "query_id": 132
+      "query_id": 420
     },
     {
       "question": "ถ้าได้เกรด D เอาไปเทียบโอนได้เปล่า",
@@ -2020,7 +7893,7 @@
       "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
       "document_question": "ได้เกรด D เทียบโอนได้ไหม",
       "reference_answer": "ไม่ได้ เทียบโอนได้เฉพาะรายวิชาที่ได้เกรดตั้งแต่ C ขึ้นไป",
-      "query_id": 133
+      "query_id": 421
     },
     {
       "question": "เรียนวิชานั้นไปแล้วรวมถึงสอบไปแล้วด้วย ยังทำเรื่องโอนได้อีกมั้ย",
@@ -2037,7 +7910,7 @@
       "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
       "document_question": "ลงทะเบียนและเข้าสอบวิชานั้นไปแล้ว ยังโอนได้ไหม",
       "reference_answer": "ไม่ได้ หากลงทะเบียนแล้วเข้าสอบแล้ว จะไม่อนุญาตให้โอนรายวิชา",
-      "query_id": 134
+      "query_id": 422
     },
     {
       "question": "ต้องรีบยื่นเรื่องเทียบโอนภายในกี่วัน",
@@ -2054,7 +7927,7 @@
       "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
       "document_question": "เทียบโอนต้องทำภายในเมื่อไหร่",
       "reference_answer": "ภายในภาคการศึกษาแรกที่ขึ้นทะเบียนเป็นนักศึกษา",
-      "query_id": 135
+      "query_id": 423
     },
     {
       "question": "หลังจากส่งใบเสร็จไปแล้วต้องรอนานไหมถึงจะเรียบร้อย",
@@ -2069,7 +7942,7 @@
       "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
       "document_question": "ยื่นใบเสร็จแล้วต้องรอนานแค่ไหน",
       "reference_answer": "เข้าไปตรวจสอบได้หลังยื่นใบเสร็จประมาณ 7 วันทำการ",
-      "query_id": 136
+      "query_id": 424
     },
     {
       "question": "ถ้าโอนหน่วยกิตจากมหาลัยเก่าต้องเตรียมเอกสารไรเพิ่มบ้าง",
@@ -2084,7 +7957,7 @@
       "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
       "document_question": "ทรานสคริปมาจากมหาวิทยาลัยอื่นต้องใช้เอกสารเพิ่มไหม",
       "reference_answer": "ต้องแนบคำอธิบายรายวิชาเพิ่มด้วย",
-      "query_id": 137
+      "query_id": 425
     },
     {
       "question": "อยากเปลี่ยนนามสกุลเพราะแต่งงานต้องใช้หลักฐานอะไรบ้าง",
@@ -2099,7 +7972,7 @@
       "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
       "document_question": "เปลี่ยนนามสกุลหลังแต่งงานต้องใช้อะไรบ้าง",
       "reference_answer": "คำร้องทั่วไป สำเนาใบเปลี่ยนชื่อ/นามสกุล และสำเนาบัตรประชาชนที่เป็นชื่อใหม่",
-      "query_id": 138
+      "query_id": 426
     },
     {
       "question": "ถ้าข้อมูลโปรไฟล์มันไม่ตรง ต้องทำเรื่องแก้ยังไง",
@@ -2114,7 +7987,7 @@
       "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
       "document_question": "ข้อมูลประวัติในระบบผิด ต้องยื่นคำร้องแบบไหน",
       "reference_answer": "ใช้คำร้องทั่วไป ติ๊กช่องอื่น ๆ ระบุว่าขอแก้ไข เนื่องจากบันทึกประวัติผิดพลาด",
-      "query_id": 139
+      "query_id": 427
     },
     {
       "question": "ถ้าได้ยศเพิ่มมา ต้องยื่นใบอะไรบ้าง",
@@ -2131,7 +8004,7 @@
       "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
       "document_question": "ได้รับยศใหม่ต้องใช้เอกสารอะไร",
       "reference_answer": "คำร้องทั่วไป พร้อมสำเนาแต่งตั้งยศ",
-      "query_id": 140
+      "query_id": 428
     },
     {
       "question": "หลังส่งเรื่องไปแล้ว ต้องรอเช็กสถานะกี่วัน",
@@ -2146,7 +8019,7 @@
       "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
       "document_question": "ส่งเอกสารแล้วกี่วันจึงตรวจสอบได้",
       "reference_answer": "ประมาณ 5-7 วันทำการ",
-      "query_id": 141
+      "query_id": 429
     },
     {
       "question": "จะขอเงินคืนต้องเตรียมหลักฐานกี่ชุด",
@@ -2161,7 +8034,7 @@
       "source": "04_การขอเงินคืน.pdf",
       "document_question": "ขอเงินคืนต้องใช้เอกสารกี่อย่าง",
       "reference_answer": "5 อย่าง คือ คำร้องขอเงินคืน ใบเสร็จ ใบเสร็จอิเล็กทรอนิกส์ ใบแจ้งยอด และสำเนาหน้าสมุดบัญชี",
-      "query_id": 142
+      "query_id": 430
     },
     {
       "question": "ใครบ้างที่ต้องเซ็นกำกับในเอกสาร",
@@ -2176,7 +8049,7 @@
       "source": "04_การขอเงินคืน.pdf",
       "document_question": "ต้องให้ใครลงนาม",
       "reference_answer": "อาจารย์ที่ปรึกษาเป็นผู้ลงนามในคำร้อง",
-      "query_id": 143
+      "query_id": 431
     },
     {
       "question": "ต้องเอาเอกสารไปยื่นที่แผนกไหน",
@@ -2191,7 +8064,7 @@
       "source": "04_การขอเงินคืน.pdf",
       "document_question": "ยื่นเอกสารที่ไหน",
       "reference_answer": "ส่งที่ภาควิชาฯ หลังจากอาจารย์ที่ปรึกษาลงนามแล้ว",
-      "query_id": 144
+      "query_id": 432
     },
     {
       "question": "ทำไมถึงต้องให้แนบสำเนาบัญชีธนาคารมาด้วย",
@@ -2206,7 +8079,7 @@
       "source": "04_การขอเงินคืน.pdf",
       "document_question": "ทำไมต้องแนบสำเนาสมุดบัญชี",
       "reference_answer": "ใช้เป็นบัญชีปลายทางสำหรับรับเงินคืน",
-      "query_id": 145
+      "query_id": 433
     },
     {
       "question": "ถ้าชื่อหายเพราะลืมลงทะเบียนเรียน ต้องแก้ย้งไง",
@@ -2221,7 +8094,7 @@
       "source": "05_ขอคืนสภาพนักศึกษา.pdf",
       "document_question": "ถูกถอนชื่อเพราะไม่ได้ลงทะเบียน ต้องทำอย่างไร",
       "reference_answer": "ยื่นขอคืนสภาพพร้อมลาพักการศึกษา",
-      "query_id": 146
+      "query_id": 434
     },
     {
       "question": "เรียนจบคอร์สแล้วแต่ติดภาษาอังกฤษเลยโดนคัดชื่อออก ควรทำไงดี",
@@ -2236,7 +8109,7 @@
       "source": "05_ขอคืนสภาพนักศึกษา.pdf",
       "document_question": "เรียนครบหลักสูตรแล้วแต่ยังไม่ผ่านภาษาอังกฤษและถูกถอนชื่อ ต้องทำอย่างไร",
       "reference_answer": "ยื่นขอคืนสภาพพร้อมรักษาสภาพการเป็นนักศึกษา",
-      "query_id": 147
+      "query_id": 435
     },
     {
       "question": "จ่ายค่าเทอมไม่ทันจนโดนตัดชื่อ ต้องติดต่อเรื่องยังไง",
@@ -2253,7 +8126,7 @@
       "source": "05_ขอคืนสภาพนักศึกษา.pdf",
       "document_question": "ลงทะเบียนแล้วแต่ไม่ได้จ่ายค่าเทอมจนถูกถอนชื่อ ต้องทำอย่างไร",
       "reference_answer": "ยื่นขอคืนสภาพพร้อมชำระค่าเทอม",
-      "query_id": 148
+      "query_id": 436
     },
     {
       "question": "ขอคืนสถานะนักศึกษาต้องไปติดต่อตรงไหนครับ",
@@ -2268,7 +8141,7 @@
       "source": "05_ขอคืนสภาพนักศึกษา.pdf",
       "document_question": "ยื่นคำร้องคืนสภาพที่ไหน",
       "reference_answer": "ยื่นผ่านคำร้องออนไลน์ในระบบนักศึกษา แล้วปริ้นเอกสารส่งภาควิชาฯ",
-      "query_id": 149
+      "query_id": 437
     },
     {
       "question": "ที่ภาควิชาต้องเตรียมกระดาษอะไรไปยื่นบ้าง",
@@ -2283,7 +8156,7 @@
       "source": "05_ขอคืนสภาพนักศึกษา.pdf",
       "document_question": "ต้องส่งเอกสารอะไรบ้างที่ภาควิชา",
       "reference_answer": "คำร้องขอคืนสภาพ คำร้องรักษาสภาพหรือลาพักการศึกษา และใบเสร็จ",
-      "query_id": 150
+      "query_id": 438
     },
     {
       "question": "จ่ายตังค์ค่าคงสภาพกี่บาท",
@@ -2302,7 +8175,7 @@
       "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
       "document_question": "ค่ารักษาสภาพเท่าไหร่",
       "reference_answer": "1,000 บาท",
-      "query_id": 151
+      "query_id": 439
     },
     {
       "question": "ใครมีสิทธิ์ทำเรื่องคงสภาพได้มั่ง",
@@ -2317,7 +8190,7 @@
       "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
       "document_question": "ใครยื่นรักษาสภาพได้",
       "reference_answer": "นักศึกษาที่มีผลการเรียนครบตามหลักสูตรแล้ว และอยู่ระหว่างรอดำเนินการตามเงื่อนไขการสำเร็จการ",
-      "query_id": 152
+      "query_id": 440
     },
     {
       "question": "การรักษาสภาพกับลาพักเนี่ยต่างกันตรงไหน",
@@ -2334,7 +8207,7 @@
       "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
       "document_question": "รักษาสภาพต่างจากลาพักการศึกษาอย่างไร",
       "reference_answer": "รักษาสภาพใช้กับผู้ที่เรียนครบหลักสูตรแล้วรอเงื่อนไขจบ ส่วนลาพักการศึกษาใช้กับผู้ที่ยังเรียนไม่ครบ",
-      "query_id": 153
+      "query_id": 441
     },
     {
       "question": "ส่งเรื่องไปแล้วต้องรอนานกี่วันถึงเช็กสถานะได้",
@@ -2351,7 +8224,7 @@
       "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
       "document_question": "ยื่นคำร้องแล้วกี่วันจึงตรวจสอบสถานะได้",
       "reference_answer": "ประมาณ 7 วันทำการ",
-      "query_id": 154
+      "query_id": 442
     },
     {
       "question": "ต้องลงเรียนน้อยกว่ากี่หน่วยถึงต้องขออนุญาต",
@@ -2366,7 +8239,7 @@
       "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
       "document_question": "ลงทะเบียนต่ำกว่ากี่หน่วยกิตจึงต้องยื่นคำร้อง",
       "reference_answer": "ต่ำกว่า 9 หน่วยกิต ในเทอม 1 และเทอม 2",
-      "query_id": 155
+      "query_id": 443
     },
     {
       "question": "ขอลงเรียนเกินลิมิตได้สูงสุดกี่รอบ",
@@ -2383,7 +8256,7 @@
       "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
       "document_question": "ลงทะเบียนเกินเกณฑ์ได้กี่ครั้ง",
       "reference_answer": "2 ครั้งตลอดการศึกษา",
-      "query_id": 156
+      "query_id": 444
     },
     {
       "question": "รอบแรกที่ขอลงเกินต้องทำเกรดถึงเท่าไหร่",
@@ -2398,7 +8271,7 @@
       "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
       "document_question": "ลงเกินเกณฑ์ครั้งแรกต้องมีเกรดเฉลี่ยเท่าไหร่",
       "reference_answer": "เกรดเฉลี่ยต้องได้ 2.00",
-      "query_id": 157
+      "query_id": 445
     },
     {
       "question": "ถ้าจะขอลงเกินรอบสองมีเงื่อนไขอะไรบ้าง",
@@ -2415,7 +8288,7 @@
       "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
       "document_question": "ลงเกินเกณฑ์ครั้งที่สองมีเงื่อนไขอะไร",
       "reference_answer": "ต้องจบการศึกษาในเทอมที่ขอลงทะเบียนเกินเท่านั้น",
-      "query_id": 158
+      "query_id": 446
     },
     {
       "question": "ขอทรานสคริปต์ด้วยป่ะ",
@@ -2432,7 +8305,7 @@
       "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
       "document_question": "ต้องแนบใบผลการศึกษาไหม",
       "reference_answer": "ต้องแนบ โดยปริ้นจากระบบนักศึกษา",
-      "query_id": 159
+      "query_id": 447
     },
     {
       "question": "จ่ายตังค์เทอมนี้ไปแล้ว ถ้าจะพักต้องจ่ายเพิ่มอีกเปล่า",
@@ -2447,7 +8320,7 @@
       "source": "08_ลาพักการศึกษา.pdf",
       "document_question": "จ่ายค่าเทอมไปแล้วต้องจ่ายค่าลาพักอีกไหม",
       "reference_answer": "ไม่ต้อง นักศึกษาที่ชำระค่าลงทะเบียนแล้วไม่ต้องชำระค่าลาพักการศึกษา",
-      "query_id": 160
+      "query_id": 448
     },
     {
       "question": "ทำเรื่องพักเรียนที่ไหนอะ",
@@ -2462,7 +8335,7 @@
       "source": "08_ลาพักการศึกษา.pdf",
       "document_question": "ยื่นลาพักการศึกษาที่ไหน",
       "reference_answer": "ยื่นผ่านคำร้องออนไลน์ในระบบนักศึกษา",
-      "query_id": 161
+      "query_id": 449
     },
     {
       "question": "ยื่นเสร็จแล้วต้องไปดำเนินการอะไรต่อมั้ย",
@@ -2477,7 +8350,7 @@
       "source": "08_ลาพักการศึกษา.pdf",
       "document_question": "ยื่นแล้วต้องทำอะไรต่อ",
       "reference_answer": "ปริ้นคำร้องพร้อมใบชำระเงิน ให้อาจารย์ที่ปรึกษาให้ความเห็น ชำระค่าธรรมเนียม แล้วส่งคำร้องพร้อม",
-      "query_id": 162
+      "query_id": 450
     },
     {
       "question": "เช็คสถานะเรื่องได้ตอนไหน",
@@ -2492,7 +8365,7 @@
       "source": "08_ลาพักการศึกษา.pdf",
       "document_question": "ตรวจสอบผลได้เมื่อไหร่",
       "reference_answer": "ประมาณ 7 วันทำการหลังยื่นคำร้อง",
-      "query_id": 163
+      "query_id": 451
     },
     {
       "question": "ถ้าจะลาออกต้องไปติดต่อตรงไหน",
@@ -2507,7 +8380,7 @@
       "source": "09_นักศึกษาขอลาออก.pdf",
       "document_question": "อยากลาออกต้องทำอย่างไร",
       "reference_answer": "กรอกคำร้องขอลาออกตามแบบฟอร์ม เข้าพบอาจารย์ที่ปรึกษาเพื่อลงนาม แล้วส่งเอกสารที่ธุรการภาค",
-      "query_id": 164
+      "query_id": 452
     },
     {
       "question": "ใบลาออกนี่ต้องให้ใครเซ็นชื่อรับรองบ้าง",
@@ -2526,7 +8399,7 @@
       "source": "09_นักศึกษาขอลาออก.pdf",
       "document_question": "ลาออกต้องให้ใครเซ็น",
       "reference_answer": "อาจารย์ที่ปรึกษา",
-      "query_id": 165
+      "query_id": 453
     },
     {
       "question": "ส่งเรื่องไปแล้วกี่วันถึงจะรู้ผล",
@@ -2541,7 +8414,7 @@
       "source": "09_นักศึกษาขอลาออก.pdf",
       "document_question": "ส่งคำร้องแล้วรู้ผลเมื่อไหร่",
       "reference_answer": "ตรวจสอบสถานะได้หลังส่งเอกสารประมาณ 7 วันทำการ",
-      "query_id": 166
+      "query_id": 454
     },
     {
       "question": "ต้องได้เกรดเฉลี่ยเท่าไหร่ถึงจะได้เกียรตินิยมเหรียญทอง",
@@ -2560,7 +8433,7 @@
       "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
       "document_question": "GPA เท่าไหร่ได้เกียรตินิยมอันดับ 1",
       "reference_answer": "ไม่ต่ำกว่า 3.50",
-      "query_id": 167
+      "query_id": 455
     },
     {
       "question": "เกรดรวมต้องถึงเท่าไหร่ถึงจะได้เกียรตินิยมเหรียญเงิน",
@@ -2577,7 +8450,7 @@
       "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
       "document_question": "GPA เท่าไหร่ได้เกียรตินิยมอันดับ 2",
       "reference_answer": "ไม่ต่ำกว่า 3.25",
-      "query_id": 168
+      "query_id": 456
     },
     {
       "question": "ได้ D จะยังลุ้นเกียรตินิยมได้อยู่มั้ย",
@@ -2592,7 +8465,7 @@
       "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
       "document_question": "ติดเกรด D จะได้เกียรตินิยมไหม",
       "reference_answer": "ไม่ได้ เพราะต้องไม่มีผลการเรียนต่ำกว่าระดับ C ในรายวิชาใดวิชาหนึ่ง",
-      "query_id": 169
+      "query_id": 457
     },
     {
       "question": "ถ้าเคยดรอปเรียนไปเทอมนึงจะหมดสิทธิ์รับเกียรตินิยมเลยป่ะ",
@@ -2607,7 +8480,7 @@
       "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
       "document_question": "เคยลาพักการศึกษาจะเสียสิทธิ์เกียรตินิยมไหม",
       "reference_answer": "ไม่เสีย เพราะไม่นับระยะเวลาที่ขอลาพักการศึกษารวมในระยะเวลาที่หลักสูตรกำหนด",
-      "query_id": 170
+      "query_id": 458
     },
     {
       "question": "เกียรตินิยมทองกับเงินมันต่างกันตรงไหนบ้าง",
@@ -2622,7 +8495,7 @@
       "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
       "document_question": "เหรียญทองกับเหรียญเงินต่างกันอย่างไร",
       "reference_answer": "เหรียญทองต้องได้เกียรตินิยมอันดับ 1 และมี GPA สูงสุดในคณะ ส่วนเหรียญเงินได้เกียรตินิยมอันดับ 1 หรือ 2 ที่มี GPA อันดับ 2 ในคณะ หรือเกียรตินิยมอันดับ 2 ที่มี GPA สูงสุดในคณะ",
-      "query_id": 171
+      "query_id": 459
     },
     {
       "question": "เรียนจบต้องทำเกรดเฉลี่ยให้ได้ประมาณเท่าไหร่",
@@ -2641,7 +8514,7 @@
       "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
       "document_question": "จะจบต้องมี GPA เท่าไหร่",
       "reference_answer": "ไม่ต่ำกว่า 2.00",
-      "query_id": 172
+      "query_id": 460
     },
     {
       "question": "นอกจากหน่วยกิตแล้ว ต้องเคลียร์อะไรให้ครบก่อนเรียนจบอีกบ้าง",
@@ -2658,7 +8531,7 @@
       "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
       "document_question": "มีอะไรบ้างที่ต้องผ่านก่อนจบ",
       "reference_answer": "เรียนครบหลักสูตร GPA ไม่ต่ำกว่า 2.00, ไม่มีหนี้สินผูกพันต่อมหาวิทยาลัย, ผ่าน English Exit Exam, ผ่านการทดสอบสมรรถนะด้านสารสนเทศ (ICT) และผ่านการทดสอบสมรรถนะด้านวิชาชีพครบตามหลักสูตร",
-      "query_id": 173
+      "query_id": 461
     },
     {
       "question": "หน่วยกิตครบหมดแล้ว แต่ยังติดวิชาอังกฤษอยู่ จะได้รับปริญญามั้ย",
@@ -2673,7 +8546,7 @@
       "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
       "document_question": "เรียนครบหน่วยกิตแล้วแต่ยังไม่ผ่านภาษาอังกฤษ จบได้ไหม",
       "reference_answer": "ยังจบไม่ได้ ต้องผ่าน English Exit Exam ก่อน",
-      "query_id": 174
+      "query_id": 462
     },
     {
       "question": "ต้องทำคะแนนสอบโทอิคให้ได้ถึงกี่คะแนนถึงจะผ่าน",
@@ -2688,7 +8561,7 @@
       "source": "12_English-Exit-Exam.pdf",
       "document_question": "TOEIC ต้องได้กี่คะแนน",
       "reference_answer": "ไม่น้อยกว่า 400 คะแนน",
-      "query_id": 175
+      "query_id": 463
     },
     {
       "question": "เกณฑ์คะแนนไอเอลที่กำหนดไว้คือเท่าไหร่",
@@ -2703,7 +8576,7 @@
       "source": "12_English-Exit-Exam.pdf",
       "document_question": "IELTS ต้องได้เท่าไหร่",
       "reference_answer": "ไม่น้อยกว่า 3.5",
-      "query_id": 176
+      "query_id": 464
     },
     {
       "question": "มาตรฐานภาษาอังกฤษต้องได้ระดับไหนถึงจะจบได้",
@@ -2724,7 +8597,7 @@
       "source": "12_English-Exit-Exam.pdf",
       "document_question": "CEFR ต้องระดับไหน",
       "reference_answer": "ไม่น้อยกว่าระดับ B1",
-      "query_id": 177
+      "query_id": 465
     },
     {
       "question": "ถ้าสอบตกวิชาเดิมหลายรอบแล้วต้องแก้ยังไงต่อ",
@@ -2741,7 +8614,7 @@
       "source": "12_English-Exit-Exam.pdf",
       "document_question": "สอบไม่ผ่านหลายครั้งต้องทำอย่างไร",
       "reference_answer": "หากผลไม่เป็นไปตามเกณฑ์ไม่น้อยกว่า 2 ครั้ง ต้องเข้าอบรมภาษาอังกฤษกับศูนย์พัฒนาศักยภาพด้าน ภาษาและอุตสาหกรรมการบริการ คณะศิลปศาสตร์ โดยเสียค่าใช้จ่ายเอง และต้องผ่านเกณฑ์ของศูนย์ฯ ไม่ต่ำ",
-      "query_id": 178
+      "query_id": 466
     },
     {
       "question": "สอบต้องผ่านเกณฑ์ครบทุกตัวป่ะ",
@@ -2756,7 +8629,7 @@
       "source": "12_English-Exit-Exam.pdf",
       "document_question": "ต้องสอบให้ผ่านทุกมาตรฐานไหม",
       "reference_answer": "ไม่ต้อง ผ่านเกณฑ์มาตรฐานใดมาตรฐานหนึ่งก็เพียงพอ",
-      "query_id": 179
+      "query_id": 467
     },
     {
       "question": "ถ้าดรอปไว้อยากเรียนต่อต้องทำไงบ้าง",
@@ -2771,7 +8644,7 @@
       "source": "13_ขอกลับเข้าศึกษา.pdf",
       "document_question": "ลาพักการศึกษาไว้ อยากกลับมาเรียนต้องทำอย่างไร",
       "reference_answer": "เขียนคำร้องขอกลับเข้าศึกษาตามแบบฟอร์ม ให้อาจารย์ที่ปรึกษาลงนาม แล้วส่งที่ธุรการภาควิชาฯ",
-      "query_id": 180
+      "query_id": 468
     },
     {
       "question": "ต้องรีบไปแจ้งเรื่องขอเรียนต่อนี่ช่วงไหน",
@@ -2788,7 +8661,7 @@
       "source": "13_ขอกลับเข้าศึกษา.pdf",
       "document_question": "ควรยื่นคำร้องขอกลับเข้าศึกษาเมื่อไหร่",
       "reference_answer": "ก่อนวันลงทะเบียนอย่างน้อย 2 สัปดาห์",
-      "query_id": 181
+      "query_id": 469
     },
     {
       "question": "เรื่องขอรีไทร์กลับมาเรียนเนี่ยต้องจ่ายตังค์เพิ่มมั้ย",
@@ -2807,7 +8680,7 @@
       "source": "13_ขอกลับเข้าศึกษา.pdf",
       "document_question": "ขอกลับเข้าศึกษาเสียเงินไหม",
       "reference_answer": "ไม่ต้องเสียค่าธรรมเนียม",
-      "query_id": 182
+      "query_id": 470
     },
     {
       "question": "โดนชื่อหลุดไปแล้วอยากกลับมาเรียนต้องจ่ายเท่าไหร่",
@@ -2822,7 +8695,7 @@
       "source": "13_ขอกลับเข้าศึกษา.pdf",
       "document_question": "ถูกถอนชื่อแล้วอยากกลับมาเรียน ต้องเสียเงินเท่าไหร่",
       "reference_answer": "ต้องขอคืนสภาพ 1,000 บาท และลาพักการศึกษา 1,000 บาท รวม 2,000 บาท ส่วนคำร้องขอกลับเข้า",
-      "query_id": 183
+      "query_id": 471
     },
     {
       "question": "จำนวนเงินค่าขึ้นทะเบียนบัณฑิต",
@@ -2831,7 +8704,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "01_ขอสำเร็จการศึกษา.pdf",
-      "query_id": 184
+      "query_id": 472
     },
     {
       "question": "วันสุดท้ายของการแจ้งสำเร็จการศึกษาในระบบ ให้ดูจากปฏิทินการศึกษาของแต่ละภาคการศึกษา",
@@ -2840,7 +8713,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "01_ขอสำเร็จการศึกษา.pdf",
-      "query_id": 185
+      "query_id": 473
     },
     {
       "question": "จำนวนหน่วยกิตสูงสุดที่เทียบโอนได้",
@@ -2849,7 +8722,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
-      "query_id": 186
+      "query_id": 474
     },
     {
       "question": "ระยะเวลาพิจารณาอนุมัติก่อนถึงขั้นตอนชำระเงิน",
@@ -2858,7 +8731,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
-      "query_id": 187
+      "query_id": 475
     },
     {
       "question": "ค่าธรรมเนียมของคำร้องทั้ง 3 ประเภท",
@@ -2867,7 +8740,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
-      "query_id": 188
+      "query_id": 476
     },
     {
       "question": "ระยะเวลาที่เงินจะโอนเข้าบัญชีหลังยื่นคำร้อง",
@@ -2876,7 +8749,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "04_การขอเงินคืน.pdf",
-      "query_id": 189
+      "query_id": 477
     },
     {
       "question": "เงื่อนไขว่ากรณีใดบ้างที่มีสิทธิ์ขอเงินคืน",
@@ -2885,7 +8758,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "04_การขอเงินคืน.pdf",
-      "query_id": 190
+      "query_id": 478
     },
     {
       "question": "กำหนดเวลาว่าต้องยื่นขอคืนสภาพภายในกี่วันหลังถูกถอนชื่อ",
@@ -2894,7 +8767,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "05_ขอคืนสภาพนักศึกษา.pdf",
-      "query_id": 191
+      "query_id": 479
     },
     {
       "question": "จำนวนภาคการศึกษาสูงสุดที่ขอรักษาสภาพต่อเนื่องได้",
@@ -2903,7 +8776,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
-      "query_id": 192
+      "query_id": 480
     },
     {
       "question": "จำนวนหน่วยกิตสูงสุดที่ลงทะเบียนเกินเกณฑ์ได้",
@@ -2912,7 +8785,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
-      "query_id": 193
+      "query_id": 481
     },
     {
       "question": "ค่าธรรมเนียมของคำร้องนี้",
@@ -2921,7 +8794,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
-      "query_id": 194
+      "query_id": 482
     },
     {
       "question": "1,000 บาท",
@@ -2930,7 +8803,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "08_ลาพักการศึกษา.pdf",
-      "query_id": 195
+      "query_id": 483
     },
     {
       "question": "จำนวนภาคการศึกษาสูงสุดที่ลาพักต่อเนื่องได้",
@@ -2939,7 +8812,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "08_ลาพักการศึกษา.pdf",
-      "query_id": 196
+      "query_id": 484
     },
     {
       "question": "ผลกระทบด้านการเงิน เช่น การคืนเงินค่าเทอมหรือหนี้สินคงค้างหลังลาออก",
@@ -2948,7 +8821,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "09_นักศึกษาขอลาออก.pdf",
-      "query_id": 197
+      "query_id": 485
     },
     {
       "question": "ค่าธรรมเนียมของคำร้องขอลาออก",
@@ -2957,7 +8830,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "09_นักศึกษาขอลาออก.pdf",
-      "query_id": 198
+      "query_id": 486
     },
     {
       "question": "วิธีการเสนอชื่อและช่วงเวลาประกาศผลผู้ได้รับเกียรตินิยม",
@@ -2966,7 +8839,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
-      "query_id": 199
+      "query_id": 487
     },
     {
       "question": "รายละเอียดการสอบสมรรถนะด้านสารสนเทศ เช่น วิธีสมัคร เกณฑ์ผ่าน และค่าใช้จ่าย",
@@ -2975,7 +8848,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
-      "query_id": 200
+      "query_id": 488
     },
     {
       "question": "รายละเอียดการทดสอบสมรรถนะด้านวิชาชีพของแต่ละหลักสูตร",
@@ -2984,7 +8857,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
-      "query_id": 201
+      "query_id": 489
     },
     {
       "question": "วิธีสมัครสอบ ตารางสอบ และค่าสมัครสอบของแต่ละมาตรฐาน",
@@ -2993,7 +8866,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "12_English-Exit-Exam.pdf",
-      "query_id": 202
+      "query_id": 490
     },
     {
       "question": "ช่องทางและกำหนดเวลาการยื่นผลคะแนนให้คณะ",
@@ -3002,7 +8875,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "12_English-Exit-Exam.pdf",
-      "query_id": 203
+      "query_id": 491
     },
     {
       "question": "กำหนดเวลาที่ต้องยื่นขอกลับเข้าศึกษาอย่างช้าที่สุด (ระบุเพียงว่าควรยื่นก่อนวันลงทะเบียนอย่างน้อย 2",
@@ -3011,7 +8884,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "13_ขอกลับเข้าศึกษา.pdf",
-      "query_id": 204
+      "query_id": 492
     },
     {
       "question": "สัปดาห์)",
@@ -3020,7 +8893,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "13_ขอกลับเข้าศึกษา.pdf",
-      "query_id": 205
+      "query_id": 493
     }
   ]
 }

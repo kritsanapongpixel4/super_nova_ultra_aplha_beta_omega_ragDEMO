@@ -137,10 +137,29 @@ def reciprocal_rank_fusion(
     return fused
 
 
+# A code is written into a median of 7 chunks — the course listing, the
+# semester plan, the description, and again in the other curriculum book — so
+# pinning every one of them would fill all 8 slots the generator gets and
+# push out everything fusion found.  Measured 2026-09-07 over the 288
+# curriculum questions, Hit@1/Hit@5 on by_code:
+#
+#   field only (เดิม)   3% / 24%
+#   + text, cap 3      14% / 97%
+#   + text, cap 5      14% / 100%
+#   + text, ไม่จำกัด     14% / 100%
+#
+# Five is where Hit@5 saturates; past that the extra pins buy nothing and
+# only cost slots.  No other category moves — pinning cannot fire without a
+# code in the query, and CLO stays at 100%.
+_PIN_LIMIT = 5
+
+
 def exact_code_matches(
-    query: str, chunks: list[dict[str, Any]]
+    query: str,
+    chunks: list[dict[str, Any]],
+    limit: int | None = _PIN_LIMIT,
 ) -> list[dict[str, Any]]:
-    """Chunks whose ``course_code`` is written literally in *query*.
+    """Chunks that carry a course code written literally in *query*.
 
     A course code is an exact identifier, not a topic.  Neither retriever
     handles it well once every course card shares the same shape: the code is
@@ -151,12 +170,38 @@ def exact_code_matches(
     "CLO ของวิชา 04-620-201 มีกี่ข้อ" the right card sat at BM25 rank 6 and
     hybrid rank 14.
 
-    Looking the code up directly sidesteps all of that.
+    Looking the code up directly sidesteps all of that — but only for chunks
+    that were given a ``course_code`` field, and chunking only sets it on the
+    64 CLO cards.  The two หลักสูตร books are 1,718 of the 2,202 chunks and
+    write their codes in ordinary text, so for them the pin never fired at
+    all and by_code questions scored 3% Hit@1 against CLO's 100%.
+
+    Hence three tiers, best first: the card whose field says so, then a chunk
+    that *starts a line* with the code, which is how both books open a course
+    entry, then a passing mention in a table or a prerequisite list.
     """
     codes = set(_COURSE_CODE.findall(query.lower()))
     if not codes:
         return []
-    return [chunk for chunk in chunks if chunk.get("course_code") in codes]
+
+    line_start = {code: re.compile(rf"^{re.escape(code)}[ \t]", re.M) for code in codes}
+    carded: list[dict[str, Any]] = []
+    defined: list[dict[str, Any]] = []
+    mentioned: list[dict[str, Any]] = []
+
+    for chunk in chunks:
+        if chunk.get("course_code") in codes:
+            carded.append(chunk)
+            continue
+        text = chunk.get("text", "")
+        for code in codes:
+            if code not in text:
+                continue
+            (defined if line_start[code].search(text) else mentioned).append(chunk)
+            break
+
+    ranked = [*carded, *defined, *mentioned]
+    return ranked if limit is None else ranked[:limit]
 
 
 class HybridRetriever:
@@ -190,6 +235,10 @@ class HybridRetriever:
         fused = reciprocal_rank_fusion([dense_hits, sparse_hits], k=candidate_k, rrf_k=rrf_k)
 
         pinned = exact_code_matches(query, self.store.chunks) if pin_exact_codes else []
+        # By id, not by ``chunk in pinned``: that compared dicts field by
+        # field against every pinned chunk in turn, which was survivable
+        # while a pin meant one CLO card and is not now that it means five.
+        pinned_ids = {chunk.get("chunk_id") for chunk in pinned}
 
         results: list[dict[str, Any]] = []
         taken: set[Any] = set()
@@ -203,7 +252,7 @@ class HybridRetriever:
             # Pinned chunks never went through fusion, so they carry no score.
             # Say so rather than inventing a number that looks comparable.
             hit.setdefault("score", float("nan"))
-            hit["pinned"] = chunk in pinned
+            hit["pinned"] = chunk_id in pinned_ids
             results.append(hit)
             if len(results) >= max(1, k):
                 break

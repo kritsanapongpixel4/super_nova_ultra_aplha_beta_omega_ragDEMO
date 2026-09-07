@@ -94,6 +94,22 @@ _COURSE_LINE = re.compile(
     r"^รายวิชา\s+(\d{2}-\d{3}-\d{3})\s+(.+?)\s+สอดคล้องกับ", re.MULTILINE
 )
 
+# How the two หลักสูตร documents list a course — four lines, always in this
+# order:
+#
+#     01-110-004 สังคมกับสิ่งแวดล้อม
+#     Society and Environment
+#     3(3-0)
+#
+# Regular enough to build questions from without an LLM, which keeps this
+# script offline and its output reproducible.
+_CURRICULUM_COURSE = re.compile(
+    r"^(\d{2}-\d{3}-\d{3})[ \t]+([^\n]{3,80})\n"
+    r"([A-Za-z][^\n]{2,90})\n"
+    r"(\d+)\(([^)\n]{1,12})\)",
+    re.MULTILINE,
+)
+
 
 def build_clo(chunks: list[dict]) -> list[dict]:
     """One question per phrasing per course card."""
@@ -133,6 +149,72 @@ def build_clo(chunks: list[dict]) -> list[dict]:
 
     if skipped:
         print(f"⚠️  ข้ามไป {len(skipped)} วิชาที่อ่านชื่อจากบรรทัดแรกไม่ได้: {skipped[:5]}")
+    return entries
+
+
+def build_curriculum(chunks: list[dict]) -> list[dict]:
+    """One question per phrasing per course listed in the หลักสูตร documents.
+
+    Those two PDFs are 1,718 of the corpus's 2,202 chunks and had no question
+    pointing at them at all, so every retrieval number measured so far said
+    nothing about 78% of what the system can be asked.  The CLO table covers
+    the same courses' learning outcomes but is a different document with
+    different wording, and 64 chunks of it.
+
+    A course is gold wherever it is defined, not in one chosen chunk: the same
+    code is listed in both the 2563 and 2568 curricula, and the chunk overlap
+    repeats it again inside each.  Naming one of those the right answer and
+    the identical text beside it wrong would measure nothing but which copy
+    the retriever happened to reach.  Note that this caps recall@k — four gold
+    chunks cannot fit in top-1 — so read hit@k here, not recall.
+    """
+    by_code: dict[str, dict] = {}
+
+    for chunk in chunks:
+        for code, thai, english, credits, hours in _CURRICULUM_COURSE.findall(
+            chunk["text"]
+        ):
+            card = by_code.setdefault(
+                code,
+                {
+                    "name": thai.strip(),
+                    "english": english.strip(),
+                    "credits": credits,
+                    "hours": hours,
+                    "keys": [],
+                    "ids": [],
+                    "sources": set(),
+                },
+            )
+            key = chunk_key(chunk)
+            if key not in card["keys"]:
+                card["keys"].append(key)
+                card["ids"].append(str(chunk["chunk_id"]))
+            card["sources"].add(chunk.get("source", ""))
+
+    entries: list[dict] = []
+    for code, card in sorted(by_code.items()):
+        for phrasing, question in (
+            ("by_name", f"วิชา{card['name']}รหัสวิชาอะไร และกี่หน่วยกิต"),
+            ("by_code", f"วิชา {code} ชื่อวิชาอะไร และกี่หน่วยกิต"),
+        ):
+            entries.append(
+                {
+                    "question": question,
+                    "relevant_chunk_ids": card["ids"],
+                    "relevant_chunk_keys": card["keys"],
+                    "category": "curriculum",
+                    "phrasing": phrasing,
+                    # Several documents can define one course, so the single
+                    # "source" field the other builders fill would be a
+                    # coin flip.  doc_hit@k reads this list instead.
+                    "source": sorted(card["sources"])[0],
+                    "sources": sorted(card["sources"]),
+                    "course_code": code,
+                    "course_name": card["name"],
+                    "credits": card["credits"],
+                }
+            )
     return entries
 
 
@@ -267,6 +349,7 @@ def main() -> None:
 
     entries = (
         build_clo(chunks)
+        + build_curriculum(chunks)
         + build_faq(records, chunks)
         + build_unanswerable(records)
     )
@@ -336,9 +419,14 @@ def main() -> None:
     answerable = sum(1 for e in entries if e["relevant_chunk_keys"])
     sources = len({e["source"] for e in entries if e["source"]})
     print(f"🏆 สร้าง golden set {len(entries)} คำถาม จาก {sources} เอกสาร")
-    print(f"   clo          {by_category['clo']:3d}  ตาราง CLO "
-          f"(ชื่อวิชา {sum(e['phrasing'] == 'by_name' for e in entries)}, "
-          f"รหัสวิชา {sum(e['phrasing'] == 'by_code' for e in entries)})")
+    def _phrasings(category: str) -> str:
+        same = [e for e in entries if e["category"] == category]
+        return (f"(ชื่อวิชา {sum(e['phrasing'] == 'by_name' for e in same)}, "
+                f"รหัสวิชา {sum(e['phrasing'] == 'by_code' for e in same)})")
+
+    print(f"   clo          {by_category['clo']:3d}  ตาราง CLO {_phrasings('clo')}")
+    print(f"   curriculum   {by_category['curriculum']:3d}  รายวิชาในเล่มหลักสูตร "
+          f"{_phrasings('curriculum')}")
     print(f"   faq          {by_category['faq']:3d}  คำถามที่พบบ่อยในเอกสารทะเบียน")
     print(f"   unanswerable {by_category['unanswerable']:3d}  เอกสารระบุเองว่าไม่มีคำตอบ "
           f"(ไม่มี chunk เฉลย ใช้กับ eval_generation)")
