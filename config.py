@@ -71,7 +71,6 @@ GOLDEN_SET_FILE: Path | None = _golden_candidate if _golden_candidate.exists() e
 EXTRACTED_TEXT_FILE = OUTPUTS_DIR / "extracted_text.json"
 CHUNKS_FILE = OUTPUTS_DIR / "chunks.json"
 RETRIEVAL_RESULTS_FILE = OUTPUTS_DIR / "retrieval_results.json"
-EVAL_RETRIEVAL_FILE = OUTPUTS_DIR / "eval_retrieval.json"
 EVAL_GENERATION_FILE = OUTPUTS_DIR / "eval_generation.json"
 
 # BM25 indexes the same chunks for every model, so it is shared too — one

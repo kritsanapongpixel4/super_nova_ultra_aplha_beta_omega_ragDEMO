@@ -48,6 +48,7 @@ class OllamaGenerator:
         temperature: float = 0.2,
         timeout: float = 600.0,
         think_reserve: int = 3000,
+        num_ctx: int = 8192,
     ) -> None:
         self.model = model
         self.host = host.rstrip("/")
@@ -65,6 +66,15 @@ class OllamaGenerator:
         # for.  Turning thinking off instead is worse: the same question the
         # model scores correctly with thinking on, it gets wrong without it.
         self.think_reserve = think_reserve
+
+        # Ollama defaults the context window to 4096 regardless of what the
+        # model supports, and silently slides it when prompt + generation
+        # overflow — dropping the oldest tokens, which here are the retrieved
+        # documents the judge is supposed to be grading against.  A grading
+        # prompt runs ~3000 tokens and the reply another ~3500 with thinking,
+        # so the default is not enough and the failure is invisible: the judge
+        # returns confident scores for context it can no longer see.
+        self.num_ctx = num_ctx
         self.last_model = model
 
     def _post(self, path: str, payload: dict, timeout: float | None = None) -> dict:
@@ -113,6 +123,7 @@ class OllamaGenerator:
                 "options": {
                     "temperature": self.temperature,
                     "num_predict": max_tokens + self.think_reserve,
+                    "num_ctx": self.num_ctx,
                 },
             },
         )

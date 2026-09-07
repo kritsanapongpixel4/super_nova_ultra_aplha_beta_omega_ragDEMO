@@ -1,8 +1,7 @@
 """Query transformations that run before retrieval.
 
-- rewrite      : turn a context-dependent follow-up into a standalone question
-- multi_query  : generate several phrasings and union their results
-- hyde         : draft a hypothetical answer and search with that embedding
+Just one for now: rewrite, which turns a context-dependent follow-up into a
+standalone question so retrieval sees the whole thing.
 """
 
 from __future__ import annotations
@@ -90,13 +89,3 @@ def rewrite_query(
     if rewritten != query:
         logger.info("🔁 เขียนคำถามใหม่: %s", rewritten)
     return rewritten
-
-
-def multi_query(query: str, n: int = 3) -> list[str]:
-    """Return n alternative phrasings of the query (the original included)."""
-    raise NotImplementedError
-
-
-def hyde(query: str) -> str:
-    """Generate a hypothetical answer document to embed instead of the question."""
-    raise NotImplementedError

@@ -336,13 +336,26 @@ dense เป็น e5-base เหมือนกันหมด เปลี่�
 ที่มีรหัส (ยกเว้น BM25L ที่ได้ 1.6%) เพราะตัวตัดคำไทยฉีก `04-620-201` เป็นชิ้นที่ไม่มีความหมาย
 นี่คือเหตุผลที่การปักหมุดมีอยู่
 
-### Reranker: มีโค้ดแต่ปิดไว้
+### Reranker: เปิดใช้งานแล้ว
 
-Cross-encoder (`bge-reranker-v2-m3`) แก้ปัญหาเดียวกันได้ แต่วัดได้ **291 วินาทีต่อคำถาม**
-บน CPU ขณะที่การปักหมุดแก้เรื่องเดียวกันในระดับมิลลิวินาที `USE_RERANKER` จึงเป็น `False`
-เปิดได้ด้วย `python pipeline/complete_retrieval.py --rerank`
+Cross-encoder (`bge-reranker-v2-m3`) เคยวัดได้ 291 วินาทีต่อคำถามบน CPU จึงเคยปิดไว้
+วัดใหม่บน RTX 5050 ผ่าน `.venv-gpu` ได้ **749 มิลลิวินาทีต่อคำถาม** และชนะทุกตัวเลขรวม
+วัดบน golden set 183 ข้อ:
 
-ตัวเลข 291 วินาทีนั้นวัดบน CPU ตอนนี้มี `.venv-gpu` แล้ว ควรวัดใหม่ก่อนตัดสินใจ
+| | hybrid+pin | +rerank | +rerank+re-pin |
+|---|---:|---:|---:|
+| Hit@1 รวม | 85.8% | 82.0% | **87.4%** |
+| CLO ถามด้วยชื่อ | 92.2% | 98.4% | **98.4%** |
+| CLO ถามด้วยรหัส | **100.0%** | 84.4% | **100.0%** |
+| Hit@5 รวม | 95.6% | 96.7% | **96.7%** |
+| เวลาต่อคำถาม | 17ms | 682ms | 749ms |
+
+คอลัมน์กลางคือเหตุผลที่ต้องปักหมุดซ้ำ: reranker ให้คะแนนทีละคู่และไม่รู้ว่า chunk ไหน
+ถูกปักหมุดไว้ มันจึงเลื่อนรหัสวิชาที่ตรงเป๊ะออกไป ทำให้คำถามแบบรหัสตก 15.6 จุด
+`RAGPipeline.retrieve()` จึงปักหมุดใหม่หลัง rerank — ได้ทั้งรหัส 100% และกำไร 6.2 จุด
+จากคำถามแบบชื่อที่การปักหมุดช่วยไม่ได้
+
+ต้องมี CUDA ถ้ารันบนเครื่องที่มีแต่ CPU ให้ตั้ง `USE_RERANKER = False`
 
 ---
 
@@ -453,7 +466,7 @@ src/
   retriever.py         ค้นด้วยเวกเตอร์อย่างเดียว
   sparse_retrievers.py BM25L, BM25+, TF-IDF (คำ/ตัวอักษร), Dirichlet-LM
   hybrid_retriever.py  dense + sparse + RRF + ปักหมุดรหัสวิชา
-  rerankers.py         cross-encoder (ปิดไว้)
+  rerankers.py         cross-encoder (เปิดใช้งาน)
   generator.py         เรียก Gemini พร้อมระบบสำรองโมเดล
   prompt_templates.py  prompt ที่บังคับให้ตอบจากเอกสารเท่านั้น
   memory.py            เก็บบทสนทนา
@@ -515,7 +528,7 @@ SPARSE_METHOD = "bm25plus"              # bm25 | bm25l | bm25plus |
 TOP_K = 8                               # chunks ที่ส่งให้โมเดลภาษา
 CANDIDATE_K = 20                        # ดึงมาก่อนรวมอันดับ
 RRF_K = 60                              # อย่าลดค่านี้ ดูหมายเหตุใน config.py
-USE_RERANKER = False
+USE_RERANKER = True                     # ต้องมี CUDA
 LLM_MODEL = "gemini-3.5-flash"
 LLM_FALLBACK_MODELS = (...)             # เรียงตามผลวัด ไม่ใช่ตามเลขเวอร์ชัน
 ```
@@ -543,11 +556,7 @@ LLM_FALLBACK_MODELS = (...)             # เรียงตามผลวั�
 - index หมวด `forms/`, `regulations/`, `textbook/`
 - `embeddinggemma-300m` (อันดับ 2 ของ Thai-MTEB) ต้องมี HF token
 - วัด reranker ใหม่บน GPU — ตัวเลข 291 วิ./คำถาม เป็นค่าที่วัดบน CPU
-- `evaluation/eval_retrieval.py` ยังเป็นโครง และซ้ำกับ `benchmarks/bench_retrievers.py`
-  ที่ทำงานเดียวกันเสร็จแล้ว — ควรลบทิ้งหรือเปลี่ยนไปวัด reranker แทน
-- `query_transform.multi_query` และ `hyde` ยังเป็นโครง
 - ยังไม่มีเทสต์อัตโนมัติ
-- ลบ index กำพร้าใน `vector_db/` ที่ไม่มีโค้ดอ่านแล้ว
 
 ---
 
