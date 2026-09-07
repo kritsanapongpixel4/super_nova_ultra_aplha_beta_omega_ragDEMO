@@ -29,9 +29,12 @@ Measured per unanswerable question:
                     documents themselves define the right behaviour.
 
 Two API calls per question — one to answer, one to judge — so the free-tier
-quota is the binding constraint: 20 requests per model per day, and 205
-questions need 410.  ``--limit`` samples proportionally across categories
-rather than taking the first N, which would be all CLO.
+quota is the binding constraint: 20 requests per model per day across five
+models is about 100, and 493 questions need 986.  ``--limit`` samples
+proportionally across categories rather than taking the first N, which here
+would be 60 CLO questions and nothing else — the one category the system
+already answers well, so the number would come back flattering and mean
+nothing.
 
 So the run is **resumable**.  Every answer and every verdict is written to
 ``outputs/eval_cache.json`` as it arrives, and a later run reuses whatever is
@@ -45,18 +48,27 @@ Run it again after the quota resets and it picks up where it stopped:
     python evaluation/eval_generation.py            # ทำต่อจากที่ค้างไว้
     python evaluation/eval_generation.py --fresh    # ทิ้งแคช เริ่มใหม่
 
-The cache is keyed by the corpus fingerprint and the model that produced the
-text, so re-chunking or switching models invalidates the affected entries by
-itself rather than silently mixing two systems' results.
+The cache is keyed by the question, the corpus fingerprint and the model that
+produced the text, so re-chunking or switching models invalidates the
+affected entries by itself rather than silently mixing two systems' results.
+By the question and not by query_id: that is a position in the golden set,
+and when the set grew from 205 to 493 the numbering shifted under seven
+already-graded rows.
 
 The judge is an LLM grading an LLM.  With both sides on Gemini that is a real
 weakness — shared blind spots go unmeasured, and the first 30-question run
 came back 100% on faithfulness, relevance and citations, which says more
 about the grader than the system.  ``--judge ollama:<model>`` moves the
-grading to a model running locally: a different family, and no quota, so all
-205 questions can be graded in one sitting.
+grading to a model running locally: a different family, and no quota.
 
     python evaluation/eval_generation.py --judge ollama:qwen3:8b
+
+Measured 2026-09-07, that is not usable on this machine: qwen3:8b needs an
+8192-token window for a grading prompt, which puts the KV cache past the
+8GB card and spills layers to the CPU, and one grade then takes over 900
+seconds — 51 hours for the set.  A hosted judge from another vendor buys the
+same independence without the wait; whichever is used has to pass the
+calibration in the notes before its numbers are quoted.
 
 Run: python evaluation/eval_generation.py  ->  outputs/eval_generation.json
 """
@@ -64,6 +76,7 @@ Run: python evaluation/eval_generation.py  ->  outputs/eval_generation.json
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -92,11 +105,51 @@ _CITATION = re.compile(r"\[(\d+)\]")
 CACHE_FILE = config.OUTPUTS_DIR / "eval_cache.json"
 
 
+def cache_key(question: str, corpus_sha1: str) -> str:
+    """Identify cached work by the question, never by its position.
+
+    The key used to be ``query_id``, which is an index into the golden set —
+    and the golden set grows.  Adding the 288 curriculum questions renumbered
+    everything from 129 on, so seven cached rows would have been handed back
+    as the answer to a question that did not produce them, silently, with no
+    error anywhere.  That is the same failure the golden set itself had with
+    positional chunk ids; this is the second place it was hiding.
+    """
+    digest = hashlib.sha1(question.encode("utf-8")).hexdigest()[:16]
+    return f"{digest}:{corpus_sha1}"
+
+
 def load_cache(fresh: bool) -> dict:
+    """Load the cache, converting anything still keyed by position.
+
+    A slot that never got as far as being graded has no question recorded, so
+    there is nothing to re-key it by and it is dropped — one wasted answer
+    costs a single call, and guessing costs the run's integrity.
+    """
     if fresh or not CACHE_FILE.exists():
         return {}
     with open(CACHE_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+        raw = json.load(f)
+
+    migrated: dict = {}
+    dropped = 0
+    for key, slot in raw.items():
+        head, _, corpus_sha1 = key.partition(":")
+        if not head.isdigit():
+            migrated[key] = slot
+            continue
+        question = ((slot.get("row") or {}).get("question") or "").strip()
+        if not question:
+            dropped += 1
+            continue
+        migrated[cache_key(question, corpus_sha1)] = slot
+
+    moved = sum(1 for k in raw if k.partition(":")[0].isdigit()) - dropped
+    if moved or dropped:
+        print(f"↻ ย้ายแคช {moved} รายการมาผูกกับตัวคำถามแทนเลขลำดับ"
+              + (f" · ทิ้ง {dropped} รายการที่ไม่รู้ว่าเป็นคำถามข้อไหน" if dropped else ""))
+        save_cache(migrated)
+    return migrated
 
 
 def save_cache(cache: dict) -> None:
@@ -326,7 +379,7 @@ def main() -> None:
     done = sum(
         1
         for e in entries
-        if (cache.get(f"{e['query_id']}:{corpus['chunks_sha1']}") or {}).get(
+        if (cache.get(cache_key(e["question"], corpus["chunks_sha1"])) or {}).get(
             "judge_model"
         )
         == judge_model
@@ -346,7 +399,7 @@ def main() -> None:
     ) as run:
         called = reused = 0
         for number, entry in enumerate(entries, start=1):
-            key = f"{entry['query_id']}:{corpus['chunks_sha1']}"
+            key = cache_key(entry["question"], corpus["chunks_sha1"])
             slot = cache.get(key) or {}
             head = f"  [{number}/{len(entries)}] {entry['question'][:52]}"
 
@@ -364,6 +417,9 @@ def main() -> None:
                 slot = {
                     "result": {"answer": result["answer"], "sources": result["sources"]},
                     "answer_model": config.LLM_MODEL,
+                    # Recorded here, not only inside the graded row, so a slot
+                    # that dies before grading can still be identified later.
+                    "question": entry["question"],
                 }
                 cache[key] = slot
                 save_cache(cache)
