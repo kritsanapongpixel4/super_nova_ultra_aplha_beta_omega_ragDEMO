@@ -12,7 +12,17 @@ from .generator import load_api_key
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_REWRITE_MODEL = "gemini-3.6-flash"
+# Deliberately not config.LLM_MODEL.  Rewriting is one short sentence with
+# the conversation in front of it, so it does not need the answering model —
+# and on the free tier, where the quota is 20 requests per model per day,
+# spending the answering model's allowance on rewrites is how a chat runs out
+# of answers halfway through a session.  This is the cheapest model in the
+# registry ($0.30/$2.50 per 1M vs $1.50/$9.00).
+#
+# The separation is partial, not clean: every model here is also somewhere in
+# LLM_FALLBACK_MODELS, so heavy rewriting still eats into what the generator
+# can fall back to.  Fixing that properly needs a model outside the chain.
+DEFAULT_REWRITE_MODEL = "gemini-3.1-flash-lite"
 
 _REWRITE_PROMPT = """คุณคือตัวช่วยเขียนคำถามใหม่ให้สมบูรณ์ในตัวเอง
 
