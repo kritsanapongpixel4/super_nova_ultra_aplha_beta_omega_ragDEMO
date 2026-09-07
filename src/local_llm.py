@@ -46,14 +46,25 @@ class OllamaGenerator:
         model: str,
         host: str = DEFAULT_HOST,
         temperature: float = 0.2,
-        timeout: float = 180.0,
+        timeout: float = 600.0,
+        think_reserve: int = 3000,
     ) -> None:
         self.model = model
         self.host = host.rstrip("/")
         self.temperature = temperature
-        # Generous: a 8B model on a laptop GPU takes tens of seconds for a
+        # Generous: an 8B model on a laptop GPU takes tens of seconds for a
         # long grading prompt, and a timeout here reads as a judging failure.
         self.timeout = timeout
+
+        # Reasoning models (Qwen3, and others like it) think before they
+        # answer.  Ollama keeps that thinking out of ``response`` but it still
+        # spends the ``num_predict`` budget, so a caller asking for 1000
+        # tokens got the thinking and 14 characters of a JSON object cut off
+        # mid-key — which reads as "the judge failed" when the judge was fine
+        # and the budget was not.  Reserve room on top of what the caller asks
+        # for.  Turning thinking off instead is worse: the same question the
+        # model scores correctly with thinking on, it gets wrong without it.
+        self.think_reserve = think_reserve
         self.last_model = model
 
     def _post(self, path: str, payload: dict, timeout: float | None = None) -> dict:
@@ -101,8 +112,17 @@ class OllamaGenerator:
                 "stream": False,
                 "options": {
                     "temperature": self.temperature,
-                    "num_predict": max_tokens,
+                    "num_predict": max_tokens + self.think_reserve,
                 },
             },
         )
-        return (data.get("response") or "").strip()
+        text = (data.get("response") or "").strip()
+        if data.get("done_reason") == "length":
+            # Truncated output is usually unparseable rather than merely
+            # short, and silently returning half a JSON object sends the
+            # caller hunting for a parsing bug that is not there.
+            logger.warning(
+                "%s ตอบไม่จบ (num_predict=%d หมด) — ได้ %d ตัวอักษร",
+                self.model, max_tokens + self.think_reserve, len(text),
+            )
+        return text
