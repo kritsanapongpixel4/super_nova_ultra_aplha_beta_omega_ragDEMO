@@ -3639,3 +3639,143 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   }
 }
 ```
+
+## ✅ 2026-09-07 23:44 — eval generation: e5-base + gemini-3.5-flash
+
+- **ทดลองอะไร:** วัดคุณภาพคำตอบ ไม่ใช่แค่ว่าค้น chunk เจอ
+- **ทำอย่างไร:** 60 คำถามจาก golden set, ตอบด้วย gemini-3.5-flash, ตรวจด้วย gemini-3.5-flash (LLM judge)
+- **ผลลัพธ์:** faithfulness 0.982, relevance 1.0, citation 0.982, ยอมรับว่าไม่รู้ 0.5
+
+```json
+{
+  "summary": {
+    "all": {
+      "n": 59,
+      "graded": 59,
+      "context_recall": 0.772,
+      "faithfulness": 0.982,
+      "relevance": 1.0,
+      "citation_valid": 0.982,
+      "citations_in_range": 1.0,
+      "abstained": 0.5
+    },
+    "clo": {
+      "n": 16,
+      "graded": 16,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "citation_valid": 1.0,
+      "citations_in_range": 1.0,
+      "abstained": null
+    },
+    "curriculum": {
+      "n": 35,
+      "graded": 35,
+      "context_recall": 0.629,
+      "faithfulness": 0.971,
+      "relevance": 1.0,
+      "citation_valid": 0.971,
+      "citations_in_range": 1.0,
+      "abstained": null
+    },
+    "faq": {
+      "n": 6,
+      "graded": 6,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "citation_valid": 1.0,
+      "citations_in_range": 1.0,
+      "abstained": null
+    },
+    "unanswerable": {
+      "n": 2,
+      "graded": 2,
+      "context_recall": null,
+      "faithfulness": null,
+      "relevance": null,
+      "citation_valid": null,
+      "citations_in_range": 1.0,
+      "abstained": 0.5
+    }
+  },
+  "judge_model": "gemini-3.5-flash",
+  "corpus": {
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
+    "key_version": 1
+  }
+}
+```
+
+## ✅ 2026-09-07 23:48 — eval generation: e5-base + gemini-3.5-flash
+
+- **ทดลองอะไร:** วัดคุณภาพคำตอบ ไม่ใช่แค่ว่าค้น chunk เจอ
+- **ทำอย่างไร:** 60 คำถามจาก golden set, ตอบด้วย gemini-3.5-flash, ตรวจด้วย gemini-3.5-flash (LLM judge)
+- **ผลลัพธ์:** faithfulness 0.982, relevance 1.0, citation 0.982, ยอมรับว่าไม่รู้ 0.5
+
+```json
+{
+  "summary": {
+    "all": {
+      "n": 59,
+      "graded": 59,
+      "context_recall": 0.895,
+      "faithfulness": 0.982,
+      "relevance": 1.0,
+      "citation_valid": 0.982,
+      "citations_in_range": 1.0,
+      "abstained": 0.5
+    },
+    "clo": {
+      "n": 16,
+      "graded": 16,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "citation_valid": 1.0,
+      "citations_in_range": 1.0,
+      "abstained": null
+    },
+    "curriculum": {
+      "n": 35,
+      "graded": 35,
+      "context_recall": 0.829,
+      "faithfulness": 0.971,
+      "relevance": 1.0,
+      "citation_valid": 0.971,
+      "citations_in_range": 1.0,
+      "abstained": null
+    },
+    "faq": {
+      "n": 6,
+      "graded": 6,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "relevance": 1.0,
+      "citation_valid": 1.0,
+      "citations_in_range": 1.0,
+      "abstained": null
+    },
+    "unanswerable": {
+      "n": 2,
+      "graded": 2,
+      "context_recall": null,
+      "faithfulness": null,
+      "relevance": null,
+      "citation_valid": null,
+      "citations_in_range": 1.0,
+      "abstained": 0.5
+    }
+  },
+  "judge_model": "gemini-3.5-flash",
+  "corpus": {
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
+    "key_version": 1
+  }
+}
+```

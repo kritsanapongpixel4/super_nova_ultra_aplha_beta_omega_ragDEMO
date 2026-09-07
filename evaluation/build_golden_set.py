@@ -103,6 +103,12 @@ _COURSE_LINE = re.compile(
 #
 # Regular enough to build questions from without an LLM, which keeps this
 # script offline and its output reproducible.
+# "3(3-0)" / "3(2-2-5)" — the credit figure.  Its presence is what separates a
+# chunk that answers "which code, how many credits" from one that only names
+# the course in a prerequisite list.
+_CREDIT_FIGURE = re.compile(r"\d+\s*\(")
+_COURSE_CODE = re.compile(r"\d{2}-\d{3}-\d{3}")
+
 _CURRICULUM_COURSE = re.compile(
     r"^(\d{2}-\d{3}-\d{3})[ \t]+([^\n]{3,80})\n"
     r"([A-Za-z][^\n]{2,90})\n"
@@ -167,6 +173,24 @@ def build_curriculum(chunks: list[dict]) -> list[dict]:
     the identical text beside it wrong would measure nothing but which copy
     the retriever happened to reach.  Note that this caps recall@k — four gold
     chunks cannot fit in top-1 — so read hit@k here, not recall.
+
+    "Defined" is wider than the four-line entry.  The first version of this
+    builder marked only those, and the generation run then scored thirteen
+    curriculum answers as retrieval misses while the system had in fact
+    answered every one of them correctly, out of the semester plan or the
+    course list — chunks that state the code beside its credit figure and
+    answer "which code, how many credits" exactly as well as the entry does.
+    Measured over the 288 questions, that labelling alone was most of the
+    apparent failure:
+
+                    เฉลยแบบแคบ        เฉลยที่ตอบได้จริง
+        by_code    13.9% / 100.0%     52.8% / 100.0%
+        by_name     7.6% /  35.4%     31.2% /  61.8%   (Hit@1 / Hit@5)
+
+    Widening it is not grading on a curve: a chunk reading "04-621-302
+    อินเตอร์เน็ตของสรรพสิ่ง 3(3-0-6)" answers the question, and calling it
+    wrong measures the label, not the retriever.  by_name stays the weak
+    spot either way, which is the finding worth keeping.
     """
     by_code: dict[str, dict] = {}
 
@@ -190,6 +214,22 @@ def build_curriculum(chunks: list[dict]) -> list[dict]:
             if key not in card["keys"]:
                 card["keys"].append(key)
                 card["ids"].append(str(chunk["chunk_id"]))
+            card["sources"].add(chunk.get("source", ""))
+
+    # Second pass: everything else that answers the same question.  Runs after
+    # the entries are known so a course nobody defines never gets invented
+    # here out of a passing mention.
+    for chunk in chunks:
+        text = chunk.get("text", "")
+        if not _CREDIT_FIGURE.search(text):
+            continue
+        key = chunk_key(chunk)
+        for code in set(_COURSE_CODE.findall(text)):
+            card = by_code.get(code)
+            if card is None or key in card["keys"]:
+                continue
+            card["keys"].append(key)
+            card["ids"].append(str(chunk["chunk_id"]))
             card["sources"].add(chunk.get("source", ""))
 
     entries: list[dict] = []

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "built_at": "2026-09-07T18:23:49",
+    "built_at": "2026-09-07T23:47:31",
     "n_queries": 493,
     "by_category": {
       "clo": 128,
@@ -8,8 +8,8 @@
       "faq": 55,
       "unanswerable": 22
     },
-    "chunks_covered": 263,
-    "coverage": 0.1194,
+    "chunks_covered": 436,
+    "coverage": 0.198,
     "corpus": {
       "n_chunks": 2202,
       "n_sources": 18,
@@ -1943,15 +1943,20 @@
     {
       "question": "วิชาอัตลักษณ์แห่งราชมงคลธัญบุรีรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1527"
+        "1527",
+        "1315",
+        "1768"
       ],
       "relevant_chunk_keys": [
-        "75e7a80f3f304aef"
+        "75e7a80f3f304aef",
+        "d62554cb14cbe653",
+        "80a0035ece863845"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-101",
@@ -1962,15 +1967,20 @@
     {
       "question": "วิชา 00-100-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1527"
+        "1527",
+        "1315",
+        "1768"
       ],
       "relevant_chunk_keys": [
-        "75e7a80f3f304aef"
+        "75e7a80f3f304aef",
+        "d62554cb14cbe653",
+        "80a0035ece863845"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-101",
@@ -1981,10 +1991,12 @@
     {
       "question": "วิชาอัตลักษณ์แห่งราชมงคลธัญบุรีรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "728"
+        "728",
+        "1300"
       ],
       "relevant_chunk_keys": [
-        "a04ff529f926adf7"
+        "a04ff529f926adf7",
+        "d5fda0b2d6749272"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2000,10 +2012,12 @@
     {
       "question": "วิชา 00-100-102 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "728"
+        "728",
+        "1300"
       ],
       "relevant_chunk_keys": [
-        "a04ff529f926adf7"
+        "a04ff529f926adf7",
+        "d5fda0b2d6749272"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2019,10 +2033,12 @@
     {
       "question": "วิชาความเป็นผู้ประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "661"
+        "661",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "aec91a80e936cad5"
+        "aec91a80e936cad5",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2038,10 +2054,12 @@
     {
       "question": "วิชา 00-100-103 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "661"
+        "661",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "aec91a80e936cad5"
+        "aec91a80e936cad5",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2057,15 +2075,20 @@
     {
       "question": "วิชามหาวิทยาลัยสีเขียวรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1527"
+        "1527",
+        "1315",
+        "1772"
       ],
       "relevant_chunk_keys": [
-        "75e7a80f3f304aef"
+        "75e7a80f3f304aef",
+        "d62554cb14cbe653",
+        "1e9e30a488e5d921"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-201",
@@ -2076,15 +2099,20 @@
     {
       "question": "วิชา 00-100-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1527"
+        "1527",
+        "1315",
+        "1772"
       ],
       "relevant_chunk_keys": [
-        "75e7a80f3f304aef"
+        "75e7a80f3f304aef",
+        "d62554cb14cbe653",
+        "1e9e30a488e5d921"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-201",
@@ -2095,15 +2123,20 @@
     {
       "question": "วิชาการคิดเชิงออกแบบรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1527"
+        "1527",
+        "1315",
+        "1776"
       ],
       "relevant_chunk_keys": [
-        "75e7a80f3f304aef"
+        "75e7a80f3f304aef",
+        "d62554cb14cbe653",
+        "eafed316377cca7b"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-202",
@@ -2114,15 +2147,20 @@
     {
       "question": "วิชา 00-100-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1527"
+        "1527",
+        "1315",
+        "1776"
       ],
       "relevant_chunk_keys": [
-        "75e7a80f3f304aef"
+        "75e7a80f3f304aef",
+        "d62554cb14cbe653",
+        "eafed316377cca7b"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-202",
@@ -2133,10 +2171,12 @@
     {
       "question": "วิชามหาวิทยาลัยสีเขียวรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "634"
+        "634",
+        "1308"
       ],
       "relevant_chunk_keys": [
-        "5b8efd715ca03b5b"
+        "5b8efd715ca03b5b",
+        "76bb3b0484a618c4"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2152,10 +2192,12 @@
     {
       "question": "วิชา 00-100-203 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "634"
+        "634",
+        "1308"
       ],
       "relevant_chunk_keys": [
-        "5b8efd715ca03b5b"
+        "5b8efd715ca03b5b",
+        "76bb3b0484a618c4"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2171,10 +2213,12 @@
     {
       "question": "วิชาการคิดเชิงออกแบบรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "635"
+        "635",
+        "1308"
       ],
       "relevant_chunk_keys": [
-        "7c07acdf3df93f14"
+        "7c07acdf3df93f14",
+        "76bb3b0484a618c4"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2190,10 +2234,12 @@
     {
       "question": "วิชา 00-100-204 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "635"
+        "635",
+        "1308"
       ],
       "relevant_chunk_keys": [
-        "7c07acdf3df93f14"
+        "7c07acdf3df93f14",
+        "76bb3b0484a618c4"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2209,15 +2255,20 @@
     {
       "question": "วิชาความเป็นผู้ประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1527"
+        "1527",
+        "1315",
+        "1780"
       ],
       "relevant_chunk_keys": [
-        "75e7a80f3f304aef"
+        "75e7a80f3f304aef",
+        "d62554cb14cbe653",
+        "17f0f02cc27ef468"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-301",
@@ -2228,15 +2279,20 @@
     {
       "question": "วิชา 00-100-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1527"
+        "1527",
+        "1315",
+        "1780"
       ],
       "relevant_chunk_keys": [
-        "75e7a80f3f304aef"
+        "75e7a80f3f304aef",
+        "d62554cb14cbe653",
+        "17f0f02cc27ef468"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-301",
@@ -2247,15 +2303,20 @@
     {
       "question": "วิชานวัตกรรมเพื่อชุมชนรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1528"
+        "1528",
+        "1315",
+        "1784"
       ],
       "relevant_chunk_keys": [
-        "85c4b9c89ee73a9d"
+        "85c4b9c89ee73a9d",
+        "d62554cb14cbe653",
+        "ff7a680acf2e4627"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-302",
@@ -2266,15 +2327,20 @@
     {
       "question": "วิชา 00-100-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1528"
+        "1528",
+        "1315",
+        "1784"
       ],
       "relevant_chunk_keys": [
-        "85c4b9c89ee73a9d"
+        "85c4b9c89ee73a9d",
+        "d62554cb14cbe653",
+        "ff7a680acf2e4627"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "00-100-302",
@@ -2285,10 +2351,12 @@
     {
       "question": "วิชานวัตกรรมเพื่อชุมชนรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "659"
+        "659",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "92938469059e5ba8"
+        "92938469059e5ba8",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2304,10 +2372,12 @@
     {
       "question": "วิชา 00-100-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "659"
+        "659",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "92938469059e5ba8"
+        "92938469059e5ba8",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2324,11 +2394,13 @@
       "question": "วิชานวัตกรรมเพื่ออุตสาหกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "660",
-        "805"
+        "805",
+        "1316"
       ],
       "relevant_chunk_keys": [
         "4099638e905aff9a",
-        "820793ec21b9684e"
+        "820793ec21b9684e",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2345,11 +2417,13 @@
       "question": "วิชา 00-100-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "660",
-        "805"
+        "805",
+        "1316"
       ],
       "relevant_chunk_keys": [
         "4099638e905aff9a",
-        "820793ec21b9684e"
+        "820793ec21b9684e",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2367,12 +2441,18 @@
       "relevant_chunk_ids": [
         "615",
         "711",
-        "1516"
+        "1516",
+        "1297",
+        "1298",
+        "1672"
       ],
       "relevant_chunk_keys": [
         "0fdd3c54dd67e629",
         "a1717755ccb99f5a",
-        "7b6630e163913bb1"
+        "7b6630e163913bb1",
+        "fbc36b84fd65f0ee",
+        "25718bdf487f0173",
+        "ac32b45d9361dde7"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2391,12 +2471,18 @@
       "relevant_chunk_ids": [
         "615",
         "711",
-        "1516"
+        "1516",
+        "1297",
+        "1298",
+        "1672"
       ],
       "relevant_chunk_keys": [
         "0fdd3c54dd67e629",
         "a1717755ccb99f5a",
-        "7b6630e163913bb1"
+        "7b6630e163913bb1",
+        "fbc36b84fd65f0ee",
+        "25718bdf487f0173",
+        "ac32b45d9361dde7"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2414,11 +2500,17 @@
       "question": "วิชาการพัฒนาคุณภาพชีวิตและสังคมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "616",
-        "1516"
+        "1516",
+        "1297",
+        "1298",
+        "1674"
       ],
       "relevant_chunk_keys": [
         "eac8783dd9abb2ac",
-        "7b6630e163913bb1"
+        "7b6630e163913bb1",
+        "fbc36b84fd65f0ee",
+        "25718bdf487f0173",
+        "85a6bf703f43e135"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2436,11 +2528,17 @@
       "question": "วิชา 01-110-009 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "616",
-        "1516"
+        "1516",
+        "1297",
+        "1298",
+        "1674"
       ],
       "relevant_chunk_keys": [
         "eac8783dd9abb2ac",
-        "7b6630e163913bb1"
+        "7b6630e163913bb1",
+        "fbc36b84fd65f0ee",
+        "25718bdf487f0173",
+        "85a6bf703f43e135"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2457,10 +2555,12 @@
     {
       "question": "วิชาปรัชญาเศรษฐกิจพอเพียงเพื่อการพัฒนาที่ยั่งยืนรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "617"
+        "617",
+        "1298"
       ],
       "relevant_chunk_keys": [
-        "89443d7811d34a7a"
+        "89443d7811d34a7a",
+        "25718bdf487f0173"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2476,10 +2576,12 @@
     {
       "question": "วิชา 01-110-012 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "617"
+        "617",
+        "1298"
       ],
       "relevant_chunk_keys": [
-        "89443d7811d34a7a"
+        "89443d7811d34a7a",
+        "25718bdf487f0173"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2496,11 +2598,15 @@
       "question": "วิชาคุณภาพชีวิตที่ดีของพลเมืองยุคใหม่รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "618",
-        "1516"
+        "1516",
+        "1297",
+        "1298"
       ],
       "relevant_chunk_keys": [
         "7f197742d6e9ca7e",
-        "7b6630e163913bb1"
+        "7b6630e163913bb1",
+        "fbc36b84fd65f0ee",
+        "25718bdf487f0173"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2518,11 +2624,15 @@
       "question": "วิชา 01-110-017 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "618",
-        "1516"
+        "1516",
+        "1297",
+        "1298"
       ],
       "relevant_chunk_keys": [
         "7f197742d6e9ca7e",
-        "7b6630e163913bb1"
+        "7b6630e163913bb1",
+        "fbc36b84fd65f0ee",
+        "25718bdf487f0173"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2540,16 +2650,19 @@
       "question": "วิชาชีวิตในสังคมพหุวัฒนธรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "1516",
-        "1517"
+        "1517",
+        "1297"
       ],
       "relevant_chunk_keys": [
         "7b6630e163913bb1",
-        "23453c5ab28ef8cc"
+        "23453c5ab28ef8cc",
+        "fbc36b84fd65f0ee"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-110-021",
@@ -2561,16 +2674,19 @@
       "question": "วิชา 01-110-021 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "1516",
-        "1517"
+        "1517",
+        "1297"
       ],
       "relevant_chunk_keys": [
         "7b6630e163913bb1",
-        "23453c5ab28ef8cc"
+        "23453c5ab28ef8cc",
+        "fbc36b84fd65f0ee"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-110-021",
@@ -2581,15 +2697,20 @@
     {
       "question": "วิชาชีวิตที่พอเพียงกับภูมิปัญญาไทยรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1517"
+        "1517",
+        "1297",
+        "1684"
       ],
       "relevant_chunk_keys": [
-        "23453c5ab28ef8cc"
+        "23453c5ab28ef8cc",
+        "fbc36b84fd65f0ee",
+        "9865024f5dc5f145"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-110-024",
@@ -2600,15 +2721,20 @@
     {
       "question": "วิชา 01-110-024 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1517"
+        "1517",
+        "1297",
+        "1684"
       ],
       "relevant_chunk_keys": [
-        "23453c5ab28ef8cc"
+        "23453c5ab28ef8cc",
+        "fbc36b84fd65f0ee",
+        "9865024f5dc5f145"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-110-024",
@@ -2619,10 +2745,12 @@
     {
       "question": "วิชาปฏิบัติการสีเขียวสู่สังคมคาร์บอนต่ำรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "619"
+        "619",
+        "1298"
       ],
       "relevant_chunk_keys": [
-        "0729b692246fb7cb"
+        "0729b692246fb7cb",
+        "25718bdf487f0173"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2638,10 +2766,12 @@
     {
       "question": "วิชา 01-110-028 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "619"
+        "619",
+        "1298"
       ],
       "relevant_chunk_keys": [
-        "0729b692246fb7cb"
+        "0729b692246fb7cb",
+        "25718bdf487f0173"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2657,10 +2787,12 @@
     {
       "question": "วิชาอัตลักษณ์การเมืองกับพลเมืองยุคใหม่รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "620"
+        "620",
+        "1298"
       ],
       "relevant_chunk_keys": [
-        "fb89a702516b19c6"
+        "fb89a702516b19c6",
+        "25718bdf487f0173"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2676,10 +2808,12 @@
     {
       "question": "วิชา 01-110-029 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "620"
+        "620",
+        "1298"
       ],
       "relevant_chunk_keys": [
-        "fb89a702516b19c6"
+        "fb89a702516b19c6",
+        "25718bdf487f0173"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2695,10 +2829,12 @@
     {
       "question": "วิชาสารสนเทศและการเขียนรายงานทางวิชาการรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "624"
+        "624",
+        "1300"
       ],
       "relevant_chunk_keys": [
-        "aa724651ede26996"
+        "aa724651ede26996",
+        "d5fda0b2d6749272"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2714,10 +2850,12 @@
     {
       "question": "วิชา 01-210-017 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "624"
+        "624",
+        "1300"
       ],
       "relevant_chunk_keys": [
-        "aa724651ede26996"
+        "aa724651ede26996",
+        "d5fda0b2d6749272"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2733,15 +2871,20 @@
     {
       "question": "วิชาการพัฒนาบุคลิกภาพรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1518"
+        "1518",
+        "1299",
+        "1686"
       ],
       "relevant_chunk_keys": [
-        "829c3d7d5ea87801"
+        "829c3d7d5ea87801",
+        "e83bb87d88947225",
+        "3522b6f01d798a2c"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-210-019",
@@ -2752,15 +2895,20 @@
     {
       "question": "วิชา 01-210-019 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1518"
+        "1518",
+        "1299",
+        "1686"
       ],
       "relevant_chunk_keys": [
-        "829c3d7d5ea87801"
+        "829c3d7d5ea87801",
+        "e83bb87d88947225",
+        "3522b6f01d798a2c"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-210-019",
@@ -2771,15 +2919,20 @@
     {
       "question": "วิชาจิตวิทยาประยุกต์เพื่อการทำงานรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1518"
+        "1518",
+        "1299",
+        "1688"
       ],
       "relevant_chunk_keys": [
-        "829c3d7d5ea87801"
+        "829c3d7d5ea87801",
+        "e83bb87d88947225",
+        "a1f59331e54d330d"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-210-020",
@@ -2790,15 +2943,20 @@
     {
       "question": "วิชา 01-210-020 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1518"
+        "1518",
+        "1299",
+        "1688"
       ],
       "relevant_chunk_keys": [
-        "829c3d7d5ea87801"
+        "829c3d7d5ea87801",
+        "e83bb87d88947225",
+        "a1f59331e54d330d"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-210-020",
@@ -2810,11 +2968,17 @@
       "question": "วิชาทักษะการเรียนรู้สู่ความสำเร็จรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "625",
-        "1518"
+        "1518",
+        "1299",
+        "1300",
+        "1691"
       ],
       "relevant_chunk_keys": [
         "29953c8e55f66ba7",
-        "829c3d7d5ea87801"
+        "829c3d7d5ea87801",
+        "e83bb87d88947225",
+        "d5fda0b2d6749272",
+        "96471708f1c4fdf1"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2832,11 +2996,17 @@
       "question": "วิชา 01-210-024 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "625",
-        "1518"
+        "1518",
+        "1299",
+        "1300",
+        "1691"
       ],
       "relevant_chunk_keys": [
         "29953c8e55f66ba7",
-        "829c3d7d5ea87801"
+        "829c3d7d5ea87801",
+        "e83bb87d88947225",
+        "d5fda0b2d6749272",
+        "96471708f1c4fdf1"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2853,10 +3023,12 @@
     {
       "question": "วิชาบุคลิกภาพสู่ความสำเร็จรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "626"
+        "626",
+        "1300"
       ],
       "relevant_chunk_keys": [
-        "ab4ea30e15ce7e00"
+        "ab4ea30e15ce7e00",
+        "d5fda0b2d6749272"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2872,10 +3044,12 @@
     {
       "question": "วิชา 01-210-033 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "626"
+        "626",
+        "1300"
       ],
       "relevant_chunk_keys": [
-        "ab4ea30e15ce7e00"
+        "ab4ea30e15ce7e00",
+        "d5fda0b2d6749272"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2892,11 +3066,13 @@
       "question": "วิชาจิตวิทยาเพื่อพัฒนาประสิทธิภาพการทำงานรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "627",
-        "738"
+        "738",
+        "1300"
       ],
       "relevant_chunk_keys": [
         "d8d200f4bf97bb60",
-        "283090c993953e03"
+        "283090c993953e03",
+        "d5fda0b2d6749272"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2913,11 +3089,13 @@
       "question": "วิชา 01-210-034 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "627",
-        "738"
+        "738",
+        "1300"
       ],
       "relevant_chunk_keys": [
         "d8d200f4bf97bb60",
-        "283090c993953e03"
+        "283090c993953e03",
+        "d5fda0b2d6749272"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2933,10 +3111,12 @@
     {
       "question": "วิชาสุนทรียภาพของภาษาไทยในบทเพลงและวรรณกรรมรังสรรค์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "653"
+        "653",
+        "1313"
       ],
       "relevant_chunk_keys": [
-        "535c041f2b856042"
+        "535c041f2b856042",
+        "1f811716329db412"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -2952,10 +3132,12 @@
     {
       "question": "วิชา 01-310-007 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "653"
+        "653",
+        "1313"
       ],
       "relevant_chunk_keys": [
-        "535c041f2b856042"
+        "535c041f2b856042",
+        "1f811716329db412"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -2971,15 +3153,20 @@
     {
       "question": "วิชาสุนทรียภาพของภาษาไทยในบทเพลงรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1522"
+        "1522",
+        "1311",
+        "1704"
       ],
       "relevant_chunk_keys": [
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "fa08e1d0d223a971",
+        "499258155f4fe727"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-310-018",
@@ -2990,15 +3177,20 @@
     {
       "question": "วิชา 01-310-018 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1522"
+        "1522",
+        "1311",
+        "1704"
       ],
       "relevant_chunk_keys": [
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "fa08e1d0d223a971",
+        "499258155f4fe727"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-310-018",
@@ -3010,11 +3202,17 @@
       "question": "วิชาภาษาอังกฤษเพื่อการสื่อสารรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "645",
-        "1520"
+        "1520",
+        "1310",
+        "1312",
+        "1697"
       ],
       "relevant_chunk_keys": [
         "cd8725fa088f8e9c",
-        "3cd114b6d335b601"
+        "3cd114b6d335b601",
+        "4ddf2121c37b3d39",
+        "7885b8b1e19709ef",
+        "22a6915a90c04d7d"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3032,11 +3230,17 @@
       "question": "วิชา 01-320-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "645",
-        "1520"
+        "1520",
+        "1310",
+        "1312",
+        "1697"
       ],
       "relevant_chunk_keys": [
         "cd8725fa088f8e9c",
-        "3cd114b6d335b601"
+        "3cd114b6d335b601",
+        "4ddf2121c37b3d39",
+        "7885b8b1e19709ef",
+        "22a6915a90c04d7d"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3054,11 +3258,17 @@
       "question": "วิชาสนทนาภาษาอังกฤษรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "646",
-        "1520"
+        "1520",
+        "1310",
+        "1312",
+        "1699"
       ],
       "relevant_chunk_keys": [
         "b33fe9eaae1158f8",
-        "3cd114b6d335b601"
+        "3cd114b6d335b601",
+        "4ddf2121c37b3d39",
+        "7885b8b1e19709ef",
+        "c74f89e937296722"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3076,11 +3286,17 @@
       "question": "วิชา 01-320-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "646",
-        "1520"
+        "1520",
+        "1310",
+        "1312",
+        "1699"
       ],
       "relevant_chunk_keys": [
         "b33fe9eaae1158f8",
-        "3cd114b6d335b601"
+        "3cd114b6d335b601",
+        "4ddf2121c37b3d39",
+        "7885b8b1e19709ef",
+        "c74f89e937296722"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3097,10 +3313,12 @@
     {
       "question": "วิชาการพัฒนาทักษะการอ่านภาษาอังกฤษรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "647"
+        "647",
+        "1312"
       ],
       "relevant_chunk_keys": [
-        "3f7d3b962e462e72"
+        "3f7d3b962e462e72",
+        "7885b8b1e19709ef"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3116,10 +3334,12 @@
     {
       "question": "วิชา 01-320-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "647"
+        "647",
+        "1312"
       ],
       "relevant_chunk_keys": [
-        "3f7d3b962e462e72"
+        "3f7d3b962e462e72",
+        "7885b8b1e19709ef"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3135,10 +3355,12 @@
     {
       "question": "วิชาการพัฒนาทักษะการเขียนภาษาอังกฤษรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "648"
+        "648",
+        "1312"
       ],
       "relevant_chunk_keys": [
-        "e7ef4eb20d1977c3"
+        "e7ef4eb20d1977c3",
+        "7885b8b1e19709ef"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3154,10 +3376,12 @@
     {
       "question": "วิชา 01-320-004 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "648"
+        "648",
+        "1312"
       ],
       "relevant_chunk_keys": [
-        "e7ef4eb20d1977c3"
+        "e7ef4eb20d1977c3",
+        "7885b8b1e19709ef"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3173,10 +3397,12 @@
     {
       "question": "วิชาภาษาอังกฤษเพื่อการนำเสนอนวัตกรรมและธุรกิจรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "649"
+        "649",
+        "1312"
       ],
       "relevant_chunk_keys": [
-        "78202fb3d91c186c"
+        "78202fb3d91c186c",
+        "7885b8b1e19709ef"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3192,10 +3418,12 @@
     {
       "question": "วิชา 01-320-005 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "649"
+        "649",
+        "1312"
       ],
       "relevant_chunk_keys": [
-        "78202fb3d91c186c"
+        "78202fb3d91c186c",
+        "7885b8b1e19709ef"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3211,10 +3439,12 @@
     {
       "question": "วิชาภาษาอังกฤษเพื่อการสอบแบบทดสอบมาตรฐานรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "786"
+        "786",
+        "1312"
       ],
       "relevant_chunk_keys": [
-        "7fb4383e3b6182f4"
+        "7fb4383e3b6182f4",
+        "7885b8b1e19709ef"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3230,10 +3460,12 @@
     {
       "question": "วิชา 01-320-006 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "786"
+        "786",
+        "1312"
       ],
       "relevant_chunk_keys": [
-        "7fb4383e3b6182f4"
+        "7fb4383e3b6182f4",
+        "7885b8b1e19709ef"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3250,11 +3482,17 @@
       "question": "วิชาภาษาอังกฤษเพื่อการสมัครงานรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "651",
-        "1522"
+        "1522",
+        "1310",
+        "1313",
+        "1706"
       ],
       "relevant_chunk_keys": [
         "2487dcafe429971b",
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "4ddf2121c37b3d39",
+        "1f811716329db412",
+        "ce8aefffdac18f4f"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3272,11 +3510,17 @@
       "question": "วิชา 01-320-007 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "651",
-        "1522"
+        "1522",
+        "1310",
+        "1313",
+        "1706"
       ],
       "relevant_chunk_keys": [
         "2487dcafe429971b",
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "4ddf2121c37b3d39",
+        "1f811716329db412",
+        "ce8aefffdac18f4f"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3293,10 +3537,12 @@
     {
       "question": "วิชาภาษาอังกฤษเพื่องานวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "652"
+        "652",
+        "1313"
       ],
       "relevant_chunk_keys": [
-        "422cc697ab3e93bf"
+        "422cc697ab3e93bf",
+        "1f811716329db412"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3312,10 +3558,12 @@
     {
       "question": "วิชา 01-320-014 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "652"
+        "652",
+        "1313"
       ],
       "relevant_chunk_keys": [
-        "422cc697ab3e93bf"
+        "422cc697ab3e93bf",
+        "1f811716329db412"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3331,15 +3579,22 @@
     {
       "question": "วิชาภาษาอังกฤษเพื่อการเขียนทางวิชาการรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1522"
+        "1522",
+        "1310",
+        "1311",
+        "1708"
       ],
       "relevant_chunk_keys": [
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "4ddf2121c37b3d39",
+        "fa08e1d0d223a971",
+        "58da0d6b87d35175"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-320-017",
@@ -3350,15 +3605,22 @@
     {
       "question": "วิชา 01-320-017 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1522"
+        "1522",
+        "1310",
+        "1311",
+        "1708"
       ],
       "relevant_chunk_keys": [
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "4ddf2121c37b3d39",
+        "fa08e1d0d223a971",
+        "58da0d6b87d35175"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-320-017",
@@ -3369,15 +3631,22 @@
     {
       "question": "วิชาการพัฒนาทักษะการเขียนรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1522"
+        "1522",
+        "1310",
+        "1311",
+        "1711"
       ],
       "relevant_chunk_keys": [
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "4ddf2121c37b3d39",
+        "fa08e1d0d223a971",
+        "a6250569c78e3c31"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-320-018",
@@ -3388,15 +3657,22 @@
     {
       "question": "วิชา 01-320-018 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1522"
+        "1522",
+        "1310",
+        "1311",
+        "1711"
       ],
       "relevant_chunk_keys": [
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "4ddf2121c37b3d39",
+        "fa08e1d0d223a971",
+        "a6250569c78e3c31"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "01-320-018",
@@ -3408,11 +3684,17 @@
       "question": "วิชาภาษาจีนพื้นฐานรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "654",
-        "1522"
+        "1522",
+        "1310",
+        "1314",
+        "1713"
       ],
       "relevant_chunk_keys": [
         "ac2a0c3d2b177232",
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "4ddf2121c37b3d39",
+        "21d7b1f3f8f46362",
+        "35e5c387cbed72b9"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3430,11 +3712,17 @@
       "question": "วิชา 01-330-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "654",
-        "1522"
+        "1522",
+        "1310",
+        "1314",
+        "1713"
       ],
       "relevant_chunk_keys": [
         "ac2a0c3d2b177232",
-        "c4d2f1685f4e2e33"
+        "c4d2f1685f4e2e33",
+        "4ddf2121c37b3d39",
+        "21d7b1f3f8f46362",
+        "35e5c387cbed72b9"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3454,13 +3742,19 @@
         "655",
         "796",
         "1522",
-        "1523"
+        "1523",
+        "1311",
+        "1314",
+        "1716"
       ],
       "relevant_chunk_keys": [
         "c9c872429ebac4ef",
         "13cb5b0b6b040b17",
         "c4d2f1685f4e2e33",
-        "863fc9748d0372cd"
+        "863fc9748d0372cd",
+        "fa08e1d0d223a971",
+        "21d7b1f3f8f46362",
+        "d0d9a09391261be4"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3480,13 +3774,19 @@
         "655",
         "796",
         "1522",
-        "1523"
+        "1523",
+        "1311",
+        "1314",
+        "1716"
       ],
       "relevant_chunk_keys": [
         "c9c872429ebac4ef",
         "13cb5b0b6b040b17",
         "c4d2f1685f4e2e33",
-        "863fc9748d0372cd"
+        "863fc9748d0372cd",
+        "fa08e1d0d223a971",
+        "21d7b1f3f8f46362",
+        "d0d9a09391261be4"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3504,11 +3804,19 @@
       "question": "วิชาภาษาญี่ปุ่นพื้นฐานรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "656",
-        "1523"
+        "1523",
+        "1311",
+        "1314",
+        "1522",
+        "1720"
       ],
       "relevant_chunk_keys": [
         "7aff90cd1d58a9fe",
-        "863fc9748d0372cd"
+        "863fc9748d0372cd",
+        "fa08e1d0d223a971",
+        "21d7b1f3f8f46362",
+        "c4d2f1685f4e2e33",
+        "5c380327ce5fc178"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3526,11 +3834,19 @@
       "question": "วิชา 01-330-006 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "656",
-        "1523"
+        "1523",
+        "1311",
+        "1314",
+        "1522",
+        "1720"
       ],
       "relevant_chunk_keys": [
         "7aff90cd1d58a9fe",
-        "863fc9748d0372cd"
+        "863fc9748d0372cd",
+        "fa08e1d0d223a971",
+        "21d7b1f3f8f46362",
+        "c4d2f1685f4e2e33",
+        "5c380327ce5fc178"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3548,11 +3864,17 @@
       "question": "วิชาสนทนาภาษาญี่ปุ่นเบื้องต้นรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "657",
-        "1523"
+        "1523",
+        "1310",
+        "1314",
+        "1724"
       ],
       "relevant_chunk_keys": [
         "7941a79276222810",
-        "863fc9748d0372cd"
+        "863fc9748d0372cd",
+        "4ddf2121c37b3d39",
+        "21d7b1f3f8f46362",
+        "75632c9d29ad1372"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3570,11 +3892,17 @@
       "question": "วิชา 01-330-007 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "657",
-        "1523"
+        "1523",
+        "1310",
+        "1314",
+        "1724"
       ],
       "relevant_chunk_keys": [
         "7941a79276222810",
-        "863fc9748d0372cd"
+        "863fc9748d0372cd",
+        "4ddf2121c37b3d39",
+        "21d7b1f3f8f46362",
+        "75632c9d29ad1372"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3592,11 +3920,17 @@
       "question": "วิชานันทนาการรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "629",
-        "1519"
+        "1519",
+        "1301",
+        "1302",
+        "1693"
       ],
       "relevant_chunk_keys": [
         "6a3ab7a69d3d5cae",
-        "18512d71a0afa793"
+        "18512d71a0afa793",
+        "d44b9f261fd3fb1e",
+        "e9f7cad6d84ef1df",
+        "9978868d8aa03716"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3614,11 +3948,17 @@
       "question": "วิชา 01-610-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "629",
-        "1519"
+        "1519",
+        "1301",
+        "1302",
+        "1693"
       ],
       "relevant_chunk_keys": [
         "6a3ab7a69d3d5cae",
-        "18512d71a0afa793"
+        "18512d71a0afa793",
+        "d44b9f261fd3fb1e",
+        "e9f7cad6d84ef1df",
+        "9978868d8aa03716"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3635,10 +3975,12 @@
     {
       "question": "วิชานันทนาการเพื่อการพัฒนาคุณภาพชีวิตรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "743"
+        "743",
+        "1302"
       ],
       "relevant_chunk_keys": [
-        "35200be01043ecbb"
+        "35200be01043ecbb",
+        "e9f7cad6d84ef1df"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3654,10 +3996,12 @@
     {
       "question": "วิชา 01-610-010 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "743"
+        "743",
+        "1302"
       ],
       "relevant_chunk_keys": [
-        "35200be01043ecbb"
+        "35200be01043ecbb",
+        "e9f7cad6d84ef1df"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3673,10 +4017,12 @@
     {
       "question": "วิชาสุขภาพเพื่อการดำรงชีวิตสำหรับคนรุ่นใหม่รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "631"
+        "631",
+        "1302"
       ],
       "relevant_chunk_keys": [
-        "77dc52a0e3d0a31d"
+        "77dc52a0e3d0a31d",
+        "e9f7cad6d84ef1df"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3692,10 +4038,12 @@
     {
       "question": "วิชา 01-610-012 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "631"
+        "631",
+        "1302"
       ],
       "relevant_chunk_keys": [
-        "77dc52a0e3d0a31d"
+        "77dc52a0e3d0a31d",
+        "e9f7cad6d84ef1df"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3713,12 +4061,18 @@
       "relevant_chunk_ids": [
         "632",
         "747",
-        "1519"
+        "1519",
+        "1301",
+        "1302",
+        "1695"
       ],
       "relevant_chunk_keys": [
         "e2c4a50c04bfd0ee",
         "6ff01e9c9d86be56",
-        "18512d71a0afa793"
+        "18512d71a0afa793",
+        "d44b9f261fd3fb1e",
+        "e9f7cad6d84ef1df",
+        "4b757f33fd1a043a"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3737,12 +4091,18 @@
       "relevant_chunk_ids": [
         "632",
         "747",
-        "1519"
+        "1519",
+        "1301",
+        "1302",
+        "1695"
       ],
       "relevant_chunk_keys": [
         "e2c4a50c04bfd0ee",
         "6ff01e9c9d86be56",
-        "18512d71a0afa793"
+        "18512d71a0afa793",
+        "d44b9f261fd3fb1e",
+        "e9f7cad6d84ef1df",
+        "4b757f33fd1a043a"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3759,15 +4119,20 @@
     {
       "question": "วิชาการจัดประสบการณ์ต้นหลักสูตรรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1617"
+        "1617",
+        "1364",
+        "1366"
       ],
       "relevant_chunk_keys": [
-        "1424c6211999844d"
+        "1424c6211999844d",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-102",
@@ -3778,15 +4143,20 @@
     {
       "question": "วิชา 04-000-102 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1617"
+        "1617",
+        "1364",
+        "1366"
       ],
       "relevant_chunk_keys": [
-        "1424c6211999844d"
+        "1424c6211999844d",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-102",
@@ -3797,15 +4167,20 @@
     {
       "question": "วิชาภาษาอังกฤษสำหรับงานวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1521"
+        "1521",
+        "1310",
+        "1701"
       ],
       "relevant_chunk_keys": [
-        "f4f59c628f1800cc"
+        "f4f59c628f1800cc",
+        "4ddf2121c37b3d39",
+        "42f1da0fb636307f"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-201",
@@ -3816,15 +4191,20 @@
     {
       "question": "วิชา 04-000-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1521"
+        "1521",
+        "1310",
+        "1701"
       ],
       "relevant_chunk_keys": [
-        "f4f59c628f1800cc"
+        "f4f59c628f1800cc",
+        "4ddf2121c37b3d39",
+        "42f1da0fb636307f"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-201",
@@ -3835,15 +4215,22 @@
     {
       "question": "วิชาปฏิบัติงานภาคสนามรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1617"
+        "1617",
+        "1364",
+        "1366",
+        "2174"
       ],
       "relevant_chunk_keys": [
-        "1424c6211999844d"
+        "1424c6211999844d",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "99cb6bfffaffe8e5"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-203",
@@ -3854,15 +4241,22 @@
     {
       "question": "วิชา 04-000-203 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1617"
+        "1617",
+        "1364",
+        "1366",
+        "2174"
       ],
       "relevant_chunk_keys": [
-        "1424c6211999844d"
+        "1424c6211999844d",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "99cb6bfffaffe8e5"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-203",
@@ -3875,12 +4269,18 @@
       "relevant_chunk_ids": [
         "690",
         "985",
-        "1613"
+        "1613",
+        "1364",
+        "1365",
+        "2135"
       ],
       "relevant_chunk_keys": [
         "d215d967aeb6346b",
         "c59da3a89ddda76e",
-        "80072c5947e0d97f"
+        "80072c5947e0d97f",
+        "bcaa13e00d8203e9",
+        "42ef76c776a0179a",
+        "189f7c2e1a56f07b"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3899,12 +4299,18 @@
       "relevant_chunk_ids": [
         "690",
         "985",
-        "1613"
+        "1613",
+        "1364",
+        "1365",
+        "2135"
       ],
       "relevant_chunk_keys": [
         "d215d967aeb6346b",
         "c59da3a89ddda76e",
-        "80072c5947e0d97f"
+        "80072c5947e0d97f",
+        "bcaa13e00d8203e9",
+        "42ef76c776a0179a",
+        "189f7c2e1a56f07b"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3923,12 +4329,18 @@
       "relevant_chunk_ids": [
         "691",
         "993",
-        "1615"
+        "1615",
+        "1364",
+        "1366",
+        "2150"
       ],
       "relevant_chunk_keys": [
         "fac4a6fc02a1a5c7",
         "1bae49dacf654cc1",
-        "7b1f1d740aa9d9e8"
+        "7b1f1d740aa9d9e8",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "52792e8d7a870911"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3947,12 +4359,18 @@
       "relevant_chunk_ids": [
         "691",
         "993",
-        "1615"
+        "1615",
+        "1364",
+        "1366",
+        "2150"
       ],
       "relevant_chunk_keys": [
         "fac4a6fc02a1a5c7",
         "1bae49dacf654cc1",
-        "7b1f1d740aa9d9e8"
+        "7b1f1d740aa9d9e8",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "52792e8d7a870911"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -3971,12 +4389,18 @@
       "relevant_chunk_ids": [
         "691",
         "995",
-        "1615"
+        "1615",
+        "1364",
+        "1366",
+        "2155"
       ],
       "relevant_chunk_keys": [
         "fac4a6fc02a1a5c7",
         "d729fd8165e3a188",
-        "7b1f1d740aa9d9e8"
+        "7b1f1d740aa9d9e8",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "989cc74660f53bb4"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -3995,12 +4419,18 @@
       "relevant_chunk_ids": [
         "691",
         "995",
-        "1615"
+        "1615",
+        "1364",
+        "1366",
+        "2155"
       ],
       "relevant_chunk_keys": [
         "fac4a6fc02a1a5c7",
         "d729fd8165e3a188",
-        "7b1f1d740aa9d9e8"
+        "7b1f1d740aa9d9e8",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "989cc74660f53bb4"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4017,15 +4447,24 @@
     {
       "question": "วิชาการติดตามพฤติกรรมการทำงานรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1617"
+        "1617",
+        "1364",
+        "1365",
+        "1366",
+        "2178"
       ],
       "relevant_chunk_keys": [
-        "1424c6211999844d"
+        "1424c6211999844d",
+        "bcaa13e00d8203e9",
+        "42ef76c776a0179a",
+        "799a0189845eb885",
+        "91cb34cda5b66713"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-304",
@@ -4036,15 +4475,24 @@
     {
       "question": "วิชา 04-000-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1617"
+        "1617",
+        "1364",
+        "1365",
+        "1366",
+        "2178"
       ],
       "relevant_chunk_keys": [
-        "1424c6211999844d"
+        "1424c6211999844d",
+        "bcaa13e00d8203e9",
+        "42ef76c776a0179a",
+        "799a0189845eb885",
+        "91cb34cda5b66713"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-304",
@@ -4055,15 +4503,24 @@
     {
       "question": "วิชาการฝึกเฉพาะตำแหน่งรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1617"
+        "1617",
+        "1364",
+        "1365",
+        "1366",
+        "2182"
       ],
       "relevant_chunk_keys": [
-        "1424c6211999844d"
+        "1424c6211999844d",
+        "bcaa13e00d8203e9",
+        "42ef76c776a0179a",
+        "799a0189845eb885",
+        "53e1d3b38ba628ff"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-305",
@@ -4074,15 +4531,24 @@
     {
       "question": "วิชา 04-000-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1617"
+        "1617",
+        "1364",
+        "1365",
+        "1366",
+        "2182"
       ],
       "relevant_chunk_keys": [
-        "1424c6211999844d"
+        "1424c6211999844d",
+        "bcaa13e00d8203e9",
+        "42ef76c776a0179a",
+        "799a0189845eb885",
+        "53e1d3b38ba628ff"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-305",
@@ -4095,12 +4561,18 @@
       "relevant_chunk_ids": [
         "690",
         "987",
-        "1614"
+        "1614",
+        "1364",
+        "1366",
+        "2139"
       ],
       "relevant_chunk_keys": [
         "d215d967aeb6346b",
         "09697e4e66d9c233",
-        "508cd6f1f3430c26"
+        "508cd6f1f3430c26",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "be1bd6052141a637"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4119,12 +4591,18 @@
       "relevant_chunk_ids": [
         "690",
         "987",
-        "1614"
+        "1614",
+        "1364",
+        "1366",
+        "2139"
       ],
       "relevant_chunk_keys": [
         "d215d967aeb6346b",
         "09697e4e66d9c233",
-        "508cd6f1f3430c26"
+        "508cd6f1f3430c26",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "be1bd6052141a637"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4142,11 +4620,19 @@
       "question": "วิชาปัญหาพิเศษจากสถานประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "997",
-        "1615"
+        "1615",
+        "691",
+        "1364",
+        "1366",
+        "2160"
       ],
       "relevant_chunk_keys": [
         "bedfe27f0d590c33",
-        "7b1f1d740aa9d9e8"
+        "7b1f1d740aa9d9e8",
+        "fac4a6fc02a1a5c7",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "b409b4863a7a9c7a"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4164,11 +4650,19 @@
       "question": "วิชา 04-000-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "997",
-        "1615"
+        "1615",
+        "691",
+        "1364",
+        "1366",
+        "2160"
       ],
       "relevant_chunk_keys": [
         "bedfe27f0d590c33",
-        "7b1f1d740aa9d9e8"
+        "7b1f1d740aa9d9e8",
+        "fac4a6fc02a1a5c7",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "b409b4863a7a9c7a"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4187,12 +4681,18 @@
       "relevant_chunk_ids": [
         "690",
         "990",
-        "1614"
+        "1614",
+        "1364",
+        "1366",
+        "2144"
       ],
       "relevant_chunk_keys": [
         "d215d967aeb6346b",
         "257e7a5e2d7be16c",
-        "508cd6f1f3430c26"
+        "508cd6f1f3430c26",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "88c874cebe701611"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4211,12 +4711,18 @@
       "relevant_chunk_ids": [
         "690",
         "990",
-        "1614"
+        "1614",
+        "1364",
+        "1366",
+        "2144"
       ],
       "relevant_chunk_keys": [
         "d215d967aeb6346b",
         "257e7a5e2d7be16c",
-        "508cd6f1f3430c26"
+        "508cd6f1f3430c26",
+        "bcaa13e00d8203e9",
+        "799a0189845eb885",
+        "88c874cebe701611"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4233,15 +4739,22 @@
     {
       "question": "วิชาการฝึกปฏิบัติจริงภายหลังสำเร็จการเรียนทฤษฎีรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1616"
+        "1616",
+        "1365",
+        "1366",
+        "2165"
       ],
       "relevant_chunk_keys": [
-        "d91507a19df336b5"
+        "d91507a19df336b5",
+        "42ef76c776a0179a",
+        "799a0189845eb885",
+        "d6e0004d663efd0c"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-404",
@@ -4252,15 +4765,22 @@
     {
       "question": "วิชา 04-000-404 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1616"
+        "1616",
+        "1365",
+        "1366",
+        "2165"
       ],
       "relevant_chunk_keys": [
-        "d91507a19df336b5"
+        "d91507a19df336b5",
+        "42ef76c776a0179a",
+        "799a0189845eb885",
+        "d6e0004d663efd0c"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-000-404",
@@ -4272,17 +4792,26 @@
       "question": "วิชากลศาสตร์วิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "667",
-        "831"
+        "831",
+        "666",
+        "1319",
+        "1321",
+        "1531"
       ],
       "relevant_chunk_keys": [
         "ce551861a64e9a80",
-        "6af08277d29e4002"
+        "6af08277d29e4002",
+        "d0d2bff34a09b5d4",
+        "74ae308cecd76f3e",
+        "1f80993254302c28",
+        "4f5799eb424782ca"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-313-101",
       "course_name": "กลศาสตร์วิศวกรรม",
@@ -4293,17 +4822,26 @@
       "question": "วิชา 04-313-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "667",
-        "831"
+        "831",
+        "666",
+        "1319",
+        "1321",
+        "1531"
       ],
       "relevant_chunk_keys": [
         "ce551861a64e9a80",
-        "6af08277d29e4002"
+        "6af08277d29e4002",
+        "d0d2bff34a09b5d4",
+        "74ae308cecd76f3e",
+        "1f80993254302c28",
+        "4f5799eb424782ca"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-313-101",
       "course_name": "กลศาสตร์วิศวกรรม",
@@ -4313,16 +4851,23 @@
     {
       "question": "วิชาการฝึกพื้นฐานทางวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "667"
+        "667",
+        "1319",
+        "1323",
+        "1533"
       ],
       "relevant_chunk_keys": [
-        "ce551861a64e9a80"
+        "ce551861a64e9a80",
+        "74ae308cecd76f3e",
+        "1a199912665ac684",
+        "f8de94ff3d3a2a51"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-411-101",
       "course_name": "การฝึกพื้นฐานทางวิศวกรรม",
@@ -4332,16 +4877,23 @@
     {
       "question": "วิชา 04-411-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "667"
+        "667",
+        "1319",
+        "1323",
+        "1533"
       ],
       "relevant_chunk_keys": [
-        "ce551861a64e9a80"
+        "ce551861a64e9a80",
+        "74ae308cecd76f3e",
+        "1a199912665ac684",
+        "f8de94ff3d3a2a51"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-411-101",
       "course_name": "การฝึกพื้นฐานทางวิศวกรรม",
@@ -4352,17 +4904,24 @@
       "question": "วิชาเขียนแบบวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "667",
-        "835"
+        "835",
+        "1319",
+        "1321",
+        "1531"
       ],
       "relevant_chunk_keys": [
         "ce551861a64e9a80",
-        "5779a8f7fddbcc83"
+        "5779a8f7fddbcc83",
+        "74ae308cecd76f3e",
+        "1f80993254302c28",
+        "4f5799eb424782ca"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-411-102",
       "course_name": "เขียนแบบวิศวกรรม",
@@ -4373,17 +4932,24 @@
       "question": "วิชา 04-411-102 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "667",
-        "835"
+        "835",
+        "1319",
+        "1321",
+        "1531"
       ],
       "relevant_chunk_keys": [
         "ce551861a64e9a80",
-        "5779a8f7fddbcc83"
+        "5779a8f7fddbcc83",
+        "74ae308cecd76f3e",
+        "1f80993254302c28",
+        "4f5799eb424782ca"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-411-102",
       "course_name": "เขียนแบบวิศวกรรม",
@@ -4394,11 +4960,13 @@
       "question": "วิชาปฏิบัติการควบคุมเวอร์ชันรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "668",
-        "837"
+        "837",
+        "1324"
       ],
       "relevant_chunk_keys": [
         "04dcda314559cedc",
-        "6dd6c81892d9b82e"
+        "6dd6c81892d9b82e",
+        "0add48b7c0e5f5e9"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4415,11 +4983,13 @@
       "question": "วิชา 04-620-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "668",
-        "837"
+        "837",
+        "1324"
       ],
       "relevant_chunk_keys": [
         "04dcda314559cedc",
-        "6dd6c81892d9b82e"
+        "6dd6c81892d9b82e",
+        "0add48b7c0e5f5e9"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4435,10 +5005,14 @@
     {
       "question": "วิชาปฏิบัติการโปรแกรมภาษาไพธอนรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "668"
+        "668",
+        "839",
+        "1324"
       ],
       "relevant_chunk_keys": [
-        "04dcda314559cedc"
+        "04dcda314559cedc",
+        "ad3a52783b2d752b",
+        "0add48b7c0e5f5e9"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4454,10 +5028,14 @@
     {
       "question": "วิชา 04-620-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "668"
+        "668",
+        "839",
+        "1324"
       ],
       "relevant_chunk_keys": [
-        "04dcda314559cedc"
+        "04dcda314559cedc",
+        "ad3a52783b2d752b",
+        "0add48b7c0e5f5e9"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4474,17 +5052,28 @@
       "question": "วิชาสัมมนาทางวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "668",
-        "841"
+        "841",
+        "1324",
+        "1330",
+        "1331",
+        "1539",
+        "1921"
       ],
       "relevant_chunk_keys": [
         "04dcda314559cedc",
-        "223dd7354af134c8"
+        "223dd7354af134c8",
+        "0add48b7c0e5f5e9",
+        "b6882cfe750ac76e",
+        "b0f30d83b01b56c2",
+        "ec004bafa2dcf948",
+        "c6abbbcf5faa2448"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-620-301",
       "course_name": "สัมมนาทางวิศวกรรมคอมพิวเตอร์",
@@ -4495,17 +5084,28 @@
       "question": "วิชา 04-620-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "668",
-        "841"
+        "841",
+        "1324",
+        "1330",
+        "1331",
+        "1539",
+        "1921"
       ],
       "relevant_chunk_keys": [
         "04dcda314559cedc",
-        "223dd7354af134c8"
+        "223dd7354af134c8",
+        "0add48b7c0e5f5e9",
+        "b6882cfe750ac76e",
+        "b0f30d83b01b56c2",
+        "ec004bafa2dcf948",
+        "c6abbbcf5faa2448"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-620-301",
       "course_name": "สัมมนาทางวิศวกรรมคอมพิวเตอร์",
@@ -4515,10 +5115,12 @@
     {
       "question": "วิชาปฏิบัติการบูรณาการระบบคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "678"
+        "678",
+        "1337"
       ],
       "relevant_chunk_keys": [
-        "e4fa697f1da9632a"
+        "e4fa697f1da9632a",
+        "b7468c29925bfbbe"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4534,10 +5136,12 @@
     {
       "question": "วิชา 04-620-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "678"
+        "678",
+        "1337"
       ],
       "relevant_chunk_keys": [
-        "e4fa697f1da9632a"
+        "e4fa697f1da9632a",
+        "b7468c29925bfbbe"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4554,11 +5158,13 @@
       "question": "วิชาการเตรียมโครงงานวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "678",
-        "901"
+        "901",
+        "1334"
       ],
       "relevant_chunk_keys": [
         "e4fa697f1da9632a",
-        "2bfba061f4adfa36"
+        "2bfba061f4adfa36",
+        "9427523d7e1a8214"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4575,11 +5181,13 @@
       "question": "วิชา 04-620-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "678",
-        "901"
+        "901",
+        "1334"
       ],
       "relevant_chunk_keys": [
         "e4fa697f1da9632a",
-        "2bfba061f4adfa36"
+        "2bfba061f4adfa36",
+        "9427523d7e1a8214"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4596,11 +5204,13 @@
       "question": "วิชาโครงงานวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "678",
-        "903"
+        "903",
+        "1334"
       ],
       "relevant_chunk_keys": [
         "e4fa697f1da9632a",
-        "e183bc6f23a99d97"
+        "e183bc6f23a99d97",
+        "9427523d7e1a8214"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4617,11 +5227,13 @@
       "question": "วิชา 04-620-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "678",
-        "903"
+        "903",
+        "1334"
       ],
       "relevant_chunk_keys": [
         "e4fa697f1da9632a",
-        "e183bc6f23a99d97"
+        "e183bc6f23a99d97",
+        "9427523d7e1a8214"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4637,16 +5249,27 @@
     {
       "question": "วิชาการเขียนโปรแกรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "843"
+        "843",
+        "668",
+        "839",
+        "1319",
+        "1321",
+        "1531"
       ],
       "relevant_chunk_keys": [
-        "2bb59b36fd87e26a"
+        "2bb59b36fd87e26a",
+        "04dcda314559cedc",
+        "ad3a52783b2d752b",
+        "74ae308cecd76f3e",
+        "1f80993254302c28",
+        "4f5799eb424782ca"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-101",
       "course_name": "การเขียนโปรแกรมคอมพิวเตอร์",
@@ -4656,16 +5279,27 @@
     {
       "question": "วิชา 04-621-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "843"
+        "843",
+        "668",
+        "839",
+        "1319",
+        "1321",
+        "1531"
       ],
       "relevant_chunk_keys": [
-        "2bb59b36fd87e26a"
+        "2bb59b36fd87e26a",
+        "04dcda314559cedc",
+        "ad3a52783b2d752b",
+        "74ae308cecd76f3e",
+        "1f80993254302c28",
+        "4f5799eb424782ca"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-101",
       "course_name": "การเขียนโปรแกรมคอมพิวเตอร์",
@@ -4675,16 +5309,27 @@
     {
       "question": "วิชาวงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "670"
+        "670",
+        "1324",
+        "1329",
+        "1338",
+        "1535",
+        "1856"
       ],
       "relevant_chunk_keys": [
-        "a469f2fe7fa50c61"
+        "a469f2fe7fa50c61",
+        "0add48b7c0e5f5e9",
+        "201ca72a5d44b167",
+        "f127ffc5cf3a6abf",
+        "cc0d02ebe0e68590",
+        "b5f2b89748ed6b6c"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-201",
       "course_name": "วงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์",
@@ -4694,16 +5339,27 @@
     {
       "question": "วิชา 04-621-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "670"
+        "670",
+        "1324",
+        "1329",
+        "1338",
+        "1535",
+        "1856"
       ],
       "relevant_chunk_keys": [
-        "a469f2fe7fa50c61"
+        "a469f2fe7fa50c61",
+        "0add48b7c0e5f5e9",
+        "201ca72a5d44b167",
+        "f127ffc5cf3a6abf",
+        "cc0d02ebe0e68590",
+        "b5f2b89748ed6b6c"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-201",
       "course_name": "วงจรไฟฟ้าสำหรับวิศวกรรมคอมพิวเตอร์",
@@ -4714,17 +5370,26 @@
       "question": "วิชาวงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "848"
+        "848",
+        "1319",
+        "1329",
+        "1535",
+        "1862"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "45435cd42c0550c1"
+        "45435cd42c0550c1",
+        "74ae308cecd76f3e",
+        "201ca72a5d44b167",
+        "cc0d02ebe0e68590",
+        "5691654b7298ac7b"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-202",
       "course_name": "วงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์",
@@ -4735,17 +5400,26 @@
       "question": "วิชา 04-621-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "848"
+        "848",
+        "1319",
+        "1329",
+        "1535",
+        "1862"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "45435cd42c0550c1"
+        "45435cd42c0550c1",
+        "74ae308cecd76f3e",
+        "201ca72a5d44b167",
+        "cc0d02ebe0e68590",
+        "5691654b7298ac7b"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-202",
       "course_name": "วงจรอิเล็กทรอนิกส์สำหรับวิศวกรรมคอมพิวเตอร์",
@@ -4756,11 +5430,15 @@
       "question": "วิชาการออกแบบวงจรดิจิทัลและตรรกะรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "850"
+        "850",
+        "1323",
+        "1330"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "7c4285650e1278a5"
+        "7c4285650e1278a5",
+        "1a199912665ac684",
+        "b6882cfe750ac76e"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4777,11 +5455,15 @@
       "question": "วิชา 04-621-203 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "850"
+        "850",
+        "1323",
+        "1330"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "7c4285650e1278a5"
+        "7c4285650e1278a5",
+        "1a199912665ac684",
+        "b6882cfe750ac76e"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4797,10 +5479,16 @@
     {
       "question": "วิชาไมโครคอนโทรลเลอร์และการเชื่อมต่อรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "860"
+        "860",
+        "671",
+        "865",
+        "1336"
       ],
       "relevant_chunk_keys": [
-        "35f39f44f0f96f84"
+        "35f39f44f0f96f84",
+        "1faa8eda78b374b1",
+        "6cc167cb88e4a602",
+        "9834ca13f9f3a728"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4816,10 +5504,16 @@
     {
       "question": "วิชา 04-621-204 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "860"
+        "860",
+        "671",
+        "865",
+        "1336"
       ],
       "relevant_chunk_keys": [
-        "35f39f44f0f96f84"
+        "35f39f44f0f96f84",
+        "1faa8eda78b374b1",
+        "6cc167cb88e4a602",
+        "9834ca13f9f3a728"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4836,11 +5530,13 @@
       "question": "วิชาองค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "673",
-        "862"
+        "862",
+        "1333"
       ],
       "relevant_chunk_keys": [
         "e2f76ada390bfa91",
-        "ad00b0edf04bf502"
+        "ad00b0edf04bf502",
+        "5bc8f98abc648c45"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4857,11 +5553,13 @@
       "question": "วิชา 04-621-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "673",
-        "862"
+        "862",
+        "1333"
       ],
       "relevant_chunk_keys": [
         "e2f76ada390bfa91",
-        "ad00b0edf04bf502"
+        "ad00b0edf04bf502",
+        "5bc8f98abc648c45"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4877,10 +5575,14 @@
     {
       "question": "วิชาอินเตอร์เน็ตของสรรพสิ่งรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "673"
+        "673",
+        "865",
+        "1333"
       ],
       "relevant_chunk_keys": [
-        "e2f76ada390bfa91"
+        "e2f76ada390bfa91",
+        "6cc167cb88e4a602",
+        "5bc8f98abc648c45"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4896,10 +5598,14 @@
     {
       "question": "วิชา 04-621-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "673"
+        "673",
+        "865",
+        "1333"
       ],
       "relevant_chunk_keys": [
-        "e2f76ada390bfa91"
+        "e2f76ada390bfa91",
+        "6cc167cb88e4a602",
+        "5bc8f98abc648c45"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4915,16 +5621,25 @@
     {
       "question": "วิชาระบบปฏิบัติการรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "674"
+        "674",
+        "1330",
+        "1333",
+        "1538",
+        "1898"
       ],
       "relevant_chunk_keys": [
-        "6c154235e8e296da"
+        "6c154235e8e296da",
+        "b6882cfe750ac76e",
+        "5bc8f98abc648c45",
+        "0406908744c89327",
+        "8663f954ac0cfb70"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-303",
       "course_name": "ระบบปฏิบัติการ",
@@ -4934,16 +5649,25 @@
     {
       "question": "วิชา 04-621-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "674"
+        "674",
+        "1330",
+        "1333",
+        "1538",
+        "1898"
       ],
       "relevant_chunk_keys": [
-        "6c154235e8e296da"
+        "6c154235e8e296da",
+        "b6882cfe750ac76e",
+        "5bc8f98abc648c45",
+        "0406908744c89327",
+        "8663f954ac0cfb70"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-303",
       "course_name": "ระบบปฏิบัติการ",
@@ -4954,11 +5678,13 @@
       "question": "วิชาเซ็นเซอร์และตัวขับเคลื่อนรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "678",
-        "905"
+        "905",
+        "1344"
       ],
       "relevant_chunk_keys": [
         "e4fa697f1da9632a",
-        "251177475de8a624"
+        "251177475de8a624",
+        "39488220e0569067"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -4975,11 +5701,13 @@
       "question": "วิชา 04-621-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "678",
-        "905"
+        "905",
+        "1344"
       ],
       "relevant_chunk_keys": [
         "e4fa697f1da9632a",
-        "251177475de8a624"
+        "251177475de8a624",
+        "39488220e0569067"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -4996,17 +5724,30 @@
       "question": "วิชาการออกแบบระบบดิจิทัลและการทวนสอบรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "679",
-        "907"
+        "907",
+        "678",
+        "1339",
+        "1344",
+        "1345",
+        "1540",
+        "1931"
       ],
       "relevant_chunk_keys": [
         "6a9edbdc2a2590e5",
-        "88b0c830ef07bd75"
+        "88b0c830ef07bd75",
+        "e4fa697f1da9632a",
+        "dc5967550af56ee3",
+        "39488220e0569067",
+        "b090a5615b4eca19",
+        "9000a56ac00fdcd0",
+        "93c834b95d3d3194"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-305",
       "course_name": "การออกแบบระบบดิจิทัลและการทวนสอบ",
@@ -5017,17 +5758,30 @@
       "question": "วิชา 04-621-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "679",
-        "907"
+        "907",
+        "678",
+        "1339",
+        "1344",
+        "1345",
+        "1540",
+        "1931"
       ],
       "relevant_chunk_keys": [
         "6a9edbdc2a2590e5",
-        "88b0c830ef07bd75"
+        "88b0c830ef07bd75",
+        "e4fa697f1da9632a",
+        "dc5967550af56ee3",
+        "39488220e0569067",
+        "b090a5615b4eca19",
+        "9000a56ac00fdcd0",
+        "93c834b95d3d3194"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-305",
       "course_name": "การออกแบบระบบดิจิทัลและการทวนสอบ",
@@ -5037,16 +5791,29 @@
     {
       "question": "วิชาสถาปัตยกรรมคอมพิวเตอร์ขั้นสูงรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "910"
+        "910",
+        "679",
+        "1339",
+        "1342",
+        "1343",
+        "1542",
+        "1937"
       ],
       "relevant_chunk_keys": [
-        "e5cc93fc00142507"
+        "e5cc93fc00142507",
+        "6a9edbdc2a2590e5",
+        "dc5967550af56ee3",
+        "f90e135005721483",
+        "0629dc35584fe86a",
+        "c58091f02cdafe8c",
+        "db52869b525835c1"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-306",
       "course_name": "สถาปัตยกรรมคอมพิวเตอร์ขั้นสูง",
@@ -5056,16 +5823,29 @@
     {
       "question": "วิชา 04-621-306 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "910"
+        "910",
+        "679",
+        "1339",
+        "1342",
+        "1343",
+        "1542",
+        "1937"
       ],
       "relevant_chunk_keys": [
-        "e5cc93fc00142507"
+        "e5cc93fc00142507",
+        "6a9edbdc2a2590e5",
+        "dc5967550af56ee3",
+        "f90e135005721483",
+        "0629dc35584fe86a",
+        "c58091f02cdafe8c",
+        "db52869b525835c1"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-306",
       "course_name": "สถาปัตยกรรมคอมพิวเตอร์ขั้นสูง",
@@ -5076,17 +5856,30 @@
       "question": "วิชาระบบสมองกลฝังตัวรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "680",
-        "913"
+        "913",
+        "1339",
+        "1342",
+        "1343",
+        "1345",
+        "1544",
+        "1943"
       ],
       "relevant_chunk_keys": [
         "4ff9913986fc9d02",
-        "64390891ee906bfc"
+        "64390891ee906bfc",
+        "dc5967550af56ee3",
+        "f90e135005721483",
+        "0629dc35584fe86a",
+        "b090a5615b4eca19",
+        "9388f62cce507276",
+        "547d4437c1108e76"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-307",
       "course_name": "ระบบสมองกลฝังตัว",
@@ -5097,17 +5890,30 @@
       "question": "วิชา 04-621-307 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "680",
-        "913"
+        "913",
+        "1339",
+        "1342",
+        "1343",
+        "1345",
+        "1544",
+        "1943"
       ],
       "relevant_chunk_keys": [
         "4ff9913986fc9d02",
-        "64390891ee906bfc"
+        "64390891ee906bfc",
+        "dc5967550af56ee3",
+        "f90e135005721483",
+        "0629dc35584fe86a",
+        "b090a5615b4eca19",
+        "9388f62cce507276",
+        "547d4437c1108e76"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-307",
       "course_name": "ระบบสมองกลฝังตัว",
@@ -5118,17 +5924,26 @@
       "question": "วิชาระบบปฏิบัติการแบบทันกาลรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "680",
-        "915"
+        "915",
+        "1339",
+        "1344",
+        "1550",
+        "1962"
       ],
       "relevant_chunk_keys": [
         "4ff9913986fc9d02",
-        "b50d3d997d963111"
+        "b50d3d997d963111",
+        "dc5967550af56ee3",
+        "39488220e0569067",
+        "f2a79dc65dad6f9b",
+        "7edba2662d39a0b6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-401",
       "course_name": "ระบบปฏิบัติการแบบทันกาล",
@@ -5139,17 +5954,26 @@
       "question": "วิชา 04-621-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "680",
-        "915"
+        "915",
+        "1339",
+        "1344",
+        "1550",
+        "1962"
       ],
       "relevant_chunk_keys": [
         "4ff9913986fc9d02",
-        "b50d3d997d963111"
+        "b50d3d997d963111",
+        "dc5967550af56ee3",
+        "39488220e0569067",
+        "f2a79dc65dad6f9b",
+        "7edba2662d39a0b6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-401",
       "course_name": "ระบบปฏิบัติการแบบทันกาล",
@@ -5160,17 +5984,26 @@
       "question": "วิชาอินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "680",
-        "917"
+        "917",
+        "1339",
+        "1344",
+        "1552",
+        "1966"
       ],
       "relevant_chunk_keys": [
         "4ff9913986fc9d02",
-        "eff0827680ddbf1b"
+        "eff0827680ddbf1b",
+        "dc5967550af56ee3",
+        "39488220e0569067",
+        "bcb2520494bd6c8e",
+        "779e24edaf85b752"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-402",
       "course_name": "อินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรม",
@@ -5181,17 +6014,26 @@
       "question": "วิชา 04-621-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "680",
-        "917"
+        "917",
+        "1339",
+        "1344",
+        "1552",
+        "1966"
       ],
       "relevant_chunk_keys": [
         "4ff9913986fc9d02",
-        "eff0827680ddbf1b"
+        "eff0827680ddbf1b",
+        "dc5967550af56ee3",
+        "39488220e0569067",
+        "bcb2520494bd6c8e",
+        "779e24edaf85b752"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-621-402",
       "course_name": "อินเตอร์เน็ตของสรรพสิ่งสำหรับอุตสาหกรรม",
@@ -5202,11 +6044,13 @@
       "question": "วิชาการออกแบบวงจรรวมแอนะล็อกรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "680",
-        "919"
+        "919",
+        "1344"
       ],
       "relevant_chunk_keys": [
         "4ff9913986fc9d02",
-        "d6e6ec42f1ebc642"
+        "d6e6ec42f1ebc642",
+        "39488220e0569067"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -5223,11 +6067,13 @@
       "question": "วิชา 04-621-403 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "680",
-        "919"
+        "919",
+        "1344"
       ],
       "relevant_chunk_keys": [
         "4ff9913986fc9d02",
-        "d6e6ec42f1ebc642"
+        "d6e6ec42f1ebc642",
+        "39488220e0569067"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -5243,10 +6089,14 @@
     {
       "question": "วิชาการออกแบบวงจรรวมดิจิทัลรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "923"
+        "923",
+        "680",
+        "1344"
       ],
       "relevant_chunk_keys": [
-        "0ee8d2820ebd4ea1"
+        "0ee8d2820ebd4ea1",
+        "4ff9913986fc9d02",
+        "39488220e0569067"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -5262,10 +6112,14 @@
     {
       "question": "วิชา 04-621-404 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "923"
+        "923",
+        "680",
+        "1344"
       ],
       "relevant_chunk_keys": [
-        "0ee8d2820ebd4ea1"
+        "0ee8d2820ebd4ea1",
+        "4ff9913986fc9d02",
+        "39488220e0569067"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -5282,11 +6136,13 @@
       "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์ฮาร์ดแวร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "681",
-        "926"
+        "926",
+        "1343"
       ],
       "relevant_chunk_keys": [
         "a7e0da8d4688eaaa",
-        "cc6ea4ac9133f7fd"
+        "cc6ea4ac9133f7fd",
+        "0629dc35584fe86a"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -5303,11 +6159,13 @@
       "question": "วิชา 04-621-405 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "681",
-        "926"
+        "926",
+        "1343"
       ],
       "relevant_chunk_keys": [
         "a7e0da8d4688eaaa",
-        "cc6ea4ac9133f7fd"
+        "cc6ea4ac9133f7fd",
+        "0629dc35584fe86a"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -5324,11 +6182,13 @@
       "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ฮาร์ดแวร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "681",
-        "928"
+        "928",
+        "1343"
       ],
       "relevant_chunk_keys": [
         "a7e0da8d4688eaaa",
-        "bf671fb4fab1cdb8"
+        "bf671fb4fab1cdb8",
+        "0629dc35584fe86a"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -5345,11 +6205,13 @@
       "question": "วิชา 04-621-406 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "681",
-        "928"
+        "928",
+        "1343"
       ],
       "relevant_chunk_keys": [
         "a7e0da8d4688eaaa",
-        "bf671fb4fab1cdb8"
+        "bf671fb4fab1cdb8",
+        "0629dc35584fe86a"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -5366,17 +6228,28 @@
       "question": "วิชาโครงสร้างข้อมูลและอัลกอริทึมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "674",
-        "870"
+        "870",
+        "1321",
+        "1325",
+        "1333",
+        "1531",
+        "1825"
       ],
       "relevant_chunk_keys": [
         "6c154235e8e296da",
-        "5ca8eb4b525976e7"
+        "5ca8eb4b525976e7",
+        "1f80993254302c28",
+        "395b7e7ef53f53e8",
+        "5bc8f98abc648c45",
+        "4f5799eb424782ca",
+        "79dfe61440f13c0a"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-201",
       "course_name": "โครงสร้างข้อมูลและอัลกอริทึม",
@@ -5387,17 +6260,28 @@
       "question": "วิชา 04-622-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "674",
-        "870"
+        "870",
+        "1321",
+        "1325",
+        "1333",
+        "1531",
+        "1825"
       ],
       "relevant_chunk_keys": [
         "6c154235e8e296da",
-        "5ca8eb4b525976e7"
+        "5ca8eb4b525976e7",
+        "1f80993254302c28",
+        "395b7e7ef53f53e8",
+        "5bc8f98abc648c45",
+        "4f5799eb424782ca",
+        "79dfe61440f13c0a"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-201",
       "course_name": "โครงสร้างข้อมูลและอัลกอริทึม",
@@ -5408,17 +6292,28 @@
       "question": "วิชาระบบฐานข้อมูลรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "675",
-        "873"
+        "873",
+        "878",
+        "1317",
+        "1333",
+        "1529",
+        "1797"
       ],
       "relevant_chunk_keys": [
         "7087e0e7f20d9b76",
-        "41a6f867ef5180cb"
+        "41a6f867ef5180cb",
+        "89748cab8abdfea0",
+        "6b0fcf2808207373",
+        "5bc8f98abc648c45",
+        "4502c55b6449578c",
+        "0d545b4da0b4bde4"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-202",
       "course_name": "ระบบฐานข้อมูล",
@@ -5429,17 +6324,28 @@
       "question": "วิชา 04-622-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "675",
-        "873"
+        "873",
+        "878",
+        "1317",
+        "1333",
+        "1529",
+        "1797"
       ],
       "relevant_chunk_keys": [
         "7087e0e7f20d9b76",
-        "41a6f867ef5180cb"
+        "41a6f867ef5180cb",
+        "89748cab8abdfea0",
+        "6b0fcf2808207373",
+        "5bc8f98abc648c45",
+        "4502c55b6449578c",
+        "0d545b4da0b4bde4"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-202",
       "course_name": "ระบบฐานข้อมูล",
@@ -5450,17 +6356,26 @@
       "question": "วิชาการเขียนโปรแกรมเชิงวัตถุรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "675",
-        "875"
+        "875",
+        "1330",
+        "1333",
+        "1536",
+        "1868"
       ],
       "relevant_chunk_keys": [
         "7087e0e7f20d9b76",
-        "7139db11f8b0e9b2"
+        "7139db11f8b0e9b2",
+        "b6882cfe750ac76e",
+        "5bc8f98abc648c45",
+        "93394ba0a706a244",
+        "8941d1b82056f652"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-203",
       "course_name": "การเขียนโปรแกรมเชิงวัตถุ",
@@ -5471,17 +6386,26 @@
       "question": "วิชา 04-622-203 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "675",
-        "875"
+        "875",
+        "1330",
+        "1333",
+        "1536",
+        "1868"
       ],
       "relevant_chunk_keys": [
         "7087e0e7f20d9b76",
-        "7139db11f8b0e9b2"
+        "7139db11f8b0e9b2",
+        "b6882cfe750ac76e",
+        "5bc8f98abc648c45",
+        "93394ba0a706a244",
+        "8941d1b82056f652"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-203",
       "course_name": "การเขียนโปรแกรมเชิงวัตถุ",
@@ -5491,16 +6415,27 @@
     {
       "question": "วิชาการพัฒนาเว็บเต็มรูปแบบรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "675"
+        "675",
+        "878",
+        "1323",
+        "1336",
+        "1534",
+        "1850"
       ],
       "relevant_chunk_keys": [
-        "7087e0e7f20d9b76"
+        "7087e0e7f20d9b76",
+        "89748cab8abdfea0",
+        "1a199912665ac684",
+        "9834ca13f9f3a728",
+        "04eb3d4e79e4c7ee",
+        "aceac705e9d88c4e"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-301",
       "course_name": "การพัฒนาเว็บเต็มรูปแบบ",
@@ -5510,16 +6445,27 @@
     {
       "question": "วิชา 04-622-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "675"
+        "675",
+        "878",
+        "1323",
+        "1336",
+        "1534",
+        "1850"
       ],
       "relevant_chunk_keys": [
-        "7087e0e7f20d9b76"
+        "7087e0e7f20d9b76",
+        "89748cab8abdfea0",
+        "1a199912665ac684",
+        "9834ca13f9f3a728",
+        "04eb3d4e79e4c7ee",
+        "aceac705e9d88c4e"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-301",
       "course_name": "การพัฒนาเว็บเต็มรูปแบบ",
@@ -5530,17 +6476,30 @@
       "question": "วิชาวิศวกรรมซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "675",
-        "880"
+        "880",
+        "1325",
+        "1330",
+        "1333",
+        "1338",
+        "1537",
+        "1874"
       ],
       "relevant_chunk_keys": [
         "7087e0e7f20d9b76",
-        "c7224e07a29ec2a4"
+        "c7224e07a29ec2a4",
+        "395b7e7ef53f53e8",
+        "b6882cfe750ac76e",
+        "5bc8f98abc648c45",
+        "f127ffc5cf3a6abf",
+        "72b722c2b96120f6",
+        "b0c3692ef165c4a1"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-302",
       "course_name": "วิศวกรรมซอฟต์แวร์",
@@ -5551,17 +6510,30 @@
       "question": "วิชา 04-622-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "675",
-        "880"
+        "880",
+        "1325",
+        "1330",
+        "1333",
+        "1338",
+        "1537",
+        "1874"
       ],
       "relevant_chunk_keys": [
         "7087e0e7f20d9b76",
-        "c7224e07a29ec2a4"
+        "c7224e07a29ec2a4",
+        "395b7e7ef53f53e8",
+        "b6882cfe750ac76e",
+        "5bc8f98abc648c45",
+        "f127ffc5cf3a6abf",
+        "72b722c2b96120f6",
+        "b0c3692ef165c4a1"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-302",
       "course_name": "วิศวกรรมซอฟต์แวร์",
@@ -5572,17 +6544,26 @@
       "question": "วิชาการโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัลรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "675",
-        "884"
+        "884",
+        "1330",
+        "1333",
+        "1537",
+        "1880"
       ],
       "relevant_chunk_keys": [
         "7087e0e7f20d9b76",
-        "a5491591871abe56"
+        "a5491591871abe56",
+        "b6882cfe750ac76e",
+        "5bc8f98abc648c45",
+        "72b722c2b96120f6",
+        "170eb9d6217130c1"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-303",
       "course_name": "การโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัล",
@@ -5593,17 +6574,26 @@
       "question": "วิชา 04-622-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "675",
-        "884"
+        "884",
+        "1330",
+        "1333",
+        "1537",
+        "1880"
       ],
       "relevant_chunk_keys": [
         "7087e0e7f20d9b76",
-        "a5491591871abe56"
+        "a5491591871abe56",
+        "b6882cfe750ac76e",
+        "5bc8f98abc648c45",
+        "72b722c2b96120f6",
+        "170eb9d6217130c1"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-303",
       "course_name": "การโปรแกรมอุปกรณ์เคลื่อนที่สำหรับอุตสาหกรรมดิจิทัล",
@@ -5614,17 +6604,28 @@
       "question": "วิชาการโปรแกรมเกมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "682",
-        "930"
+        "930",
+        "1330",
+        "1338",
+        "1353",
+        "1537",
+        "1886"
       ],
       "relevant_chunk_keys": [
         "22c87f8ff064afd7",
-        "ef818ee52991e937"
+        "ef818ee52991e937",
+        "b6882cfe750ac76e",
+        "f127ffc5cf3a6abf",
+        "283692d45c2776e6",
+        "72b722c2b96120f6",
+        "9fda15a0f70a8a31"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-304",
       "course_name": "การโปรแกรมเกม",
@@ -5635,17 +6636,28 @@
       "question": "วิชา 04-622-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "682",
-        "930"
+        "930",
+        "1330",
+        "1338",
+        "1353",
+        "1537",
+        "1886"
       ],
       "relevant_chunk_keys": [
         "22c87f8ff064afd7",
-        "ef818ee52991e937"
+        "ef818ee52991e937",
+        "b6882cfe750ac76e",
+        "f127ffc5cf3a6abf",
+        "283692d45c2776e6",
+        "72b722c2b96120f6",
+        "9fda15a0f70a8a31"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-304",
       "course_name": "การโปรแกรมเกม",
@@ -5655,10 +6667,14 @@
     {
       "question": "วิชาการเขียนโปรแกรมบนระบบยูนิกซ์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "933"
+        "933",
+        "682",
+        "1347"
       ],
       "relevant_chunk_keys": [
-        "43a0d57a11ac6633"
+        "43a0d57a11ac6633",
+        "22c87f8ff064afd7",
+        "f884c793aeeac145"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -5674,10 +6690,14 @@
     {
       "question": "วิชา 04-622-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "933"
+        "933",
+        "682",
+        "1347"
       ],
       "relevant_chunk_keys": [
-        "43a0d57a11ac6633"
+        "43a0d57a11ac6633",
+        "22c87f8ff064afd7",
+        "f884c793aeeac145"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -5694,17 +6714,26 @@
       "question": "วิชาการเขียนโปรแกรมคอมพิวเตอร์ขั้นสูงรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "935"
+        "935",
+        "1341",
+        "1347",
+        "1554",
+        "1970"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "45a742fb67d394fd"
+        "45a742fb67d394fd",
+        "68a2dc2984770518",
+        "f884c793aeeac145",
+        "1bb720c27f89e23c",
+        "9a023b793e3a4ed0"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-306",
       "course_name": "การเขียนโปรแกรมคอมพิวเตอร์ขั้นสูง",
@@ -5715,17 +6744,26 @@
       "question": "วิชา 04-622-306 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "935"
+        "935",
+        "1341",
+        "1347",
+        "1554",
+        "1970"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "45a742fb67d394fd"
+        "45a742fb67d394fd",
+        "68a2dc2984770518",
+        "f884c793aeeac145",
+        "1bb720c27f89e23c",
+        "9a023b793e3a4ed0"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-306",
       "course_name": "การเขียนโปรแกรมคอมพิวเตอร์ขั้นสูง",
@@ -5736,17 +6774,28 @@
       "question": "วิชาการทดสอบซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "938"
+        "938",
+        "1341",
+        "1353",
+        "1354",
+        "1556",
+        "1976"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "50f2e2fb8a198b9b"
+        "50f2e2fb8a198b9b",
+        "68a2dc2984770518",
+        "283692d45c2776e6",
+        "bcb0092170ce7f18",
+        "8baa452483bf3272",
+        "78974017c0ce8b8b"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-307",
       "course_name": "การทดสอบซอฟต์แวร์",
@@ -5757,17 +6806,28 @@
       "question": "วิชา 04-622-307 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "938"
+        "938",
+        "1341",
+        "1353",
+        "1354",
+        "1556",
+        "1976"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "50f2e2fb8a198b9b"
+        "50f2e2fb8a198b9b",
+        "68a2dc2984770518",
+        "283692d45c2776e6",
+        "bcb0092170ce7f18",
+        "8baa452483bf3272",
+        "78974017c0ce8b8b"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-307",
       "course_name": "การทดสอบซอฟต์แวร์",
@@ -5778,17 +6838,28 @@
       "question": "วิชากระบวนการพัฒนาซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "940"
+        "940",
+        "1341",
+        "1353",
+        "1354",
+        "1558",
+        "1983"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "baa964da2de6636e"
+        "baa964da2de6636e",
+        "68a2dc2984770518",
+        "283692d45c2776e6",
+        "bcb0092170ce7f18",
+        "6665db519b60bdcf",
+        "e326ffd1ad5b31a6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-308",
       "course_name": "กระบวนการพัฒนาซอฟต์แวร์",
@@ -5799,17 +6870,28 @@
       "question": "วิชา 04-622-308 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "940"
+        "940",
+        "1341",
+        "1353",
+        "1354",
+        "1558",
+        "1983"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "baa964da2de6636e"
+        "baa964da2de6636e",
+        "68a2dc2984770518",
+        "283692d45c2776e6",
+        "bcb0092170ce7f18",
+        "6665db519b60bdcf",
+        "e326ffd1ad5b31a6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-308",
       "course_name": "กระบวนการพัฒนาซอฟต์แวร์",
@@ -5820,17 +6902,28 @@
       "question": "วิชาระบบฐานข้อมูลขั้นสูงรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "942"
+        "942",
+        "1330",
+        "1338",
+        "1347",
+        "1537",
+        "1892"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "ee30081407b88583"
+        "ee30081407b88583",
+        "b6882cfe750ac76e",
+        "f127ffc5cf3a6abf",
+        "f884c793aeeac145",
+        "72b722c2b96120f6",
+        "ed5182ef765ca1b1"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-401",
       "course_name": "ระบบฐานข้อมูลขั้นสูง",
@@ -5841,17 +6934,28 @@
       "question": "วิชา 04-622-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "942"
+        "942",
+        "1330",
+        "1338",
+        "1347",
+        "1537",
+        "1892"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "ee30081407b88583"
+        "ee30081407b88583",
+        "b6882cfe750ac76e",
+        "f127ffc5cf3a6abf",
+        "f884c793aeeac145",
+        "72b722c2b96120f6",
+        "ed5182ef765ca1b1"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-401",
       "course_name": "ระบบฐานข้อมูลขั้นสูง",
@@ -5862,17 +6966,24 @@
       "question": "วิชาฐานข้อมูลไม่สัมพันธ์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "944"
+        "944",
+        "1352",
+        "1538",
+        "1908"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "90010bcf7815c1ed"
+        "90010bcf7815c1ed",
+        "eddcc4269476feda",
+        "0406908744c89327",
+        "59ee396a8ac214d0"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-402",
       "course_name": "ฐานข้อมูลไม่สัมพันธ์",
@@ -5883,17 +6994,24 @@
       "question": "วิชา 04-622-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "944"
+        "944",
+        "1352",
+        "1538",
+        "1908"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "90010bcf7815c1ed"
+        "90010bcf7815c1ed",
+        "eddcc4269476feda",
+        "0406908744c89327",
+        "59ee396a8ac214d0"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-402",
       "course_name": "ฐานข้อมูลไม่สัมพันธ์",
@@ -5904,17 +7022,26 @@
       "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "946"
+        "946",
+        "1342",
+        "1352",
+        "1581",
+        "2054"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "b767525ab904eca6"
+        "b767525ab904eca6",
+        "f90e135005721483",
+        "eddcc4269476feda",
+        "3692021d27e9daae",
+        "a220f8cb29950685"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-403",
       "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์",
@@ -5925,17 +7052,26 @@
       "question": "วิชา 04-622-403 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "683",
-        "946"
+        "946",
+        "1342",
+        "1352",
+        "1581",
+        "2054"
       ],
       "relevant_chunk_keys": [
         "840470730e5d8098",
-        "b767525ab904eca6"
+        "b767525ab904eca6",
+        "f90e135005721483",
+        "eddcc4269476feda",
+        "3692021d27e9daae",
+        "a220f8cb29950685"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-403",
       "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์ซอฟต์แวร์",
@@ -5946,17 +7082,28 @@
       "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "684",
-        "948"
+        "948",
+        "683",
+        "1348",
+        "1352",
+        "1583",
+        "2058"
       ],
       "relevant_chunk_keys": [
         "f49c465709cc4639",
-        "4247108263e3ad86"
+        "4247108263e3ad86",
+        "840470730e5d8098",
+        "77dfa0d340cedf26",
+        "eddcc4269476feda",
+        "eaf36ef7fa5313d0",
+        "e71eb9abe34c8997"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-404",
       "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์",
@@ -5967,17 +7114,28 @@
       "question": "วิชา 04-622-404 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "684",
-        "948"
+        "948",
+        "683",
+        "1348",
+        "1352",
+        "1583",
+        "2058"
       ],
       "relevant_chunk_keys": [
         "f49c465709cc4639",
-        "4247108263e3ad86"
+        "4247108263e3ad86",
+        "840470730e5d8098",
+        "77dfa0d340cedf26",
+        "eddcc4269476feda",
+        "eaf36ef7fa5313d0",
+        "e71eb9abe34c8997"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-622-404",
       "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์ซอฟต์แวร์",
@@ -5988,17 +7146,30 @@
       "question": "วิชาการสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "676",
-        "886"
+        "886",
+        "1321",
+        "1325",
+        "1333",
+        "1531",
+        "1532",
+        "1831"
       ],
       "relevant_chunk_keys": [
         "3b1f99ec34b92dc5",
-        "50c5ae65ac24e21e"
+        "50c5ae65ac24e21e",
+        "1f80993254302c28",
+        "395b7e7ef53f53e8",
+        "5bc8f98abc648c45",
+        "4f5799eb424782ca",
+        "0fbabb72ba5b90b1",
+        "73393edd2c1f1333"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-201",
       "course_name": "การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",
@@ -6009,17 +7180,30 @@
       "question": "วิชา 04-623-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "676",
-        "886"
+        "886",
+        "1321",
+        "1325",
+        "1333",
+        "1531",
+        "1532",
+        "1831"
       ],
       "relevant_chunk_keys": [
         "3b1f99ec34b92dc5",
-        "50c5ae65ac24e21e"
+        "50c5ae65ac24e21e",
+        "1f80993254302c28",
+        "395b7e7ef53f53e8",
+        "5bc8f98abc648c45",
+        "4f5799eb424782ca",
+        "0fbabb72ba5b90b1",
+        "73393edd2c1f1333"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-201",
       "course_name": "การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",
@@ -6029,10 +7213,16 @@
     {
       "question": "วิชาระบบเครือข่ายแบบทีซีพีไอพีรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "890"
+        "890",
+        "676",
+        "1333",
+        "1334"
       ],
       "relevant_chunk_keys": [
-        "6fc4c542f99c5071"
+        "6fc4c542f99c5071",
+        "3b1f99ec34b92dc5",
+        "5bc8f98abc648c45",
+        "9427523d7e1a8214"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6048,10 +7238,16 @@
     {
       "question": "วิชา 04-623-202 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "890"
+        "890",
+        "676",
+        "1333",
+        "1334"
       ],
       "relevant_chunk_keys": [
-        "6fc4c542f99c5071"
+        "6fc4c542f99c5071",
+        "3b1f99ec34b92dc5",
+        "5bc8f98abc648c45",
+        "9427523d7e1a8214"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6068,17 +7264,26 @@
       "question": "วิชาปฏิบัติการเครือข่ายคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "853"
+        "853",
+        "1323",
+        "1330",
+        "1538",
+        "1915"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "d2f376779d121744"
+        "d2f376779d121744",
+        "1a199912665ac684",
+        "b6882cfe750ac76e",
+        "0406908744c89327",
+        "7cb97ec9fb9c0753"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-301",
       "course_name": "ปฏิบัติการเครือข่ายคอมพิวเตอร์",
@@ -6089,17 +7294,26 @@
       "question": "วิชา 04-623-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "853"
+        "853",
+        "1323",
+        "1330",
+        "1538",
+        "1915"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "d2f376779d121744"
+        "d2f376779d121744",
+        "1a199912665ac684",
+        "b6882cfe750ac76e",
+        "0406908744c89327",
+        "7cb97ec9fb9c0753"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-301",
       "course_name": "ปฏิบัติการเครือข่ายคอมพิวเตอร์",
@@ -6110,17 +7324,26 @@
       "question": "วิชาข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้นรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "684",
-        "950"
+        "950",
+        "1350",
+        "1356",
+        "1585",
+        "2062"
       ],
       "relevant_chunk_keys": [
         "f49c465709cc4639",
-        "55c5db455b3cc226"
+        "55c5db455b3cc226",
+        "42364f59c37d54e3",
+        "84cca49fe6df69ef",
+        "17f5082a06678525",
+        "a2d4cb213d6d564e"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-302",
       "course_name": "ข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้น",
@@ -6131,17 +7354,26 @@
       "question": "วิชา 04-623-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "684",
-        "950"
+        "950",
+        "1350",
+        "1356",
+        "1585",
+        "2062"
       ],
       "relevant_chunk_keys": [
         "f49c465709cc4639",
-        "55c5db455b3cc226"
+        "55c5db455b3cc226",
+        "42364f59c37d54e3",
+        "84cca49fe6df69ef",
+        "17f5082a06678525",
+        "a2d4cb213d6d564e"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-302",
       "course_name": "ข่ายงานบริเวณเฉพาะที่และข่ายงานบริเวณกว้างเบื้องต้น",
@@ -6152,17 +7384,28 @@
       "question": "วิชาเครือข่ายเซ็นเซอร์ไร้สายรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "684",
-        "954"
+        "954",
+        "1350",
+        "1357",
+        "1358",
+        "1587",
+        "2069"
       ],
       "relevant_chunk_keys": [
         "f49c465709cc4639",
-        "1301be99869b2039"
+        "1301be99869b2039",
+        "42364f59c37d54e3",
+        "115a423d33d723ab",
+        "fee7651669b6c53d",
+        "6c78ccecd0af8c4b",
+        "8007677be9b678a2"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-303",
       "course_name": "เครือข่ายเซ็นเซอร์ไร้สาย",
@@ -6173,17 +7416,28 @@
       "question": "วิชา 04-623-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "684",
-        "954"
+        "954",
+        "1350",
+        "1357",
+        "1358",
+        "1587",
+        "2069"
       ],
       "relevant_chunk_keys": [
         "f49c465709cc4639",
-        "1301be99869b2039"
+        "1301be99869b2039",
+        "42364f59c37d54e3",
+        "115a423d33d723ab",
+        "fee7651669b6c53d",
+        "6c78ccecd0af8c4b",
+        "8007677be9b678a2"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-303",
       "course_name": "เครือข่ายเซ็นเซอร์ไร้สาย",
@@ -6193,16 +7447,29 @@
     {
       "question": "วิชาความปลอดภัยไซเบอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "958"
+        "958",
+        "684",
+        "1350",
+        "1357",
+        "1358",
+        "1589",
+        "2075"
       ],
       "relevant_chunk_keys": [
-        "e2aa7ebb61b13776"
+        "e2aa7ebb61b13776",
+        "f49c465709cc4639",
+        "42364f59c37d54e3",
+        "115a423d33d723ab",
+        "fee7651669b6c53d",
+        "c06b6b0d66a2ca0a",
+        "c4f8bca4d81cbf41"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-304",
       "course_name": "ความปลอดภัยไซเบอร์",
@@ -6212,16 +7479,29 @@
     {
       "question": "วิชา 04-623-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "958"
+        "958",
+        "684",
+        "1350",
+        "1357",
+        "1358",
+        "1589",
+        "2075"
       ],
       "relevant_chunk_keys": [
-        "e2aa7ebb61b13776"
+        "e2aa7ebb61b13776",
+        "f49c465709cc4639",
+        "42364f59c37d54e3",
+        "115a423d33d723ab",
+        "fee7651669b6c53d",
+        "c06b6b0d66a2ca0a",
+        "c4f8bca4d81cbf41"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-304",
       "course_name": "ความปลอดภัยไซเบอร์",
@@ -6232,17 +7512,28 @@
       "question": "วิชาความมั่นคงในระบบเครือข่ายรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "685",
-        "961"
+        "961",
+        "1350",
+        "1356",
+        "1358",
+        "1591",
+        "2080"
       ],
       "relevant_chunk_keys": [
         "6d44aacfb6d7f1de",
-        "5321a06c5bf1ea65"
+        "5321a06c5bf1ea65",
+        "42364f59c37d54e3",
+        "84cca49fe6df69ef",
+        "fee7651669b6c53d",
+        "3cbddf19f27522a1",
+        "a0c26df23d78bb82"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-305",
       "course_name": "ความมั่นคงในระบบเครือข่าย",
@@ -6253,17 +7544,28 @@
       "question": "วิชา 04-623-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "685",
-        "961"
+        "961",
+        "1350",
+        "1356",
+        "1358",
+        "1591",
+        "2080"
       ],
       "relevant_chunk_keys": [
         "6d44aacfb6d7f1de",
-        "5321a06c5bf1ea65"
+        "5321a06c5bf1ea65",
+        "42364f59c37d54e3",
+        "84cca49fe6df69ef",
+        "fee7651669b6c53d",
+        "3cbddf19f27522a1",
+        "a0c26df23d78bb82"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-305",
       "course_name": "ความมั่นคงในระบบเครือข่าย",
@@ -6274,17 +7576,26 @@
       "question": "วิชาปัญหาพิเศษทางคอมพิวเตอร์เครือข่ายรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "686",
-        "964"
+        "964",
+        "1351",
+        "1356",
+        "1595",
+        "2091"
       ],
       "relevant_chunk_keys": [
         "aae57753d9ad15e9",
-        "2ffe3760eab57d02"
+        "2ffe3760eab57d02",
+        "7819dcddf51eb012",
+        "84cca49fe6df69ef",
+        "d442eb349251a2ab",
+        "48dd5bdaa6396c49"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-401",
       "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์เครือข่าย",
@@ -6295,17 +7606,26 @@
       "question": "วิชา 04-623-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "686",
-        "964"
+        "964",
+        "1351",
+        "1356",
+        "1595",
+        "2091"
       ],
       "relevant_chunk_keys": [
         "aae57753d9ad15e9",
-        "2ffe3760eab57d02"
+        "2ffe3760eab57d02",
+        "7819dcddf51eb012",
+        "84cca49fe6df69ef",
+        "d442eb349251a2ab",
+        "48dd5bdaa6396c49"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-401",
       "course_name": "ปัญหาพิเศษทางคอมพิวเตอร์เครือข่าย",
@@ -6315,16 +7635,27 @@
     {
       "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่ายรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "966"
+        "966",
+        "686",
+        "1351",
+        "1356",
+        "1597",
+        "2095"
       ],
       "relevant_chunk_keys": [
-        "4bad8ed06c4c0862"
+        "4bad8ed06c4c0862",
+        "aae57753d9ad15e9",
+        "7819dcddf51eb012",
+        "84cca49fe6df69ef",
+        "92d125224db3f079",
+        "a361e77f395b42a6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-402",
       "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่าย",
@@ -6334,16 +7665,27 @@
     {
       "question": "วิชา 04-623-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "966"
+        "966",
+        "686",
+        "1351",
+        "1356",
+        "1597",
+        "2095"
       ],
       "relevant_chunk_keys": [
-        "4bad8ed06c4c0862"
+        "4bad8ed06c4c0862",
+        "aae57753d9ad15e9",
+        "7819dcddf51eb012",
+        "84cca49fe6df69ef",
+        "92d125224db3f079",
+        "a361e77f395b42a6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-623-402",
       "course_name": "หัวข้อขั้นสูงเกี่ยวกับคอมพิวเตอร์เครือข่าย",
@@ -6354,11 +7696,15 @@
       "question": "วิชาทฤษฎีการคำนวณรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "677",
-        "894"
+        "894",
+        "1326",
+        "1334"
       ],
       "relevant_chunk_keys": [
         "13fe892156d093e9",
-        "2178d3ec738c7284"
+        "2178d3ec738c7284",
+        "cc4b1e53e8bcdc6c",
+        "9427523d7e1a8214"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6375,11 +7721,15 @@
       "question": "วิชา 04-624-201 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "677",
-        "894"
+        "894",
+        "1326",
+        "1334"
       ],
       "relevant_chunk_keys": [
         "13fe892156d093e9",
-        "2178d3ec738c7284"
+        "2178d3ec738c7284",
+        "cc4b1e53e8bcdc6c",
+        "9427523d7e1a8214"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6395,10 +7745,12 @@
     {
       "question": "วิชาการประมวลผลภาพและการมองเห็นของคอมพิวเตอร์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "896"
+        "896",
+        "677"
       ],
       "relevant_chunk_keys": [
-        "3a6587e3792de4d3"
+        "3a6587e3792de4d3",
+        "13fe892156d093e9"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6414,10 +7766,12 @@
     {
       "question": "วิชา 04-624-301 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "896"
+        "896",
+        "677"
       ],
       "relevant_chunk_keys": [
-        "3a6587e3792de4d3"
+        "3a6587e3792de4d3",
+        "13fe892156d093e9"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6433,10 +7787,16 @@
     {
       "question": "วิชาการเรียนรู้ของเครื่องรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "968"
+        "968",
+        "687",
+        "1336",
+        "1360"
       ],
       "relevant_chunk_keys": [
-        "02791a34e0cf73b0"
+        "02791a34e0cf73b0",
+        "d2f91ee02f04430e",
+        "9834ca13f9f3a728",
+        "3c26faefa9671e55"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6452,10 +7812,16 @@
     {
       "question": "วิชา 04-624-302 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "968"
+        "968",
+        "687",
+        "1336",
+        "1360"
       ],
       "relevant_chunk_keys": [
-        "02791a34e0cf73b0"
+        "02791a34e0cf73b0",
+        "d2f91ee02f04430e",
+        "9834ca13f9f3a728",
+        "3c26faefa9671e55"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6472,11 +7838,13 @@
       "question": "วิชาการเรียนรู้เชิงลึกเบื้องต้นรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "688",
-        "970"
+        "970",
+        "1360"
       ],
       "relevant_chunk_keys": [
         "a6fb1f8ad1526e7f",
-        "00b8722f34c52403"
+        "00b8722f34c52403",
+        "3c26faefa9671e55"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6493,11 +7861,13 @@
       "question": "วิชา 04-624-303 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "688",
-        "970"
+        "970",
+        "1360"
       ],
       "relevant_chunk_keys": [
         "a6fb1f8ad1526e7f",
-        "00b8722f34c52403"
+        "00b8722f34c52403",
+        "3c26faefa9671e55"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6514,11 +7884,13 @@
       "question": "วิชาการรู้จำเสียงพูดรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "688",
-        "972"
+        "972",
+        "1360"
       ],
       "relevant_chunk_keys": [
         "a6fb1f8ad1526e7f",
-        "f423b96476df86f9"
+        "f423b96476df86f9",
+        "3c26faefa9671e55"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6535,11 +7907,13 @@
       "question": "วิชา 04-624-304 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "688",
-        "972"
+        "972",
+        "1360"
       ],
       "relevant_chunk_keys": [
         "a6fb1f8ad1526e7f",
-        "f423b96476df86f9"
+        "f423b96476df86f9",
+        "3c26faefa9671e55"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6555,10 +7929,14 @@
     {
       "question": "วิชาข้อมูลขนาดใหญ่รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "974"
+        "974",
+        "688",
+        "1360"
       ],
       "relevant_chunk_keys": [
-        "bbebbadf4cd2c03f"
+        "bbebbadf4cd2c03f",
+        "a6fb1f8ad1526e7f",
+        "3c26faefa9671e55"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6574,10 +7952,14 @@
     {
       "question": "วิชา 04-624-305 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "974"
+        "974",
+        "688",
+        "1360"
       ],
       "relevant_chunk_keys": [
-        "bbebbadf4cd2c03f"
+        "bbebbadf4cd2c03f",
+        "a6fb1f8ad1526e7f",
+        "3c26faefa9671e55"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6593,10 +7975,14 @@
     {
       "question": "วิชาวิศวกรรมข้อมูลรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "689"
+        "689",
+        "976",
+        "1362"
       ],
       "relevant_chunk_keys": [
-        "c18bdd3ea54c6caf"
+        "c18bdd3ea54c6caf",
+        "1bec9a7c99aa5626",
+        "77e13cf953e16452"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6612,10 +7998,14 @@
     {
       "question": "วิชา 04-624-306 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "689"
+        "689",
+        "976",
+        "1362"
       ],
       "relevant_chunk_keys": [
-        "c18bdd3ea54c6caf"
+        "c18bdd3ea54c6caf",
+        "1bec9a7c99aa5626",
+        "77e13cf953e16452"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6632,11 +8022,13 @@
       "question": "วิชาการเรียนรู้ของเครื่องขนาดเล็กและการประมวลผลที่ขอบรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "689",
-        "978"
+        "978",
+        "1362"
       ],
       "relevant_chunk_keys": [
         "c18bdd3ea54c6caf",
-        "f5bffa102905db0f"
+        "f5bffa102905db0f",
+        "77e13cf953e16452"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6653,11 +8045,13 @@
       "question": "วิชา 04-624-307 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "689",
-        "978"
+        "978",
+        "1362"
       ],
       "relevant_chunk_keys": [
         "c18bdd3ea54c6caf",
-        "f5bffa102905db0f"
+        "f5bffa102905db0f",
+        "77e13cf953e16452"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6674,11 +8068,13 @@
       "question": "วิชาปัญหาพิเศษทางปัญญาประดิษฐ์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "689",
-        "981"
+        "981",
+        "1363"
       ],
       "relevant_chunk_keys": [
         "c18bdd3ea54c6caf",
-        "e3f0774852746753"
+        "e3f0774852746753",
+        "d4ab9dc8f6d9c371"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6695,11 +8091,13 @@
       "question": "วิชา 04-624-401 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "689",
-        "981"
+        "981",
+        "1363"
       ],
       "relevant_chunk_keys": [
         "c18bdd3ea54c6caf",
-        "e3f0774852746753"
+        "e3f0774852746753",
+        "d4ab9dc8f6d9c371"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6716,11 +8114,13 @@
       "question": "วิชาหัวข้อขั้นสูงเกี่ยวกับปัญญาประดิษฐ์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "689",
-        "983"
+        "983",
+        "1363"
       ],
       "relevant_chunk_keys": [
         "c18bdd3ea54c6caf",
-        "126200cf6a5dd19e"
+        "126200cf6a5dd19e",
+        "d4ab9dc8f6d9c371"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6737,11 +8137,13 @@
       "question": "วิชา 04-624-402 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "689",
-        "983"
+        "983",
+        "1363"
       ],
       "relevant_chunk_keys": [
         "c18bdd3ea54c6caf",
-        "126200cf6a5dd19e"
+        "126200cf6a5dd19e",
+        "d4ab9dc8f6d9c371"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6757,10 +8159,12 @@
     {
       "question": "วิชาการเขียนโปรแกรมโมไบล์แอปพลิเคชันขั้นพื้นฐานรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1612"
+        "1612",
+        "2126"
       ],
       "relevant_chunk_keys": [
-        "83497b1a7d93ccce"
+        "83497b1a7d93ccce",
+        "4c89b9421a3bb296"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6776,10 +8180,12 @@
     {
       "question": "วิชา 04-625-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1612"
+        "1612",
+        "2126"
       ],
       "relevant_chunk_keys": [
-        "83497b1a7d93ccce"
+        "83497b1a7d93ccce",
+        "4c89b9421a3bb296"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6795,10 +8201,12 @@
     {
       "question": "วิชาการออกแบบและพัฒนาเว็บไซต์เบื้องต้นรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1612"
+        "1612",
+        "2129"
       ],
       "relevant_chunk_keys": [
-        "83497b1a7d93ccce"
+        "83497b1a7d93ccce",
+        "cb9be6d804676b7e"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6814,10 +8222,12 @@
     {
       "question": "วิชา 04-625-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1612"
+        "1612",
+        "2129"
       ],
       "relevant_chunk_keys": [
-        "83497b1a7d93ccce"
+        "83497b1a7d93ccce",
+        "cb9be6d804676b7e"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6833,10 +8243,12 @@
     {
       "question": "วิชาการเขียนโปรแกรมไพทอนสำหรับวิศวกรรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1612"
+        "1612",
+        "2132"
       ],
       "relevant_chunk_keys": [
-        "83497b1a7d93ccce"
+        "83497b1a7d93ccce",
+        "220e166d39bee014"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6852,10 +8264,12 @@
     {
       "question": "วิชา 04-625-004 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1612"
+        "1612",
+        "2132"
       ],
       "relevant_chunk_keys": [
-        "83497b1a7d93ccce"
+        "83497b1a7d93ccce",
+        "220e166d39bee014"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6872,17 +8286,26 @@
       "question": "วิชาเคมีสำหรับวิศวกรรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "855"
+        "855",
+        "1317",
+        "1323",
+        "1530",
+        "1801"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "3c523acc4f6afd3c"
+        "3c523acc4f6afd3c",
+        "6b0fcf2808207373",
+        "1a199912665ac684",
+        "1ddea1e02c25b21e",
+        "a3dd653bd57575f2"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-711-101",
       "course_name": "เคมีสำหรับวิศวกร",
@@ -6893,17 +8316,26 @@
       "question": "วิชา 04-711-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "855"
+        "855",
+        "1317",
+        "1323",
+        "1530",
+        "1801"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "3c523acc4f6afd3c"
+        "3c523acc4f6afd3c",
+        "6b0fcf2808207373",
+        "1a199912665ac684",
+        "1ddea1e02c25b21e",
+        "a3dd653bd57575f2"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-711-101",
       "course_name": "เคมีสำหรับวิศวกร",
@@ -6914,17 +8346,26 @@
       "question": "วิชาวัสดุวิศวกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "857"
+        "857",
+        "1322",
+        "1323",
+        "1532",
+        "1836"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "094eee845cb738af"
+        "094eee845cb738af",
+        "24ef2552b80bfa09",
+        "1a199912665ac684",
+        "0fbabb72ba5b90b1",
+        "00d9fc43348e6e06"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-720-101",
       "course_name": "วัสดุวิศวกรรม",
@@ -6935,17 +8376,26 @@
       "question": "วิชา 04-720-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "671",
-        "857"
+        "857",
+        "1322",
+        "1323",
+        "1532",
+        "1836"
       ],
       "relevant_chunk_keys": [
         "1faa8eda78b374b1",
-        "094eee845cb738af"
+        "094eee845cb738af",
+        "24ef2552b80bfa09",
+        "1a199912665ac684",
+        "0fbabb72ba5b90b1",
+        "00d9fc43348e6e06"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "04-720-101",
       "course_name": "วัสดุวิศวกรรม",
@@ -6955,10 +8405,12 @@
     {
       "question": "วิชาเศรษฐศาสตร์ประยุกต์รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "662"
+        "662",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "50ee7628e731bd09"
+        "50ee7628e731bd09",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -6974,10 +8426,12 @@
     {
       "question": "วิชา 05-700-101 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "662"
+        "662",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "50ee7628e731bd09"
+        "50ee7628e731bd09",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -6994,11 +8448,17 @@
       "question": "วิชาทักษะการใช้คอมพิวเตอร์และเทคโนโลยีสารสนเทศรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "636",
-        "1524"
+        "1524",
+        "1303",
+        "1308",
+        "1728"
       ],
       "relevant_chunk_keys": [
         "b4d12b3f5b040fdc",
-        "14b5886333b007f3"
+        "14b5886333b007f3",
+        "9878f44840e3136e",
+        "76bb3b0484a618c4",
+        "4302913d39dbecb8"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7016,11 +8476,17 @@
       "question": "วิชา 09-000-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "636",
-        "1524"
+        "1524",
+        "1303",
+        "1308",
+        "1728"
       ],
       "relevant_chunk_keys": [
         "b4d12b3f5b040fdc",
-        "14b5886333b007f3"
+        "14b5886333b007f3",
+        "9878f44840e3136e",
+        "76bb3b0484a618c4",
+        "4302913d39dbecb8"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7038,11 +8504,17 @@
       "question": "วิชาการใช้งานโปรแกรมสำเร็จรูปเพื่องานมัลติมีเดียรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "637",
-        "1524"
+        "1524",
+        "1304",
+        "1308",
+        "1732"
       ],
       "relevant_chunk_keys": [
         "6f63f88e6271a6d1",
-        "14b5886333b007f3"
+        "14b5886333b007f3",
+        "d055eb2b41a699eb",
+        "76bb3b0484a618c4",
+        "138e80fa8814a123"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7060,11 +8532,17 @@
       "question": "วิชา 09-000-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "637",
-        "1524"
+        "1524",
+        "1304",
+        "1308",
+        "1732"
       ],
       "relevant_chunk_keys": [
         "6f63f88e6271a6d1",
-        "14b5886333b007f3"
+        "14b5886333b007f3",
+        "d055eb2b41a699eb",
+        "76bb3b0484a618c4",
+        "138e80fa8814a123"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7081,15 +8559,20 @@
     {
       "question": "วิชาเทคโนโลยีสารสนเทศเพื่อการตัดสินใจรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1524"
+        "1524",
+        "1305",
+        "1736"
       ],
       "relevant_chunk_keys": [
-        "14b5886333b007f3"
+        "14b5886333b007f3",
+        "6103e37be3712217",
+        "319313e0a9352fea"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-000-003",
@@ -7100,15 +8583,20 @@
     {
       "question": "วิชา 09-000-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1524"
+        "1524",
+        "1305",
+        "1736"
       ],
       "relevant_chunk_keys": [
-        "14b5886333b007f3"
+        "14b5886333b007f3",
+        "6103e37be3712217",
+        "319313e0a9352fea"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-000-003",
@@ -7120,11 +8608,17 @@
       "question": "วิชาการจัดการสารสนเทศเพื่อผู้ประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "638",
-        "1528"
+        "1528",
+        "1308",
+        "1315",
+        "1788"
       ],
       "relevant_chunk_keys": [
         "75bc1ede76adebb6",
-        "85c4b9c89ee73a9d"
+        "85c4b9c89ee73a9d",
+        "76bb3b0484a618c4",
+        "d62554cb14cbe653",
+        "996b25a1dd85ebe3"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7142,11 +8636,17 @@
       "question": "วิชา 09-090-013 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "638",
-        "1528"
+        "1528",
+        "1308",
+        "1315",
+        "1788"
       ],
       "relevant_chunk_keys": [
         "75bc1ede76adebb6",
-        "85c4b9c89ee73a9d"
+        "85c4b9c89ee73a9d",
+        "76bb3b0484a618c4",
+        "d62554cb14cbe653",
+        "996b25a1dd85ebe3"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7164,11 +8664,17 @@
       "question": "วิชาการคิดและการให้เหตุผลรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "639",
-        "1525"
+        "1525",
+        "1305",
+        "1308",
+        "1740"
       ],
       "relevant_chunk_keys": [
         "88ce4da62368eff6",
-        "6f6a6c26fcf48887"
+        "6f6a6c26fcf48887",
+        "6103e37be3712217",
+        "76bb3b0484a618c4",
+        "0490bda6d9edb1e6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7186,11 +8692,17 @@
       "question": "วิชา 09-111-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "639",
-        "1525"
+        "1525",
+        "1305",
+        "1308",
+        "1740"
       ],
       "relevant_chunk_keys": [
         "88ce4da62368eff6",
-        "6f6a6c26fcf48887"
+        "6f6a6c26fcf48887",
+        "6103e37be3712217",
+        "76bb3b0484a618c4",
+        "0490bda6d9edb1e6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7208,17 +8720,26 @@
       "question": "วิชาแคลคูลัสสำหรับวิศวกร 1รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "666",
-        "819"
+        "819",
+        "1317",
+        "1319",
+        "1529",
+        "1792"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
-        "d60573318ec65451"
+        "d60573318ec65451",
+        "6b0fcf2808207373",
+        "74ae308cecd76f3e",
+        "4502c55b6449578c",
+        "9e6e0f57bb45343f"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-111-141",
       "course_name": "แคลคูลัสสำหรับวิศวกร 1",
@@ -7229,17 +8750,26 @@
       "question": "วิชา 09-111-141 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "666",
-        "819"
+        "819",
+        "1317",
+        "1319",
+        "1529",
+        "1792"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
-        "d60573318ec65451"
+        "d60573318ec65451",
+        "6b0fcf2808207373",
+        "74ae308cecd76f3e",
+        "4502c55b6449578c",
+        "9e6e0f57bb45343f"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-111-141",
       "course_name": "แคลคูลัสสำหรับวิศวกร 1",
@@ -7250,17 +8780,26 @@
       "question": "วิชาแคลคูลัสสำหรับวิศวกร 2รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "666",
-        "821"
+        "821",
+        "1317",
+        "1319",
+        "1529",
+        "1794"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
-        "a1eb6bf9cc9d73fe"
+        "a1eb6bf9cc9d73fe",
+        "6b0fcf2808207373",
+        "74ae308cecd76f3e",
+        "4502c55b6449578c",
+        "389c598ab52c0a09"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-111-142",
       "course_name": "แคลคูลัสสำหรับวิศวกร 2",
@@ -7271,17 +8810,26 @@
       "question": "วิชา 09-111-142 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "666",
-        "821"
+        "821",
+        "1317",
+        "1319",
+        "1529",
+        "1794"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
-        "a1eb6bf9cc9d73fe"
+        "a1eb6bf9cc9d73fe",
+        "6b0fcf2808207373",
+        "74ae308cecd76f3e",
+        "4502c55b6449578c",
+        "389c598ab52c0a09"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-111-142",
       "course_name": "แคลคูลัสสำหรับวิศวกร 2",
@@ -7291,10 +8839,12 @@
     {
       "question": "วิชาสถิติพื้นฐานสำหรับการพัฒนานวัตกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "640"
+        "640",
+        "1308"
       ],
       "relevant_chunk_keys": [
-        "4d9ed0e3504a05f7"
+        "4d9ed0e3504a05f7",
+        "76bb3b0484a618c4"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7310,10 +8860,12 @@
     {
       "question": "วิชา 09-121-001 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "640"
+        "640",
+        "1308"
       ],
       "relevant_chunk_keys": [
-        "4d9ed0e3504a05f7"
+        "4d9ed0e3504a05f7",
+        "76bb3b0484a618c4"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7329,15 +8881,20 @@
     {
       "question": "วิชาสถิติเบื้องต้นสำหรับนวัตกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1525"
+        "1525",
+        "1305",
+        "1744"
       ],
       "relevant_chunk_keys": [
-        "6f6a6c26fcf48887"
+        "6f6a6c26fcf48887",
+        "6103e37be3712217",
+        "5a5f3b973b7f0bc1"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-121-002",
@@ -7348,15 +8905,20 @@
     {
       "question": "วิชา 09-121-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1525"
+        "1525",
+        "1305",
+        "1744"
       ],
       "relevant_chunk_keys": [
-        "6f6a6c26fcf48887"
+        "6f6a6c26fcf48887",
+        "6103e37be3712217",
+        "5a5f3b973b7f0bc1"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-121-002",
@@ -7367,10 +8929,12 @@
     {
       "question": "วิชาสถิติพื้นฐานสำหรับผู้ประกอบการรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "815"
+        "815",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "6a7180529c0b1a56"
+        "6a7180529c0b1a56",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7386,10 +8950,12 @@
     {
       "question": "วิชา 09-121-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "815"
+        "815",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "6a7180529c0b1a56"
+        "6a7180529c0b1a56",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7405,10 +8971,12 @@
     {
       "question": "วิชาสถิติพื้นฐานสำหรับการลงทุนยุคใหม่รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "664"
+        "664",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "306744f16e2c593a"
+        "306744f16e2c593a",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7424,10 +8992,12 @@
     {
       "question": "วิชา 09-121-004 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "664"
+        "664",
+        "1316"
       ],
       "relevant_chunk_keys": [
-        "306744f16e2c593a"
+        "306744f16e2c593a",
+        "7d1b338fa3e742e6"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7444,11 +9014,13 @@
       "question": "วิชาสถิติทั่วไปรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "666",
-        "824"
+        "824",
+        "1324"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
-        "29ecd2dbedaa1b06"
+        "29ecd2dbedaa1b06",
+        "0add48b7c0e5f5e9"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7465,11 +9037,13 @@
       "question": "วิชา 09-122-103 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "666",
-        "824"
+        "824",
+        "1324"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
-        "29ecd2dbedaa1b06"
+        "29ecd2dbedaa1b06",
+        "0add48b7c0e5f5e9"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7485,10 +9059,14 @@
     {
       "question": "วิชาอินเทอร์เน็ตทุกสรรพสิ่งในชีวิตประจำวันรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "641"
+        "641",
+        "1308",
+        "1309"
       ],
       "relevant_chunk_keys": [
-        "7053cf6a9d84e960"
+        "7053cf6a9d84e960",
+        "76bb3b0484a618c4",
+        "44675d994e8c478c"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7504,10 +9082,14 @@
     {
       "question": "วิชา 09-130-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "641"
+        "641",
+        "1308",
+        "1309"
       ],
       "relevant_chunk_keys": [
-        "7053cf6a9d84e960"
+        "7053cf6a9d84e960",
+        "76bb3b0484a618c4",
+        "44675d994e8c478c"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7524,11 +9106,19 @@
       "question": "วิชาวิทยาศาสตร์ ความคิดสร้างสรรค์ และนวัตกรรมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "642",
-        "1526"
+        "1526",
+        "1305",
+        "1308",
+        "1309",
+        "1748"
       ],
       "relevant_chunk_keys": [
         "fbdf4b5caa0630d5",
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "6103e37be3712217",
+        "76bb3b0484a618c4",
+        "44675d994e8c478c",
+        "7e61ba838b0aea1f"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7546,11 +9136,19 @@
       "question": "วิชา 09-210-003 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "642",
-        "1526"
+        "1526",
+        "1305",
+        "1308",
+        "1309",
+        "1748"
       ],
       "relevant_chunk_keys": [
         "fbdf4b5caa0630d5",
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "6103e37be3712217",
+        "76bb3b0484a618c4",
+        "44675d994e8c478c",
+        "7e61ba838b0aea1f"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7567,15 +9165,20 @@
     {
       "question": "วิชาเทคโนโลยีสีเขียวรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1526"
+        "1526",
+        "1306",
+        "1752"
       ],
       "relevant_chunk_keys": [
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "429e175faca13e82",
+        "0336bf7a8c2c08c7"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-210-033",
@@ -7586,15 +9189,20 @@
     {
       "question": "วิชา 09-210-033 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1526"
+        "1526",
+        "1306",
+        "1752"
       ],
       "relevant_chunk_keys": [
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "429e175faca13e82",
+        "0336bf7a8c2c08c7"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-210-033",
@@ -7605,15 +9213,20 @@
     {
       "question": "วิชาชีวิตกับสิ่งแวดล้อมรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1526"
+        "1526",
+        "1304",
+        "1756"
       ],
       "relevant_chunk_keys": [
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "d055eb2b41a699eb",
+        "0d2a15891aa2c2ee"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-311-051",
@@ -7624,15 +9237,20 @@
     {
       "question": "วิชา 09-311-051 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1526"
+        "1526",
+        "1304",
+        "1756"
       ],
       "relevant_chunk_keys": [
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "d055eb2b41a699eb",
+        "0d2a15891aa2c2ee"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-311-051",
@@ -7643,15 +9261,20 @@
     {
       "question": "วิชาวิทยาศาสตร์เพื่อชีวิตรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1526"
+        "1526",
+        "1306",
+        "1760"
       ],
       "relevant_chunk_keys": [
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "429e175faca13e82",
+        "a4b016f6e492a485"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-410-002",
@@ -7662,15 +9285,20 @@
     {
       "question": "วิชา 09-410-002 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
-        "1526"
+        "1526",
+        "1306",
+        "1760"
       ],
       "relevant_chunk_keys": [
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "429e175faca13e82",
+        "a4b016f6e492a485"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
-      "source": "หลักสูตร63-คอมพิวเตอร์.pdf",
+      "source": "หลักสูตร-683.pdf",
       "sources": [
+        "หลักสูตร-683.pdf",
         "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-410-002",
@@ -7682,11 +9310,17 @@
       "question": "วิชาเทคโนโลยีพลังงานทดแทนเพื่อความยั่งยืนรหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "643",
-        "1526"
+        "1526",
+        "1306",
+        "1309",
+        "1764"
       ],
       "relevant_chunk_keys": [
         "98c7908a43a6650d",
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "429e175faca13e82",
+        "44675d994e8c478c",
+        "eb0bde27f319dfa2"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7704,11 +9338,17 @@
       "question": "วิชา 09-410-004 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "643",
-        "1526"
+        "1526",
+        "1306",
+        "1309",
+        "1764"
       ],
       "relevant_chunk_keys": [
         "98c7908a43a6650d",
-        "ab35e596a3b398ae"
+        "ab35e596a3b398ae",
+        "429e175faca13e82",
+        "44675d994e8c478c",
+        "eb0bde27f319dfa2"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7727,12 +9367,18 @@
       "relevant_chunk_ids": [
         "666",
         "826",
-        "1803"
+        "1803",
+        "1317",
+        "1319",
+        "1530"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
         "05dc827c650771f9",
-        "a314f9d6b788e63d"
+        "a314f9d6b788e63d",
+        "6b0fcf2808207373",
+        "74ae308cecd76f3e",
+        "1ddea1e02c25b21e"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
@@ -7751,12 +9397,18 @@
       "relevant_chunk_ids": [
         "666",
         "826",
-        "1803"
+        "1803",
+        "1317",
+        "1319",
+        "1530"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
         "05dc827c650771f9",
-        "a314f9d6b788e63d"
+        "a314f9d6b788e63d",
+        "6b0fcf2808207373",
+        "74ae308cecd76f3e",
+        "1ddea1e02c25b21e"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
@@ -7774,17 +9426,26 @@
       "question": "วิชาปฏิบัติการฟิสิกส์สำหรับวิศวกร 1รหัสวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "666",
-        "828"
+        "828",
+        "1317",
+        "1319",
+        "1530",
+        "1805"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
-        "f5fca09c9ee0b427"
+        "f5fca09c9ee0b427",
+        "6b0fcf2808207373",
+        "74ae308cecd76f3e",
+        "1ddea1e02c25b21e",
+        "a271d305269c3754"
       ],
       "category": "curriculum",
       "phrasing": "by_name",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-410-142",
       "course_name": "ปฏิบัติการฟิสิกส์สำหรับวิศวกร 1",
@@ -7795,17 +9456,26 @@
       "question": "วิชา 09-410-142 ชื่อวิชาอะไร และกี่หน่วยกิต",
       "relevant_chunk_ids": [
         "666",
-        "828"
+        "828",
+        "1317",
+        "1319",
+        "1530",
+        "1805"
       ],
       "relevant_chunk_keys": [
         "d0d2bff34a09b5d4",
-        "f5fca09c9ee0b427"
+        "f5fca09c9ee0b427",
+        "6b0fcf2808207373",
+        "74ae308cecd76f3e",
+        "1ddea1e02c25b21e",
+        "a271d305269c3754"
       ],
       "category": "curriculum",
       "phrasing": "by_code",
       "source": "หลักสูตร-683.pdf",
       "sources": [
-        "หลักสูตร-683.pdf"
+        "หลักสูตร-683.pdf",
+        "หลักสูตร63-คอมพิวเตอร์.pdf"
       ],
       "course_code": "09-410-142",
       "course_name": "ปฏิบัติการฟิสิกส์สำหรับวิศวกร 1",

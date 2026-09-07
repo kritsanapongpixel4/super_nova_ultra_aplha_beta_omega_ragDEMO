@@ -428,7 +428,20 @@ def main() -> None:
             # 2. The verdict.  Re-judged when the judge changes, since a score
             #    from a different grader is not comparable.
             if slot.get("judge_model") == judge_model and "row" in slot:
-                rows.append(slot["row"])
+                # The verdict is what cost an API call and is what gets
+                # reused.  context_recall is computed here, not judged, and it
+                # reads the golden set — which changes when a question's gold
+                # chunks are relabelled.  Recompute it rather than serve a
+                # number measured against labels that no longer exist.
+                row = dict(slot["row"])
+                gold = set(entry["relevant_chunk_ids"])
+                got = {str(c.get("chunk_id")) for c in result["sources"]}
+                row["context_recall"] = bool(gold & got) if gold else None
+                if row != slot["row"]:
+                    slot["row"] = row
+                    cache[key] = slot
+                    save_cache(cache)
+                rows.append(row)
                 reused += 1
                 print(f"{head}  ↩ ใช้ของเดิม", flush=True)
                 continue
