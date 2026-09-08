@@ -223,6 +223,14 @@ logs/
 .venv-gpu/
 benchmarks/results/
 outputs/embeddings/
+
+# ผลลัพธ์ระหว่างทางของ pipeline — สร้างใหม่ได้ ฟรี และได้ผลเดิมทุกครั้ง
+# แต่เปลี่ยนทุกครั้งที่รัน จึงกลายเป็น blob ใหม่ 3 MB ใน git ทุกรอบ
+# (outputs/ กินไปแล้ว 124 MB จาก 307 MB ของ history)
+# ทุกตัวที่อ่านไฟล์พวกนี้เช็คไว้แล้วว่าถ้าไม่มีให้รัน pipeline ก่อน
+# eval_cache.json ไม่อยู่ในนี้เพราะมันคือโควตา API ที่จ่ายไปแล้ว สร้างใหม่ไม่ฟรี
+outputs/chunks.json
+outputs/extracted_text.json
 # FAISS index, chunk_store และ sparse index สร้างใหม่ได้ด้วย build_index.py
 # ทั้งหมด และเขียนทับทั้งไฟล์ทุกครั้งที่ rebuild — chunk_store.json ไฟล์เดียว
 # เป็น diff 13,000 บรรทัดต่อรอบ เก็บไว้ใน git มีแต่ทำให้ประวัติบวม
