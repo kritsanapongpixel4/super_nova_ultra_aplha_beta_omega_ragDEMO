@@ -59,6 +59,40 @@ class SplitVowelTests(unittest.TestCase):
         self.assertEqual(normalize_text("ยื่น คำร้อง"), "ยื่น คำร้อง")
 
 
+class DroppedSaraAmTests(unittest.TestCase):
+    """The other way "ำ" goes missing: no space left behind, only "า"."""
+
+    def test_the_verified_repairs_are_applied(self):
+        self.assertEqual(normalize_text("อย่างสม่าเสมอ"), "อย่างสม่ำเสมอ")
+        self.assertEqual(normalize_text("สามารถทางานร่วมกัน"), "สามารถทำงานร่วมกัน")
+        self.assertEqual(normalize_text("ข้อกาหนดได้"), "ข้อกำหนดได้")
+
+    def test_words_that_merely_look_broken_are_left_alone(self):
+        # Each of these contains the damaged spelling of a different word as a
+        # fragment, so a general "า -> ำ where the dictionary says ำ" rule
+        # rewrites all of them.  That rule was measured on this corpus and got
+        # 32 of 35 wrong; these are the ones it would break.
+        for text in (
+            "ข้อแตกต่างระหว่าง",        # ตกต่า  <- ตกต่ำ
+            "ตามประกาศของมหาวิทยาลัย",  # ประกา  <- ประกำ
+            "ตารางเรียนตารางสอบ",       # ตารา   <- ตำรา
+            "การออกแบบระบบ",            # การอ   <- กำรอ
+            "เอกสารองค์ความรู้",         # สารอง  <- สำรอง
+            "สัมมนาทางวิศวกรรม",        # นาทาง  <- นำทาง
+            "พระบาทสมเด็จพระเจ้าอยู่หัว", # ระบา   <- ระบำ
+            "ระบบบริการการศึกษา",       # การกา  <- การกำ
+            "การรายงานผล",              # การรา  <- การรำ
+            "ถ่ายทอดข้อความจากสื่อ",    # ความจา <- ความจำ
+            "แนบสำเนาหน้าสมุดบัญชี",    # นาหน้า <- นำหน้า
+            "ระดับชั้นต่าง ๆ",           # ชั้นต่า <- ชั้นต่ำ
+            "หรือการย้ายคณะ",           # การย้า <- การย้ำ
+            "พื้นฐานทางนิเวศวิทยา",      # ทางน   <- ทำงน
+            "อันตรกิริยาระหว่างกัน",     # ริยา   <- ริยำ
+        ):
+            with self.subTest(text=text):
+                self.assertEqual(normalize_text(text), text)
+
+
 class StructureTests(unittest.TestCase):
     def test_blank_lines_survive(self):
         # parse_document tells one passage from the next by the blank line;

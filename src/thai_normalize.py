@@ -87,6 +87,26 @@ _PUA_FALLBACK = " "
 # always this artefact and never a real word boundary.
 _SPLIT_VOWEL_RE = re.compile(r"(?<=[ก-ฮ]) ([าำ])")
 
+# The same glyph can also go missing without leaving a space behind, and then
+# only the "า" half survives: "สม่ำเสมอ" comes out as "สม่าเสมอ".  There is no
+# safe general rule for this.  Thai writes no spaces between words, so the
+# damaged form of one word is usually a real fragment of another: rewriting
+# every "า" that a dictionary word spells "ำ" turns แตกต่าง into แตกต่ำง,
+# ประกาศ into ประกำศ, ตาราง into ตำราง, การออกแบบ into กำรออกแบบ and
+# เอกสารองค์ความรู้ into เอกสำรองค์ความรู้.  Measured against pythainlp's
+# dictionary over this corpus, that rule proposed 35 rewrites and 32 of them
+# were wrong.
+#
+# So the repairs are listed one at a time, and each earns its place by being
+# a string no correct Thai word contains.  Add to this only after checking the
+# same way — grep the corpus for the surrounding context, not just the word.
+_DROPPED_SARA_AM = {
+    "สม่าเสมอ": "สม่ำเสมอ",
+    "ทางาน": "ทำงาน",
+    "กาหนด": "กำหนด",
+}
+_DROPPED_SARA_AM_RE = re.compile("|".join(map(re.escape, _DROPPED_SARA_AM)))
+
 
 def has_pua(text: str) -> bool:
     """True if *text* still contains Private Use Area characters."""
@@ -108,10 +128,11 @@ def normalize_text(text: str) -> str:
 
     1. Map PUA characters back to real Unicode.
     2. NFC-compose so combining marks sit in canonical order.
-    3. Run PyThaiNLP's normaliser (removes duplicate tone marks and
+    3. Put back "ำ" where the extraction dropped it.
+    4. Run PyThaiNLP's normaliser (removes duplicate tone marks and
        reorders misplaced ones — common in text recovered from PDFs).
 
-    Step 3 runs **line by line**: ``thai_normalize`` collapses runs of
+    Step 4 runs **line by line**: ``thai_normalize`` collapses runs of
     newlines, and ``parse_document`` needs the blank lines intact to tell
     one passage from the next.
     """
@@ -120,6 +141,7 @@ def normalize_text(text: str) -> str:
     text = fix_pua(text)
     text = unicodedata.normalize("NFC", text)
     text = _SPLIT_VOWEL_RE.sub("ำ", text)
+    text = _DROPPED_SARA_AM_RE.sub(lambda m: _DROPPED_SARA_AM[m.group()], text)
     lines = text.split("\n")
     return "\n".join(
         thai_normalize(line) if line.strip() else line
