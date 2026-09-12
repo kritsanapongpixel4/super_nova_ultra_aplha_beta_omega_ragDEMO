@@ -335,6 +335,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate answer quality.")
     parser.add_argument("--limit", type=int, default=0,
                         help="ประเมินกี่คำถาม (0 = ทั้งหมด), สุ่มกระจายทุกหมวด")
+    parser.add_argument("--only", default="",
+                        help="ประเมินเฉพาะหมวดนี้ เช่น unanswerable "
+                             "(คั่นด้วยจุลภาคได้) — --limit จะสุ่มจากที่เหลือ")
     parser.add_argument("--fresh", action="store_true",
                         help="ทิ้งแคชแล้วเริ่มใหม่ (ค่าเริ่มต้นคือทำต่อจากที่ค้างไว้)")
     parser.add_argument("--judge", default=None,
@@ -372,6 +375,16 @@ def main() -> None:
     with open(config.CHUNKS_FILE, "r", encoding="utf-8") as f:
         chunks = json.load(f)
     entries, _ = golden_set.load(chunks, include_unanswerable=True)
+    if args.only:
+        # Proportional sampling is right for a headline number and wrong for a
+        # small category: 15 unanswerable questions out of 486 draw two seats
+        # in a 60-question sample, and an abstention rate measured on two is
+        # not a rate.  This asks for the whole category instead.
+        wanted = {name.strip() for name in args.only.split(",") if name.strip()}
+        entries = [e for e in entries if e["category"] in wanted]
+        if not entries:
+            print(f"❌ ไม่มีคำถามในหมวด {sorted(wanted)}")
+            sys.exit(1)
     entries = stratified(entries, args.limit)
 
     corpus = golden_set.fingerprint(chunks)

@@ -3779,3 +3779,43 @@ Access to model google/embeddinggemma-300m is restricted. You must have access
   }
 }
 ```
+
+## ✅ 2026-09-12 20:20 — eval generation: e5-base + gemini-3.5-flash
+
+- **ทดลองอะไร:** วัดคุณภาพคำตอบ ไม่ใช่แค่ว่าค้น chunk เจอ
+- **ทำอย่างไร:** 15 คำถามจาก golden set, ตอบด้วย gemini-3.5-flash, ตรวจด้วย gemini-3.5-flash (LLM judge)
+- **ผลลัพธ์:** faithfulness None, relevance None, citation None, ยอมรับว่าไม่รู้ 0.929
+
+```json
+{
+  "summary": {
+    "all": {
+      "n": 14,
+      "graded": 14,
+      "context_recall": null,
+      "faithfulness": null,
+      "relevance": null,
+      "citation_valid": null,
+      "citations_in_range": 1.0,
+      "abstained": 0.929
+    },
+    "unanswerable": {
+      "n": 14,
+      "graded": 14,
+      "context_recall": null,
+      "faithfulness": null,
+      "relevance": null,
+      "citation_valid": null,
+      "citations_in_range": 1.0,
+      "abstained": 0.929
+    }
+  },
+  "judge_model": "gemini-3.5-flash",
+  "corpus": {
+    "n_chunks": 2202,
+    "n_sources": 18,
+    "chunks_sha1": "30cffcd2a35ff359",
+    "key_version": 1
+  }
+}
+```
