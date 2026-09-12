@@ -85,6 +85,40 @@ _NOT_COVERED = re.compile(
 # corpus does answer this one, so it is not a test of refusing to answer.
 _CROSS_REFERENCE = re.compile(r"REG-\d+")
 
+# A line break inside the list is not an item break.  These lists wrap:
+#
+#     จำนวนเงินค่าธรรมเนียมลาพักการศึกษา ... แต่เอกสาร REG-13 ระบุไว้ว่า
+#     1,000 บาท
+#
+# Splitting on the newline made "1,000 บาท" a question of its own, and worse,
+# it escaped the REG- filter that had just excluded the line it belongs to —
+# so a cross-reference became an "unanswerable" question whose answer sits one
+# line above it.  The same wrap split "...อย่างน้อย 2 / สัปดาห์)" into a
+# truncated question plus the fragment "สัปดาห์)".
+#
+# A line continues the one before it when that line cannot have ended an item:
+# it leaves a bracket open, or trails off on a connective or a bare number.
+# Checked against all 25 lines the 13 registrar documents actually carry — it
+# joins exactly the three real wraps and splits every genuine item.
+_CONTINUES = re.compile(r"(?:ว่า|ที่|และ|หรือ|เช่น|คือ|\d)$")
+
+
+def _unwrap(block: str) -> list[str]:
+    """Split a "not covered" list into items, honouring wrapped lines."""
+    items: list[str] = []
+    for line in block.split("\n"):
+        line = line.strip()
+        if not line:
+            continue
+        if items and (
+            _CONTINUES.search(items[-1])
+            or items[-1].count("(") > items[-1].count(")")
+        ):
+            items[-1] = f"{items[-1]} {line}"
+        else:
+            items.append(line)
+    return items
+
 # Written by evaluation/paraphrase_faq.py — see build_faq() for why.
 _PARAPHRASE_FILE = config.DATA_DIR / "faq_paraphrases.json"
 
@@ -341,6 +375,36 @@ def build_faq(records: list[dict], chunks: list[dict]) -> list[dict]:
     return entries
 
 
+# Audited 2026-09-12 against all 2,202 chunks.  A document's own "ไม่ได้ระบุ"
+# list means "this file does not say"; the chatbot answers from all eighteen,
+# and for these the corpus does say — so grading a correct answer as a refusal
+# failure would measure the label.  Quoted evidence, so the call can be checked:
+#
+#   ...แจ้งสำเร็จการศึกษา   คู่มือนักศึกษา69: "ยื่นภายใน 15 วัน นับตั้งแต่วันเปิด
+#                            ภาคการศึกษา"
+#   ...ขอคืนสภาพภายในกี่วัน  คู่มือนักศึกษา69: "ต้องไม่พ้นกำหนดระยะเวลา 1 ปี นับจาก
+#                            วันที่ถูกประกาศถอนชื่อ"
+#   ...ลาพักต่อเนื่องได้     คู่มือนักศึกษา69: "จะลาพักการศึกษาเกินกว่า 2 ภาค
+#                            การศึกษาปกติติดต่อกันไม่ได้"
+#   ...กลับเข้าศึกษา         REG-13 itself: "ควรยื่นคำร้องก่อนวันลงทะเบียนอย่างน้อย
+#                            2 สัปดาห์" — the document's own aside said it gives
+#                            only this and not a hard deadline, but that aside is
+#                            a parenthetical, and parentheses are stripped from
+#                            the question.  What is left asks for something the
+#                            document does answer.
+#
+# The last one is excluded for a second reason: "ค่าธรรมเนียมของคำร้องนี้" has no
+# referent once it leaves its document, so no retriever can be expected to know
+# which form "นี้" means.  It tests the question, not the system.
+_ANSWERED_ELSEWHERE = {
+    "วันสุดท้ายของการแจ้งสำเร็จการศึกษาในระบบ ให้ดูจากปฏิทินการศึกษาของแต่ละภาคการศึกษา",
+    "กำหนดเวลาว่าต้องยื่นขอคืนสภาพภายในกี่วันหลังถูกถอนชื่อ",
+    "จำนวนภาคการศึกษาสูงสุดที่ลาพักต่อเนื่องได้",
+    "กำหนดเวลาที่ต้องยื่นขอกลับเข้าศึกษาอย่างช้าที่สุด",
+    "ค่าธรรมเนียมของคำร้องนี้",
+}
+
+
 def build_unanswerable(records: list[dict]) -> list[dict]:
     """Questions the documents say outright they do not answer.
 
@@ -353,13 +417,15 @@ def build_unanswerable(records: list[dict]) -> list[dict]:
         match = _NOT_COVERED.search(record.get("text", ""))
         if not match:
             continue
-        for line in match.group(1).split("\n"):
+        for line in _unwrap(match.group(1)):
             topic = _flat(line)
             if len(topic) < 8 or _CROSS_REFERENCE.search(topic):
                 continue
             # Drop the document's own aside — "(เอกสารนี้ระบุเฉพาะค่าปรับ 500
             # บาท)" is an explanation to the reader, not part of the topic.
             topic = _flat(re.sub(r"\(.*?\)", "", topic))
+            if topic in _ANSWERED_ELSEWHERE:
+                continue
             entries.append(
                 {
                     "question": topic,

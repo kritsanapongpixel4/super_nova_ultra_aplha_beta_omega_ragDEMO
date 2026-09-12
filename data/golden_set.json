@@ -1,12 +1,12 @@
 {
   "meta": {
-    "built_at": "2026-09-07T23:47:31",
-    "n_queries": 493,
+    "built_at": "2026-09-12T20:10:19",
+    "n_queries": 486,
     "by_category": {
       "clo": 128,
       "curriculum": 288,
       "faq": 55,
-      "unanswerable": 22
+      "unanswerable": 15
     },
     "chunks_covered": 436,
     "coverage": 0.198,
@@ -10377,22 +10377,13 @@
       "query_id": 472
     },
     {
-      "question": "วันสุดท้ายของการแจ้งสำเร็จการศึกษาในระบบ ให้ดูจากปฏิทินการศึกษาของแต่ละภาคการศึกษา",
-      "relevant_chunk_ids": [],
-      "relevant_chunk_keys": [],
-      "category": "unanswerable",
-      "phrasing": "unanswerable",
-      "source": "01_ขอสำเร็จการศึกษา.pdf",
-      "query_id": 473
-    },
-    {
       "question": "จำนวนหน่วยกิตสูงสุดที่เทียบโอนได้",
       "relevant_chunk_ids": [],
       "relevant_chunk_keys": [],
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
-      "query_id": 474
+      "query_id": 473
     },
     {
       "question": "ระยะเวลาพิจารณาอนุมัติก่อนถึงขั้นตอนชำระเงิน",
@@ -10401,7 +10392,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "02_เทียบโอนรายวิชา-เทียบรหัสวิชา.pdf",
-      "query_id": 475
+      "query_id": 474
     },
     {
       "question": "ค่าธรรมเนียมของคำร้องทั้ง 3 ประเภท",
@@ -10410,7 +10401,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "03_เปลี่ยนชื่อ-นามสกุล-คำนำหน้า-แก้ไขประวัติ.pdf",
-      "query_id": 476
+      "query_id": 475
     },
     {
       "question": "ระยะเวลาที่เงินจะโอนเข้าบัญชีหลังยื่นคำร้อง",
@@ -10419,7 +10410,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "04_การขอเงินคืน.pdf",
-      "query_id": 477
+      "query_id": 476
     },
     {
       "question": "เงื่อนไขว่ากรณีใดบ้างที่มีสิทธิ์ขอเงินคืน",
@@ -10428,16 +10419,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "04_การขอเงินคืน.pdf",
-      "query_id": 478
-    },
-    {
-      "question": "กำหนดเวลาว่าต้องยื่นขอคืนสภาพภายในกี่วันหลังถูกถอนชื่อ",
-      "relevant_chunk_ids": [],
-      "relevant_chunk_keys": [],
-      "category": "unanswerable",
-      "phrasing": "unanswerable",
-      "source": "05_ขอคืนสภาพนักศึกษา.pdf",
-      "query_id": 479
+      "query_id": 477
     },
     {
       "question": "จำนวนภาคการศึกษาสูงสุดที่ขอรักษาสภาพต่อเนื่องได้",
@@ -10446,7 +10428,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "06_ขอรักษาสภาพนักศึกษา.pdf",
-      "query_id": 480
+      "query_id": 478
     },
     {
       "question": "จำนวนหน่วยกิตสูงสุดที่ลงทะเบียนเกินเกณฑ์ได้",
@@ -10455,34 +10437,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
-      "query_id": 481
-    },
-    {
-      "question": "ค่าธรรมเนียมของคำร้องนี้",
-      "relevant_chunk_ids": [],
-      "relevant_chunk_keys": [],
-      "category": "unanswerable",
-      "phrasing": "unanswerable",
-      "source": "07_ลงทะเบียนเกินเกณฑ์-ต่ำกว่าเกณฑ์.pdf",
-      "query_id": 482
-    },
-    {
-      "question": "1,000 บาท",
-      "relevant_chunk_ids": [],
-      "relevant_chunk_keys": [],
-      "category": "unanswerable",
-      "phrasing": "unanswerable",
-      "source": "08_ลาพักการศึกษา.pdf",
-      "query_id": 483
-    },
-    {
-      "question": "จำนวนภาคการศึกษาสูงสุดที่ลาพักต่อเนื่องได้",
-      "relevant_chunk_ids": [],
-      "relevant_chunk_keys": [],
-      "category": "unanswerable",
-      "phrasing": "unanswerable",
-      "source": "08_ลาพักการศึกษา.pdf",
-      "query_id": 484
+      "query_id": 479
     },
     {
       "question": "ผลกระทบด้านการเงิน เช่น การคืนเงินค่าเทอมหรือหนี้สินคงค้างหลังลาออก",
@@ -10491,7 +10446,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "09_นักศึกษาขอลาออก.pdf",
-      "query_id": 485
+      "query_id": 480
     },
     {
       "question": "ค่าธรรมเนียมของคำร้องขอลาออก",
@@ -10500,7 +10455,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "09_นักศึกษาขอลาออก.pdf",
-      "query_id": 486
+      "query_id": 481
     },
     {
       "question": "วิธีการเสนอชื่อและช่วงเวลาประกาศผลผู้ได้รับเกียรตินิยม",
@@ -10509,7 +10464,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "10_เกียรตินิยมและเหรียญเกียรตินิยม.pdf",
-      "query_id": 487
+      "query_id": 482
     },
     {
       "question": "รายละเอียดการสอบสมรรถนะด้านสารสนเทศ เช่น วิธีสมัคร เกณฑ์ผ่าน และค่าใช้จ่าย",
@@ -10518,7 +10473,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
-      "query_id": 488
+      "query_id": 483
     },
     {
       "question": "รายละเอียดการทดสอบสมรรถนะด้านวิชาชีพของแต่ละหลักสูตร",
@@ -10527,7 +10482,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "11_เตรียมความพร้อมก่อนสำเร็จการศึกษา.pdf",
-      "query_id": 489
+      "query_id": 484
     },
     {
       "question": "วิธีสมัครสอบ ตารางสอบ และค่าสมัครสอบของแต่ละมาตรฐาน",
@@ -10536,7 +10491,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "12_English-Exit-Exam.pdf",
-      "query_id": 490
+      "query_id": 485
     },
     {
       "question": "ช่องทางและกำหนดเวลาการยื่นผลคะแนนให้คณะ",
@@ -10545,25 +10500,7 @@
       "category": "unanswerable",
       "phrasing": "unanswerable",
       "source": "12_English-Exit-Exam.pdf",
-      "query_id": 491
-    },
-    {
-      "question": "กำหนดเวลาที่ต้องยื่นขอกลับเข้าศึกษาอย่างช้าที่สุด (ระบุเพียงว่าควรยื่นก่อนวันลงทะเบียนอย่างน้อย 2",
-      "relevant_chunk_ids": [],
-      "relevant_chunk_keys": [],
-      "category": "unanswerable",
-      "phrasing": "unanswerable",
-      "source": "13_ขอกลับเข้าศึกษา.pdf",
-      "query_id": 492
-    },
-    {
-      "question": "สัปดาห์)",
-      "relevant_chunk_ids": [],
-      "relevant_chunk_keys": [],
-      "category": "unanswerable",
-      "phrasing": "unanswerable",
-      "source": "13_ขอกลับเข้าศึกษา.pdf",
-      "query_id": 493
+      "query_id": 486
     }
   ]
 }
